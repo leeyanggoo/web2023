@@ -1,4 +1,6 @@
 # web2023
+Blog : "https://leeyanggoo.tistory.com/"</a></li>
+Github : "https://github.com/leeyanggoo/web2023"</a></li>
 
 # HTML
 Block vs Inline
