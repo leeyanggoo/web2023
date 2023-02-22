@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃24 - gird</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #E0F2F1;
+            height: 100px;
+        }
+        nav {
+            background-color: #80CBC4;
+            height: 300px;
+        }
+        section {
+            background-color: #26A69A;
+            height: 580px;
+        }
+        footer {
+            background-color: #00897B;
+            height: 100px;
+        }
+        .container {
+            width: 1200px;
+            height: inherit;
+            margin: 0 auto;
+            grid-template-areas: 
+                "header"
+                "nav"
+                "section"
+                "footer"
+            ;
+            grid-template-rows: 1200px;
+            grid-template-columns: 100px 300px 580px 100px;
+        }
+        #header {
+            background-color: #B2DFDB;
+            grid-area: header;
+        }
+        #nav {
+            background-color: #4DB6AC;
+            grid-area: nav;
+        }
+        #section {
+            background-color: #009688;
+            grid-area: section;
+        }
+        #footer {
+            background-color: #00796B;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container" id="header"></div>
+    </header>
+    <nav>
+        <div class="container" id="nav"></div>
+    </nav>
+    <section>
+        <div class="container" id="section"></div>
+    </section>
+    <footer>
+        <div class="container" id="footer"></div>
+    </footer>
+</body>
+</html>
