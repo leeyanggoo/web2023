@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 예제</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .clearfix::before,
+        .clearfix::after{
+            content: '';
+            display: block;
+            line-height: 0;
+        }
+        .clearfix::after{
+            clear: both;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #aside {
+            width: 30%;
+            float: left;
+        }
+        #logo1 {
+            height: 200px;
+            background-color: #29B6F6;
+        }
+        #logo2 {
+            height: 200px;
+            background-color: #000000;
+        }
+        #logo3 {
+            height: 680px;
+            background-color: #66BB6A;
+        }
+        /* #contents {
+            width: 70%;
+        } */
+        #article1 {
+            width: 70%;
+            height: 580px;
+            background-color: #4DB6AC;
+            float: left;
+        }
+        #article2 {
+            width: 25%;
+            height: 300px;
+            background-color: #0288D1;
+            float: left;
+        }
+        #article3 {
+            width: 25%;
+            height: 300px;
+            background-color: #B2DFDB;
+            float: left;
+        }
+        #article4 {
+            width: 20%;
+            height: 300px;
+            background-color: #FFA726;
+            float: left;
+        }
+        #article5 {
+            width: 10%;
+            height: 200px;
+            background-color: #000000;
+            float: left;
+        }
+        #article6 {
+            width: 60%;
+            height: 100px;
+            background-color: #43A047;
+            float: left;
+        }
+        #article7 {
+            width: 60%;
+            height: 100px;
+            background-color: #FFE0B2;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="aside">
+            <div id="logo1"></div>
+            <div id="logo2"></div>
+            <div id="logo3"></div>
+        </div>
+        <div id="contents" class="clearfix">
+            <dvi id="article1"></dvi>
+            <dvi id="article2"></dvi>
+            <dvi id="article3"></dvi>
+            <dvi id="article4"></dvi>
+            <dvi id="article5"></dvi>
+            <dvi id="article6"></dvi>
+            <dvi id="article7"></dvi>
+        </div>
+    </div>
+</body>
+</html>
