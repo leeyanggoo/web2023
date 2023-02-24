@@ -50,33 +50,216 @@
             <div class="main__menu">
                 <ul>
                     <li><a href="#">01. if문</a></li>
-                    <li><a href="#">01. if문 생략</a></li>
-                    <li><a href="#">01. 다중 if문</a></li>
-                    <li><a href="#">01. 중첩 if문</a></li>
-                    <li><a href="#">01. 삼항 연산자</a></li>
-                    <li><a href="#">01. switch문</a></li>
-                    <li><a href="#">01. while문</a></li>
-                    <li><a href="#">01. do while문</a></li>
-                    <li><a href="#">01. for문</a></li>
-                    <li><a href="#">01. 중첩 for문</a></li>
+                    <li><a href="#">02. if문 생략</a></li>
+                    <li><a href="#">03. 삼항 연산자</a></li>
+                    <li><a href="#">04. 다중 if문(else if)</a></li>
+                    <li><a href="#">05. 중첩 if문</a></li>
+
+                    <li><a href="#">06. switch문</a></li>
+                    <li><a href="#">07. while문</a></li>
+                    <li><a href="#">08. do while문</a></li>
+                    <li><a href="#">09. for문</a></li>
+                    <li><a href="#">10. 중첩 for문</a></li>
                     <li><a href="#">01. break문</a></li>
                     <li><a href="#">01. continue문</a></li>
                 </ul>
             </div>
             <div class="main__sample">
                 <div id="sample01" class="sample">
-                    <h3>01. 제목입니다</h3>
-                    <p>간략한 내용입니다.</p>
+                    <h3>01. if문</h3>
+                    <p>조건문은 프로그래밍에서 가장 기본적인 구문 중 하나로, 조건에 따라 다른 코드를 실행할 수 있도록 해줍니다. 자바스크립트에서는 if문, switch문, 삼항 연산자 등을 사용하여 조건문을 구현할 수 있습니다.</p>
                     <div class="script">
-<pre class="line-numbers"><code class="language-js">{
-let x = 100, y = 200, z = "javascript";
-
-console.log(x, y, z);    //배운 코드 적는 곳입니다.
+<pre class="line-numbers"><code class="language-js">if(조건식){
+    document.write("실행되었습니다.(true)");
+} else {
+    document.write("실행되었습니다.(false)");
 }
 </pre></code>
                     </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                <p>조건식 = 0, null, undefined, false, " "(빈 문자열) = flase</p>
+                                <p>조건식 = 1, '0', '1', 'ABC', true, [], {} = true</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <p>0, null, undefined, false, " "(빈 문자열)의 5가지 경우는 false의 조건이다.</p>
+                        <p>0을 제외한 숫자, 문자열, 배열, 객체는 if 조건식에서 'true'가 나오는 조건이다.</p>
+                        <p></p>
+                    </div>
                 </div>
                 <!-- //sample01 -->
+
+                <div id="sample02" class="sample">
+                    <h3>02. if문 생략</h3>
+                    <p>if문의 {}를 제거하고 간략히 if문을 표현할 수 있습니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">const num = 100;
+
+// if(num){
+//     document.write("실행되었습니다.(true)");
+// } else {
+//     document.write("실행되었습니다.(false)")
+// }
+
+if(num) document.write("실행되었습니다.(true)");
+else document.write("실행되었습니다.(false)");  //생략
+</pre></code>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                <p>100은 0이 아닌 숫자이므로 'true'</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <p>조건문은 길어질수록 복잡해지기 때문에 이를 간소화하는 표현도 생겨났다.</p>
+                        <p></p>
+                    </div>
+                </div>
+                <!-- //sample02 -->
+
+                <div id="sample03" class="sample">
+                    <h3>03. 삼항 연산자</h3>
+                    <p>삼항 연산자는 조건식의 결과에 따라 두 개의 표현식 중 하나를 선택하여 실행합니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">const num = 100;
+
+// if(num == 100){
+//     document.write("true");
+// } else {
+//     document.write("false")
+// }                                        //원본
+
+(num == 100) ? document.write("true") : document.write("false");
+</pre></code>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                <p>100은 0이 아닌 숫자이므로 'true'</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <p>삼항 연산자는 조건식의 결과에 따라 두 개의 표현식 중 하나를 선택하여 실행한다.</p>
+                        <p>반면 삼항 연산자가 아닌 원본은 두 표현식을 모두 읽기 때문에 많은 조건식이 있다고 가정하면 처리하는 데 더 오랜 시간이 걸린다.</p>
+                        <p>삼항 연산자는 조건식 뒤에 물음표(?)가 오며, 이어서 true일 때 실행될 표현식이 오고, 그 다음에 콜론(:)이 오며, 이어서 false일 때 실행될 표현식이 오게 된다.</p>
+                        <p>조건 ? A : B;의 뜻은 조건이 true면 A가 반환되고 조건이 false면 B가 반환된다는의 미이다.</p>
+                    </div>
+                </div>
+                <!-- //sample03 -->
+
+                <div id="sample04" class="sample">
+                    <h3>04. 다중 if문(else if)</h3>
+                    <p>여러 개의 조건을 비교할 때 사용하며, 첫 번째 조건이 거짓인 경우 다음 조건을 검사합니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">const num = 100;
+
+if(num == 90){
+    document.write("실행되었습니다.(num == 90)");
+} else if(num == 100){
+    document.write("실행되었습니다.(num == 100)");
+} else if(num == 110){
+    document.write("실행되었습니다.(num == 110)");
+} else if(num == 120){
+    document.write("실행되었습니다.(num == 120)");
+} else {
+    document.write("실행되었습니다.");
+}
+</pre></code>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                <p>상수 num의 값이 100이므로, 정답은</p>
+                                <p>실행되었습니다.(num == 100)</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <p>다중 if문은 변수에 따라 변하는 다양한 조건이 있을 때 사용한다.</p>
+                        <p>따라서 변수에 따라 true가 나오지 않고 false가 나온다면 다음의 조건식을 실행한다.</p>
+                        <p>마지막까지 모든 조건이 false라면 마지막 else 블록을 실행한다.</p>
+                        <p>다중 if문은 점수에 따른 등급 평가 같은 곳에 사용할 수 있다.</p>
+                    </div>
+                </div>
+                <!-- //sample04 -->
+
+                <div id="sample05" class="sample">
+                    <h3>05. 중첩 if문</h3>
+                    <p>중첩 if문을 사용하면 여러 개의 조건을 조합하여 더 복잡한 로직을 구현할 수 있습니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">const num = 100;
+
+if(num == 100){
+    document.write("실행되었습니다.(1)");
+    if(num == 100){
+        document.write("실행되었습니다.(2)");
+        if(num == 100){
+            document.write("실행되었습니다.(3)");
+        }
+    }
+} else {
+    document.write("실행되었습니다.(4)");
+}
+</pre></code>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                <p>변수 num의 값이 100이고 3개의 조건식의 조건이 num == 100이므로 정답은</p>
+                                <p>실행되었습니다.(1)실행되었습니다.(2)실행되었습니다.(3)</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <p>중첩 if문 여러 조건을 만족하는 값을 찾을 때 유용하다.</p>
+                        <p>예를 들어 변수로 점수와 출석률 2가지가 있다고 가정할 때,</p>
+                        <p>if문으로 점수는 합격(true)지만 출석률이 좋지 않아 불합격(false)인 학생을 선별할 수 있다.</p>
+                    </div>
+                </div>
+                <!-- //sample05 -->
+
+                <div id="sample09" class="sample">
+                    <h3>09. for문</h3>
+                    <p>for문은 반복적인 작업을 수행할 때 사용하는 제어문입니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">for(let i = 1; i&lt;=100; i++){
+document.write(i);
+}
+</pre></code>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                <p>변수 i의 값이 1일 때(let i = 1;)</p>
+                                <p>변수 i의 값이 100보다 크거나 같으면 true(i&lt;=100;)</p>
+                                <p>변수 i의 값이 1씩 증가합니다.(i++)</p>
+                                <p>변수 i는 1로 시작해서 100이 될 때까지 조건식을 충족하므로 결과는</p>
+                                <p>123456 ... 99100</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <p>for문은</p>
+                        <p>for (초기식; 조건식; 증감식) {</p>
+                        <p>// 조건식이 참일 때 반복 실행할 코드</p>
+                        <p>}</p>
+                        <p>로 구성되며 특히 배열과 같은 데이터 집합을 다룰 때 많이 사용된다.</p>
+                    </div>
+                </div>
+                <!-- //sample09 -->
+
             </div> <!--mian_sample 끝-->      
         </div> <!--.container 끝 / sample 마무리하면 끝에 항상 2개 /div 있어야 함-->
         </div>
@@ -90,7 +273,58 @@ console.log(x, y, z);    //배운 코드 적는 곳입니다.
 
     <script src="assets/js/prism.js"></script>
     <script>
+    // // {
+    //     const arr = [1,2,3,4,5,6,7,8,9];
+
+    // //     for(let i = 0; i<arr.length; i++){
+    // //         document.write(arr[i]);
+    // //     }
+    // // document.write("<br>");
+    // //     //짝수
+    // //     for(let i = 1; i<arr.length; i+=2){
+    // //         document.write(arr[i]);            
+    // //     }
+    // // document.write("<br>");
+    // //     //홀수
+    // //     for(let i = 0; i<arr.length; i+=2){
+    // //         document.write(arr[i]);            
+    // //     }
+    // // document.write("<br>");
+        
+    //     //짝수 if문
+    //     for(let i = 1; i<arr.length; i++){
+    //         if(i % 2 == 0){
+    //             document.write("<span style='color:red'>"+i+"</span>");
+    //         } else {
+    //             document.write(`<span style='color:blue'>${i}</span>`);
+    //         }
+    //     }
+    // document.write("<br>");
     
+    //table만들기
+    // let table = "<table border='1'>"
+
+    // for(let i = 1; i<=10; i++){
+    //     table += "<tr>"
+    //     for(let j = 1; j<=10; j++){
+    //         table += "<td>"+j+"</td>";
+    //     }
+    //     table += "/<tr>"
+    // }
+    // document.write(table);
+
+    // //1~25
+    // for(let i = 1; i<=25; i++){
+    //     document.write(i);
+    // }
+
+    // // let num = 1;
+    // for(let i = 1; i<=25; i++){
+    //     document.write(i);
+    //     num++;              //이걸 이용하면 테이블에 숫자 순서대로 넣을 수 있다.
+    // }
+    // document.write("<br>");
+    // document.write(num);
     </script>
 
 </body>
