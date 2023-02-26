@@ -5,62 +5,92 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
+    <style>
+        #wrap {
+          width: 600px;
+        }
+          .box1 {
+              float: left;
+              width: 300px;
+              height: 200px;
+              background-color: red;
+          }
+      
+          .box2 {
+              float: left;
+              width: 300px;
+              height: 100px;
+              background-color: blue;
+          }
+      
+          .box3 {
+              /* clear: both; */
+              /* float: left; */
+              width: 300px;
+              height: 200px;
+              background-color: green;
+          }
+      </style>
+    <body>
+    <div id=wrap>
+  <div class="box1"></div>
+  <div class="box2"></div>
+  <div class="box3"></div>
+    </div>
     <script>
-        let arr = [1,2,3,4,5,6,7,8,9,10];
+        // let arr = [1,2,3,4,5,6,7,8,9,10];
 
-        document.write(arr[4], '<br>');
-        document.write(arr[6], arr[7], '<br>');
-        document.write(arr[9] + arr[1], '<br>');
-        document.write(arr[8] * arr[9], '<br>');
+        // document.write(arr[4], '<br>');
+        // document.write(arr[6], arr[7], '<br>');
+        // document.write(arr[9] + arr[1], '<br>');
+        // document.write(arr[8] * arr[9], '<br>');
 
-        document.write('<br>','<br>');
+        // document.write('<br>','<br>');
 
-        // for문 이용해서 1-8까지 출력
-        for(let i=0; i<8; i++)
-        document.write(arr[i]);
-        document.write('<br>','<br>');
+        // // for문 이용해서 1-8까지 출력
+        // for(let i=0; i<8; i++)
+        // document.write(arr[i]);
+        // document.write('<br>','<br>');
 
-        // for문 이용해서 100까지 출력 (짝수)
-        for(let j=1; j<=100; j++){
-            if(j % 2 == 0){
-                document.write(j);
-            }
-        }
-        document.write('<br>','<br>');
+        // // for문 이용해서 100까지 출력 (짝수)
+        // for(let j=1; j<=100; j++){
+        //     if(j % 2 == 0){
+        //         document.write(j);
+        //     }
+        // }
+        // document.write('<br>','<br>');
         
-        // for문 이용해서 100까지 출력 (4의 배수)
-        for(let z=1; z<=100; z++){
-            if(z % 4 == 0){
-                document.write(z);
-            }
-        }
-        document.write('<br>','<br>');
+        // // for문 이용해서 100까지 출력 (4의 배수)
+        // for(let z=1; z<=100; z++){
+        //     if(z % 4 == 0){
+        //         document.write(z);
+        //     }
+        // }
+        // document.write('<br>','<br>');
 
-        // for문 이용해서 8단 구구단
-        document.write("8단","</br>","</br>")
+        // // for문 이용해서 8단 구구단
+        // document.write("8단","</br>","</br>")
 
-        for(let y=1; y<=9; y++){
-            document.write(y+'*'+8+'='+y*8+'<br>')
-        }
-        document.write('<br>','<br>');
+        // for(let y=1; y<=9; y++){
+        //     document.write(y+'*'+8+'='+y*8+'<br>')
+        // }
+        // document.write('<br>','<br>');
 
-        // for문 이용해서 15칸 테이블
-        let table = "<table border='1'>";
+        // // for문 이용해서 15칸 테이블
+        // let table = "<table border='1'>";
 
-        for(let x=1; x<=15; x++){
-            table += "<tr>"
+        // for(let x=1; x<=15; x++){
+        //     table += "<tr>"
 
-            for(let c=1; c<=15; c++){
-                table += "<td></td>"
-            }
-            table += "</tr>"
-        }        
+        //     for(let c=1; c<=15; c++){
+        //         table += "<td></td>"
+        //     }
+        //     table += "</tr>"
+        // }        
 
-        table += "</table>"
+        // table += "</table>"
 
-        document.write(table);
+        // document.write(table);
 
 
     </script>
