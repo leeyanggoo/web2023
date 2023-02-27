@@ -50,14 +50,14 @@
             <div class="main__menu">
                 <ul>
                     <li><a href="#">01. 선언적 함수</a></li>
-                    <li><a href="#">01. 익명 함수</a></li>
-                    <li><a href="#">01. 매개변수 함수</a></li>
-                    <li><a href="#">01. 리턴값 함수</a></li>
+                    <li><a href="#">02. 익명 함수</a></li>
+                    <li><a href="#">03. 매개변수 함수</a></li>
+                    <li><a href="#">04. 리턴값 함수</a></li>
+                    <li><a href="#">05. 화살표 함수 : 선언적 함수</a></li>
+                    <li><a href="#">06. 화살표 함수 : 익명 함수</a></li>
+                    <li><a href="#">07. 화살표 함수 : 매개변수 함수</a></li>
+                    <li><a href="#">08. 화살표 함수 : 리턴값 함수</a></li>
 
-                    <li><a href="#">01. 화살표 함수 : 선언적 함수</a></li>
-                    <li><a href="#">01. 화살표 함수 : 익명 함수</a></li>
-                    <li><a href="#">01. 화살표 함수 : 매개변수 함수</a></li>
-                    <li><a href="#">01. 화살표 함수 : 리턴값 함수</a></li>
                     <li><a href="#">01. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</a></li>
                     <li><a href="#">01. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</a></li>
                     <li><a href="#">01. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
@@ -110,7 +110,114 @@ console.log(x, y, z);    //배운 코드 적는 곳입니다.
 
     <script src="assets/js/prism.js"></script>
     <script>
-    
+        //변수, 상수, 배열, 객체 : 데이터 저장
+        //함수 : 데이터 실행
+
+        // 1. 변수명으로 쓰기에 적절한 것은?
+        // 1 _har 2 2kd 3 var 4 $ab
+        // 2번은 숫자부터라서x 3번은 예약어라서 x  = 반응형웹 317페이지
+
+        // //선언적 함수
+        // {
+        //     function func(){
+        //         document.write("실행되었습니다.");
+        //     }
+        //     func();
+        // }
+        
+        // //익명 함수
+        // //변수 안에 함수를 넣어서 실행한다.
+        // {
+        //     const func = function(){
+        //         document.write("실행되었습니다.");
+        //     }
+        //     func();
+        // }
+
+        // //매개변수 함수
+        // //속성 값을 전달시킨다
+        // {
+        //     function func(str){
+        //         document.write(str);
+        //     }
+        //     func("실행되었습니다.<br>");
+        // }
+
+        // //리턴값 함수
+        // //리턴값 = 결과or끝
+        // {
+        //     function func(){
+        //         const str = "함수가 실행되었습니다.<br><br>";
+        //         return str;
+        //     }
+        //     document.write(func());
+        // }
+
+        // //화살표 함수 : 선언적 함수
+        // //함수 선언(function) 생략
+        // {
+        //     func = () => document.write("실행되었습니다.<br>");
+        //     func();
+        // }
+
+        // //화살 : 익명
+        // {
+        //     const func = () => {
+        //         document.write("실행되었습니다.<br>");      //위처럼 중괄호 생략 가능
+        //     }
+        //     func();
+        // }
+
+        // //화살 : 맥앱ㄴ수
+        // {
+        //     func = (str) => {
+        //         document.write(str);
+        //     }
+        //     func("실행되었습니다.<br>")
+        // }
+
+        // //리턴
+        // {
+        //     func = () => {
+        //         const str = "실행되었습니다.<br>";
+        //         return str;
+        //     }
+        //     document.write(func());
+        // }
+
+
+        
+        //선언적 함수
+        {
+            function func(){
+                document.write("실행합니다.<br>");
+            }
+            func();
+        }
+        //익명 함수
+        {
+            const func = function(){
+                document.write("실행합니다.<br>")
+            }
+            func();
+        }
+        //매개변수 함수
+        {
+            const str = "실행함.<br>"
+
+            function func(str){
+                document.write(str);
+            }
+            func(str);
+        }
+        //리턴값 함수
+        {
+            function func(){
+                const str = "실행합니다.<br>"
+                return str;
+            }
+            document.write(func());
+        }
     </script>
 
 </body>
