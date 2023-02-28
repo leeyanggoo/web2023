@@ -4,93 +4,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃08 - float 유형 - 반응형</title>
+    <title>레이아웃18 - flex 유형 - 반응형</title>
     <style>
         * {
             margin: 0;
             padding: 0;
         }
-        .clearfix::before,
-        .clearfix::after {
-            content: '';
-            display: block;
-            line-height: 0;
-        }
-        .clearfix::after {
-            clear: both;
-        }
         body {
             background-color: #E1F5FE;
         }
-        #wrap{
+        #wrap {
             width: 1200px;
             margin: 0 auto;
         }
-        #header{
+        #header {
             width: 100%;
             height: 100px;
             background-color: #B3E5FC;
         }
-        #nav{
+        #nav {
             width: 100%;
             height: 100px;
             background-color: #81D4FA;
         }
-        #main{
-            width: 100%;
+        #main {
+            /* width: 100%; */
+            /* height: 780px; */
+            /* background-color: #4FC3F7;  */
+            display: flex;
+            flex-wrap: wrap;
         }
         #aside {
-            width: 30%;
+            width: 20%;
             height: 780px;
             background-color: #4FC3F7;
-            float: left;
+        }
+        #container {
+            width: 80%;
         }
         #article1 {
-            width: 70%;
+            width: 100%;
             height: 260px;
             background-color: #29B6F6;
-            float: left;
         }
         #article2 {
-            width: 70%;
+            width: 100%;
             height: 260px;
             background-color: #03A9F4;
-            float: left;
         }
         #article3 {
-            width: 70%;
+            width: 100%;
             height: 260px;
             background-color: #039BE5;
-            float: left;
         }
-        #footer{
+        #footer {
             width: 100%;
             height: 100px;
             background-color: #0288D1;
         }
         @media (max-width: 1220px){
-            #wrap {
+            #wrap{
                 width: 96%;
             }
-            #article2{
-                width: 35%;
+            #container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            #article1 {
+                width: 100%;
+                height: 260px;
+            }
+            #article2 {
+                width: 50%;
                 height: 520px;
             }
-            #article3{
-                width: 35%;
+            #article3 {
+                width: 50%;
                 height: 520px;
             }
         }
         @media (max-width: 768px){
-            #wrap {
+            #wrap{
                 width: 100%;
             }
             #article1 {
-                width: 70%;
+                width: 100%;
                 height: 390px;
             }
             #article2 {
-                width: 70%;
+                width: 100%;
                 height: 390px;
             }
             #article3 {
@@ -101,6 +103,9 @@
             #aside {
                 width: 100%;
                 height: 200px;
+            }
+            #container {
+                width: 100%;
             }
             #article1 {
                 width: 100%;
@@ -115,15 +120,17 @@
 </head>
 <body>
     <div id="wrap">
-        <div id="header"></div>
-        <div id="nav"></div>
-        <div id="main" class="clearfix">
-            <div id="aside"></div>
-            <div id="article1"></div>
-            <div id="article2"></div>
-            <div id="article3"></div>
-        </div>
-        <div id="footer"></div>
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <main id="main">
+            <aside id="aside"></aside>
+            <div id="container">
+                <article id="article1"></article>
+                <article id="article2"></article>
+                <article id="article3"></article>
+            </div>
+        </main>
+        <footer id="footer"></footer>
     </div>
 </body>
 </html>

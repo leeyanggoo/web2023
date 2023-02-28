@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃07 - float 유형 - 반응형</title>
+    <title>레이아웃17 - flex 유형 - 반응형</title>
     <style>
         * {
             margin: 0;
@@ -27,26 +27,27 @@
             height: 100px;
             background-color: #A5D6A7;
         }
-        #section {
-            overflow: hidden;
+        #main {
+            /* width: 100%; */
+            /* height: 780px;
+            background-color: #81C784; */
+            display: flex;
+            flex-wrap: wrap;
         }
         #article1 {
-            width: 30%;
+            width: 20%;
             height: 780px;
             background-color: #81C784;
-            float: left;
         }
         #article2 {
-            width: 40%;
+            width: 60%;
             height: 780px;
             background-color: #66BB6A;
-            float: left;
         }
         #article3 {
-            width: 30%;
+            width: 20%;
             height: 780px;
             background-color: #4CAF50;
-            float: left;
         }
         #footer {
             width: 100%;
@@ -89,26 +90,14 @@
 </head>
 <body>
     <div id="wrap">
-        <div id="header"></div>
-        <div id="nav"></div>
-        <div id="section">
-            <div id="article1"></div>
-            <div id="article2"></div>
-            <div id="article3"></div>
-        </div>
-        <div id="footer"></div>
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <main id="main">
+            <article id="article1"></article>
+            <article id="article2"></article>
+            <article id="article3"></article>
+        </main>
+        <footer id="footer"></footer>
     </div>
 </body>
 </html>
-
-
-    <!-- clearfix
-    .clearfix::before,
-    .clearfix::after {
-        content: "";
-        display: block;
-        line-height: 0;
-    }
-    .clearfix::after{
-        clear: both;
-    } -->

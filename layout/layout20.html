@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃20 - flex 유형 - 반응형</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #EEEBE9;
+        }
+        #nav {
+            width: 100%;
+            height: 100px;
+            background-color: #B9AAA5;
+        }
+        #main {
+            width: 100%;
+            height: 780px;
+            background-color: #886F65;
+        }
+        #main .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .container {
+            width: 1200px;
+            height: inherit;
+            margin: 0 auto;
+            background-color: rgba(0,0,0,0.2);
+        }
+        #article1 {
+            width: 100%;
+            height: 100px;
+            background-color: #74574A;
+        }
+        .section1 {
+            width: 100%;
+            /* display: flex;
+            flex-wrap: wrap; */
+        }
+        #article2 {
+            width: 100%;
+            height: 200px;
+            background-color: #684D43;
+        }
+        .section2 {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #article3 {
+            width: 50%;
+            height: 480px;
+            background-color: #594139;
+        }
+        #article4 {
+            width: 50%;
+            height: 480px;
+            background-color: #4A352F;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #4E342E;
+        }
+        @media (max-width: 1220px){
+            #container {
+                width: 96%;           
+            }
+            #article1 {
+                width: 30%;
+                height: 780px;
+            }
+            .section1{
+                width: 70%;
+            }
+            #article2 {
+                width: 100%;
+                height: 390px;
+            }
+            #article3 {
+                height: 390px;
+            }
+            #article4 {
+                height: 390px;
+            }
+        }
+        @media (max-width: 768px){
+            .container {
+                width: 100%;
+            }
+            #article2 {
+                height: 260px;
+            }
+            #article3 {
+                width: 100%;
+                height: 260px;
+            }
+            #article4 {
+                width: 100%;
+                height: 260px;
+            }
+        }
+        @media (max-width: 600px){
+            #article1 {
+                width: 100%;
+                height: 150px;
+            }
+            .section1{
+                width: 100%;
+            }
+            #article2 {
+                height: 210px;
+            }
+            #article3 {
+                height: 210px;
+            }
+            #article4 {
+                height: 210px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+        <header id="header">
+            <div class="container"></div>
+        </header>
+        <nav id="nav">
+            <div class="container"></div>
+        </nav>
+        <main id="main">
+            <div class="container">
+                <article id="article1"></article>
+                <div class="section1">
+                    <article id="article2"></article>
+                    <div class="section2">
+                        <article id="article3"></article>
+                        <article id="article4"></article>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="container"></div>
+        </footer>
+</body>
+</html>

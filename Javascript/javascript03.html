@@ -58,46 +58,127 @@
                     <li><a href="#">07. 화살표 함수 : 매개변수 함수</a></li>
                     <li><a href="#">08. 화살표 함수 : 리턴값 함수</a></li>
 
-                    <li><a href="#">01. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</a></li>
-                    <li><a href="#">01. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</a></li>
-                    <li><a href="#">01. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
-                    <li><a href="#">01. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
+                    <li><a href="#">09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</a></li>
+                    <li><a href="#">10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</a></li>
+                    <li><a href="#">11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
+                    <li><a href="#">12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
 
-                    <li><a href="#">01. 함수 유형 : 함수와 매개변수를 이용한 형태</a></li>
-                    <li><a href="#">01. 함수 유형 : 함수와 변수를 이용한 형태</a></li>
-                    <li><a href="#">01. 함수 유형 : 함수와 배열, 객체를 이용한 형태</a></li>
-                    <li><a href="#">01. 함수 유형 : 함수와 객체 안에 변수와 함수를 이용한 형태</a></li>
-                    <li><a href="#">01. 함수 유형 : 객체 생성자 함수</a></li>
-                    <li><a href="#">01. 함수 유형 : 프로토타입 함수</a></li>
-                    <li><a href="#">01. 함수 유형 : 객체 리터럴 함수</a></li>
+                    <li><a href="#">13. 함수 유형 : 함수와 매개변수를 이용한 형태</a></li>
+                    <li><a href="#">14. 함수 유형 : 함수와 변수를 이용한 형태</a></li>
+                    <li><a href="#">15. 함수 유형 : 함수와 배열, 객체를 이용한 형태</a></li>
+                    <li><a href="#">16. 함수 유형 : 함수와 객체 안에 변수와 함수를 이용한 형태</a></li>
+                    <li><a href="#">17. 함수 유형 : 객체 생성자 함수</a></li>
+                    <li><a href="#">18. 함수 유형 : 프로토타입 함수</a></li>
+                    <li><a href="#">19. 함수 유형 : 객체 리터럴 함수</a></li>
 
-                    <li><a href="#">01. 함수 유형 : 즉시 실행 함수</a></li>
-                    <li><a href="#">01. 함수 유형 : 파라미터 함수</a></li>
-                    <li><a href="#">01. 함수 유형 : 아규먼트 함수</a></li>
-                    <li><a href="#">01. 함수 유형 : 재귀 함수</a></li>
-                    <li><a href="#">01. 함수 유형 : 콜백 함수</a></li>
-                    <li><a href="#">01. 함수 유형 : promise 함수</a></li>
-                    <li><a href="#">01. 함수 유형 : 내부 함수</a></li>
-                    <li><a href="#">01. 함수 유형 : 내부 함수 : 스코프, 클로저</a></li>
+                    <li><a href="#">20. 함수 유형 : 즉시 실행 함수</a></li>
+                    <li><a href="#">21. 함수 유형 : 파라미터 함수</a></li>
+                    <li><a href="#">22. 함수 유형 : 아규먼트 함수</a></li>
+                    <li><a href="#">23. 함수 유형 : 재귀 함수</a></li>
+                    <li><a href="#">24. 함수 유형 : 콜백 함수</a></li>
+                    <li><a href="#">25. 함수 유형 : promise 함수</a></li>
+                    <li><a href="#">26. 함수 유형 : 내부 함수</a></li>
+                    <li><a href="#">27. 함수 유형 : 내부 함수 : 스코프, 클로저</a></li>
 
-                    <li><a href="#">01. 클래스</a></li>
-                    <li><a href="#">01. 클래스 상속</a></li>
+                    <li><a href="#">28. 클래스</a></li>
+                    <li><a href="#">29. 클래스 상속</a></li>
                 </ul>
             </div>
             <div class="main__sample">
                 <div id="sample01" class="sample">
-                    <h3>01. 제목입니다</h3>
-                    <p>간략한 내용입니다.</p>
+                    <h3>01. 선언적 함수</h3>
+                    <p>선언적 함수는 'function'이라는 예약어로 함수명을 명시하고, 함수 내용을 중괄호({ })로 감싸는 방식입니다.</p>
                     <div class="script">
-<pre class="line-numbers"><code class="language-js">{
-let x = 100, y = 200, z = "javascript";
-
-console.log(x, y, z);    //배운 코드 적는 곳입니다.
+<pre class="line-numbers"><code class="language-js">say();      //함수가 호출되기 전에 선언
+function say(){
+    console.log("Hello, World!");
 }
 </pre></code>
                     </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                Hello, World!<br>                                
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <p>함수 이름을 지정하고 실행할 명령들을 묶는 것을 '함수를 선언한다'고 합니다.<br>
+                           그리고 이렇게 미리 선언해놓은 함수를 실행할 때는 '함수명( )'과 같이 함수 이름뒤에 소괄호'( )'를 붙여 사용합니다.<br>
+                           이걸 '함수를 호출한다'고 합니다.<br><br>
+                           웹 브라우저에서는 자바스크립트 소스를 해석할 때 변수나 함수 선언을 먼저 해석합니다.<br>
+                           때문에 앞에 쓰인 호출 선언은 변수나 함수를 선언하기 전에 해당 변수나 함수를 사용할 수 있는 것처럼 보이게 됩니다.<br>
+                           이런 자바스트립트 성질을 끌어올려 해석하는 것을 '호이스팅(Hoisting)'이라고 합니다.</p>
+                    </div>
                 </div>
                 <!-- //sample01 -->
+
+                <div id="sample02" class="sample">
+                    <h3>02. 익명 함수</h3>
+                    <p>익명 함수는 변수에 함수를 저장하여 변수를 함수처럼 사용할 수 있도록 만들어줍니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">let addNumbers = function(){
+    let x = 2;
+    let y = 3;
+    let result = x + y;
+    console.log(result);
+}
+addNumbers();		//변수를 호출하면 변수 안의 함수가 실행
+</pre></code>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                5<br>                                
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <p>익명 함수는 함수명이 없기 때문에 함수명을 생략하고, 해당 함수를 다른 변수에 할당하거나 다른 함수의 인수로 전달할 수 있습니다.<br>
+                        이 코드는 'addNumbers'라는 변수에 함수가 저장되어 있습니다.<br>
+                        변수를 호출하게 되면 변수 안의 함수가 실행이 되면서 마지막 console.log에서 구한 값을 호출하게 됩니다.</p>
+                    </div>
+                </div>
+                <!-- //sample02 -->
+
+                <div id="sample03" class="sample">
+                    <h3>03. 매개변수 함수</h3>
+                    <p>함수를 선언할 때 사용되는, 외부에서 값을 받는 변수를 '매개변수parameter'라고 합니다.<br>
+                    함수가 호출될 때 넘기는 매개변수 값을 '인수argument'라고 합니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">function allSum(n){
+    let sum = 0;
+    for(let i = 1; i &lt;= n; i++){
+    	sum = sum + i;	//sum += i
+    }
+    console.log(`1부터 ${n}까지 더하면 ${sum}입니다.`);
+}
+allSum(10);
+</pre></code>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                1부터 10까지 더하면 55입니다.<br>                                
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <p>매개변수는 함수의 소괄호'( )' 안에 매개변수의 이름을 넣고, 여러 개의 매개변수가 필요한 경우 쉼표' , '로 나열합니다.<br>
+                        매개변수는 어떤 값을 받느냐에 따라 함수의 다양한 결과를 보여주게 됩니다.<br>
+                        이렇게 하나의 함수를 여러 상황에서 사용하는 것을 '함수의 재사용성'이라고 합니다.<br><br>
+                        위의 코드는 인수에 어떤 숫자를 넣느냐에 따라 1부터 n까지 더하는 코드입니다.<br>
+                        함수가 호출되는 순서는 다음과 같습니다.<br><br>
+                        1. 함수를 호출하는 맨밑의 allSum( )에 인수 10이 들어갑니다.<br>
+                        2. 인수 10은 매개변수 n에 넘겨집니다.<br>
+                        3. 함수 안의 실행문이 진행되고 console.log에 n과 sum의 값이 들어갑니다.</p>
+                    </div>
+                </div>
+                <!-- //sample03 -->
+
             </div> <!--mian_sample 끝-->      
         </div> <!--.container 끝 / sample 마무리하면 끝에 항상 2개 /div 있어야 함-->
     </main>
@@ -110,113 +191,30 @@ console.log(x, y, z);    //배운 코드 적는 곳입니다.
 
     <script src="assets/js/prism.js"></script>
     <script>
-        //변수, 상수, 배열, 객체 : 데이터 저장
-        //함수 : 데이터 실행
-
-        // 1. 변수명으로 쓰기에 적절한 것은?
-        // 1 _har 2 2kd 3 var 4 $ab
-        // 2번은 숫자부터라서x 3번은 예약어라서 x  = 반응형웹 317페이지
-
-        // //선언적 함수
-        // {
-        //     function func(){
-        //         document.write("실행되었습니다.");
-        //     }
-        //     func();
-        // }
-        
-        // //익명 함수
-        // //변수 안에 함수를 넣어서 실행한다.
-        // {
-        //     const func = function(){
-        //         document.write("실행되었습니다.");
-        //     }
-        //     func();
-        // }
-
-        // //매개변수 함수
-        // //속성 값을 전달시킨다
-        // {
-        //     function func(str){
-        //         document.write(str);
-        //     }
-        //     func("실행되었습니다.<br>");
-        // }
-
-        // //리턴값 함수
-        // //리턴값 = 결과or끝
-        // {
-        //     function func(){
-        //         const str = "함수가 실행되었습니다.<br><br>";
-        //         return str;
-        //     }
-        //     document.write(func());
-        // }
-
-        // //화살표 함수 : 선언적 함수
-        // //함수 선언(function) 생략
-        // {
-        //     func = () => document.write("실행되었습니다.<br>");
-        //     func();
-        // }
-
-        // //화살 : 익명
-        // {
-        //     const func = () => {
-        //         document.write("실행되었습니다.<br>");      //위처럼 중괄호 생략 가능
-        //     }
-        //     func();
-        // }
-
-        // //화살 : 맥앱ㄴ수
-        // {
-        //     func = (str) => {
-        //         document.write(str);
-        //     }
-        //     func("실행되었습니다.<br>")
-        // }
-
-        // //리턴
-        // {
-        //     func = () => {
-        //         const str = "실행되었습니다.<br>";
-        //         return str;
-        //     }
-        //     document.write(func());
-        // }
-
-
-        
-        //선언적 함수
+        // 09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값
+        //화살표 함수는 바로 알아보기 어려워서 변수로 자주 바꾼다.
         {
-            function func(){
-                document.write("실행합니다.<br>");
-            }
-            func();
-        }
-        //익명 함수
-        {
-            const func = function(){
-                document.write("실행합니다.<br>")
-            }
-            func();
-        }
-        //매개변수 함수
-        {
-            const str = "실행함.<br>"
-
-            function func(str){
-                document.write(str);
-            }
-            func(str);
-        }
-        //리턴값 함수
-        {
-            function func(){
-                const str = "실행합니다.<br>"
+            const func = (str) => {
                 return str;
             }
-            document.write(func());
+            document.write(func("실행되었습니다1"));
+        }
+        // 10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략
+        {
+            const func = str => {
+                return str;
+            }
+            document.write(func("실행되었습니다2"));
+        }
+        // 11. +리턴 생략
+        {
+            const func = str => str;
+            document.write(func("실행되었습니다3"));
+        }
+        // 12. 선언적 함수
+        {
+            func = str => str;
+            document.write(func("실행되었습니다4"));
         }
     </script>
 

@@ -54,14 +54,15 @@
                     <li><a href="#">03. 삼항 연산자</a></li>
                     <li><a href="#">04. 다중 if문(else if)</a></li>
                     <li><a href="#">05. 중첩 if문</a></li>
-
                     <li><a href="#">06. switch문</a></li>
+
                     <li><a href="#">07. while문</a></li>
                     <li><a href="#">08. do while문</a></li>
                     <li><a href="#">09. for문</a></li>
                     <li><a href="#">10. 중첩 for문</a></li>
-                    <li><a href="#">01. break문</a></li>
-                    <li><a href="#">01. continue문</a></li>
+
+                    <li><a href="#">11. break문</a></li>
+                    <li><a href="#">12. continue문</a></li>
                 </ul>
             </div>
             <div class="main__sample">
@@ -95,7 +96,7 @@
 
                 <div id="sample02" class="sample">
                     <h3>02. if문 생략</h3>
-                    <p>if문의 {}를 제거하고 간략히 if문을 표현할 수 있습니다.</p>
+                    <p>if문의 중괄호({ })를 제거하고 간략히 if문을 표현할 수 있습니다.</p>
                     <div class="script">
 <pre class="line-numbers"><code class="language-js">const num = 100;
 
@@ -229,12 +230,111 @@ if(num == 100){
                 </div>
                 <!-- //sample05 -->
 
+                <div id="sample06" class="sample">
+                    <h3>06. switch문</h3>
+                    <p>switch문은 여러 개의 조건식을 한번에 검사할 때 사용됩니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">const num = 100;
+
+switch(num){
+    case 90:
+        document.write("구십");
+        break;      //조건에 맞으면 멈춤
+    case 80:
+        document.write("팔십");
+        break;
+    case 70:
+        document.write("칠십");
+        break;
+    case 60:
+        document.write("육십");
+        break;
+    case 50:
+        document.write("오십");
+        break;
+    default:
+        document.write("빵");
+}
+</pre></code>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                <p>변수 num의 값이 100이고 맞는 조건이 없으므로 결과는 "빵"</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <p>switch문은 주어진 조건에 해당하는 true를 case문에서 찾아간다는 점에서 다중 if문과 구조가 비슷하다.<br>
+                        그러나 다중 if문이 결과를 찾을 때까지 실행을 계속한다면, switch문은 맞는 결과가 나왔을 때 break문으로 불필요한 계산을 멈출 수 있다.</p>
+                    </div>
+                </div>
+                <!-- //sample06 -->
+
+                <div id="sample07" class="sample">
+                    <h3>07. while문</h3>
+                    <p>while문은 조건이 참(true)인 동안 문장을 반복합니다. 조건이 false라면 문장은 한 번도 실행되지 않을 수도 있습니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">for(let i=0; i&lt;=5; i++){
+    document.write(i);
+}
+
+let num = 0;                    //초깃값
+while(num&lt;=5){               //조건식
+    document.write(num);
+    num++;                      //명령문(flase가 나오도록 하는 계산식)
+}
+</pre></code>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                <p>012345</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <p>while문은 for문과 구조가 비슷하다.<br>
+                        다른 점은 while문은 조건이 참이라면 false가 나오기 전까지 계속 계산을 진행한다는 점이다.<br>
+                        그래서 증감식이나 변수, break문을 이용하여 false가 나오는 때를 정해줘야 한다.</p>
+                    </div>
+                </div>
+                <!-- //sample07 -->
+
+                <div id="sample08" class="sample">
+                    <h3>08. do while문</h3>
+                    <p>do while문은 조건이 뒤로 붙습니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">let num = 0;                //초깃값
+do {
+    document.write(num);
+    num++                   //명령문
+} while(num&lt;=5);         //조건식
+</pre></code>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                <p>012345</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <p>do while문은 조건식이 뒤에 붙기 때문에 일단 문장을 한 번 실행한 후 문장을 확인한다.<br>
+                        while문과 do while문 모두 num++와 같은 명령문이 어디에 위치하냐에 따라 값이 달라질 수 있다.</p>
+                    </div>
+                </div>
+                <!-- //sample08 -->
+
                 <div id="sample09" class="sample">
                     <h3>09. for문</h3>
                     <p>for문은 반복적인 작업을 수행할 때 사용하는 제어문입니다.</p>
                     <div class="script">
 <pre class="line-numbers"><code class="language-js">for(let i = 1; i&lt;=100; i++){
-document.write(i);
+    document.write(i);
 }
 </pre></code>
                     </div>
@@ -260,6 +360,110 @@ document.write(i);
                 </div>
                 <!-- //sample09 -->
 
+                <div id="sample10" class="sample">
+                    <h3>10. 중첩 for문</h3>
+                    <p>중첩된 for문은 순서를 이해하고 쓰는 것이 중요합니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">for(let i=2; i&lt;=9; i++){
+    document.write(i + "단","<br>");
+
+    for(let j=1; j&lt;=9; j++){
+        document.write(i +"*"+ j +"="+ i*j);    //*, = 은 화면상에 출력해야 하는 '문자열'이다.
+        document.write("&lt;br>");
+    }
+}
+</pre></code>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>
+                                for(let i=2; i<=9; i++){
+                                    document.write(i + "단","<br>");
+                                
+                                    for(let j=1; j<=9; j++){
+                                        document.write(i +"*"+ j +"="+ i*j);    //*, = 은 화면상에 출력해야 하는 '문자열'이다.
+                                        document.write("<br>");
+                                    }
+                                }
+                            </script>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <p>중첩 for문은 순서를 이해하는 게 중요하다.</p>
+                        <p>첫 번째 for문이 한 번 진행되면 그 뒤의 for문은 끝날 때까지 진행된다.</p>
+                        <p>이 순서를 이해하면 첫 for문에 몇 단부터 시작할 것인지 넣을 수 있다(i=시작하는 단; i&lt;=끝나는 단).</p>
+                        <p>document.write에 이어 나오는 문자(태그)는 쉼표(,)로 잇는다. CSS처럼</p>
+                        <p>두 번째 for문에서 화면에 출력하기 위한 '*'와 '='에 따음표를 붙이는 걸 잊지 말자.</p>
+                        <p>앞의 i, j는 출력하기 위해서 뒤의 i, j는 연산을 위해서.</p>
+                    </div>
+                </div>
+                <!-- //sample10 -->
+
+                <div id="sample11" class="sample">
+                    <h3>11. break문</h3>
+                    <p>break문은 종료 조건이 되기 전에 반복문을 끝낼 수 있습니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">for(let i = 1; i &lt;=20; i++){
+    if(i == 10){
+        break;      //10까지 하고 멈춤
+    }
+    document.write(i)
+}
+</pre></code>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>
+                                for(let i = 1; i <=20; i++){
+                                    if(i == 10){
+                                        break;      //10까지 하고 멈춤
+                                    }
+                                    document.write(i)
+                                }
+                            </script>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <p>원래대로의 for문이라면 i가 20까지 반복되기 때문에 1부터 20까지 출력해야 한다.<br>
+                        하지만 if문의 break가 있기 때문에 i가 10이 되면 실행을 멈추고 break문까지의 결과만 출력한다.</p>
+                    </div>
+                </div>
+                <!-- //sample11 -->
+
+                <div id="sample12" class="sample">
+                    <h3>12. continue문</h3>
+                    <p>continue문은 조건에 해당되는 값을 만나면 건너뜁니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">for(let i = 1; i &lt;=20; i++){
+    if(i == 10){
+        continue;       //10을 건너뜀
+    }
+    document.write(i)   //continue 앞에 쓰면 출력을 먼저 해서 출력 결과가 달라짐
+}
+</pre></code>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>
+                                for(let i = 1; i <=20; i++){
+                                    if(i == 10){
+                                        continue;       //10을 건너뜀
+                                    }
+                                    document.write(i)   //continue 앞에 쓰면 출력을 먼저 해서 출력 결과가 달라짐
+                                }
+                            </script>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <p>원래대로의 for문이라면 i가 20까지 반복되기 때문에 1부터 20까지 출력해야 한다.<br>
+                        하지만 if문의 continue문이 있기 때문에 10을 건너뛴 나머지 값만 출력한다.</p>
+                    </div>
+                </div>
+                <!-- //sample12 -->
+
             </div> <!--mian_sample 끝-->      
         </div> <!--.container 끝 / sample 마무리하면 끝에 항상 2개 /div 있어야 함-->
         </div>
@@ -273,84 +477,9 @@ document.write(i);
 
     <script src="assets/js/prism.js"></script>
     <script>
-    // // {
-    //     const arr = [1,2,3,4,5,6,7,8,9];
-
-    // //     for(let i = 0; i<arr.length; i++){
-    // //         document.write(arr[i]);
-    // //     }
-    // // document.write("<br>");
-    // //     //짝수
-    // //     for(let i = 1; i<arr.length; i+=2){
-    // //         document.write(arr[i]);            
-    // //     }
-    // // document.write("<br>");
-    // //     //홀수
-    // //     for(let i = 0; i<arr.length; i+=2){
-    // //         document.write(arr[i]);            
-    // //     }
-    // // document.write("<br>");
-        
-    //     //짝수 if문
-    //     for(let i = 1; i<arr.length; i++){
-    //         if(i % 2 == 0){
-    //             document.write("<span style='color:red'>"+i+"</span>");
-    //         } else {
-    //             document.write(`<span style='color:blue'>${i}</span>`);
-    //         }
-    //     }
-    // document.write("<br>");
     
-    //table만들기
-    // let table = "<table border='1'>"
-
-    // for(let i = 1; i<=10; i++){
-    //     table += "<tr>"
-    //     for(let j = 1; j<=10; j++){
-    //         table += "<td>"+j+"</td>";
-    //     }
-    //     table += "/<tr>"
-    // }
-    // document.write(table);
-
-    // //1~25
-    // for(let i = 1; i<=25; i++){
-    //     document.write(i);
-    // }
-
-    // // let num = 1;
-    // for(let i = 1; i<=25; i++){
-    //     document.write(i);
-    //     num++;              //이걸 이용하면 테이블에 숫자 순서대로 넣을 수 있다.
-    // }
-    // document.write("<br>");
-    // document.write(num);
-
-// let num = parseInt(prompt("1보다 큰 수를 입력하세요."));
-// let sum = 0;
-
-// // 입력한 수까지 반복하면서 짝수인 경우에만 sum 변수에 더함
-// for (let i = 1; i <= num; i++) {
-//     if (i % 2 === 0) {
-//         sum += i;
-//         console.log(i + "------" + sum + "</br>");
-//     }
-// }
-
-
-// let n = parseInt(prompt("1보다 큰 숫자를 입력하세요."));
-// let sum = 0;
-
-// if( n !== null && n > 1) {
-//     for(let i = 1; i <= n ; i++) {
-//         if(i % 2 == 1) {
-//             continue;
-//         }
-//         sum += i;
-//         console.log(`${i} ----- ${sum} <br>`);
-//     }
-// }
-
+    
+    
     </script>
 
 </body>

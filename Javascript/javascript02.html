@@ -220,7 +220,7 @@ console.log(arr.length)
 // console.log(arr[1]);
 // console.log(arr[2]); ...
 
-    for(let i = 0; i<9; i++){
+    for(let i = 0; i&lt;9; i++){
         console.log(arr[i]);
     }
     for(let i = 8; i>=0; i--){
@@ -248,6 +248,36 @@ console.log(arr.length)
                 </div>
                 <!-- //sample06 -->
 
+                <div id="sample07" class="sample">
+                    <h3>07. 배열 : 데이터 불러오기 : 중첩 for()문</h3>
+                    <p>for()문이 중첩된 코드를 불러오는 방법입니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">for( let i=1; i&lt;=10; i++ ){
+    console.log("i : " + i)
+    for( let j=1; j&lt;=10; j++ ){
+        console.log("j : " + j)
+        //console.log(i+"+"+j+"="+(i+j))
+    }               
+}
+</pre></code>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                123...8910123...8910<br>
+                                1+1=2 1+2=3 ... 10+9=19 10+10=20
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <p>for문이 중첩된 경우 위의 코드처럼 각각의 for문을 불러올 수 있다.<br>
+                        만약 불러와야 하는 결괏값이 i+j인 경우,<br>
+                        for문의 끝에 console.log(i+"+"+j+"="+i+j)로 표기할 수 있다.</p>
+                    </div>
+                </div>
+                <!-- //sample07 -->
+
             </div> <!--mian_sample 끝 -->      
         </div> <!--.container 끝 / sample 마무리하면 끝에 항상 2개 /div 있어야 함-->
     </main>
@@ -260,25 +290,6 @@ console.log(arr.length)
 
     <script src="assets/js/prism.js"></script>
     <script>
-        // 20230223
-        // 06. 배열 : 데이터 불러오기 : for()문 //복습
-        {
-            const A = [1,2,3,4,5,6,7,8,9,10];
-
-            for(let i = 0; i<A.length; i++) {       // length를 쓰면 셀 필요 없이 편하다
-               console.log(A[i]);
-            }
-        }
-        
-        // 07. 배열 : 데이터 불러오기 : 중첩 for()문
-        {
-            for( let i=1; i<=10; i++ ){
-                console.log("i : " + i)
-                for( let j=1; j<=10; j++ ){
-                    console.log("j : " + j)
-                }                    
-            }
-        }
     
     </script>
 
