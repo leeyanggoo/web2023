@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20230303 테스트</title>
+</head>
+<body>
+    <script>
+        //01 1-50까지 for문으로 출력
+        {
+            for(let i=1; i<=50; i++){
+                document.write(i);
+            }
+            document.write("<br>");
+        }
+        //02 1-50까지 while문으로 출력
+        {
+            num = 1;
+            while(num <= 50){
+                document.write(num);
+                num++;
+            }
+            document.write("<br>");
+        }
+        //03 1-100까지 짝수로 출력(if문 사용X)
+        {
+            for(let i=2; i<=100; i+=2){
+                document.write(i);
+            }
+        }
+        document.write("<br>");
+        //04 1-100까지 홀수로 출력(if문 사용)
+        {
+            for(let i=1; i<=100; i++){
+                if(i % 2 == 1){
+                    document.write(i);
+                }
+            }
+        }
+        document.write("<br>");
+        //05 테이블 50칸 출력(1-50숫자 출력)
+        {
+            let table = "<table border='1'>"
+            let num = 1;
+
+            for(let i=1; i<=10; i++){
+                table += "<tr>"
+                    for(let j=1; j<=5; j++){
+                        table += `<td>${num}</td>`
+                        num++;
+                    }
+                table += "</tr>"
+            }
+            table += "</table>"
+            document.write(table);
+        }
+        document.write("<br>");
+        //06 1-10까지 합 출력
+        {
+            num = 0;
+            for(let i=1; i<=10; i++){
+                num = num + i;
+            }
+            document.write(num);
+        }
+        document.write("<br>");
+        //07 구구단 출력
+        {
+            for(let i=1; i<=9; i++){
+                document.write(`${i}단<br>`)
+                for(let j=1; j<=9; j++){
+                    document.write(`${i}*${j}=${i*j}`);
+                }
+                document.write("<br>");
+            }
+        }
+        document.write("<br>");
+        //08 함수 유형 4가지 작성
+            //선언적 함수
+            {
+                function func(){
+                    document.write("실행1")
+                }
+                func();
+            }
+            document.write("<br>");
+            //익명 함수
+            {
+                const func = function(){
+                    document.write("실행2")
+                }
+                func();
+            }
+            document.write("<br>");
+            //매개변수 함수
+            {
+                function func(str){
+                    document.write(str);
+                }
+                func("실행3")
+            }
+            document.write("<br>");
+            //리턴 함수
+            {
+                function func(){
+                    let str = "실행4"
+                    return str;
+                }
+                document.write(func());
+            }
+            document.write("<br>");
+            //09 화살표 함수유형 4가지 작성
+            //화살표 선언적 함수
+            {
+                func = () => document.write("실행5")
+                func();
+            }
+            document.write("<br>");
+            //화살표 익명 함수
+            {
+                const func = () => document.write("실행6")
+                func();
+            }
+            document.write("<br>");
+            //화살표 매개변수 함수
+            {
+                func = str => document.write(str);
+                func("실행7")
+            }
+            document.write("<br>");
+            //화살표 리턴 함수
+            {
+                func = () => {
+                    let str = "실행8"
+                    return str;
+                }
+                document.write(func());
+            }
+            document.write("<br>");
+        //10 스크립트하면서 제일 어려운 부분과 이해 안되는 부분 서술
+        //저희가 배운 기능들이 실무에서 어떤 방식으로 쓰이는지 알 수 있다면 더 이해하기 쉬울 것 같습니다!!
+    </script>
+</body>
+</html>

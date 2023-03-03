@@ -689,13 +689,13 @@ obj.f();
                                     b: [200, 300],
                                     c: "javascript",
                                     d: function(){
-                                        console.log("javascript가 실행되었습니다.");
+                                        document.write("javascript가 실행되었습니다.");
                                     },
                                     e: function(){
-                                        console.log(obj.c + "가 실행되었습니다.");  //(obj.c = j = "javascript")
+                                        document.write(c + "가 실행되었습니다.");  //(obj.c = j = "javascript")
                                     },
                                     f: function(){
-                                        console.log(this.c + "가 실행되었습니다.")  //this는 자신이 속한 객체를 가리킨다.
+                                        document.write(this.c + "가 실행되었습니다.")  //this는 자신이 속한 객체를 가리킨다.
                                     }
                                 }
 
