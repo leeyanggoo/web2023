@@ -8,19 +8,23 @@
 
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
     <style>
+        /* reset */
         * {
             margin: 0;
             padding: 0;
         }
         a {
             text-decoration: none;
+            color: #000;
         }
         h1,h2,h3,h4,h5,h6 {
             font-weight: normal;
         }
         img {
             vertical-align: top;
+            width: 100%;
         }
+        /* common */
         .container {
             width: 1160px;
             margin: 0 auto;
@@ -33,6 +37,8 @@
         }
         .section {
             padding: 120px 0;
+        }
+        .section.center {
             text-align: center;
         }
         .section__h2 {
@@ -46,9 +52,10 @@
             color: #666666;
             margin-bottom: 70px;
             font-weight: 300;
+            line-height: 1.5;
         }
 
-        /* image__wrap */
+        /* image__type */
         .image__inner {
             display: flex;
             justify-content: space-between;
@@ -87,7 +94,7 @@
     </style>
 </head>
 <body>
-    <section class="image__wrap section nexon">
+    <section class="image__wrap section center nexon">
         <div class="container">
             <h2 class="section__h2">Would Smoke?</h2>
             <p class="section__decs">오늘 당신이 태우고 싶은 이야기가 있나요? 편히 쉬세요.</p>
@@ -98,7 +105,7 @@
                     </figure>
                     <div class="image__body">                    
                         <h3 class="title">지금, 여기</h3>
-                        <p class="desc">한 모금의 쉼을 선물하세요.당신의 한숨은 어떻게 생겼나요?</p>
+                        <p class="desc">한 모금의 쉼을 선물하세요. 당신의 한숨은 어떻게 생겼나요?</p>
                         <a href="#" class="btn">자세히 보기</a>
                     </div>
                 </article>
@@ -108,7 +115,7 @@
                     </figure>
                     <div class="image__body">                    
                         <h3 class="title">Cigarette</h3>
-                        <p class="desc">More Cigar, More Peace.How do you split your sigh?</p>
+                        <p class="desc">More Cigar, More Peace. How do you split your sigh?</p>
                         <a href="#" class="btn">자세히 보기</a>
                     </div>
                 </article>

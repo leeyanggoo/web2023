@@ -89,9 +89,9 @@ console.log(z);
                             <summary>결과 확인하기</summary>
                             <script>
                             {
-                                var x = 100;            //변수 x에 숫자 100을 저장함
-                                var y = 200;            //변수 y에 숫자 200을 저장함
-                                var z = "javascript";   //변수 z에 문자 "javascript"를 저장함
+                                var x = 100;
+                                var y = 200;
+                                var z = "javascript";
 
                                 document.write(x+'<br>');
                                 document.write(y+'<br>');
@@ -137,7 +137,7 @@ console.log(z);
 
                                 x = 300;            
                                 y = 200;
-                                z = "react";        //데이터 변경
+                                z = "react";
 
                                 document.write(x+"<br>");
                                 document.write(y+"<br>");
@@ -179,9 +179,9 @@ console.log(z);
                                 let y = 200;
                                 let z = "javascript";
 
-                                x += 300;       //x = x + 300
-                                y += 400;       //y = y + 400
-                                z += "react"    //z = z + "react"
+                                x += 300;
+                                y += 400;
+                                z += "react"
 
                                 document.write(x+"<br>");
                                 document.write(y+"<br>");
@@ -692,20 +692,20 @@ obj.f();
                                         document.write("javascript가 실행되었습니다.");
                                     },
                                     e: function(){
-                                        document.write(c + "가 실행되었습니다.");  //(obj.c = j = "javascript")
+                                        document.write(c + "가 실행되었습니다.");
                                     },
                                     f: function(){
-                                        document.write(this.c + "가 실행되었습니다.")  //this는 자신이 속한 객체를 가리킨다.
+                                        document.write(this.c + "가 실행되었습니다.");
                                     }
                                 }
 
                                 document.write(obj.a+"<br>");
                                 document.write(obj.b[0]+"<br>");
                                 document.write(obj.b[1]+"<br>");
-                                document.write(obj.b[2]+"<br>");          // undefined 정의할 수 없는, 값이 지정되지 않은 경우. null은 변수가 어떤 객체도 가리키고 있지 않은 경우.
+                                document.write(obj.b[2]+"<br>");
                                 document.write(obj.c+"<br>");
-                                document.write(obj.d+"<br>");             // 실행문을 불러올 땐 다른 문법을 써야 한다.
-                                document.write(obj.d()+"<br>");                        // 실행문은 ()를 붙인다.
+                                document.write(obj.d+"<br>");
+                                document.write(obj.d()+"<br>");
                                 document.write(obj.e()+"<br>");
                                 document.write(obj.f()+"<br>");
                             }
@@ -742,7 +742,7 @@ document.write(typeof(y));      //타입 변환
 
                                 document.write(typeof(y)+"<br>");
                                 y = Number(y);
-                                document.write(typeof(y)+"<br>");      //타입 변환
+                                document.write(typeof(y)+"<br>");
                             }
                             </script>
                         </details>
