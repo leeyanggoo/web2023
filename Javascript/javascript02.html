@@ -231,20 +231,30 @@ console.log(arr.length)
 // console.log(arr[1]);
 // console.log(arr[2]); ...
 
-    for(let i = 0; i&lt;9; i++){
-        console.log(arr[i]);
-    }
-    for(let i = 8; i>=0; i--){
-        console.log(arr[i]);
-    }
+for(let i = 0; i&lt;9; i++){
+    console.log(arr[i]);
+}
+for(let i = 8; i>=0; i--){
+    console.log(arr[i]);
+}
 </pre></code>
                     </div>
                     <div class="result">
                         <details>
                             <summary>결과 확인하기</summary>
-                            <div>
-                                100 200 300 400 500 600 700 800 900
-                            </div>
+                            <script>
+                            {
+                                    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+                                    for(let i = 0; i<9; i++){
+                                        document.write(arr[i]);
+                                    }
+                                    document.write("<br>")
+                                    for(let i = 8; i>=0; i--){
+                                        document.write(arr[i]);
+                                    }
+                            }
+                            </script>
                         </details>
                     </div>
                     <div class="notice">
