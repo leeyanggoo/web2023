@@ -357,7 +357,7 @@
     transform-origin: 100% 50%;
     border-radius: 25px 0 0 25px;
     z-index: -2;
-    animation: movetail 0.1s linear infinite alternate forwards;
+    animation: movetail 0.3s linear infinite alternate forwards;
 }
 .dog .legs {
     position: absolute;
@@ -445,6 +445,9 @@
 }
 .like .chin {
     top: 34%;
+}
+.like .tail {
+    animation: movetail 0.1s linear infinite alternate forwards;
 }
 
 .dislike {
