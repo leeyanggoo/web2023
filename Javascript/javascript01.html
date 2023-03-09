@@ -67,8 +67,9 @@
                     <li><a href="#">16. 객체 : 데이터 저장(키와 값) : 표현방법7</a></li>
                     <li><a href="#">17. 객체 : 데이터 저장(키와 값) : 표현방법8</a></li>
                     <li><a href="#">+1. 데이터 저장 : 식별자</a></li>
-                    <li><a href="#">+2. 데이터 저장 : 연산자</a></li>
+                    <li><a href="#">+2. 데이터 저장 : 연산자(전치, 후치)</a></li>
                     <li><a href="#">+3. 데이터 저장 : 형변환, typeof</a></li>
+                    <li><a href="#">+4. 데이터 저장 : 비트 연산자</a></li>
                 </ul>
             </div>
             <div class="main__sample">
@@ -805,8 +806,8 @@ let myVar, myvar
                 <!-- //sample+1 -->
 
                 <div id="sample+2" class="sample">
-                    <h3>+2. 데이터 저장 : 연산자</h3>
-                    <p>연산자는 우선순위가 있어 결괏값에 영향을 미친다.</p>
+                    <h3>+2. 데이터 저장 : 연산자(전치, 후치)</h3>
+                    <p>전치와 후치 연산자는 우선순위가 있어 결괏값에 영향을 미친다. 비트연산자</p>
                     <div class="script">
 <pre class="line-numbers"><code class="language-js">{
     let a = 1, b = 2, c = 3, result;
@@ -920,6 +921,88 @@ document.write(typeof(y));      //타입 변환
                     </div>
                 </div>
                 <!-- //sample+3 -->
+
+                <div id="sample+4" class="sample">
+                    <h3>+4. 데이터 저장 : 비트 연산자</h3>
+                    <p>비트 연산자는 0과 1로 이루어진 2진법의 연산자입니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">let num1 = 16, num2 = 60;
+let result = (num1 > num2) ? num1 & num2 : num1 ^ num2;
+document.write(result);
+document.write(num1 & num2);
+</pre></code>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>
+                            {
+                                let num1 = 16, num2 = 60;
+                                let result = (num1 > num2) ? num1 & num2 : num1 ^ num2;
+                                document.write(`result = ${result}<br>`);
+                                document.write(`num1 & num2 = ${num1 & num2}`);
+                            }
+                            </script>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <p>비트 연산자는 피연산자를 10진수나 16진수나 8진수와 같은 숫자가 아니라, 0과 1로 이루어진 비트(bit)의 집합으로 표현하고 연산하는 연산자입니다.<br>
+                        위의 예시는 num1이 num2보다 작기 때문에 false이므로, "num1 ^ num2"의 계산을 진행합니다. 계산식은 다음과 같습니다.<br>
+                        16: 00010000<br>
+                        60: 00111100<br>
+                        ----------------<br>
+                        XOR: 00101100 (44)<br><br>
+                        만약 "num1 & num2"의 계산일 경우에는<br>
+                        16: 00010000<br>
+                        60: 00111100<br>
+                        ----------------<br>
+                        XOR: 00010000 (16)<br>
+                        의 결과가 나오게 됩니다.<br><br>
+                        비트 연산자에는 다음과 같은 종류가 있습니다.<br></p>
+                        <table border="1">
+                            <thead>
+                              <tr>
+                                <th>연산자</th>
+                                <th>설명</th>
+                                <th>예시</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>~</td>
+                                <td>단항 비트 보수 연산자로, 피연산자의 모든 비트를 반전시킵니다.</td>
+                                <td>~0101은 1010이 됩니다.</td>
+                              </tr>
+                              <tr>
+                                <td>&amp;</td>
+                                <td>이진 논리 AND 연산자로, 두 피연산자의 각 비트를 AND 연산합니다.</td>
+                                <td>0101 &amp; 0011은 0001이 됩니다.</td>
+                              </tr>
+                              <tr>
+                                <td>|</td>
+                                <td>이진 논리 OR 연산자로, 두 피연산자의 각 비트를 OR 연산합니다.</td>
+                                <td>0101 | 0011은 0111이 됩니다.</td>
+                              </tr>
+                              <tr>
+                                <td>^</td>
+                                <td>이진 배타적 OR (XOR) 연산자로, 두 피연산자의 각 비트가 다르면 1을 반환하고 같으면 0을 반환합니다.</td>
+                                <td>0101 ^ 0011은 0110이 됩니다.</td>
+                              </tr>
+                              <tr>
+                                <td>&lt;&lt;, &lt;&lt;=</td>
+                                <td>왼쪽 시프트(shift) 연산자로, 첫 번째 피연산자의 모든 비트를 왼쪽으로 두 번째 피연산자만큼 이동시킵니다. 오른쪽에는 0이 채워집니다.</td>
+                                <td>00010100 &lt;&lt; 2는 01010000이 됩니다.</td>
+                              </tr>
+                              <tr>
+                                <td>&gt;&gt;, &gt;&gt;=</td>
+                                <td>오른쪽 시프트(shift) 연산자로, 첫 번째 피연산자의 모든 비트를 오른쪽으로 두 번째 피연산자만큼 이동시킵니다. 왼쪽에는 부호비트가 채워집니다.</td>
+                                <td>-00010100 &gt;&gt; 2는 -00000101이 됩니다.</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+                <!-- //sample+4 -->
 
             </div>
         </div>
