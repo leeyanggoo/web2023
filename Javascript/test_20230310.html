@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20230310 테스트</title>
+</head>
+<body>
+    <script>
+        //1. 0부터 100까지 for문으로 출력하기
+        {
+            for(let i=0; i<=100; i++){
+                document.write(i)
+            }
+        }
+        document.write("<br>")
+        //2. 100칸 테이블
+        {
+            let table = "<table border='1'>"
+            let num = 1;
+            
+            for(let i=1; i<=10; i++){
+                table += "<tr>"
+                    for(let j=1; j<=10; j++){
+                        table += "<td>"+num+"</td>"
+                        num++;
+                    }
+                table += "</tr>"
+            }
+            table += "</table>"
+            document.write(table);
+        }
+        document.write("<br>")
+        //3. 20단만 출력
+        {
+            let num = 20;
+            document.write(`${num}단<br>`)
+            for(let i=1; i<=9; i++){
+                document.write(`${num}*${i}=${num*i}<br>`)
+            }
+        }
+        document.write("<br>")
+        //4. 1부터 100까지 짝수의 합
+        {
+            let num = 0
+            for(let i=1; i<=100; i++){
+                if(i % 2 == 0){
+                    num += i;
+                }
+            }
+            document.write(num)
+        }
+        document.write("<br>")
+        //5. 1-100까지 출력(짝수는 파란색 홀수는 빨간색)
+        {
+            for(let i=1; i<=100; i++){
+                if(i % 2 == 1){
+                    document.write(`<span style=color:red>${i}</span>`)
+                } else {
+                    document.write(`<span style=color:blue>${i}</span>`)
+                }
+            } 
+        }
+        document.write("<br>")
+        //6. 배열 안에 1-10까지 데이터가 있음 (forEach문을 통해 출력하시오)
+        {
+            let arr = [1,2,3,4,5,6,7,8,9,10]
+            arr.forEach(function(el){
+                document.write(el);
+            })            
+        }
+        document.write("<br>")
+        //7. 함수의 유형 4가지
+        //선언적 함수
+        {
+            function func(){
+                document.write("선언적 함수")
+            }
+            func();
+        }
+        //익명 함수
+        {
+            let func = function(){
+                document.write("익명 함수")
+            }
+            func();
+        }
+        //매개변수 함수
+        {
+            function func(str){
+                document.write(str);
+            }
+            func("매개변수 함수")
+        }
+        //리턴 함수
+        {
+            function func(){
+                let str = "리턴 함수"
+                return str;
+            }
+            document.write(func());
+        }
+        document.write('<br>')
+        //8. 화살표 함수
+        //선언적 함수
+        {
+            func = () => document.write("선언적 함수")
+            func();
+        }
+        //익명 함수
+        {
+            let func = () => document.write("익명 함수")
+            func();
+        }
+        //매개변수 함수
+        {
+            func = str => document.write(str);
+            func("매개변수 함수")
+        }
+        //리턴 함수
+        {
+            func = () => {
+                let str = "리턴 함수"
+                return str;
+            }
+            document.write(func());
+        }
+    </script>
+</body>
+</html>
