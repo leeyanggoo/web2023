@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지/텍스트 유형01</title>
+
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        h1,h2,h3,h4,h5,h6 {
+            font-weight: normal;
+        }
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+
+        .mt10 {margin-top: 0px!important;}
+        .mt20 {margin-top: 10px !important;}
+        .mt30 {margin-top: 20px !important;}
+        .mt40 {margin-top: 30px !important;}
+        .mt50 {margin-top: 40px !important;}
+        .mt60 {margin-top: 50px !important;}
+        .mt70 {margin-top: 60px !important;}
+
+        .mb10 {margin-bottom: 0px!important;}
+        .mb20 {margin-bottom: 10px !important;}
+        .mb30 {margin-bottom: 20px !important;}
+        .mb40 {margin-bottom: 30px !important;}
+        .mb50 {margin-bottom: 40px !important;}
+        .mb60 {margin-bottom: 50px !important;}
+        .mb70 {margin-bottom: 60px !important;}
+        
+        /* common */
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+            /* background-color: rgba(0,0,0,0.1); */
+        }
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section.center {
+            text-align: center;
+        }
+        .section__h2 {
+            font-size: 50px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+        .section__decs {
+            font-size: 22px;
+            color: #666666;
+            margin-bottom: 70px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        /* imgaetext__type */
+        .section__small{
+            font-size: 14px;
+            color: #fff;
+            padding: 1px 23px;
+            background-color:#B06B03;
+            border-radius: 50px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .article__wrap {
+            display: flex;
+            justify-content: space-between;
+        }
+        .article {
+            width: 32.3333%;
+        }
+        .article p {
+            font-size: 16px;
+            color: #666666;
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+        .article ul {
+            list-style-position: inside;
+        }
+        .article li {
+            font-size: 16px;
+            color: #666666;
+            line-height: 1.6;
+        }
+        .article li::marker{
+            content: '🚬 ';
+        }
+        .article__header img {
+            border-radius: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <section class="section nexon">
+        <div class="container">
+            <div class="article__wrap">
+                <div class="article">
+                    <span class="section__small">notice</span>
+                    <h2 class="section__h2">Most Famous CIGAR</h2>
+                    <p>If I can relate to you, I will send my breath. I fly in the blink of an eye.</p>
+                    <ul>
+                        <li>쿠바 시가(Cuban cigar) : 쿠바에서 생산되는 시가로, 매우 유명하고 고품질입니다.</li>
+                        <li>도미니카 시가(Dominican cigar) : 도미니카 공화국에서 생산되는 시가로, 쿠바 시가와 경쟁합니다.</li>
+                        <li>니카라과 시가(Nicaraguan cigar) : 니카라과에서 생산되는 시가로, 강한 맛과 향기가 특징입니다.</li>
+                        <li>할리우드 시가(Hollywood cigar) : 할리우드에서 인기 있는 시가입니다.</li>
+                        <li>플로리다 시가(Florida cigar) : 미국 플로리다 주에서 생산되는 시가르로, 매우 부드러우며 가벼운 향이 특징입니다.</li>
+                    </ul>
+                </div>
+                <div class="article">
+                    <figure class="article__header">
+                        <img src="../assets/img/imgtextType01_01@2x.jpg" alt="cuban cigar">
+                    </figure>
+                </div>
+                <div class="article">
+                    <figure class="article__header">
+                        <img src="../assets/img/imgtextType01_02@2x.jpg" alt="Dominican cigar">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

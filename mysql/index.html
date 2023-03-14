@@ -100,7 +100,7 @@
                 <h2 class="page-header">MySQL</h2>
 
                 <div class="bs-docs-section">
-                    <h3 id="intro1" class="page-header">MySQL</h3>
+                    <h3 id="intro1" class="page-header">😜 MySQL</h3>
                     <p class="lead">MySQL은 오픈 소스 관계형 데이터베이스 관리 시스템(RDBMS)입니다.</p>
                     <p>
                         MySQL은 다양한 운영 체제에서 사용할 수 있으며, 대부분의 웹 응용 프로그램에서 데이터베이스 시스템으로 많이 사용됩니다.
@@ -139,7 +139,7 @@
                 <!-- //intro1 -->
 
                 <div class="bs-docs-section">
-                    <h3 id="intro2" class="page-header">MySQL 설치</h3>
+                    <h3 id="intro2" class="page-header">😜 MySQL 설치</h3>
                     <div class="bs-callout bs-callout-info">
                         MAMP란 웹사이트를 개발할 때 쓰이는 기술 스택인 macOS, Apache, MySQL, PHP의 약어이자 솔루션 스택이다.<br>
                         <a href="https://www.mamp.info/en/downloads/" target="_blank">https://www.mamp.info/en/downloads/</a>                        
@@ -148,7 +148,7 @@
                 <!-- //intro2 -->
 
                 <div class="bs-docs-section">
-                    <h3 id="intro3" class="page-header">MySQL 실행</h3>
+                    <h3 id="intro3" class="page-header">😜 MySQL 실행</h3>
                     <div class="bs-callout bs-callout-info">
                         윈도우 : cd c:\/MAMP/bin/mysql/bin <br>
                         로그인 : mysql -uroot -proot
@@ -187,10 +187,10 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
                 <!-- //intro3 -->
 
                 <div class="bs-docs-section">
-                    <h3 id="intro4" class="page-header">데이터베이스</h3>
+                    <h3 id="intro4" class="page-header">😜 데이터베이스</h3>
                     <h4 id="intro4-1" class="page-header">데이터베이스 보기</h4>
                     <div class="bs-callout bs-callout-info">
-                        show databases;<br>
+                        <code>show</code> <code>databases;</code><br>
                     </div>
 <pre><code class="language-js">mysql> show databases;
 +--------------------+
@@ -205,7 +205,7 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 </code></pre>
                     <h4 id="intro4-2" class="page-header">데이터베이스 만들기</h4>
                     <div class="bs-callout bs-callout-info">
-                        create database 데이터베이스 이름;<br>
+                        <code>create</code> <code>database</code> 데이터베이스 이름;<br>
                     </div>
 <pre><code class="language-js">mysql> create database sample01;
 Query OK, 1 row affected (0.01 sec)     //"sample01" 데이터 생성
@@ -224,14 +224,14 @@ mysql> show databases;
 </code></pre>
                     <h4 id="intro4-3" class="page-header">데이터베이스 사용</h4>
                     <div class="bs-callout bs-callout-info">
-                        use 데이터베이스 이름;
+                        <code>use</code> 데이터베이스 이름;
                     </div>
 <pre><code class="language-js">mysql> use sample01;
 Database changed        //use로 데이터베이스 사용
 </code></pre>
                     <h4 id="intro4-4" class="page-header">데이터베이스 삭제</h4>
                     <div class="bs-callout bs-callout-info">
-                        drop database 데이터베이스 이름;
+                        <code>drop</code> <code>database</code> 데이터베이스 이름;
                     </div>
 <pre><code class="language-js">mysql> drop database sample01;
 Query OK, 0 rows affected (0.03 sec)    //drop으로 삭제
@@ -251,55 +251,56 @@ mysql> show databases;
                 <!-- //intro4 -->
 
                 <div class="bs-docs-section">
-                    <h3 id="intro5" class="page-header">테이블</h3>
+                    <h3 id="intro5" class="page-header">😜 테이블</h3>
                     <h4 id="intro5-1" class="page-header">테이블 만들기</h4>
                     <div class="bs-callout bs-callout-info">
-                        create table 테이블 이름;<br>
+                        <code>create</code> <code>table</code> 테이블 이름;<br>
                     </div>
-<pre><code class="language-js">create table member2 (
-    myMemberID int(10) unsigned auto_increment,
-    youEmail varchar(40) NOT NULL,
-    youName varchar(20) NOT NULL,
-    youPass varchar(20) NOT NULL,
-    youBirth int(20) NOT NULL,
-    youAge int(5) NOT NULL,
-    regTime int(20) NOT NULL,
-    PRIMARY KEY (myMemberID)
+<pre><code class="language-js">create table member(
+memberID int(10) unsigned auto_increment,
+youEmail varchar(40) NOT NULL,
+youName varchar(10) NOT NULL,
+youPass varchar(20) NOT NULL,
+youBirth int(10) NOT NULL,
+youAge int(5) NOT NULL,
+regTime int(30) NOT NULL,
+PRIMARY KEY(memberID)
 ) charset=utf8;
+Query OK, 0 rows affected (0.03 sec)
 </code></pre>
                     <h4 id="intro5-2" class="page-header">테이블 전체 보기</h4>
                     <div class="bs-callout bs-callout-info">
-                        show tables;<br>
+                        <code>show</code> <code>tables;</code><br>
                     </div>
 <pre><code class="language-js">mysql> show tables;
-    +--------------------+
-    | Tables_in_sample01 |
-    +--------------------+
-    | member             |
-    +--------------------+
-    1 row in set (0.00 sec)    
++--------------------+
+| Tables_in_sample01 |
++--------------------+
+| member             |
++--------------------+
+1 row in set (0.00 sec)    
 </code></pre>
                     <h4 id="intro5-3" class="page-header">테이블 보기</h4>
                     <div class="bs-callout bs-callout-info">
-                        desc 테이블 이름;<br>
+                        <code>desc</code> 테이블 이름;<br>
                     </div>
 <pre><code class="language-js">mysql> desc member;
-    +------------+------------------+------+-----+---------+----------------+
-    | Field      | Type             | Null | Key | Default | Extra          |
-    +------------+------------------+------+-----+---------+----------------+
-    | myMemberID | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
-    | youEmail   | varchar(40)      | NO   |     | NULL    |                |
-    | youName    | varchar(20)      | NO   |     | NULL    |                |
-    | youPass    | varchar(20)      | NO   |     | NULL    |                |
-    | youBirth   | int(20)          | NO   |     | NULL    |                |
-    | youAge     | int(5)           | NO   |     | NULL    |                |
-    | regTime    | int(20)          | NO   |     | NULL    |                |
-    +------------+------------------+------+-----+---------+----------------+
-    7 rows in set (0.00 sec)
++----------+------------------+------+-----+---------+----------------+
+| Field    | Type             | Null | Key | Default | Extra          |
++----------+------------------+------+-----+---------+----------------+
+| memberID | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| youEmail | varchar(40)      | NO   |     | NULL    |                |
+| youName  | varchar(10)      | NO   |     | NULL    |                |
+| youPass  | varchar(20)      | NO   |     | NULL    |                |
+| youBirth | int(10)          | NO   |     | NULL    |                |
+| youAge   | int(5)           | NO   |     | NULL    |                |
+| regTime  | int(30)          | NO   |     | NULL    |                |
++----------+------------------+------+-----+---------+----------------+
+7 rows in set (0.00 sec)
 </code></pre>
                     <h4 id="intro5-4" class="page-header">테이블 삭제</h4>
                     <div class="bs-callout bs-callout-info">
-                        drop table 테이블 이름;<br>
+                        <code>drop</code> <code>table</code> 테이블 이름;<br>
                     </div>
 <pre><code class="language-js">mysql> drop table member;
 Query OK, 0 rows affected (0.01 sec)
@@ -312,10 +313,218 @@ Empty set (0.00 sec)
                         <br>
                     </div>
 <pre><code class="language-js">
-    
+
 </code></pre>
                 </div>
                 <!-- //intro5 -->
+
+                <div class="bs-docs-section">
+                    <h3 id="intro6" class="page-header">😜 테이블 데이터</h3>
+                    <h4 id="intro6-1" class="page-header">데이터 입력하기</h4>
+                    <div class="bs-callout bs-callout-info">
+                       <code>INSERT</code> <code>INTO</code> 테이블명(필드명) <code>VALUES();</code><br>
+                    </div>
+<pre><code class="language-js">
+mysql> INSERT INTO member(
+youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("didrn94553@gmail.com", "이양구", "1234", "19941212", "30","03140316");
+
+</code></pre>
+                    <h4 id="intro6-2" class="page-header">데이터 불러오기</h4>
+                    <div class="bs-callout bs-callout-info">
+                        <code>SELECT</code> 필드명 <code>FROM</code> 테이블명 <code>WHERE</code> 조건;<br>
+                    </div>
+                    <br>
+                    <h4>전체 데이터 불러오기</h4>
+<pre><code class="language-js">SELECT * FROM member;      //전체 필드명 = *
++----------+------------------------+---------+---------+----------+--------+---------+
+| memberID | youEmail               | youName | youPass | youBirth | youAge | regTime |
++----------+------------------------+---------+---------+----------+--------+---------+
+|        1 | webstoryboy@naver.com  | 황상연  | 1234    | 19990304 |     26 | 3140316 |
+|        2 | dlscks0930@naver.com   | 황인찬  | 1234    | 19980930 |     26 | 3140316 |
+|        3 | gp2617@naver.com       | 천설희  | 1234    | 19950313 |     29 | 3140316 |
+|        4 | dsy1943@naver.com      | 여다슬  | 1943    | 20011227 |     23 | 3140316 |
+|        5 | 1346zany@gmail.com     | 이승연  | 1234    | 19991216 |     25 | 3140316 |
+|        6 | ebmdols@naver.com      | 장진용  | 1234    | 19940401 |     26 | 3140316 |
+|        7 | jo0132@naver.com       | 노지영  | 1234    | 19950323 |     29 | 3140316 |
+|        8 | skadldldl123@gmail.com | 안교남  | 1234    | 19920923 |     32 | 3140316 |
+|        9 | ehcjswo1@gmail.com     | 김도현  | 123     | 19951003 |     29 | 3140316 |
+|       10 | goed0522@gmail.com     | 변우현  | 1234    | 20000629 |     24 | 3141516 |
+|       11 | yuna243441@naver.com   | 이유나  | 1234    | 20020508 |     22 | 3140316 |
+|       12 | im.kebab00@gmail.com   | 이요셉  | 1234    | 19990315 |     26 | 3140316 |
+|       13 | ture403@gmail.com      | 전윤기  | 1234    | 19920210 |     32 | 3140316 |
+|       14 | dongjin6539@naver.com  | 신동진  | 1234    | 19960709 |     28 | 3140316 |
+|       15 | gnsrbdi@naver.com      | 이훈규  | 1234    | 19950227 |     29 | 3140316 |
+|       16 | jeongyouna_@naver.com  | 정유나  | 1234    | 19950606 |     29 | 3140316 |
+|       17 | daanbi1345@gmail.com   | 조은경  | 1234    | 19930205 |     31 | 3140316 |
+|       18 | hunmi961119@gmail.com  | 진현미  | 1234    | 19961119 |     28 | 3140316 |
+|       19 | getgrovy@gmail.com     | 정희석  | 1234    | 19990101 |     26 | 3140316 |
+|       20 | kshkmn0929@naver.com   | 김도현  | 0929    | 20020929 |     22 | 3140316 |
+|       21 | hyejeong3283@gmail.com | 이혜정  | 1234    | 19940622 |     30 | 3140316 |
+|       22 | didrn94553@gmail.com   | 이양구  | 1234    | 19941212 |     30 | 3140316 |
+|       23 | ghkddn132@naver.com    | 정황우  | 1234    | 19970130 |     25 | 3140316 |
+|       24 | esansi@naver.com       | 김현빈  | 1234    | 19970524 |     27 | 3140316 |
+|       25 | lee3ll@naver.com       | 이은지  | 1234    | 19930311 |     31 | 3140316 |
+|       26 | dripidea77@gmail.com   | 김시연  | 1234    | 19930313 |     31 | 3140316 |
++----------+------------------------+---------+---------+----------+--------+---------+
+26 rows in set (0.00 sec)
+</code></pre>
+                    <br>
+                    <h4>memberID가 1번인 경우만 불러오기</h4>
+<pre><code class="language-js">SELECT * FROM member WHERE memberID=1;
++----------+----------------------+---------+---------+----------+--------+---------+
+| memberID | youEmail             | youName | youPass | youBirth | youAge | regTime |
++----------+----------------------+---------+---------+----------+--------+---------+
+|        1 | didrn94553@gmail.com | 이양구  | 1234    | 19941212 |     30 | 3140316 |
++----------+----------------------+---------+---------+----------+--------+---------+
+1 row in set (0.00 sec)
+</code></pre>
+                    <br>
+                    <h4>memberID가 1번이 아닌 경우만 불러오기</h4>
+<pre><code class="language-js">SELECT * FROM member WHERE memberID &lt;> 1;
++----------+------------------------+---------+---------+----------+--------+---------+
+| memberID | youEmail               | youName | youPass | youBirth | youAge | regTime |
++----------+------------------------+---------+---------+----------+--------+---------+
+|        2 | dlscks0930@naver.com   | 황인찬  | 1234    | 19980930 |     26 | 3140316 |
+|        3 | gp2617@naver.com       | 천설희  | 1234    | 19950313 |     29 | 3140316 |
+|        4 | dsy1943@naver.com      | 여다슬  | 1943    | 20011227 |     23 | 3140316 |
+|        5 | 1346zany@gmail.com     | 이승연  | 1234    | 19991216 |     25 | 3140316 |
+|        6 | ebmdols@naver.com      | 장진용  | 1234    | 19940401 |     26 | 3140316 |
+|        7 | jo0132@naver.com       | 노지영  | 1234    | 19950323 |     29 | 3140316 |
+|        8 | skadldldl123@gmail.com | 안교남  | 1234    | 19920923 |     32 | 3140316 |
+|        9 | ehcjswo1@gmail.com     | 김도현  | 123     | 19951003 |     29 | 3140316 |
+|       10 | goed0522@gmail.com     | 변우현  | 1234    | 20000629 |     24 | 3141516 |
+|       11 | yuna243441@naver.com   | 이유나  | 1234    | 20020508 |     22 | 3140316 |
+|       12 | im.kebab00@gmail.com   | 이요셉  | 1234    | 19990315 |     26 | 3140316 |
+|       13 | ture403@gmail.com      | 전윤기  | 1234    | 19920210 |     32 | 3140316 |
+|       14 | dongjin6539@naver.com  | 신동진  | 1234    | 19960709 |     28 | 3140316 |
+|       15 | gnsrbdi@naver.com      | 이훈규  | 1234    | 19950227 |     29 | 3140316 |
+|       16 | jeongyouna_@naver.com  | 정유나  | 1234    | 19950606 |     29 | 3140316 |
+|       17 | daanbi1345@gmail.com   | 조은경  | 1234    | 19930205 |     31 | 3140316 |
+|       18 | hunmi961119@gmail.com  | 진현미  | 1234    | 19961119 |     28 | 3140316 |
+|       19 | getgrovy@gmail.com     | 정희석  | 1234    | 19990101 |     26 | 3140316 |
+|       20 | kshkmn0929@naver.com   | 김도현  | 0929    | 20020929 |     22 | 3140316 |
+|       21 | hyejeong3283@gmail.com | 이혜정  | 1234    | 19940622 |     30 | 3140316 |
+|       22 | didrn94553@gmail.com   | 이양구  | 1234    | 19941212 |     30 | 3140316 |
+|       23 | ghkddn132@naver.com    | 정황우  | 1234    | 19970130 |     25 | 3140316 |
+|       24 | esansi@naver.com       | 김현빈  | 1234    | 19970524 |     27 | 3140316 |
+|       25 | lee3ll@naver.com       | 이은지  | 1234    | 19930311 |     31 | 3140316 |
+|       26 | dripidea77@gmail.com   | 김시연  | 1234    | 19930313 |     31 | 3140316 |
+|       27 | itshena01@gmail.com    | 조한미  | 1234    | 19930211 |     31 | 3140316 |
++----------+------------------------+---------+---------+----------+--------+---------+
+26 rows in set (0.00 sec)
+</code></pre>
+                    <br>
+                    <h4>youAge가 30 이상 40 이하인 경우 불러오기</h4>
+<pre><code class="language-js">mysql> SELECT * FROM member WHERE youAge >=30 AND youAge &lt;= 40;   //SELECT * FROM member WHERE youAge BETWEEN 30 AND 40;
++----------+------------------------+---------+---------+----------+--------+---------+
+| memberID | youEmail               | youName | youPass | youBirth | youAge | regTime |
++----------+------------------------+---------+---------+----------+--------+---------+
+|        8 | skadldldl123@gmail.com | 안교남  | 1234    | 19920923 |     32 | 3140316 |
+|       13 | ture403@gmail.com      | 전윤기  | 1234    | 19920210 |     32 | 3140316 |
+|       17 | daanbi1345@gmail.com   | 조은경  | 1234    | 19930205 |     31 | 3140316 |
+|       21 | hyejeong3283@gmail.com | 이혜정  | 1234    | 19940622 |     30 | 3140316 |
+|       22 | didrn94553@gmail.com   | 이양구  | 1234    | 19941212 |     30 | 3140316 |
+|       25 | lee3ll@naver.com       | 이은지  | 1234    | 19930311 |     31 | 3140316 |
+|       26 | dripidea77@gmail.com   | 김시연  | 1234    | 19930313 |     31 | 3140316 |
+|       27 | itshena01@gmail.com    | 조한미  | 1234    | 19930211 |     31 | 3140316 |
+|       28 | aimee00418@gmail.com   | 권현정  | 1234    | 19830211 |     39 | 3140316 |
++----------+------------------------+---------+---------+----------+--------+---------+
+9 rows in set (0.00 sec)
+</code></pre>
+                    <br>
+                    <h4>youAge가 30 이상 40 이하가 "아닌(NOT)" 경우 불러오기</h4>
+<pre><code class="language-js">mysql> SELECT * FROM member WHERE youAge NOT BETWEEN 30 AND 40;
++----------+-----------------------+---------+---------+----------+--------+---------+
+| memberID | youEmail              | youName | youPass | youBirth | youAge | regTime |
++----------+-----------------------+---------+---------+----------+--------+---------+
+|        1 | webstoryboy@naver.com | 황상연  | 1234    | 19990304 |     26 | 3140316 |
+|        2 | dlscks0930@naver.com  | 황인찬  | 1234    | 19980930 |     26 | 3140316 |
+|        3 | gp2617@naver.com      | 천설희  | 1234    | 19950313 |     29 | 3140316 |
+|        4 | dsy1943@naver.com     | 여다슬  | 1943    | 20011227 |     23 | 3140316 |
+|        5 | 1346zany@gmail.com    | 이승연  | 1234    | 19991216 |     25 | 3140316 |
+|        6 | ebmdols@naver.com     | 장진용  | 1234    | 19940401 |     26 | 3140316 |
+|        7 | jo0132@naver.com      | 노지영  | 1234    | 19950323 |     29 | 3140316 |
+|        9 | ehcjswo1@gmail.com    | 김도현  | 123     | 19951003 |     29 | 3140316 |
+|       10 | goed0522@gmail.com    | 변우현  | 1234    | 20000629 |     24 | 3141516 |
+|       11 | yuna243441@naver.com  | 이유나  | 1234    | 20020508 |     22 | 3140316 |
+|       12 | im.kebab00@gmail.com  | 이요셉  | 1234    | 19990315 |     26 | 3140316 |
+|       14 | dongjin6539@naver.com | 신동진  | 1234    | 19960709 |     28 | 3140316 |
+|       15 | gnsrbdi@naver.com     | 이훈규  | 1234    | 19950227 |     29 | 3140316 |
+|       16 | jeongyouna_@naver.com | 정유나  | 1234    | 19950606 |     29 | 3140316 |
+|       18 | hunmi961119@gmail.com | 진현미  | 1234    | 19961119 |     28 | 3140316 |
+|       19 | getgrovy@gmail.com    | 정희석  | 1234    | 19990101 |     26 | 3140316 |
+|       20 | kshkmn0929@naver.com  | 김도현  | 0929    | 20020929 |     22 | 3140316 |
+|       23 | ghkddn132@naver.com   | 정황우  | 1234    | 19970130 |     25 | 3140316 |
+|       24 | esansi@naver.com      | 김현빈  | 1234    | 19970524 |     27 | 3140316 |
++----------+-----------------------+---------+---------+----------+--------+---------+
+19 rows in set (0.00 sec)
+</code></pre>
+                    <br>
+                    <h4>memberID가 1, 5, 10, 15번만(IN) 불러오기</h4>
+<pre><code class="language-js">mysql> SELECT * FROM member WHERE memberID IN(1,5,10,15);
++----------+-----------------------+---------+---------+----------+--------+---------+
+| memberID | youEmail              | youName | youPass | youBirth | youAge | regTime |
++----------+-----------------------+---------+---------+----------+--------+---------+
+|        1 | webstoryboy@naver.com | 황상연  | 1234    | 19990304 |     26 | 3140316 |
+|        5 | 1346zany@gmail.com    | 이승연  | 1234    | 19991216 |     25 | 3140316 |
+|       10 | goed0522@gmail.com    | 변우현  | 1234    | 20000629 |     24 | 3141516 |
+|       15 | gnsrbdi@naver.com     | 이훈규  | 1234    | 19950227 |     29 | 3140316 |
++----------+-----------------------+---------+---------+----------+--------+---------+
+4 rows in set (0.00 sec)
+</code></pre>
+                    <br>
+                    <h4>youName 중에 "연" 텍스트가 포함된(LIKE '%text%') 이름 불러오기</h4>
+<pre><code class="language-js">mysql> SELECT * FROM member WHERE youName LIKE '%연%';
++----------+-----------------------+---------+---------+----------+--------+---------+
+| memberID | youEmail              | youName | youPass | youBirth | youAge | regTime |
++----------+-----------------------+---------+---------+----------+--------+---------+
+|        1 | webstoryboy@naver.com | 황상연  | 1234    | 19990304 |     26 | 3140316 |
+|        5 | 1346zany@gmail.com    | 이승연  | 1234    | 19991216 |     25 | 3140316 |
+|       26 | dripidea77@gmail.com  | 김시연  | 1234    | 19930313 |     31 | 3140316 |
++----------+-----------------------+---------+---------+----------+--------+---------+
+3 rows in set (0.00 sec)
+</code></pre>
+                    <br>
+                    <h4>youName 중에 "김"으로 시작하는(LIKE 'text%') 이름 불러오기</h4>
+<pre><code class="language-js">mysql> SELECT * FROM member WHERE youName LIKE '김%';
++----------+----------------------+---------+---------+----------+--------+---------+
+| memberID | youEmail             | youName | youPass | youBirth | youAge | regTime |
++----------+----------------------+---------+---------+----------+--------+---------+
+|        9 | ehcjswo1@gmail.com   | 김도현  | 123     | 19951003 |     29 | 3140316 |
+|       20 | kshkmn0929@naver.com | 김도현  | 0929    | 20020929 |     22 | 3140316 |
+|       24 | esansi@naver.com     | 김현빈  | 1234    | 19970524 |     27 | 3140316 |
+|       26 | dripidea77@gmail.com | 김시연  | 1234    | 19930313 |     31 | 3140316 |
++----------+----------------------+---------+---------+----------+--------+---------+
+4 rows in set (0.00 sec)
+</code></pre>
+                    <br>
+                    <h4>youName 중에 "현"으로 끝나는(LIKE '%text') 이름 불러오기</h4>
+<pre><code class="language-js">mysql> SELECT * FROM youName LIKE '%현';
++----------+----------------------+---------+---------+----------+--------+---------+
+| memberID | youEmail             | youName | youPass | youBirth | youAge | regTime |
++----------+----------------------+---------+---------+----------+--------+---------+
+|        9 | ehcjswo1@gmail.com   | 김도현  | 123     | 19951003 |     29 | 3140316 |
+|       10 | goed0522@gmail.com   | 변우현  | 1234    | 20000629 |     24 | 3141516 |
+|       20 | kshkmn0929@naver.com | 김도현  | 0929    | 20020929 |     22 | 3140316 |
++----------+----------------------+---------+---------+----------+--------+---------+
+3 rows in set (0.00 sec)
+</code></pre>
+                    <h4 id="intro6-3" class="page-header">데이터 수정하기</h4>
+                    <div class="bs-callout bs-callout-info">
+                        <code>UPDATE</code> 테이블명 <code>SET</code> 컬럼명 조건<br>
+                    </div>
+<pre><code class="language-js">
+    
+</code></pre>
+                    <h4 id="intro6-4" class="page-header">데이터 삭제하기</h4>
+                    <div class="bs-callout bs-callout-info">
+                        <code>DELETE</code> <code>FROM</code> 테이블명 <code>WHERE</code> 조건<br>
+                    </div>
+<pre><code class="language-js">
+
+</code></pre>
+                </div>
+                <!-- //intro6 -->
 
             </div>
             <div class="col-md-3">
@@ -339,6 +548,14 @@ Empty set (0.00 sec)
                                 <li><a href="#intro5-3">테이블 보기</a></li>
                                 <li><a href="#intro5-4">테이블 삭제</a></li>
                                 <li><a href="#intro5-5">테이블 복사</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#intro6">테이블 데이터</a>
+                            <ul class="nav bs-sidenav">
+                                <li><a href="#intro6-1">테이블 입력하기</a></li>
+                                <li><a href="#intro6-2">테이블 불러오기</a></li>
+                                <li><a href="#intro6-3">테이블 수정하기</a></li>
+                                <li><a href="#intro6-4">테이블 삭제하기</a></li>
                             </ul>
                         </li>
                     </ul>

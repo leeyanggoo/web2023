@@ -14,11 +14,12 @@
 </head>
 <body>
     <header id="header">
-        <h1><a href="../javascript14.html">Quiz2</a> <em>주관식 확인하기 유형</em></h1>
+        <h1><a href="../javascript14.html">Quiz3</a> <em>주관식(여러 문제) 확인하기 유형</em></h1>
         <ul>
             <li><a href="quizEffect01.html">1</a></li>
             <li><a href="quizEffect02.html">2</a></li>
             <li class="active"><a href="quizEffect03.html">3</a></li>
+            <li><a href="quizEffect04.html">4</a></li>
         </ul>
     </header>
     <!-- //header -->
@@ -163,14 +164,14 @@
     <script>
         //선택자
         const quizWrap = document.querySelector(".quiz__wrap");
-        const quizTitle = quizWrap.querySelectorAll(".quiz__title")            //시험 종목+시간
-        const quizQuestionNum = quizWrap.querySelectorAll(".quiz__question em")     //문제 번호
-        const quizQuestion = quizWrap.querySelectorAll(".quiz__question span");     //문제 질문
-        const quizAnswerResult = quizWrap.querySelectorAll(".quiz__answer .result");   //문제 정답
-        const quizDesc = quizWrap.querySelectorAll(".quiz__desc")                      //문제 해설
-        const quizAnswerConfirm = quizWrap.querySelectorAll(".quiz__answer .confirm");     //정답 버튼
-        const dogWrap = quizWrap.querySelectorAll(".dog__wrap");       //갱얼쥐
-        const quizAnswerInput = quizWrap.querySelectorAll(".quiz__answer .input");     //인풋박수
+        const quizTitle = quizWrap.querySelectorAll(".quiz__title")                     //시험 종목+시간
+        const quizQuestionNum = quizWrap.querySelectorAll(".quiz__question em")         //문제 번호
+        const quizQuestion = quizWrap.querySelectorAll(".quiz__question span");         //문제 질문
+        const quizAnswerResult = quizWrap.querySelectorAll(".quiz__answer .result");    //문제 정답
+        const quizDesc = quizWrap.querySelectorAll(".quiz__desc")                       //문제 해설
+        const quizAnswerConfirm = quizWrap.querySelectorAll(".quiz__answer .confirm");  //정답 버튼
+        const dogWrap = quizWrap.querySelectorAll(".dog__wrap");                        //갱얼쥐
+        const quizAnswerInput = quizWrap.querySelectorAll(".quiz__answer .input");      //input 박스
 
         
         //문제 정보
