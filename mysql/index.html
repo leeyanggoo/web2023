@@ -360,11 +360,29 @@ youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("didrn94553@gmail.
                     <h4>나이가 25 이상이면서 김씨 성을 가지고 있는 사람 불러오기</h4>
 <pre><code class="language-js">mysql> SELECT * FROM member WHERE youAge >=25 AND youName LIKE "김%";</code></pre>
                     <br>
+                    <h4>나이가 25 이상이면서 아이디가 2 또는 아이디가 9인 멤버 목록</h4>
+<pre><code class="language-js">mysql> SELECT * FROM member WHERE youAge >= 25 AND memberID IN(2, 9);
+//SELECT * FROM member WHERE youAge >= 25 AND (memberID = 2 OR memberID = 9);
+</code></pre>
+                    <br>
+                    <h4>회원 데이터를 5개만 불러오기(1-5)</h4>
+<pre><code class="language-js">mysql> SELECT * FROM member LIMIT 5;</code></pre>
+                    <br>
+                    <h4>회원 데이터를 5개만 불러오기(6-10)</h4>
+<pre><code class="language-js">mysql> SELECT * FROM member LIMIT 5, 5;</code></pre>
+                    <br>
+                    <h4>회원 이메일을 10개만 불러오기(11-20)</h4>
+<pre><code class="language-js">mysql> SELECT * FROM member LIMIT 5, 5;</code></pre>
+                    <br>
                     <h4>member 테이블의 youName만 불러오기</h4>
 <pre><code class="language-js">mysql> SELECT youName FROM member;       // * 대신 column 선택</code></pre>
                     <br>
                     <h4>member 테이블의 youName과 youAge만 불러오기</h4>
 <pre><code class="language-js">mysql> SELECT youName, youAge FROM member;       //복수 선택은 쉼표(,)</code></pre>
+                    <br>
+                    <h4>중복된 데이터를 제외하고 불러오기</h4>
+<pre><code class="language-js">mysql> SELECT DISTINCT youAge FROM member;</code></pre>
+
                     <h4 id="intro6-3" class="page-header">데이터 수정하기</h4>
                     <div class="bs-callout bs-callout-info">
                         <code>UPDATE</code> 테이블명 <code>SET</code> 컬럼명 조건<br>
