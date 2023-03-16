@@ -372,7 +372,7 @@ youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("didrn94553@gmail.
 <pre><code class="language-js">mysql> SELECT * FROM member LIMIT 5, 5;</code></pre>
                     <br>
                     <h4>회원 이메일을 10개만 불러오기(11-20)</h4>
-<pre><code class="language-js">mysql> SELECT * FROM member LIMIT 5, 5;</code></pre>
+<pre><code class="language-js">mysql> SELECT * FROM member LIMIT 10, 10;</code></pre>
                     <br>
                     <h4>member 테이블의 youName만 불러오기</h4>
 <pre><code class="language-js">mysql> SELECT youName FROM member;       // * 대신 column 선택</code></pre>
@@ -382,21 +382,51 @@ youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("didrn94553@gmail.
                     <br>
                     <h4>중복된 데이터를 제외하고 불러오기</h4>
 <pre><code class="language-js">mysql> SELECT DISTINCT youAge FROM member;</code></pre>
+                    <br>
+                    <h4>개수 불러오기</h4>
+<pre><code class="language-js">mysql> SELECT count(youName) FROM member;</code></pre>
+<pre><code class="language-js">mysql> SELECT count(*) FROM member;</code></pre>
+                    <br>
+                    <h4>이름만 불러오기(내림차순)</h4>
+<pre><code class="language-js">mysql> SELECT youName FROM member ORDER BY youName DESC;</code></pre>
+                    <br>
+                    <h4>이름만 불러오기(오름차순)</h4>
+<pre><code class="language-js">mysql> SELECT youName FROM member ORDER BY youName ASC;</code></pre>
 
                     <h4 id="intro6-3" class="page-header">데이터 수정하기</h4>
                     <div class="bs-callout bs-callout-info">
                         <code>UPDATE</code> 테이블명 <code>SET</code> 컬럼명 조건<br>
                     </div>
-<pre><code class="language-js">
-    
-</code></pre>
+                    <h4>모든 회원의 비밀번호를 1234로 수정하기</h4>
+<pre><code class="language-js">UPDATE member SET youPass = "1234"</code></pre>
+                    <br>
+                    <h4>아이디가 3번인 회원만 비밀번호를 9999로 수정하기</h4>
+<pre><code class="language-js">mysql> UPDATE member SET youPass="9999" WHERE memberID="3";</code></pre>
+                    <br>
+                    <h4>회원 아이디가 5-10번인 회원의 비밀번호를 7777로 수정하기</h4>
+<pre><code class="language-js">mysql> UPDATE member SET youPass="7777" WHERE memberID BETWEEN 5 AND 10;</code></pre>
+                    <br>
+                    <h4>비밀번호를 "1234567"로 10개만 변경하기</h4>
+<pre><code class="language-js">mysql> UPDATE member SET youPass="1234567" ORDER BY youPass LIMIT 10;</code></pre>
+
                     <h4 id="intro6-4" class="page-header">데이터 삭제하기</h4>
                     <div class="bs-callout bs-callout-info">
                         <code>DELETE</code> <code>FROM</code> 테이블명 <code>WHERE</code> 조건<br>
                     </div>
-<pre><code class="language-js">
-
-</code></pre>
+                    <h4>아이디가 5번인 사람 삭제</h4>
+<pre><code class="language-js">mysql> DELETE FROM member WHERE memberID=5;</code></pre>
+                    <br>
+                    <h4>회원 비밀번호가 1234인 사람만 삭제하기</h4>
+<pre><code class="language-js">mysql> DELETE FROM member WHERE youPass="1234";</code></pre>
+                    <br>
+                    <h4>아이디를 기준으로 5번째까지 삭제</h4>
+<pre><code class="language-js">mysql> DELETE FROM member ORDER BY memberID LIMIT 5;</code></pre>
+                    <br>
+                    <h4>아이디가 11, 13, 15번인 맴버 삭제</h4>
+<pre><code class="language-js">mysql> DELETE FROM member WHERE memberID IN(11, 13, 15);</code></pre>
+                    <br>
+                    <h4>이름 내림차순으로 5명만 비밀번호 "9999"로 바꾸기</h4>
+<pre><code class="language-js">mysql> UPDATE member SET youPass="9999" ORDER BY youName DESC LIMIT 5;</code></pre>
                 </div>
                 <!-- //intro6 -->
 
