@@ -179,7 +179,7 @@
     font-family: 'NanumSquare';
 }
 .quiz__choice label {
-    display: flex;
+    /* display: flex; */
 }
 .quiz__choice label input {
     position: absolute;

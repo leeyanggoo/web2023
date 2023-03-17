@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20230317 테스트</title>
+</head>
+<body>
+    <script>
+        //1. 1부터 10까지 for문
+        {
+            for(let i=1; i<=10; i++){
+                document.write(i);
+            };
+        }
+        document.write("<br>");
+        //2. 1부터 10까지 짝수만
+        {
+            for(let i=1; i<=10; i++){
+                if(i % 2 == 0){
+                    document.write(i);
+                }
+            }
+        }
+        document.write("<br>");
+        //3. 1부터 10까지 홀수 빨 짝수 파
+        {
+            for(let i=1; i<=10; i++){
+                if(i % 2 == 1){
+                    document.write(`<span style='color:red'>${i}</span>`);
+                } else {
+                    document.write(`<span style='color:blue'>${i}</span>`);
+                }
+            }
+        }
+        document.write("<br>");
+        //4. 배열 num 에 100 200 300 400 500
+        {
+            let num = [100,200,300,400,500,600,700,800,900];
+            for(let i=0; i<num.length; i++){
+                document.write(num[i]);
+            }
+        }
+        document.write("<br>");
+        //5. for문을 forEach로
+        {
+            let num = [100,200,300,400,500,600,700,800,900];
+            num.forEach(function(e, i){
+                document.write(num[i]);
+            })
+            
+        }
+        document.write("<br>");
+        //6. for in
+        {
+            let num = [100,200,300,400,500,600,700,800,900];
+            for(key in num){
+                document.write(num[key]);
+            }
+        }
+        document.write("<br>");
+        //7. for of
+        {
+            let num = [100,200,300,400,500,600,700,800,900];
+            for(e of num){
+                document.write(e);
+            }
+        }
+    </script>
+</body>
+</html>
