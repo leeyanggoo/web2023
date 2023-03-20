@@ -24,6 +24,14 @@
             vertical-align: top;
             width: 100%;
         }
+        .blind {
+            position:absolute;
+            clip:rect(0 0 0 0);
+            width:1px;
+            height:1px;
+            margin:-1px;
+            overflow:hidden
+        }
 
         .mt10 {margin-top: 0px!important;}
         .mt20 {margin-top: 10px !important;}
@@ -73,72 +81,95 @@
         }
 
         /* imgaetext__type */
-        .section__small{
+        .imgText__inner {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .imgText__inner article {
+            width: 31.3333%;
+        }
+        .imgText__inner .text span{
             font-size: 14px;
             color: #fff;
-            padding: 1px 23px;
+            padding: 1px 20px;
             background-color:#B06B03;
             border-radius: 50px;
             text-transform: uppercase;
             display: inline-block;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
-        .article__wrap {
-            display: flex;
-            justify-content: space-between;
+        .imgText__inner .text h3 {
+            font-size: 50px;
+            margin-bottom: 17px;
         }
-        .article {
-            width: 32.3333%;
-        }
-        .article p {
+        
+        .imgText__inner .text p {
             font-size: 16px;
             color: #666666;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             line-height: 1.5;
         }
-        .article ul {
-            list-style-position: inside;
-        }
-        .article li {
+        .imgText__inner .text li {
             font-size: 16px;
             color: #666666;
             line-height: 1.6;
+            list-style-position: inside;
         }
-        .article li::marker{
+        .imgText__inner .text li::marker{
             content: '🚬 ';
         }
-        .article__header img {
+        .imgText__inner .img {
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 500px;
             border-radius: 10px;
+            position: relative;
+        }
+        .imgText__inner .img a {
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 40px;
+        }
+        .imgText__inner .img.i1 {
+            background-image: url(../assets/img/imgtextType01_01.jpg);
+        }
+        .imgText__inner .img.i2 {
+            background-image: url(../assets/img/imgtextType01_02.jpg);
+        }
+        .imgText__inner .img a {
+            background-color: #37150A;
         }
         
     </style>
 </head>
 <body>
     <section class="section nexon">
+        <h2 class="blind">Most Famous CIGAR</h2>
         <div class="container">
-            <div class="article__wrap">
-                <div class="article">
-                    <span class="section__small">notice</span>
-                    <h2 class="section__h2">Most Famous CIGAR</h2>
+            <div class="imgText__inner">
+                <article class="text">
+                    <span>notice</span>
+                    <h3>Most Famous CIGAR</h3>
                     <p>If I can relate to you, I will send my breath. I fly in the blink of an eye.</p>
                     <ul>
-                        <li>쿠바 시가(Cuban cigar) : 쿠바에서 생산되는 시가로, 매우 유명하고 고품질입니다.</li>
-                        <li>도미니카 시가(Dominican cigar) : 도미니카 공화국에서 생산되는 시가로, 쿠바 시가와 경쟁합니다.</li>
-                        <li>니카라과 시가(Nicaraguan cigar) : 니카라과에서 생산되는 시가로, 강한 맛과 향기가 특징입니다.</li>
-                        <li>할리우드 시가(Hollywood cigar) : 할리우드에서 인기 있는 시가입니다.</li>
-                        <li>플로리다 시가(Florida cigar) : 미국 플로리다 주에서 생산되는 시가르로, 매우 부드러우며 가벼운 향이 특징입니다.</li>
+                        <li><a href="#">쿠바 시가(Cuban cigar) : 쿠바에서 생산되는 시가로, 매우 유명하고 고품질입니다.</a></li>
+                        <li><a href="#">도미니카 시가(Dominican cigar) : 도미니카 공화국에서 생산되는 시가로, 쿠바 시가와 경쟁합니다.</a></li>
+                        <li><a href="#">니카라과 시가(Nicaraguan cigar) : 니카라과에서 생산되는 시가로, 강한 맛과 향기가 특징입니다.</a></li>
+                        <li><a href="#">할리우드 시가(Hollywood cigar) : 할리우드에서 인기 있는 시가입니다.</a></li>
+                        <li><a href="#">플로리다 시가(Florida cigar) : 미국 플로리다 주에서 생산되는 시가르로, 매우 부드러우며 가벼운 향이 특징입니다.</a></li>
                     </ul>
-                </div>
-                <div class="article">
-                    <figure class="article__header">
-                        <img src="../assets/img/imgtextType01_01@2x.jpg" alt="cuban cigar">
-                    </figure>
-                </div>
-                <div class="article">
-                    <figure class="article__header">
-                        <img src="../assets/img/imgtextType01_02@2x.jpg" alt="Dominican cigar">
-                    </figure>
-                </div>
+                </article>
+                <article class="img i1">
+                    <a href="#">인기 있는 쿠바 시가</a>
+                </article>
+                <article class="img i2">
+                    <a href="#">인기 있는 도미니카 시가</a>
+                </article>
             </div>
         </div>
     </section>

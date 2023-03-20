@@ -1,0 +1,69 @@
+@import url('https://webfontworld.github.io/NexonMabinogi/MabinogiClassic.css');
+@import url('https://webfontworld.github.io/NexonMaplestory/NexonMaplestory.css');
+@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+@import url('https://webfontworld.github.io/TheJamsil/TheJamsil.css');
+@import url('https://webfontworld.github.io/nixgon/NixgonFonts.css');
+@import url('https://webfontworld.github.io/NanumMyeongjo/NanumMyeongjo.css');
+@import url('https://webfontworld.github.io/suseong/SuseongDotum.css');
+@import url('https://webfontworld.github.io/neodgm/NeoDunggeunmo.css');
+@import url('https://webfontworld.github.io/MaruBuri/MaruBuri.css');
+@import url('https://webfontworld.github.io/fontlab/LABDigital.css');
+
+
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: #222
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+} 
+li, ul, ol {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+    width: 100%;
+}
+em {
+    font-style: normal;
+}
+.font01 {
+    font-family: 'MabinogiClassic';
+}
+.font02 {
+    font-family: 'NexonMaplestory';
+}
+.font03 {
+    font-family: 'NexonLv1Gothic';
+}
+.font04 {
+    font-family: 'TheJamsil';
+}
+.font05 {
+    font-family: 'NixgonFonts';
+}
+.font06 {
+    font-family: 'NanumMyeongjo';
+}
+.font07 {
+    font-family: 'SuseongDotum';
+}
+.font08 {
+    font-family: 'NeoDunggeunmo';
+}
+.font09 {
+    font-family: 'MaruBuri';
+}
+.font10 {
+    font-family: 'LABDigital';
+}

@@ -93,7 +93,7 @@
         margin-bottom: 10px;
     }
     .main__desc p {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         border-left: 5px solid blue;
         padding: 12px 10px 10px 20px;
         background-color: #f5f5f5;
@@ -112,9 +112,11 @@
         text-align: center;
         padding: 10px;
         margin-bottom: 50px;
+        transition: all 0.2;
     }
     .main__desc a:hover {
         border-color: blue;
+        background-color: #d1ddff
     }
     .main__sample {
         padding-top: 40px;

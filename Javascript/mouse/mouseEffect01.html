@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01. 마우스 이펙트</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/mouse.css">
+    <style>
+        .mouse__wrap {
+            cursor: none;
+        }
+        .mouse__cursor {
+            position: absolute;
+            left: 0%;
+            top: 0%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            background-color: rgba(255, 255, 255, 0.1);
+            user-select: none;
+            pointer-events: none;
+            transition: background-color 0.3s,
+                        border-color 0.3s,
+                        transform 0.6s,
+                        border 0.3s;
+        }
+        .mouse__cursor.s1 {
+            background-color: rgba(215, 155, 255, 0.5);
+            border-color: rgb(155, 0, 255);
+        }
+        .mouse__cursor.s2 {
+            background-color: rgba(155, 195, 255, 0.5);
+            border-color: rgb(90, 0, 255);
+            transform: scale(2) rotateY(720deg);
+        }
+        .mouse__cursor.s3 {
+            background-color: rgba(235, 155, 255, 0.5);
+            border-color: rgb(255, 0, 235);
+            transform: scale(1.5) rotateX(540deg);
+        }
+        .mouse__cursor.s4 {
+            background-color: rgba(172, 255, 155, 0.5);
+            border-color: rgb(0, 255, 34);
+            transform: scale(10);
+            border-radius: 0px;
+        }
+        .mouse__cursor.s5 {
+            background-color: rgba(155, 252, 255, 0.5);
+            border-color: rgb(0, 238, 255);
+            transform: scale(5) skew(3600deg) rotateX(360deg);
+        }
+        .mouse__cursor.s6 {
+            background-color: rgba(68, 68, 68, 0.5);
+            border-color: rgb(0, 0, 0);
+            transform: scale(0.7) rotateY(3600deg);
+        }
+        .mouse__text {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .mouse__text p {
+            font-size: 2vw;
+            line-height: 2;
+        }
+        .mouse__text p span {
+            color: #3c485e;
+            border-bottom: 1px dashed #3c485e;
+        }
+        .mouse__text p:last-child {
+            font-size: 2.7vw;
+        }
+        .mouse__info {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            padding: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body class="img01 bg01 font06">
+    <header id="header">
+        <h1>Javascript Mouse Effect01</h1>
+        <p>마우스 이펙트 - 마우스 따라다니기</p>
+        <ul>
+            <li class="active"><a href="mouseEffect01.html">1</a></li>
+            <li><a href="mouseEffect02.html">2</a></li>
+            <li><a href="mouseEffect03.html">3</a></li>
+            <li><a href="mouseEffect04.html">4</a></li>
+            <li><a href="mouseEffect05.html">5</a></li>
+            <li><a href="mouseEffect06.html">6</a></li>
+        </ul>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="mouse__wrap">
+            <div class="mouse__cursor"></div>
+            <div class="mouse__text">
+                <p><span class="s1">Laugh</span>, and the world laughs with you; <span class="s2">weep</span>, and you weep <span class="s3">alone</span>.</p>
+                <p><span class="s4">웃어라</span>, 온 세상이 너와 함께 웃을 것이다. <span class="s5">울어라</span>, 너 <span class="s6">혼자</span>만 울게 될 것이다.</p>
+            </div>
+        </div>
+        <div class="mouse__info">
+            <ul>
+                <li>clientX : <span class="clientX">0</span>px</li>
+                <li>clientY : <span class="clientY">0</span>px</li>
+                <li>offsetX : <span class="offsetX">0</span>px</li>
+                <li>offsetY : <span class="offsetY">0</span>px</li>
+                <li>pageX : <span class="pageX">0</span>px</li>
+                <li>pageY : <span class="pageY">0</span>px</li>
+                <li>screenX : <span class="screenX">0</span>px</li>
+                <li>screenY : <span class="screenY">0</span>px</li>
+            </ul>
+        </div>
+    </main>
+    <!-- //header -->
+
+    <footer id="footer">
+        <a href="mailto:didrn94553@gmail.com">didrn94553@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script>
+        window.addEventListener("mousemove", function(event){       //event에 마우스 정보가 들어감
+            document.querySelector(".clientX").innerHTML = event.clientX;
+            document.querySelector(".clientY").innerHTML = event.clientY;
+            document.querySelector(".offsetX").innerHTML = event.offsetX;
+            document.querySelector(".offsetY").innerHTML = event.offsetY;
+            document.querySelector(".pageX").innerHTML = event.pageX;
+            document.querySelector(".pageY").innerHTML = event.pageY;
+            document.querySelector(".screenX").innerHTML = event.screenX;
+            document.querySelector(".screenY").innerHTML = event.screenY;
+        });
+
+        //선택자
+        const cursor = document.querySelector(".mouse__cursor");
+
+        window.addEventListener("mousemove", function(e){
+            cursor.style.left = e.clientX -25 + "px";
+            cursor.style.top = e.clientY -25 + "px";
+        });
+
+
+        // document.querySelector(".s1").addEventListener("mouseover", function(){
+        //     cursor.classList.add("s1");
+        // });
+        // document.querySelector(".s1").addEventListener("mouseout", function(){
+        //     cursor.classList.remove("s1");
+        // });
+        // document.querySelector(".s2").addEventListener("mouseover", function(){
+        //     cursor.classList.add("s2");
+        // });
+        // document.querySelector(".s2").addEventListener("mouseout", function(){
+        //     cursor.classList.remove("s2");
+        // });
+        // document.querySelector(".s3").addEventListener("mouseover", function(){
+        //     cursor.classList.add("s3");
+        // });
+        // document.querySelector(".s3").addEventListener("mouseout", function(){
+        //     cursor.classList.remove("s3");
+        // });
+        // document.querySelector(".s4").addEventListener("mouseover", function(){
+        //     cursor.classList.add("s4");
+        // });
+        // document.querySelector(".s4").addEventListener("mouseout", function(){
+        //     cursor.classList.remove("s4");
+        // });
+        // document.querySelector(".s5").addEventListener("mouseover", function(){
+        //     cursor.classList.add("s5");
+        // });
+        // document.querySelector(".s5").addEventListener("mouseout", function(){
+        //     cursor.classList.remove("s5");
+        // });
+        // document.querySelector(".s6").addEventListener("mouseover", function(){
+        //     cursor.classList.add("s6");
+        // });
+        // document.querySelector(".s6").addEventListener("mouseout", function(){
+        //     cursor.classList.remove("s6");
+        // });
+
+        //for문
+        for(let i=1; i<7; i++){
+            document.querySelector(`.s${i}`).addEventListener("mouseover", function(){
+                cursor.classList.add(`s${i}`);
+            });
+            document.querySelector(`.s${i}`).addEventListener("mouseout", function(){
+                cursor.classList.remove(`s${i}`);
+            });
+        }
+
+        //선택자로 변수 지정하고 forEach
+        // const mouseText = document.querySelectorAll(".mouse__text span");
+        // mouseText.forEach(function(e, i){
+        //     document.querySelector(`.s${i+1}`).addEventListener("mouseover", function(){
+        //         cursor.classList.add(`s${i+1}`);
+        //     });
+        //     document.querySelector(`.s${i+1}`).addEventListener("mouseout", function(){
+        //         cursor.classList.remove(`s${i+1}`);
+        //     });
+        // })
+
+        //바로 forEach
+        // document.querySelectorAll(".mouse__text span").forEach(function(e, i){
+        //     document.querySelector(`.s${i+1}`).addEventListener("mouseover", function(){
+        //         cursor.classList.add(`s${i+1}`);
+        //     });
+        //     document.querySelector(`.s${i+1}`).addEventListener("mouseout", function(){
+        //         cursor.classList.remove(`s${i+1}`);
+        //     });
+        // })
+
+        //forEach문의 요소로 문법 길이 줄이기
+        // document.querySelectorAll(".mouse__text span").forEach(function(span, num){
+        //     span.addEventListener("mouseover", function(){
+        //         cursor.classList.add(`s${num+1}`);
+        //     });
+        //     span.addEventListener("mouseout", function(){
+        //         cursor.classList.remove(`s${num+1}`);
+        //     });
+        // })
+
+        //getAtrtibute();   속성 가져오기
+        document.querySelectorAll(".mouse__text span").forEach(function(span){
+            let attr = span.getAttribute("class");  // attr에 span의 class인 s1 ~ s6가 들어감
+            span.addEventListener("mouseover", function(){
+                cursor.classList.add(attr);
+            });
+            span.addEventListener("mouseout", function(){
+                cursor.classList.remove(attr);
+            });
+            
+        });
+
+        //setAtrtibute();   속성 바꾸기
+
+    </script>
+
+</body>
+</html>
