@@ -52,15 +52,79 @@
                 <h3>01. 마우스 이펙트</h3>
                 <p>마우스를 따라다니는 기본적인 효과입니다</p>
                 <ul>
+                    <li>데이터 불러오기 : for(), forEach()</li>
                     <li>이벤트 객체 : addEventListener("mousemove", function(event){}) : event에 마우스 정보가 들어갑니다.</li>
-                    <li>이벤트 객체 : clientX, clientY, offsetX, offsetY, pageX, pageY, screenX, screenY : 8가지 속성은 이벤트 객체의 속성이자, 이벤트가 발생한 위치에 대한 정보를 담고 있습니다.
-                    </li>
-                    <li>for(), forEach()</li>
-                    <li>getAtrtibute() : 속성을 가지고 오는 메서드</li>
-                    <li>window() : window 객체는 자바스크립트에서 전역 객체로 사용되며, 전역 변수와 함수를 포함합니다.<br>window 객체의 메소드는 전역 함수이며, window 객체의 프로퍼티는 전역 변수가 됩니다.</li>
-                    
+                    <li>이벤트 속성 : clientX, clientY, offsetX, offsetY, pageX, pageY, screenX, screenY : 8가지 속성은 이벤트 객체의 속성이자, 이벤트가 발생한 위치에 대한 정보를 담고 있습니다.</li>
+                    <li>요소 객체 : querySelector(), querySelectorAll(), getAtrtibute(), window()<br>
+                    getAtrtibute() : 속성을 가지고 오는 메서드입니다. 괄호 안에 ("class")라고 입력하면 요소의 class 속성을 가지고 옵니다.<br>
+                    window() : window 객체는 자바스크립트에서 전역 객체로 사용되며, 전역 변수와 함수를 포함합니다.<br>window 객체의 메소드는 전역 함수이며, window 객체의 프로퍼티는 전역 변수가 됩니다.</li>
                 </ul>
-                <a href="quiz/quizEffect01.html">확인하기</a>
+                <a href="mouse/mouseEffect01.html">확인하기</a>
+
+                <h3>02. 마우스 이펙트</h3>
+                <p>GSAP를 이용해서 마우스를 따라다니는 효과입니다</p>
+                <ul>
+                    <li>데이터 저장하기 : 변수</li>
+                    <li>데이터 실행하기 : 함수, 화살표 함수</li>
+                    <li>데이터 불러오기 : for(), forEach()</li>
+                    <li>이벤트 객체 : addEventListener(), mousemover, mouseenter, mouseleave</li>
+                    <li>이벤트 속성 : pageX, pageY</li>
+                    <li>요소 객체 : querySelector(), getAtrtibute()</li>
+                    <li>라이브러리 : GSAP to(적용할 요소 혹은 선택자, {효과})<br>
+                        duration : 애니메이션의 지속시간을 설정합니다.</li>
+                    <li>CSS : user-select, pointer-events<br></li>
+                    <li>user-select : 사용자가 페이지 내에서 텍스트를 선택할 수 있는지 여부를 결정합니다. 이 속성은 다음과 같은 값 중 하나를 사용할 수 있습니다.<br>
+                    auto: 텍스트 선택을 허용합니다. 이 값이 기본값입니다.<br>
+                    none: 텍스트 선택을 금지합니다.<br>
+                    text: 텍스트 선택을 허용하지만, 텍스트 선택 동작을 사용자 지정할 수 있도록 합니다. (ex. 드래그해서 선택)<br></li>
+                    <li>pointer-events : 마우스 이벤트 처리 방식을 결정합니다. 이 속성은 다음과 같은 값 중 하나를 사용할 수 있습니다.<br>
+                    auto: 마우스 이벤트를 처리합니다. 이 값이 기본값입니다.<br>
+                    none: 마우스 이벤트를 처리하지 않습니다.<br>
+                    visiblePainted: 마우스 이벤트를 처리하지 않지만, 요소의 배경색이나 텍스트 색상에는 영향을 주지 않습니다.<br>
+                    visibleFill: 마우스 이벤트를 처리하지 않지만, 요소의 테두리 색상이나 불투명도에는 영향을 주지 않습니다.<br>
+                    visibleStroke: 마우스 이벤트를 처리하지 않지만, 요소의 배경색이나 불투명도에는 영향을 주지 않습니다.<br>
+                    all: 마우스 이벤트를 처리하고, 다른 요소들과의 겹침 여부와 관계없이 가장 앞에 표시됩니다.<br></li>
+                    
+                    
+
+                </ul>
+                <a href="mouse/mouseEffect02.html">확인하기</a>
+
+                <h3>03. 마우스 이펙트</h3>
+                <p>마우스를 따라다니는 조명 효과입니다</p>
+                <ul>
+                    <li>데이터 저장하기 : 변수</li>
+                    <li>데이터 실행하기 : 함수, 화살표 함수</li>
+                    <li>이벤트 객체 : mousemover</li>
+                    <li>요소 객체 : querySelector(), clientWidth, clientHeight, offsetWidth, offsetHeight, getBoundingClientRect()</li>
+                    <li>getBoundingClientRect() : 요소(element)의 위치와 크기 정보를 반환하는 메서드입니다. 이 메서드를 호출하면 요소의 위치와 크기 정보가 포함된 DOMRect 객체를 반환합니다. DOMRect 객체는 left, top, right, bottom, width, height 속성을 가지고 있으며, 이를 통해 요소의 위치와 크기를 파악할 수 있습니다.</li>
+                    <li>라이브러리 : GSAP to(적용할 요소 혹은 선택자, {효과})</li>
+                    <li>CSS : "background-attachment: fiexd", background-image, background-size, background-position</li>
+                    <li>background-attachment : 배경 이미지가 스크롤 되는 동안 요소와 상대적으로 고정되는지 여부를 지정합니다.<br>
+                        속성값<br>
+                        scroll : 배경 이미지가 요소와 함께 스크롤됩니다.<br>
+                        fixed : 배경 이미지가 뷰포트(viewport)에 고정됩니다. 요소와 함께 스크롤되지 않습니다.<br>
+                        local : 배경 이미지가 요소와 함께 스크롤됩니다. 다만, 요소의 내부 스크롤 영역에서 스크롤되지 않습니다.<br>
+                        initial : 기본값으로 설정합니다.<br>
+                        inherit : 부모 요소로부터 값을 상속받습니다.<br></li>
+                    <li>background-position : 배경 이미지의 위치를 지정합니다.<br>
+                        속성 값<br>
+                        키워드 : top, bottom, left, right, center<br>
+                        "left top", "left center", "left bottom"처럼 두 개의 값을 가지며, 첫 번째 값은 수평 위치를, 두 번째 값은 수직 위치를 지정합니다. 값이 하나만 주어지면, 수평 위치는 center, 수직 위치는 center로 지정됩니다.
+                        백분율 또는 길이 값 : x% y%<br>
+                        예를 들어 "50% 50%", "10px 20px" 첫 번째 값은 수평 위치를, 두 번째 값은 수직 위치를 백분율로 지정합니다.<br>
+                        xpos ypos : 배경 이미지의 위치를 픽셀 단위로 지정합니다. 첫 번째 값은 수평 위치를, 두 번째 값은 수직 위치를 픽셀 단위로 지정합니다.<br>
+                        여러 값을 조합하여 지정할 수도 있습니다.(예: "top right", "center 30%")<br></li>
+                    <li>background-size : 배경 이미지의 크기를 지정합니다.<br>
+                        속성 값<br>
+                        auto : 원본 이미지 크기를 유지합니다.<br>
+                        고정된 크기 : "50px 100px";는 너비가 50px이고 높이가 100px인 이미지를 사용합니다.
+                        백분율 또는 길이 값 : 예를 들어 "50% 50%", "10px 20px"<br>
+                        cover : 이미지가 요소의 전체 영역을 채울 수 있도록 이미지 크기를 조정합니다. 요소의 크기에 맞게 이미지를 확대 또는 축소하여 배경을 채웁니다.<br>
+                        contain : 이미지가 요소의 내부에 완전히 들어갈 수 있도록 이미지 크기를 조정합니다. 이 때 이미지 비율이 요소 비율과 일치하지 않으면 이미지가 요소 내부에 정중앙에 위치하게 됩니다.</li>
+
+                </ul>
+                <a href="mouse/mouseEffect03.html">확인하기</a>
 
 
             </div> 
