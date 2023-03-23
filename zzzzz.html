@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 
-    <style>
-        body {
-  height: 100vh;
-  background-image: linear-gradient(-60deg, red, blue);
-}
-.loading {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 20px;
-  height: 150px;
-  animation: loading 1s ease 1000;
-}
-.loading .circle1{
-  display: block;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #fff;
-}
-.loading .circle2{
-  display: block;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #fff;
-  margin-top: 110px;
-}
-@keyframes loading {
-  0%{transform: rotate(360deg)}
-}
-    </style>
+  <style>
+    body {
+      background-color: #000;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .watchFace {
+      height: 125px;
+      width: 125px;
+      animation: pulse 4s cubic-bezier(0.5, 0, 0.5, 1) alternate infinite;
+    }
+    .circle {
+      width: 125px;
+      height: 125px;
+      /* background-color: #fff; */
+      border-radius: 50%;
+      position: absolute;
+      mix-blend-mode: screen;
+      transform: translate(0, 0);
+      animation: center 6s infinite;
+    }
+    .circle:nth-child(odd) {
+      background: #61bea2;
+    }
+
+    .circle:nth-child(even) {
+      background: #529ca0;
+    }
+  </style>
 </head>
 <body>
-    <div class="loading">
-        <span class="circle1"></span>
-        <span class="circle2"></span>
-      </div>
+  <div class="watchFace">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
 </body>
 </html>
