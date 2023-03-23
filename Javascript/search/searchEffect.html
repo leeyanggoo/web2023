@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색 이펙트</title>
+
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/search.css">
+</head>
+<body class="pink">
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- header -->
+
+    <main id="main">
+        <div class="search__wrap">
+            <div class="search__header">
+                <h2 class="title">🤪자바스크립트</h2>                
+            </div>
+            <div class="search__conts">
+                <hgroup>
+                    <h3 class="title">CSS 속성 검색하기</h3>
+                    <h4>indexOf() / search()</h4>
+                </hgroup>
+            </div>
+            <div class="search__box">
+                <label for="search">검색하기</label>
+                <input type="text" name="search" id="search" placeholder="CSS 속성을 입력해주세요!">
+            </div>
+            <div class="search__info">
+                <div>
+                    CSS 속성 개수 : <span>0</span>개
+                </div>
+            </div>
+            <div class="search__list">
+                <ul>
+                    <li data-name="align-content"><strong>align-content</strong> : 콘텐츠 아이템의 상하관계 정렬 상태를 설정합니다.</li>
+                    <li data-name="align-items"><strong>align-items</strong> : 콘텐츠 아이템의 내부 상하관계 정렬 상태를 설정합니다.</li>
+                    <li data-name="align-self"><strong>align-self</strong> : 개별적인 콘텐츠 아이템의 정렬 상태를 설정합니다.</li>
+                    <li data-name="all"><strong>all</strong> : 요소의 속성을 초기화 또는 상속을 설정합니다.</li>
+                    <li data-name="animation"><strong>animation</strong> : 애니메이션과 관련된 속성을 일괄적으로 설정합니다.</li>
+                    <li data-name="animation-delay"><strong>animation-delay</strong> : 애니메이션 지연 시간을 설정합니다.</li>
+                    <li data-name="animation-direction"><strong>animation-direction</strong> : 애니메이션 움직임 방향을 설정합니다.</li>
+                    <li data-name="animation-duration"><strong>animation-duration</strong> : 애니메이션 움직임 시간을 설정합니다.</li>
+                    <li data-name="animation-fill-mode"><strong>animation-fill-mode</strong> : 애니메이션이 끝난 후의 상태를 설정합니다.</li>
+                    <li data-name="animation-iteration-count"><strong>animation-iteration-count</strong> : 애니메이션 반복 횟수 설정합니다.</li>
+                    <li data-name="animation-name"><strong>animation-name</strong> : 애니메이션 keyframe 이름을 설정합니다.</li>
+                    <li data-name="animation-play-state"><strong>animation-play-state</strong> : 애니메이션 진행상태를 설정합니다.</li>
+                    <li data-name="animation-timing-function"><strong>animation-timing-function</strong> : 애니메이션 움직임의 속도를 설정합니다.</li>
+                    <li data-name="backdrop-filter"><strong>backdrop-filter</strong> : 배경에 그래픽 효과를 설정합니다.</li>
+                    <li data-name="backface-visibility"><strong>backface-visibility</strong> : 요소의 뒷면을 설정합니다.</li>
+                    <li data-name="background-attachment"><strong>background-attachment</strong> : 배경 이미지의 고정 여부를 설정합니다.</li>
+                    <li data-name="background-blend-mode"><strong>background-blend-mode</strong> : 배경을 혼합했을 때의 상태를 설정합니다.</li>
+                    <li data-name="background-clip"><strong>background-clip</strong> : 백그라운드 이미지의 위치 기준점을 설정하기 위한 속성입니다.</li>
+                    <li data-name="background-color"><strong>background-color</strong> : 백그라운드 색을 설정합니다.</li>
+                    <li data-name="background-image"><strong>background-image</strong> : 백그라운드 이미지 및 배경 속성을 설정합니다.</li>
+                    <li data-name="background-origin"><strong>background-origin</strong> : 백그라운드 이미지의 위치 기준점을 설정하기 위한 속성입니다.</li>
+                    <li data-name="background-position"><strong>background-position</strong> : 백그라운드 이미지의 위치 영역을 설정합니다.</li>
+                    <li data-name="background-repeat"><strong>background-repeat</strong> : 백그라운드 이미지 반복 여부를 설정합니다.</li>
+                    <li data-name="background-size"><strong>background-size</strong> : 백그라운드 이미지 사이즈를 설정합니다.</li>
+                    <li data-name="background"><strong>background</strong> : 백그라운드 속성을 일괄적으로 설정합니다.</li>
+                    <li data-name="border"><strong>border</strong> : 테두리 속성을 일괄적으로 설정합니다.</li>
+                    <li data-name="border-bottom"><strong>border-bottom</strong> : 테두리 아래쪽 속성을 일괄적으로 설정합니다.</li>
+                    <li data-name="border-bottom-color"><strong>border-bottom-color</strong> : 테두리 아래쪽 색 속성을 설정합니다.</li>
+                    <li data-name="border-bottom-left-radius"><strong>border-bottom-left-radius</strong> : 아래부분 왼쪽 모서리 굴곡을 설정합니다.</li>
+                    <li data-name="border-bottom-right-radius"><strong>border-bottom-right-radius</strong> : 아래부분 오른쪽 모서리 굴곡을 설정합니다.</li>
+                    <li data-name="border-bottom-style"><strong>border-bottom-style</strong> : 테두리 아래쪽 스타일 속성을 설정합니다.</li>
+                    <li data-name="border-bottom-width"><strong>border-bottom-width</strong> : 테두리 아래쪽 두께 속성을 설정합니다.</li>
+                    <li data-name="border-collapse"><strong>border-collapse</strong> : 테이블의 테두리 분리 여부를 설정합니다.</li>
+                    <li data-name="border-color"><strong>border-color</strong> : 테두리 색 속성을 설정합니다.</li>
+                    <li data-name="border-image"><strong>border-image</strong> : 테두리 이미지 속성을 설정합니다.</li>
+                    <li data-name="border-image-outset"><strong>border-image-outset</strong> : 테두리 이미지 간격 속성을 설정합니다.</li>
+                    <li data-name="border-image-repeat"><strong>border-image-repeat</strong> : 테두리 이미지 반복 속성을 설정합니다.</li>
+                    <li data-name="border-image-slice"><strong>border-image-slice</strong> : 테두리 이미지 크기 속성을 설정합니다.</li>
+                    <li data-name="border-image-source"><strong>border-image-source</strong> : 테두리 이미지 경로 속성을 설정합니다.</li>
+                    <li data-name="border-image-width"><strong>border-image-width</strong> : 테두리 이미지 두께 속성을 설정합니다.</li>
+                    <li data-name="border-left"><strong>border-left</strong> : 테두리 왼쪽 속성을 일괄적으로 설정합니다.</li>
+                    <li data-name="border-left-color"><strong>border-left-color</strong> : 테두리 왼쪽 색 속성을 설정합니다.</li>
+                    <li data-name="border-left-style"><strong>border-left-style</strong> : 테두리 왼쪽 스타일 속성을 설정합니다.</li>
+                    <li data-name="border-left-width"><strong>border-left-width</strong> : 테두리 왼쪽 두께 속성을 설정합니다.</li>
+                    <li data-name="border-radius"><strong>border-radius</strong> : 모서리 굴곡을 설정합니다.</li>
+                    <li data-name="border-right"><strong>border-right</strong> : 테두리 오른쪽 속성을 일괄적으로 설정합니다.</li>
+                    <li data-name="border-right-color"><strong>border-right-color</strong> : 테두리 오른쪽 색 속성을 설정합니다.</li>
+                    <li data-name="border-right-style"><strong>border-right-style</strong> : 테두리 오른쪽 스타일 속성을 설정합니다.</li>
+                    <li data-name="border-right-width"><strong>border-right-width</strong> : 테두리 오른쪽 두께 속성을 설정합니다.</li>
+                    <li data-name="border-spacing"><strong>border-spacing</strong> : 테이블의 테두리 간격을 설정합니다.</li>
+                    <li data-name="border-style"><strong>border-style</strong> : 테두리 스타일 속성을 설정합니다.</li>
+                    <li data-name="border-top"><strong>border-top</strong> : 테두리 위쪽 속성을 일괄적으로 설정합니다.</li>
+                    <li data-name="border-top-color"><strong>border-top-color</strong> : 테두리 위쪽 색 속성을 설정합니다.</li>
+                    <li data-name="border-top-left-radius"><strong>border-top-left-radius</strong> : 윗부분 왼쪽 모서리 굴곡을 설정합니다.</li>
+                    <li data-name="border-top-right-radius"><strong>border-top-right-radius</strong> : 윗부분 오른쪽 모서리 굴곡을 설정합니다.</li>
+                    <li data-name="border-top-style"><strong>border-top-style</strong> : 테두리 위쪽 스타일 속성을 설정합니다.</li>
+                    <li data-name="border-top-width"><strong>border-top-width</strong> : 테두리 위쪽 두께 속성을 설정합니다.</li>
+                    <li data-name="border-width"><strong>border-width</strong> : 테두리 두께 속성을 설정합니다.</li>
+                    <li data-name="bottom"><strong>bottom</strong> : 위치 요소의 아래쪽 속성을 설정합니다.</li>
+                    <li data-name="box-decoration-break"><strong>box-decoration-break</strong> : 컬럼 및 줄바꿈시 테두리와 패딩의 방식을 설정합니다.</li>
+                    <li data-name="box-shadow"><strong>box-shadow</strong> : 박스 요소의 그림자를 설정합니다.</li>
+                    <li data-name="box-sizing"><strong>box-sizing</strong> : 요소 크기에 패딩 포함 여부를 설정합니다.</li>
+
+                    <li data-name="caption-side"><strong>caption-side</strong> :  표(table)의 캡션의 위치를 정하는 속성이다.</li>
+                    <li data-name="caret-color"><strong>caret-color</strong> : 웹페이지의 텍스트 커서 색상을 변경하기 위해서는 CSS의 caret-color 속성을 적용할 수 있습니다</li>
+                    <li data-name="clear"><strong>clear</strong> :  요소를 floating 된 요소의 영향에서 벗어나게 하는 속성이다.</li>
+                    <li data-name="clip"><strong>clip</strong> :  요소의 특정 부분만 나오도록 할 수 있습니다.</li>
+                    <li data-name="color"><strong>color</strong> : 글꼴의 색상 지정</li>
+                    <li data-name="column-count"><strong>column-count</strong> : 컬럼의 수를 정의합니다.</li>
+                    <li data-name="column-fill"><strong>column-fill</strong> : 열의 지정방법을 정의합니다.</li>
+                    <li data-name="column-gap"><strong>column-gap</strong> : 열과 열 사이의 간격(Line)을 정의</li>
+                    <li data-name="column-rule"><strong>column-rule</strong> : 컬럼 라인의 가로값, 스타일, 컬러를 정의합니다.</li>
+                    <li data-name="column-rule-color"><strong>column-rule-color</strong> : 컬럼 라인의 컬러를 설정합니다.</li>
+                    <li data-name="column-rule-style"><strong>column-rule-style</strong> : 컬럼 라인의 스타일을 설정합니다.</li>
+                    <li data-name="column-rule-width"><strong>column-rule-width</strong> : 컬럼 라인의 가로 값을 설정합니다.</li>
+                    <li data-name="column-span"><strong>column-span</strong> : 열의 속성을 정의합니다.</li>
+                    <li data-name="column-width"><strong>column-width</strong> : 컬럼의 가로 값을 정의합니다.</li>
+                    <li data-name="content "><strong>content</strong> : 콘텐츠 내용을 설정합니다.</li>
+                    <li data-name="counter-increment"><strong>counter-increment</strong> : 콘텐츠의 순서 상태를 정의합니다.</li>
+                    <li data-name="counter-reset"><strong>counter-reset</strong> : 콘텐츠의 숫자를 초기화합니다.</li>
+                    <li data-name="cursor "><strong>cursor</strong> : 마우스 오버시 마우스 포인터를 정의합니다.</li>
+                    <li data-name="direction "><strong>direction</strong> : 문장의 방향을 설정합니다.</li>
+                    <li data-name="display "><strong>display</strong> : 요소의 성질을 정의합니다.</li>
+                    <li data-name="empty-cells"><strong>empty-cells</strong> : 테이블의 빈요소의 속성을 설정합니다.</li>
+                    <li data-name="filter "><strong>filter</strong> : 그래픽 효과를 설정합니다.</li>
+                    <li data-name="flex "><strong>flex</strong> : 콘텐츠의 성질을 flex로 정의합니다.</li>
+                    <li data-name="flex-basis"><strong>flex-basis</strong> : 플렉스 요소의 기본 단위를 정의합니다.</li>
+                    <li data-name="flex-direction"><strong>flex-direction</strong> : 요소의 정렬 방향을 정의합니다.</li>
+                    <li data-name="flex-flow"><strong>flex-flow</strong> : 정렬 방향 flex-direction와 줄 속성 flex-wrap을 같이 설정합니다.</li>
+                    <li data-name="flex-grow"><strong>flex-grow</strong> : 플렉스 요소의 크기를 늘려줍니다.</li>
+                    <li data-name="flex-shrink"><strong>flex-shrink</strong> : 플렉스 요소의 크기를 수축시킵니다.</li>
+                    <li data-name="flex-wrap"><strong>flex-wrap</strong> : 요소의 줄 속성을 설정합니다.</li>
+                    <li data-name="float"><strong>float</strong> : 블록요소의 정렬 상태를 설정합니다.</li>
+                    <li data-name="font"><strong>font</strong> : 폰트에 관한 설정을 정의합니다.</li>
+                    <li data-name="font-family"><strong>font-family</strong> : 속성은 폰트 종류를 설정합니다.</li>
+                    <li data-name="font-size"><strong>font-size</strong> : 폰트 사이즈 속성을 설정합니다.</li>
+                    <li data-name="font-size-adjust"><strong>font-size-adjust</strong> : 소문자를 기준으로 폰트 크기를 설정합니다.</li>
+                    <li data-name="font-stretch"><strong>font-stretch</strong> : 폰트의 굵기를 정의합니다.</li>
+                    <li data-name="font-style"><strong>font-style</strong> : 폰트의 스타일을 설정합니다.</li>
+                    <li data-name="font-variant"><strong>font-variant</strong> : 글꼴 변형 형태를 일괄적으로 설정합니다.</li>
+                    <li data-name="font-variant-numeric"><strong>font-variant-numeric</strong> : 숫자에 대한 글꼴 글리프(표시 형태)를 설정합니다.</li>
+                    <li data-name="font-variant-ligatures"><strong>font-variant-ligatures</strong> : 속성은 글꼴 글리프가 겹쳤을 때 설정합니다.</li>
+                    <li data-name="font-variant-emoji"><strong>font-variant-emoji</strong> : 이모지 글꼴 글리프를 설정합니다.</li>
+                    <li data-name="font-variant-east-asian"><strong>font-variant-east-asian</strong> : 아시아 언어 글꼴 글리프를 설정합니다.</li>
+                    <li data-name="font-variant-caps"><strong>font-variant-caps</strong> : 소문자/대문자에 대한 글꼴 글리프를 설정합니다.</li>
+                    <li data-name="font-variant-alternates"><strong>font-variant-alternates</strong> : 글꼴 글리프의 대체 형태를 설정합니다.</li>
+                    <li data-name="font-variant-position"><strong>font-variant-position</strong> : 글꼴 글리프의 위치를 설정합니다.</li>
+                    <li data-name="font-variation-settings"><strong>font-variation-settings</strong> : 가변 폰트를 설정합니다.</li>
+                    <li data-name="font-weight"><strong>font-weight</strong> : 폰트의 두께를 설정합니다.</li>
+
+                    <li data-name="gird"><strong>gird</strong> : 페이지를 여러 주요 영역으로 나누거나, 크기와 위치 및 문서 계층 구조의 관점에서 HTML 기본 요소로 작성된 콘트롤 간의 관계를 설정합니다.</li>
+                    <li data-name="gird-area"><strong>gird-area</strong> : 그리드 영역의 가장자리를 지정하여 그리드 내에서 그리드 항목의 크기와 위치를 설정합니다.</li>
+                    <li data-name="gird-auto-columns"><strong>gird-auto-columns</strong> : 암시적으로 생성된 그리드 열 트랙 또는 트랙 패턴의 크기를 설정합니다.</li>
+                    <li data-name="bird-auto-flow"><strong>gird-auto-flow</strong> : 자동 배치 알고리즘이 작동하는 방식을 제어하여 자동 배치된 항목이 그리드로 흐르는 방식을 정확하게 설정합니다.</li>
+                    <li data-name="gird-auto-rows"><strong>gird-auto-rows</strong> : 암시적으로 생성된 그리드 행 트랙 또는 트랙 패턴의 크기를 설정합니다.</li>
+                    <li data-name="gird-column"><strong>gird-column</strong> : 그리드 영역의 인라인 시작 및 인라인 끝 가장자리를 지정하여 그리드 열 내 그리드 항목의 크기 와 위치를 설정합니다.</li>
+                    <li data-name="gird-column-end"><strong>gird-column-end</strong> : 그리드 영역의 블록 끝 가장자리를 지정하여 그리드 열 내에서 그리드 항목의 끝 위치를 설정합니다.</li>
+                    <li data-name="gird-column-gap"><strong>gird-column-gap</strong> : 그리드 아이템 사이의 간격을 정하는 속성으로 열 사이의 간격을 설정합니다.</li>
+                    <li data-name="gird-column-start"><strong>gird-column-start</strong> : 그리드 열 내에서 그리드 항목의 시작 위치를 설정합니다.</li>
+                    <li data-name="gird-gap"><strong>gird-gap</strong> : 그리드 아이템 사이의 간격을 정하는 속성으로 행과 열의 간격을 동시에 설정합니다.</li>
+                    <li data-name="gird-row"><strong>gird-row</strong> : 그리드 영역 의 인라인 시작 및 인라인 끝 가장자리를 지정하여 그리드 행 내에서 그리드 항목의 크기와 위치를 설정합니다.</li>
+                    <li data-name="gird-row-end"><strong>gird-row-end</strong> : 그리드 영역의 인라인 끝 가장자리를 지정하여 그리드 행 내에서 그리드 항목의 끝 위치를 설정합니다.</li>
+                    <li data-name="gird-row-gap"><strong>gird-row-gap</strong> : 그리드 아이템 사이의 간격을 정하는 속성으로 행 사이의 간격을 설정합니다.</li>
+                    <li data-name="gird-row-start"><strong>gird-row-start</strong> : 그리드 영역의 인라인 시작 가장자리를 지정하여 그리드 행 내에서 그리드 항목의 시작 위치를 설정합니다.</li>
+                    <li data-name="gird-template"><strong>gird-template</strong> : 그리드 열 , 그리드 행 및 그리드 영역을 정의하기 위한 속기 속성을 설정합니다.</li>
+                    <li data-name="gird-template-areas"><strong>gird-template-areas</strong> : 명명된 그리드 영역을 지정하여 그리드의 셀을 설정하고 이름을 설정합니다.</li>
+                    <li data-name="gird-template-columns"><strong>gird-template-columns</strong> : 그리드 열의 라인 이름 및 트랙 크기 조정 기능을 설정합니다.</li>
+                    <li data-name="gird-template-rows"><strong>gird-template-rows</strong> : 그리드 행의 라인 이름 및 트랙 크기 조정 기능을 설정합니다.</li>
+                    <li data-name="hanging-punctuation"><strong>hanging-punctuation</strong> : 문장 부호가 텍스트 줄의 시작 또는 끝에 달려야 하는지 여부를 설정합니다.</li>
+                    <li data-name="height"><strong>height</strong> : 요소의 세로 크기를 설정합니다.</li>
+                    <li data-name="hyphens"><strong>hyphens</strong> : 텍스트 줄바꿈을 할때 하이픈으로 연결하는 방법을 설정합니다.</li>
+                    <li data-name="initial"><strong>initial</strong> 속성의 초깃값(기본값)을 요소에 적용합니다.</li>
+                    <li data-name="isolation"><strong>isolation</strong> : stacking context을 설정합니다.</li>
+                    <li data-name="justify-content"><strong>justify-content</strong> : 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</li>
+                    <li data-name="left"><strong>left</strong> : 위치 요소의 왼쪽 속성을 설정합니다.</li>
+                    <li data-name="letter-spacing"><strong>letter-spacing</strong> : 글자 사이의 간격을 설정합니다.</li>
+                    <li data-name="line-height"><strong>line-height</strong> : 문장과 문장 사이의 간격을 설정합니다.</li>
+                    <li data-name="list-style"><strong>list-style</strong> : 목록 스타일 속성을 설정합니다.</li>
+                    <li data-name="list-style-type"><strong>list-style-type</strong> : 목록 마커의 유형을 설정합니다.</li>
+                    <li data-name="margin"><strong>margin</strong> : 요소의 바같쪽 여백을 설정합니다.</li>
+                    <li data-name="margin-bottom"><strong>margin-bottom</strong> : 요소의 아래 바같쪽 여백을 설정합니다.</li>
+                    <li data-name="margin-right"><strong>margin-right</strong> : 요소의 오른쪽 바같쪽 여백을 설정합니다.</li>
+                    <li data-name="margin-top"><strong>margin-top</strong> : 요소의 위부분 바같쪽 여백을 설정합니다.</li>
+                    <li data-name="max-height"><strong>max-height</strong> : 요소의 최대 세로 값을 설정합니다.</li>
+                    <li data-name="max-width"><strong>max-width</strong> : 요소의 최대 가로 값을 설정합니다.</li>
+                    <li data-name="min-height"><strong>min-height</strong> : 요소의 최소 세로 값을 설정합니다.</li>
+                    <li data-name="min-width"><strong>min-width</strong> : 요소의 최소 가로 값을 설정합니다.</li>
+                    <li data-name="mix-blend-mode"><strong>mix-blend-mode</strong> : 배경의 혼합 상태를 정의합니다.</li>
+                    <li data-name="object-fit"><strong>object-fit</strong> : &lt;img>, &lt;video> 태그의 크기를 정의합니다.</li>
+                    <li data-name="object-position"><strong>object-position</strong> : &lt;img>, &lt;video> 태그의 위치를 정의합니다.</li>
+                    <li data-name="opacity"><strong>opacity</strong> : 요소의 투명도를 설정합니다.</li>
+                    <li data-name="order"><strong>order</strong> : flex 콘텐츠의 순서를 정의합니다.</li>
+                    <li data-name="outline"><strong>outline</strong> : 테두리 속성을 일괄적으로 설정합니다.</li>
+                    <li data-name="outline-color"><strong>outline-color</strong> : 아웃라인의 색을 정의합니다.</li>
+                    <li data-name="outline-offset"><strong>outline-offset</strong> : 아웃라인의 간격을 정의합니다.</li>
+                    <li data-name="outline-style"><strong>outline-style</strong> : 아웃라인 스타일을 정의합니다.</li>
+                    <li data-name="outline-width"><strong>outline-width</strong> : 아웃라인의 두께를 정의합니다.</li>
+                    <li data-name="overflow"><strong>overflow</strong> : 지정한 영역에 요소들이 벗어났을 때 속성을 설정합니다.</li>
+                    <li data-name="overflow-x"><strong>overflow-x</strong> : X축을 기준으로 지정한 영역에 요소들이 벗어났을 때 속성을 설정합니다.</li>
+                    <li data-name="overflow-y"><strong>overflow-y</strong> : y축을 기준으로 지정한 영역에 요소들이 벗어났을 때 속성을 설정합니다.</li>
+
+                    <li data-name="padding"><strong>padding</strong> : 네 방향 안쪽 여백 영역을 설정합니다.</li>
+                    <li data-name="padding-bottom"><strong>padding-bottom</strong> : 요소의 아래쪽에 안쪽 여백 영역을 설정합니다.</li>
+                    <li data-name="padding-left"><strong>padding-left</strong> : 요소의 왼쪽에 안쪽 여백 영역을 설정합니다.</li>
+                    <li data-name="padding-right"><strong>padding-right</strong> : 요소의 오른쪽에 안쪽 여백 영역을 설정합니다.</li>
+                    <li data-name="padding-top"><strong>padding-top</strong> : 요소의 위쪽에 안쪽 여백 영역을 설정합니다.</li>
+                    <li data-name="page-break-after"><strong>page-break-after</strong> : 현재 요소 다음에 페이지 넘김을 지정합니다.</li>
+                    <li data-name="page-break-before"><strong>page-break-before</strong> : 현재 요소 전에 페이지 넘김을 지정합니다.</li>
+                    <li data-name="page-break-inside"><strong>page-break-inside</strong> : 인쇄시 페이지 분리에 관한 설정을 정의합니다.</li>
+                    <li data-name="perspective"><strong>perspective</strong> :  요소와의 거리를 나타냅니다. 3D 위치 요소에 약간의 원근감을 지정합니다.</li>
+                    <li data-name="perspective-origin"><strong>perspective-origin</strong> : 뷰어가 보고 있는 위치를 결정합니다. 속성에서 소실점으로 사용됩니다.</li>
+                    <li data-name="pointer-events"><strong>pointer-events</strong> : 뷰어가 보고 있는 위치를 결정합니다. 속성에서 소실점으로 사용됩니다.</li>
+                    <li data-name="position"><strong>position</strong> : 문서 상에 요소를 배치하는 방법을 지정합니다.</li>
+                    <li data-name="quotes"><strong>quotes</strong> : 인용문을 감싸는 큰따옴표를 다른 기호 또는 문자로 바꿉니다.</li>
+                    <li data-name="resize"><strong>resize</strong> : 사용자에게 요소 크기 조정 권한을 지정합니다.</li>
+                    <li data-name="right"><strong>right</strong> : 위치 요소의 오른쪽 속성을 설정합니다.</li>
+                    <li data-name="tab-size"><strong>tab-size</strong> : 글씨의 간격을 정의합니다.</li>
+                    <li data-name="table-layout"><strong>table-layout</strong> : 표의 레이아웃 크기를 정의합니다.</li>
+                    <li data-name="text-align"><strong>text-align</strong> : 텍스트 정렬 방식을 설정합니다.</li>
+                    <li data-name="text-align-last"><strong>text-align-last</strong> : 문장의 마지막 텍스트 정렬 방식을 설정합니다.</li>
+                    <li data-name="text-decoration"><strong>text-decoration</strong> :  글자 라인 속성을 일괄적으로 설정합니다.</li>
+                    <li data-name="text-decoration-color"><strong>text-decoration-color</strong> : 글자 라인 색을 설정합니다.</li>
+                    <li data-name="text-decoration-line"><strong>text-decoration-line</strong> : 글자 라인 스타일을 설정합니다.</li>
+                    <li data-name="text-decoration-style"><strong>text-decoration-style</strong> : 글자 스타일을 정의합니다.</li>
+                    <li data-name="text-decoration-style"><strong>text-decoration-style</strong> : 글자 스타일을 정의합니다.</li>
+                    <li data-name="text-decoration-skip-ink"><strong>text-decoration-skip-ink</strong> : 언더 라인의 글씨 겹침을 설정합니다.</li>
+                    <li data-name="text-decoration-thickness"><strong>text-decoration-thickness</strong> : 글자 라인의 굵기 속성을 설정합니다.</li>
+                    <li data-name="text-emphasis-color"><strong>text-emphasis-color</strong> : 텍스트에 강조 표시 색상을 설정합니다.</li>
+                    <li data-name="text-emphasis-position"><strong>text-emphasis-position</strong> : 텍스트에 강조 표시 위치를 설정합니다.</li>
+                    <li data-name="text-emphasis-style"><strong>text-emphasis-style</strong> : 텍스트에 강조 표시 스타일을 설정합니다.</li>
+                    <li data-name="text-emphasis"><strong>text-emphasis</strong> : 텍스트에 강조 표시를 일괄적으로 설정합니다.</li>
+                    <li data-name="text-indent"><strong>text-indent</strong> : 문단 들여쓰기 속성을 설정합니다.</li>
+                    <li data-name="text-justify"><strong>text-justify</strong> : 양쪽 정렬을 했을 때 정렬 유형을 설정합니다.</li>
+                    <li data-name="text-overflow"><strong>text-overflow</strong> : 텍스트가 영역을 벗어 났을 때 속성을 설정합니다.</li>
+                    <li data-name="text-shadow"><strong>text-shadow</strong> : 텍스트가 그림자를 설정합니다.</li>
+                    <li data-name="text-transform"><strong>text-transform</strong> : 텍스트를 대문자나 소문자로 변경합니다.</li>
+                    <li data-name="text-underline-offset"><strong>text-underline-offset</strong> : 언더 라인의 오프셋 값을 설정합니다.</li>
+                    <li data-name="text-underline-position"><strong>text-underline-position</strong> : 언더 라인의 위치을 설정합니다.</li>
+                    <li data-name="top"><strong>top</strong> : 요소의 위쪽 속성을 설정합니다.</li>
+                    <li data-name="transform"><strong>transform</strong> : 컨텐츠 요소를 이동(translate), 회전(rotate), 확대(scale), 기울기(skew) 등의 효과를 줄 수 있습니다. 애니메이션 작업 시 가장 많이 쓰는 요소입니다. 요소를 이동시키거나 회전 시킬 수 있으며, 원근점(perspective)를 사용하여 3D까지 구현 할 수 있습니다.</li>
+                    <li data-name="transform-origin"><strong>transform-origin</strong> : 요소의 움직임 방향 및 기준점을 설정합니다. transform 속성과 같이 설정하며 기준점에 따라 애니메이션의 방향을 설정 할 수 있습니다.</li>
+                    <li data-name="transform-style"><strong>transform-style</strong> : 요소의 움직임 스타일을 정의합니다.</li>
+                    <li data-name="transition-delay"><strong>transition-delay</strong> : 요소의 움직임 시간을 지연합니다.</li>
+                    <li data-name="transition-duration"><strong>transition-duration</strong> : 요소의 움직임 지속시간을 정의합니다.</li>
+                    <li data-name="transition-property"><strong>transition-property</strong> : transition의 적용 여부를 정의합니다.</li>
+                    <li data-name="transition-timing-function"><strong>transition-timing-function</strong> : 요소의 움직임 기능을 정의합니다.</li>
+                    <li data-name="unicode-bidi"><strong>unicode-bidi</strong> : 글자의 방향 속성을 설정합니다.</li>
+                    <li data-name="user-select"><strong>user-select</strong> : 요소의 텍스트를 선택할 지 정의합니다.</li>
+                    <li data-name="vertical-align"><strong>vertical-align</strong> : 텍스트의 상하 정렬 방식을 설정합니다.</li>
+                    <li data-name="visibility"><strong>visibility</strong> : 요소를 보이지 않게 정의합니다.</li>
+                    <li data-name="white-space"><strong>white-space</strong> : 줄바꿈, 공백, 줄 속성을 설정합니다.</li>
+                    <li data-name="width"><strong>width</strong> : 요소의 가로 값을 정의합니다.</li>
+                    <li data-name="word-break"><strong>word-break</strong> : 줄바꿈 속성을 설정합니다.</li>
+                    <li data-name="word-spacing"><strong>word-spacing</strong> : 단어 사이의 간격을 정의합니다.</li>
+                    <li data-name="word-wrap"><strong>word-wrap</strong> : 줄바꿈을 설정합니다.</li>
+                    <li data-name="z-index"><strong>z-index</strong> : 요소의 위치가 겹칠 경우 순서를 정의합니다.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <a href="mailto:didrn94553@gmail.com">didrn94553@gmail.com</a>
+    </footer>
+
+    <script>
+        //선택자
+        const searchBox = document.querySelector(".search__box input"); //검색
+        const searchList = document.querySelectorAll(".search__list li");  //목록 리스트
+        const searchInfo = document.querySelector(".search__info span")
+        
+        searchInfo.innerHTML = searchList.length;
+
+        //검색
+        searchBox.addEventListener("keyup", () => {
+            const userWord = searchBox.value;   //사용자가 입력한 키워드
+            searchList.forEach((el, i, a) => {
+                
+                // const cssName = el.getAttribute("data-name");
+                const cssName = el.dataset.name;    //data-name 불러오기
+                
+                if(cssName.indexOf(userWord)){
+                    //데이터가 있으면 실행
+                    el.classList.add("hide");
+                } else {
+                    //데이터가 없으면 실행
+                    el.classList.remove("hide");
+                };
+            });
+        });
+    </script>
+</body>
+</html>
