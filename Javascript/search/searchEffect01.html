@@ -275,13 +275,13 @@
         const searchBox = document.querySelector(".search__box input"); //검색
         const searchList = document.querySelectorAll(".search__list li");  //목록 리스트
         const searchInfo = document.querySelector(".search__info span")
-        
-        searchInfo.innerHTML = searchList.length;
+        let num = 0;
+        searchInfo.innerHTML = searchList.length;   //전체 개수
 
         //검색
         searchBox.addEventListener("keyup", () => {
             const userWord = searchBox.value;   //사용자가 입력한 키워드
-            searchList.forEach((el, i, a) => {
+            searchList.forEach((el, i) => {
                 
                 // const cssName = el.getAttribute("data-name");
                 const cssName = el.dataset.name;    //data-name 불러오기
@@ -291,8 +291,14 @@
                     el.classList.add("hide");
                 } else {
                     //데이터가 없으면 실행
+                    num++;
+                    console.log(num);
                     el.classList.remove("hide");
                 };
+                if(i == searchList.length-1){
+                    searchInfo.innerHTML = num;
+                    num = 0;
+                }
             });
         });
     </script>
