@@ -1,67 +1,86 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>슬라이드 유형02</title>
-    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-    <style>
-.swiper {
-  width: 1920px;
-  height: 600px;
-}
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+        margin: 0;
+    }
+    section {
+        overflow: hidden;
+    }
+    .container {
+        transition: transform 0.5s;
+    }
+    .inner {
+        width: 100vw;
+        float: left;
+    }
+    .inner img {
+        width: 100%;   
+    }
+    button {
+        width: 100px;
+        margin: 10px;
+        padding: 10px;
+    }
+    .slider__btn {
+        text-align: center;
+        display: block;
+    }
+    .slider__btn .btn.active {
+        background-color: #000;
+        color: #fff;
+    }
+  </style>
 </head>
-
 <body>
-    <!-- Slider main container -->
-<div class="swiper">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-      <!-- Slides -->
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      ...
+    <section>
+        <div class="container">
+            <div class="inner">
+                <img src="../assets/img/sliderType01_01.jpg" alt="">
+            </div>
+            <div class="inner">
+                <img src="../assets/img/sliderType01_02.jpg" alt="">
+            </div>
+            <div class="inner">
+                <img src="../assets/img/sliderType01_03.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <div class="slider__btn">
+        <button class="btn active">1</button>
+        <button class="btn">2</button>
+        <button class="btn">3</button>
     </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
-  
-    <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  
-    <!-- If we need scrollbar -->
-    <div class="swiper-scrollbar"></div>
-  </div>
+
+    <script>
+        const container = document.querySelector(".container")
+        const btn = document.querySelectorAll(".slider__btn .btn")
+
+        //btn 개수에 따라 vw 변경
+        container.style.width = `${btn.length}00vw`
+
+        //몇 번째 btn인지에 따라 옮기는 vw 변경
+        btn.forEach((button, index) => {
+            button.addEventListener("click", function(event){
+                container.style.transform = `translate(-${index}00vw)`
+                //사용자가 클릭한 버튼에 active class 추가하기
+                btn.forEach((button) => {
+                    if(button == event.target) {
+                        button.classList.add("active");
+                    } else {
+                        button.classList.remove("active");
+                    }
+                });
+            })
+            
+        })
+
+    </script>
 </body>
-<script>
-    const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-});
-</script>
 </html>
