@@ -9,7 +9,47 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/quiz.css">
     <style>
-        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.2);
+            background-image: url(img/modal.png);
+            background-repeat: no-repeat;
+            box-sizing: border-box;
+            background-position: center center;
+            font-family: "NeoDunggeunmo";
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 5px solid #888;
+            width: 80%;
+        }
+
+        /* 모달창 닫기 버튼 스타일 */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .modal p {
+            font-size: 50px;
+        }
     </style>
 </head>
 <body>
@@ -85,6 +125,12 @@
                     <div class="quiz__desc"></div>
                     <div class="quiz__info"></div>
                     <div class="quiz__check"></div>
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -225,6 +271,7 @@
         const quizDesc = quizWrap.querySelector(".quiz__desc");  //문제 해설
         const quizCurrent = quizWrap.querySelector(".quiz__info");  //현재 문제 표시
         const quizCheck = quizWrap.querySelector(".quiz__check");
+        const quizModal = quizWrap.querySelector(".modal p");
 
         let quizCount = 0;
         let quizScore = 0;
@@ -267,23 +314,26 @@
             let checkTag = `
                 정답 : ${quizScore}개
             `;
+            let modalTag = `
+                정답 : ${quizScore}개<br>
+                점수 : ${Math.ceil((quizScore / quizInfo.length) * 100) + "점"}
+            `;
 
             quizTitle.innerHTML = typeTag;
             quizQuestion.innerHTML = questionTag;
             quizChoice.innerHTML = choiceTag;
             quizDesc.innerHTML = descTag;
-            quizCurrent.innerHTML = currentTag
-            quizCheck.innerHTML = checkTag
+            quizCurrent.innerHTML = currentTag;
+            quizCheck.innerHTML = checkTag;
+            quizModal.innerHTML = modalTag;
 
             //보기 선택자
             const quizChoiceSpan = quizWrap.querySelectorAll(".quiz__choice span");
             const quizChoiceInput = quizWrap.querySelectorAll(".quiz__choice input");
-            // quizChoiceSpan.forEach((span, num) => {
-            //     span.setAttribute("onclick", "choiceSelected(this)");   //속성을 부여하는 setA
-            // });
 
             for(let i=0; i<quizChoiceSpan.length; i++){
                 quizChoiceSpan[i].setAttribute("onclick", "choiceSelected(this)");
+                //속성을 부여하는 setAttribute
             }
 
             //다음 버튼, 해설 숨기기
@@ -294,8 +344,8 @@
         updateQuiz(quizCount);
 
         function choiceSelected(answer){
-            let userAnswer = answer.textContent;  //사용자 정답
-            let currentAnswer = quizInfo[quizCount].infoAnswer; //ㄹㅇ정답
+            let userAnswer = answer.textContent;  //사용자가 선택한 보기
+            let currentAnswer = quizInfo[quizCount].infoAnswer; //문제 정답
             if(userAnswer == currentAnswer){
                 dogWrap.classList.add("like");
                 quizScore++;
@@ -313,9 +363,30 @@
             
             dogWrap.classList.remove("like","dislike");
             if(quizCount == quizInfo.length){
-                alert(Math.ceil((quizScore / quizInfo.length) * 100) + "점");
+                quizCheck.innerHTML = quizScore;
+                // alert(Math.ceil((quizScore / quizInfo.length) * 100) + "점");
+                
+                // 모달창을 띄우는 함수
+                function showModal() {
+                    // 모달창 요소를 가져옵니다.
+                    var modal = document.getElementById("myModal");
+
+                    // 모달창 요소를 보이도록 설정합니다.
+                    modal.style.display = "block";
+
+                    // 모달창을 닫는 버튼 요소를 가져옵니다.
+                    var closeBtn = document.getElementsByClassName("close")[0];
+
+                    // 모달창을 닫는 이벤트를 추가합니다.
+                    closeBtn.onclick = function() {
+                        modal.style.display = "none";
+                    }
+                }
+
+                // alert 대신 showModal 함수를 호출합니다.
+                showModal();
             }
-            
+
             updateQuiz(quizCount);
         });
     </script>
