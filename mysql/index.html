@@ -145,6 +145,15 @@
                         <a href="https://www.mamp.info/en/downloads/" target="_blank">https://www.mamp.info/en/downloads/</a>                        
                     </div>
                 </div>
+                <br>
+                <h4>php 정보 확인</h4>
+                <div class="bs-callout bs-callout-info">
+                    phpinfo();
+                </div>
+                <div>정보 파일 수정 위치 : Loaded Configuration File : C:\MAMP\conf\php8.0.1\php.ini</div>
+                <div>에러 표시 : display_errors = On</div>
+                <div>캐쉬 설정 : opcache.enable = 0</div>
+                <div>PHP 관리자 페이지 : http://localhost/phpMyAdmin/index.php</div>
                 <!-- //intro2 -->
 
                 <div class="bs-docs-section">
@@ -241,7 +250,7 @@ mysql> show databases;
                     <div class="bs-callout bs-callout-info">
                         <code>create</code> <code>table</code> 테이블 이름;<br>
                     </div>
-<pre><code class="language-js">create table member(
+<pre><code class="language-js">create table members(
 memberID int(10) unsigned auto_increment,
 youEmail varchar(40) NOT NULL,
 youName varchar(10) NOT NULL,
@@ -284,6 +293,7 @@ Query OK, 0 rows affected (0.03 sec)
 7 rows in set (0.00 sec)
 </code></pre>
                     <h4 id="intro5-4" class="page-header">테이블 삭제</h4>
+                    <h4>drop은 구조와 내용 모두 삭제합니다.</h4>
                     <div class="bs-callout bs-callout-info">
                         <code>drop</code> <code>table</code> 테이블 이름;<br>
                     </div>
@@ -293,6 +303,16 @@ Query OK, 0 rows affected (0.01 sec)
 mysql> show tables;
 Empty set (0.00 sec)
 </code></pre>
+
+                    <h4 id="intro5-4" class="page-header">테이블 삭제</h4>
+                    <h4>turncate는 구조는 남기고 내용만 삭제합니다.</h4>
+                    <div class="bs-callout bs-callout-info">
+                        <code>turncate</code> <code>table</code> 테이블 이름;<br>
+                    </div>
+<pre><code class="language-js">mysql> turncate table member;
+
+</code></pre>
+
                     <h4 id="intro5-5" class="page-header">테이블 복사</h4>
                     <div class="bs-callout bs-callout-info">
                         <br>

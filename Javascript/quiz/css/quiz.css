@@ -138,6 +138,20 @@
 .quiz__answer .confirm:hover {
     background-color: blanchedalmond;
 }
+.quiz__answer .next {
+    background-color: Cornsilk;
+    border: 6px ridge #cacaca;
+    width: 100%;
+    font-family: 'NanumSquare';
+    padding: 20px;
+    font-size: 22px;
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+}
+.quiz__answer .next:hover {
+    background-color: lightsalmon;
+}
 .quiz__answer .result {
     background-color: #fff;
     border: 6px ridge #cacaca;
