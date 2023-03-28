@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사이트 만들기1</title>
+
+    <!-- SEO -->
+    <meta name="author" content="이양구">
+    <meta name="description" content="이양구가 만든 사이트 튜토리얼입니다.">
+    <meta name="keyword" content="이양구, 사이트, 사이트 만들기, 튜토리얼">
+    <meta name="robots" content="all">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/ico/favicon.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/ico/favicon.png">
+    <link rel="apple-touch-icon" href="assets/ico/favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="skip">
+        <a href="#headerType">헤더 영역 바로가기</a>
+        <a href="#sliderType">슬라이드 영역 바로가기</a>
+        <a href="#imageType">이미지 영역 바로가기</a>
+        <a href="#imgTextType">이미지/텍스트 영역 바로가기</a>
+        <a href="#cardType">카드 영역 바로가기</a>
+        <a href="#bannerType">배너 영역 바로가기</a>
+        <a href="#textType">텍스트 영역 바로가기</a>
+        <a href="#footerType">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="headerType" class="header__wrap nexon">
+        <h2 class="blind">헤더 영역</h2>
+        <div class="header__inner">
+            <h1 class="header__logo">CIGAR</h1>
+            <nav class="header__menu">
+                <ul>
+                    <li><a href="#">Cigar</a></li>
+                    <li><a href="#">Cigar Cutter</a></li>
+                    <li><a href="#">Humidor</a></li>
+                    <li><a href="#">Lighter</a></li>
+                    <li><a href="#">Pipe</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </nav>
+            <div class="header__member">
+                <a href="#">로그인</a>
+            </div>
+        </div>
+    </header>
+    <!-- //headerType -->
+
+    <main id="mainType">
+
+        <section id="sliderType" class="nexon hide">
+            <h2 class="blind">슬라이드 영역</h2>
+            <div class="slider__inner">
+                <div class="slider">
+                    <div class="slider__info container">
+                        <span class="small">event</span>
+                        <h3 class="title">Inhale, Exhale.</h3>
+                        <p class="desc">They can not change me. Nothing can save me. <br>You try to run away. Run away from the world.</p>
+                        <div class="btn">
+                            <a href="#">자세히 보기</a>
+                            <a href="#">상담 신청</a>
+                        </div>
+                    </div>
+                    <div class="slider__arrow">
+                        <a href="#"><span class="blind">이전 이미지</span></a>
+                        <a href="#"><span class="blind">다음 이미지</span></a>
+                    </div>
+                    <div class="slider__dot">
+                        <a href="#" class="dot active"><span class="blind">첫 번째 이미지</span></a>
+                        <a href="#" class="dot"><span class="blind">두 번째 이미지</span></a>
+                        <a href="#" class="dot"><span class="blind">세 번째 이미지</span></a>
+                        <a href="#" class="play"><span class="blind">플레이</span></a>
+                        <a href="#" class="stop"><span class="blind">정지</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //sliderType -->
+
+        <section id="imageType" class="nexon section center">
+            <h2 class="section__h2">Would Smoke?</h2>
+            <p class="section__decs">오늘 당신이 태우고 싶은 이야기가 있나요? 편히 쉬세요.</p>
+
+            <div class="image__inner container">
+                <article class="image">
+                    <figure class="image__header">
+                        <img src="assets/img/imageType01_01.jpg" alt="시가 이미지">
+                    </figure>
+                    <div class="image__body">                    
+                        <h3 class="title">지금, 여기</h3>
+                        <p class="desc">한 모금의 쉼을 선물하세요. 당신의 한숨은 어떻게 생겼나요?</p>
+                        <a href="#" class="btn">자세히 보기</a>
+                    </div>
+                </article>
+                <article class="image">
+                    <figure class="image__header">
+                        <img src="assets/img/imageType01_02.jpg" alt="시가 이미지">
+                    </figure>
+                    <div class="image__body">                    
+                        <h3 class="title">Cigarette</h3>
+                        <p class="desc">More Cigar, More Peace. How do you split your sigh?</p>
+                        <a href="#" class="btn">자세히 보기</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- //imageType -->
+
+        <section id="imgTextType" class="nexon section gray">
+            <h2 class="blind">Most Famous CIGAR</h2>
+            <div class="imgText__inner container">
+                <article class="text">
+                    <span>notice</span>
+                    <h3>Most Famous CIGAR</h3>
+                    <p>If I can relate to you, I will send my breath. I fly in the blink of an eye.</p>
+                    <ul>
+                        <li><a href="#">쿠바 시가(Cuban cigar) : 쿠바에서 생산되는 시가로, 매우 유명하고 고품질입니다.</a></li>
+                        <li><a href="#">도미니카 시가(Dominican cigar) : 도미니카 공화국에서 생산되는 시가로, 쿠바 시가와 경쟁합니다.</a></li>
+                        <li><a href="#">니카라과 시가(Nicaraguan cigar) : 니카라과에서 생산되는 시가로, 강한 맛과 향기가 특징입니다.</a></li>
+                        <li><a href="#">할리우드 시가(Hollywood cigar) : 할리우드에서 인기 있는 시가입니다.</a></li>
+                        <li><a href="#">플로리다 시가(Florida cigar) : 미국 플로리다 주에서 생산되는 시가르로, 매우 부드러우며 가벼운 향이 특징입니다.</a></li>
+                    </ul>
+                </article>
+                <article class="img i1">
+                    <a href="#">인기 있는 쿠바 시가</a>
+                </article>
+                <article class="img i2">
+                    <a href="#">인기 있는 도미니카 시가</a>
+                </article>
+            </div>
+        </section>
+        <!-- //imgTextType -->
+
+        <section id="cardType" class="nexon section">
+            <h2 class="blind">카드 영역</h2>
+            <div class="container">
+                <h2 class="section__h2">시가를 보관하는 방법</h2>
+                <p class="section__decs">시가는 적절한 온도와 습도를 유지하는 것이 중요합니다.<br>제대로 보관하지 않으면 맛과 향이 손상될 수 있으며, 심지어 변질되어 맛이 나빠질 수도 있습니다.</p>
+                <div class="card__inner">
+                    <article class="card">
+                        <figure class="card__header">
+                            <img src="assets/img/cardType01_01.jpg" alt="온도와 습도 조절">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="title">온도와 습도 조절</h3>
+                            <p class="desc">시가는 상대적으로 낮은 온도와 높은 습도에서 보관해야 합니다. 일반적으로 70도와 70% 습도가 이상적인 조건입니다. 보관 온도가 너무 높으면 시가가 건조해지고, 습도가 너무 낮으면...</p>
+                            <a href="#" class="btn">자세히 보기</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <figure class="card__header">
+                        <img src="assets/img/cardType01_02.jpg" alt="시가 케이스 사용">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="title">시가 케이스 사용</h3>
+                            <p class="desc">시가 케이스를 사용하면 시가를 적절한 온도와 습도로 유지할 수 있습니다. 케이스는 종이 또는 나무 상자 형태가 있으며, 내부에는 적절한 습도를 유지하는 습도 조절기가 있습니다.</p>
+                            <a href="#" class="btn">자세히 보기</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <figure class="card__header">
+                            <img src="assets/img/cardType01_03.jpg" alt="시가 케이스">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="title">시가 케이스</h3>
+                            <p class="desc">보관 장소는 건조하고 직사광선이 닿지 않는 곳이 좋습니다. 직사광선이 닿으면 시가의 맛과 향이 손상될 수 있으며, 보관 장소가 너무 건조하면 시가가 불쾌하게 느껴질 수 있습니다.</p>
+                            <a href="#" class="btn">자세히 보기</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- //cardType -->
+
+        <section id="bannerType" class="banner__wrap nexon section center">
+            <h2 class="blind">배너 영역</h2>
+            <div class="banner__inner container">
+                <h3>Ask Us Anything</h3>
+                <p>시가의 구매부터 관리까지<br>뭐든지 물어보세요!</p>
+                <a href="#">leeyanggoo.tistory.com</a>
+            </div>
+        </section>
+        <!-- //bannerType -->
+
+        <section id="textType" class="text__wrap section center nexon">
+            <h2 class="blind">텍스트 영역</h2>
+            <div class="container">
+                <span class="section__small">notice</span>
+                <h2 class="section__h2 mb70">시가 구매 시 주의할 점</h2>
+                <div class="text__inner">
+                    <div class="text t1">
+                        <h3 class="text__title">브랜드와 종류</h3>
+                        <p class="text__desc">시가는 다양한 브랜드와 종류가 있으므로, 시가를 구매할 때는 자신이 원하는 브랜드와 종류를 선택해야 합니다. 맛과 향에 대한 개인적인 취향이 있으므로, 구매 전에 구체적인 정보를 수집하고...</p>
+                        <a href="#" class="text__btn">더보기</a>
+                    </div>
+                    <div class="text t2">
+                        <h3 class="text__title">판매처</h3>
+                        <p class="text__desc">시가를 구매할 때는 판매처를 신중하게 선택해야 합니다. 시가 전문 매장, 토바코 전문점, 술집 또는 밴데에서 구매하는 것이 좋으며, 인터넷에서 구매할 때는 신뢰할 수 있는 사이트에서 구매...</p>
+                        <a href="#" class="text__btn">더보기</a>
+                    </div>
+                    <div class="text t3">
+                        <h3 class="text__title">가격</h3>
+                        <p class="text__desc">시가의 가격은 다양하며, 시가의 품질과 관련이 있습니다. 일반적으로 좋은 시가는 비싸지만, 품질이 보장되는 것이 많습니다. 하지만 너무 싼 가격의 시가는 품질이 나쁠 수 있으므로, 품질과...</p>
+                        <a href="#" class="text__btn">더보기</a>
+                    </div>
+                    <div class="text t4">
+                        <h3 class="text__title">보관</h3>
+                        <p class="text__desc">시가는 적절한 온도와 습도에서 보관해야 하므로, 구매한 시가를 적절하게 보관할 수 있는 시가 케이스 또는 보관함을 구매하는 것이 좋습니다. 케이스를 사용하면 시가를 이동하거나 여행할 때...</p>
+                        <a href="#" class="text__btn">더보기</a>
+                    </div>
+                    <div class="text t5">
+                        <h3 class="text__title">특정 향과 맛에 대한 알레르기</h3>
+                        <p class="text__desc">시가에는 다양한 향과 맛이 있으므로, 일부 사람들은 특정한 향과 맛에 알레르기 반응을 나타낼 수 있습니다. 구매 전에 자신이 알레르기 반응을 보이는 향과 맛에 대해 알아보는 것이 좋습니다.</p>
+                        <a href="#" class="text__btn">더보기</a>
+                    </div>
+                    <div class="text t6">
+                        <h3 class="text__title">시가의 특성</h3>
+                        <p class="text__desc">시가는 일부 특성에 따라 다르게 분류됩니다. 예를 들어, 매운 시가, 강한 시가 등이 있으므로, 자신이 선호하는 특성을 고려하여 시가를 선택하는 것이 좋습니다.</p>
+                        <a href="#" class="text__btn">더보기</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //textType -->
+
+    </main>
+    <!-- //main -->
+
+    <footer id="footerType" class="footer__wrap section nexon">
+        <h2 class="blind">푸터 영역</h2>
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__menu">
+                    <div>
+                        <h3>Infomation</h3>
+                        <ul>
+                            <li><a href="#">Websites</a></li>
+                            <li><a href="#">Collections</a></li>
+                            <li><a href="#">Contributors</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Learn</h3>
+                        <ul>
+                            <li><a href="#">Academy</a></li>
+                            <li><a href="#">Seminar</a></li>
+                            <li><a href="#">Jobs</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Know-how</h3>
+                        <ul>
+                            <li><a href="#">Directory</a></li>
+                            <li><a href="#">Conferences</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Connect</h3>
+                        <ul>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Policy</h3>
+                        <ul>
+                            <li><a href="#">Cookies Policy</a></li>
+                            <li><a href="#">Legal Terms</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>SNS</h3>
+                        <ul>
+                            <li><a href="#">Instargram</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__right">
+                    2023 LeeYanggoo CIGAR site Portfolio is Power<br>
+                    All Right Reserved
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- //footerType -->
+
+</body>
+</html>

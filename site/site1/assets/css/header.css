@@ -1,0 +1,49 @@
+/* header__wrap */
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+.header__logo {
+    width: 20%;
+    position: relative;
+    /* margin-left: 40px; */
+}
+.header__logo::before {
+    content: '';
+    background-image: url(../img/logo.svg);
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 55px;
+    top: -15px;
+    background-repeat: no-repeat;
+}
+.header__menu {
+    width: 60%;
+    text-align: center;
+}
+.header__menu li {
+    display: inline-block;
+}
+.header__menu li a {
+    display: inline-block;
+    padding: 10px 30px;
+}
+.header__member {
+    width: 20%;
+    text-align: right;
+}
+.header__member a {
+    border: 1px solid #000;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+}
+
+/* 미디어쿼리 */
+@media (max-width: 960px){}
+@media (max-width: 600px){}
