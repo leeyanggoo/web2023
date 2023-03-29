@@ -68,23 +68,42 @@
                     <li><a href="#sample17">17. <strong>string.prototype.replaceAll()</strong>          : 메서드는 문자열에서 특정 문자열을 모두 교체하여, 새로은 문자열을 반환합니다.</a></li>
                     <li><a href="#sample18">18. <strong>string.prototype.search()</strong>              : 메서드는 문자열(정규식)을 검색하고, 위치값(숫자)을 반환합니다.</a></li>
                     <li><a href="#sample19">19. <strong>string.prototype.slice()</strong>               : 메서드는 문자열에서 시작 위치에서 종료 위치 값을 추출하여, 새로운 문자열을 반환합니다.</a>🐾🐾</li>
-                    <li><a href="#sample20">20. <strong>string.prototype.substring()</strong>           : 메서드는 문자열에서 시작 위치에서 종료 위치 값을 추출하여, 새로운 문자열을 반환합니다.</a>🐾</li>
+                    <li><a href="#sample19">20. <strong>string.prototype.substring()</strong>           : 메서드는 문자열에서 시작 위치에서 종료 위치 값을 추출하여, 새로운 문자열을 반환합니다.</a>🐾</li>
                     <li><a href="#sample21">21. <strong>string.prototype.substr()</strong>              : 메서드는 문자열에서 시작 위치에서 길이 값을 추출하여, 새로운 문자열을 반환합니다.</a></li>
                     <li><a href="#sample22">22. <strong>string.prototype.split()</strong>               : 메서드는 문자열을 구분자로 구분하고, 여러 개의 문자열(배열)을 반환합니다.</a>🐾🐾🐾</li>
                     <li><a href="#sample23">23. <strong>string.prototype.startsWith()</strong>          : 메서드는 시작하는 문자열에서 특정 문자열로 시작하는 확인하여, 그 결과를 불린(true, false)로 반환합니다.</a></li>
-                    <li><a href="#sample24">24. <strong>string.prototype.endsWith()</strong>            : 메서드는 끝나는 문자열에서 특정 문자열로 끝나는지 확인하여, 그 결과를 불린(true, false)로 반환합니다.</a></li>
+                    <li><a href="#sample23">24. <strong>string.prototype.endsWith()</strong>            : 메서드는 끝나는 문자열에서 특정 문자열로 끝나는지 확인하여, 그 결과를 불린(true, false)로 반환합니다.</a></li>
                     <li><a href="#sample25">25. <strong>string.prototype.toLocaleLowerCase()</strong>   : 메서드는 문자열을 소문자로 설정하고, 로케일 소문자 문자열을 반환합니다.</a></li>
                     <li><a href="#sample26">26. <strong>string.prototype.toLocaleUpperCase()</strong>   : 메서드는 문자열을 대문자로 설정하고, 로케일 대문자 문자열을 반환합니다.</a></li>
                     <li><a href="#sample27">27. <strong>string.prototype.toLowerCase()</strong>         : 메서드는 문자열을 소문자로 설정하고, 소문자 문자열을 반환합니다.</a></li>
-                    <li><a href="#sample28">28. <strong>string.prototype.toUpperCase()</strong>         : 메서드는 문자열을 대문자로 설정하고, 대문자 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample27">28. <strong>string.prototype.toUpperCase()</strong>         : 메서드는 문자열을 대문자로 설정하고, 대문자 문자열을 반환합니다.</a></li>
                     <li><a href="#sample29">29. <strong>string.prototype.toString()</strong>            : 메서드는 데이터를 문자열로 변환하고, 문자열을 반환합니다.</a></li>
                     <li><a href="#sample30">30. <strong>string.prototype.trim()</strong>                : 메서드는 문자열의 앞/뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</a>🐾</li>
-                    <li><a href="#sample31">31. <strong>string.prototype.trimEnd()</strong>             : 메서드는 문자열의 앞 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
-                    <li><a href="#sample32">32. <strong>string.prototype.trimStart()</strong>           : 메서드는 문자열의 뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample30">31. <strong>string.prototype.trimStart()</strong>           : 메서드는 문자열의 앞 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample30">32. <strong>string.prototype.trimEnd()</strong>             : 메서드는 문자열의 뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
                     <li><a href="#sample33">33. <strong>string.prototype.valueOf()</strong>             : 메서드는 객체의 원시값을 반환합니다.</a></li>
                 </ul>
             </div>
             <div class="main__sample">
+
+                <div id="sample02" class="sample">
+                    <h3>02. chartAt()</h3>
+                    <div class="notice">"문자열".chartAt(위치값)</div>
+                    <ul>
+                        <li>문자열에서 특정 문자의 위치를 가져옵니다.</li>
+                        <li>배열처럼 대괄호([])를 이용해 문자열의 위치를 인덱스처럼 활용할 수 있습니다.</li>
+                    </ul>                    
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+let str = "Hello"
+
+str.charAt(1)	//"H"
+str[5]	//"o"
+}
+</pre></code>
+                    </div>
+                </div>
+                <!-- //sample02 -->
 
                 <div id="sample06" class="sample">
                     <h3>06. includes() 🐾</h3>
@@ -230,8 +249,112 @@ console.log(stringName.lastIndexOf('every')); // 17, lastIndexOf와 indexOf의 �
                     </div>
                 </div>
                 <!-- //sample18 -->
-                
 
+                <div id="sample19" class="sample">
+                    <h3>19. slice() 🐾🐾, 20. substring() 🐾</h3>
+                    <div class="notice">"문자열".slice(시작 위치, 끝 위치) "문자열".substring(시작 위치, 끝 위치)</div>
+                    <ul>
+                        <li>slice(), substring() : 문자열에서 시작 위치에서 종료 위치 값을 추출하여, 새로운 문자열을 반환합니다.<br>끝 위치를 적지 않으면 문자열 끝까지 추출하며, 끝 위치를 지정하면 끝 위치 직전까지 추출합니다.</li>
+                        <li>slice()는 위치를 지정할 때 음수를 쓸 수 있습니다. 이때 문자열 맨끝이 -1이며 시작점까지 뺀 숫자로 계산합니다.</li>
+                    </ul>          
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+let str = "Good Boy"
+
+str.substring(5)	//"Boy"
+str.slice(-3, 8)	//"Boy"
+}
+</pre></code>
+                    </div>
+                </div>
+                <!-- //sample19 20 -->
+
+                <div id="sample22" class="sample">
+                    <h3>22. split() 🐾🐾🐾</h3>
+                    <div class="notice">"문자열".split(구분자)</div>
+                    <ul>
+                        <li>문자열을 구분자로 구분하고, 여러 개의 문자열(배열)을 반환합니다.</li>
+                        <li>단어별로 구분하고자 할 때는 공백(" ")으로 지정하며, 글자별로 구분할 때는 공백 없이 따옴표만("") 씁니다.</li>
+                    </ul>          
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+let str = "Good Boy"
+
+str.split(" ")	//["Good", "Boy"]
+str.slice("")	//["G", "o", "o", "d", " ", "B", "o", "y"]
+}
+</pre></code>
+                    </div>
+                </div>
+                <!-- //sample22 -->
+
+                <div id="sample23" class="sample">
+                    <h3>23. startsWith()<br>24. endsWith()</h3>
+                    <div class="notice">"문자열".startsWith(검색값, [위치값])<br>"문자열".endsWith(검색값, [길이])</div>
+                    <ul>
+                        <li>특정 문자나 문자열로 시작하는지 확인하는 메서드입니다. 불린(true or false)을 반환합니다.</li>
+                        <li>startsWith() : 위치를 함께 지정하면 해당 위치부터 시작하는지 알 수 있습니다.</li>
+                        <li>endsWith() : 길이를 함께 지정하면 해당 문자의 마지막 길이를 알 수 있습니다.</li>
+                        <li>대소문자를 구별합니다.</li>
+                    </ul>                    
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+let str = "Hello World"
+
+str.startsWith("Hel")	//true
+str.startsWith("Wor")	//false
+str.startsWith("hel")	//false
+str.startsWith("W", 6)	//true 시작하는 문자열 위치
+
+str.endsWith("Hel")	//false
+str.endsWith("rld")	//true
+str.endsWith("rld", 11)	//true
+str.endsWith("lo", 5)	//true 끝나는 문자열 길이
+}
+</pre></code>
+                    </div>
+                </div>
+                <!-- //sample23 24 -->
+
+                <div id="sample27" class="sample">
+                    <h3>27. toLowerCase()<br>28. toUpperCase()</h3>
+                    <div class="notice">"문자열".toLowerCase()<br>"문자열".toUpperCase()</div>
+                    <ul>
+                        <li>toLowerCase() : 문자열을 소문자로 설정하고, 소문자 문자열을 반환합니다.</li>
+                        <li>toUpperCase() : 문자열을 대문자로 설정하고, 대문자 문자열을 반환합니다.</li>
+                    </ul>          
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+let str = "Hi, I'm Lee."
+
+str.toUpperCase()	//"HI, I'M LEE."
+str.toLowerCase()	//"hi, i'm lee."
+}
+</pre></code>
+                    </div>
+                </div>
+                <!-- //sample27 28 -->
+
+                <div id="sample30" class="sample">
+                    <h3>30. trim() 🐾<br>31. trimStart()<br>32. trimEnd()</h3>
+                    <div class="notice">"문자열".trim()<br>"문자열".trimStart()<br>"문자열".trimEnd()</div>
+                    <ul>
+                        <li>trim() : 문자열의 앞/뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</li>
+                        <li>trimStart() : 문자열의 앞 공백을 제거하고, 새로운 문자열을 반환합니다.</li>
+                        <li>trimEnd() : 문자열의 뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</li>
+                    </ul>          
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+let str = " Hi, I'm Lee. "
+
+str.trim()	//"Hi, I'm Lee."
+str.trimStart()	//"Hi, I'm Lee. "
+str.trimEnd()	//" Hi, I'm Lee."
+}
+</pre></code>
+                    </div>
+                </div>
+                <!-- //sample30 31 32 -->
 
                 </div> <!--mian_sample 끝-->      
             </div> <!--.container 끝 / sample 마무리하면 끝에 항상 2개 /div 있어야 함-->
