@@ -9,7 +9,28 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/quiz.css">
     <style>
-        
+        .over {
+            animation: over 1s linear infinite;
+        }
+        @keyframes over {
+            0% {
+                transform: rotate(360deg);
+            }
+        }
+        .bounce {
+            animation: bounce 2s ease infinite;
+        }
+        @keyframes bounce {
+            0% {
+                transform: scale(0.9);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(0.9);
+            }
+        }
     </style>
 </head>
 <body>
@@ -1021,6 +1042,7 @@
         //정답 확인
         const answerQuiz = () => {
             const quizChoices = document.querySelectorAll(".quiz__choice");
+            quizScore=0;
 
             //사용자가 체크한 정답 == 문제 정답
             quizInfo.forEach((question, number)=>{
@@ -1041,10 +1063,24 @@
 
             //점수 보이기
             document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore / quizInfo.length) * 100) + "점"
+            //커져라 커져라
+            let info = document.querySelector(".quiz__info");
+            info.classList.add("bounce")
         }
         
         //정답 클릭
         document.querySelector(".quiz__check").addEventListener("click", answerQuiz);
+
+        //돌아라 돌아라
+        let submit = document.querySelector(".quiz__check");
+
+        submit.addEventListener("mouseenter", () =>{
+            submit.classList.add("over")
+        });
+        submit.addEventListener("mouseleave", () =>{
+            submit.classList.remove("over")
+        });
+
     </script>
 </body>
 </html>

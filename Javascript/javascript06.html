@@ -78,87 +78,91 @@
                     <li><a href="#sample27">27.  <strong>array.prototype.shift()</strong>             메서드는 배열 처음 요소를 제거하고, 제거한 요소를 반환합니다.</a></li>
                     <li><a href="#sample27">28.  <strong>array.prototype.unshift()</strong>           메서드는 배열 앞에 요소를 추가하고, 배열의 새로운 길이 값을 반환합니다.</a></li>
                     <li><a href="#sample29">29.  <strong>array.prototype.slice()</strong>             메서드는 배열 시작 위치에서 종료 위치 값을 추출하여, 새로운 배열을 반환합니다.</a>🐾🐾</li>
-                    <li><a href="#sample29">29.  <strong>array.prototype.splice()</strong>            메서드는 배열의 기존 요소를 삭제 또는 교체하거나, 새 요소를 추가하여 배열의 내용을 변경합니다. 이 메소드는 원본 배열 자체를 수정합니다.</a>🐾🐾</li>
-                    <li><a href="#sample30">30.  <strong>array.prototype.sort()</strong>              메서드는 배열의 요소를 적절한 위치에 정렬한 후, 그 배열을 반환합니다.</a>🐾</li>
-                    <li><a href="#sample31">31.  <strong>array.prototype.toLocaleString()</strong>    메서드는 배열의 요소를 문자열로 반환합니다.</a></li>
-                    <li><a href="#sample32">32.  <strong>array.prototype.toString()</strong>          메서드는 데이터를 배열로 변환하고, 새로운 배열을 반환합니다.</a></li>
-                    <li><a href="#sample33">33.  <strong>array.prototype.values()</strong>            메서드는 배열 각 인덱스에 대한 값을 객체로 반환합니다.</a>🐾🐾</li>
-                    <input type="text" class="walking_layer flip" style="left: 25%">
+                    <li><a href="#sample30">30.  <strong>array.prototype.splice()</strong>            메서드는 배열의 기존 요소를 삭제 또는 교체하거나, 새 요소를 추가하여 배열의 내용을 변경합니다. 이 메소드는 원본 배열 자체를 수정합니다.</a>🐾🐾</li>
+                    <li><a href="#sample31">31.  <strong>array.prototype.sort()</strong>              메서드는 배열의 요소를 적절한 위치에 정렬한 후, 그 배열을 반환합니다.</a>🐾</li>
+                    <li><a href="#sample32">32.  <strong>array.prototype.toLocaleString()</strong>    메서드는 배열의 요소를 문자열로 반환합니다.</a></li>
+                    <li><a href="#sample33">33.  <strong>array.prototype.toString()</strong>          메서드는 데이터를 배열로 변환하고, 새로운 배열을 반환합니다.</a></li>
+                    <li><a href="#sample34">34.  <strong>array.prototype.values()</strong>            메서드는 배열 각 인덱스에 대한 값을 객체로 반환합니다.</a>🐾🐾</li>
                 </ul>
             </div>
             <div class="main__sample">
-                <div id="sample21" class="sample">
-                    <h3>21. 배열 메서드 : join()</h3>
-                    <p>join() 메서드는 배열 요소를 문자열로 결합합니다. 반환은 문자열입니다.</p>
-                    <div class="script">
-<pre class="line-numbers"><code class="language-js">{
-const arrNum1 = [100,200,300,400,500];
-const text1 = arrNum1.join('')      //100200300400500
-const text2 = arrNum1.join(' ')     //100 200 300 400 500
-const text3 = arrNum1.join('👅')   //100👅200👅300👅400👅500
-const text4 = arrNum1.join('-')     //100-200-300-400-500
-
-console.log(text1);
-console.log(text2);
-console.log(text3);
-console.log(text4);
-}
-</pre></code>
-                    </div>
-                </div>
-                <!-- //sample21 -->
-
-                <div id="sample22" class="sample">
-                    <h3>배열 메서드 : push() / pop()</h3>
+                
+                <div id="sample29" class="sample">
+                    <h3>29. 배열 메서드 : slice() 🐾🐾</h3>
+                    <div class="notice">"배열".slice(시작 위치, [끝 위치])<br></div>
                     <ul>
-                        <li>push() : 배열 끝에 요소를 추가하고, 배열의 새로운 길이값을 반환합니다.</li>
-                        <li>pop() : 마지막 요소를 제거하고, 제거한 요소를 반환합니다.</li>
+                        <li>시작 위치에서 종료 위치 값을 추출하여, 새로운 배열을 반환합니다.<br>끝 위치를 적지 않으면 배열 끝까지 추출하며, 끝 위치를 지정하면 끝 위치 직전까지 추출합니다.</li>
+                        <li>slice()는 위치를 지정할 때 음수를 쓸 수 있습니다. 이때 배열 마지막 요소가 -1이며 시작점까지 뺀 숫자로 계산합니다.</li>
                     </ul>
                     <div class="script">
 <pre class="line-numbers"><code class="language-js">{
-const arrNum1 = [100,200,300,400,500]
-const arrPush1 = arrNum1.push(600);   //요소 추가
-
-console.log(arrNum1);    //100,200,300,400,500,600
-
-const arrNum2 = [100,200,300,400,500]
-const arrPush2 = arrNum2.pop();   //마지막 요소 제거
-
-console.log(arrNum2);    //100,200,300,400
+['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't'].slice(0);        //['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't']
+['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't'].slice(1);        //['a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't']
+//끝 위치를 적지 않으면 배열 끝까지 추출
+['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't'].slice(0, 1);     //['j']
+['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't'].slice(1, 2);     //['a']
+['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't'].slice(0, 2);     //['j', 'a']
+['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't'].slice(5, 10);    //['c', 'r', 'i', 'p', 't']
+//끝 위치를 지정하면 끝 위치 직전까지 추출합니다.
+['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't'].slice(5, -1);    //['c', 'r', 'i', 'p']
+['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't'].slice(5, -2);    //['c', 'r', 'i']
+['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't'].slice(-1);       //['t']
+['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't'].slice(-2);       //['p', 't']
+['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't'].slice(-3, -1);    //['i', 'p']
 }
 </pre></code>
                     </div>
                 </div>
-                <!-- //sample22 -->
+                <!-- //sample29 -->
 
-                <div id="sample27" class="sample">
-                    <h3>배열 메서드 : unshift() / shift()</h3>
+                <div id="sample30" class="sample">
+                    <h3>30. 배열 메서드 : splice() 🐾🐾</h3>
+                    <div class="notice">"배열".splice(시작 위치, [삭제 개수], [요소])<br></div>
                     <ul>
-                        <li>unshift() : 배열 앞에 요소를 추가하고, 배열의 새로운 길이 값을 반환합니다.</li>
-                        <li>shift() : 배열 처음 요소를 제거하고, 제거한 요소를 반환합니다.</li>
+                        <li>배열의 기존 요소를 삭제 또는 교체하거나, 새 요소를 추가하여 배열의 내용을 변경합니다. 이 메소드는 원본 배열 자체를 수정합니다.</li>
                     </ul>
-                    <p>메서드는 배열 처음 요소에 요소를 추가하고, shift() 메서드는 배열 처음 요소를 삭제합니다.</p>
                     <div class="script">
 <pre class="line-numbers"><code class="language-js">{
-const arrNum1 = [100,200,300,400,500]
-const arrPush1 = arrNum1.unshift(600);   //처음 요소에 추가
+const arrNum1 = [100, 200, 300, 400, 500];
+const result1 = arrNum1.splice(1);
+//arrNum1=[100], result1=[200, 300, 400, 500] 
 
-console.log(arrNum1);    //600,100,200,300,400,500
+const arrNum2 = [100, 200, 300, 400, 500];
+const result2 = arrNum2.splice(1, 2);
+//arrNum2=[100, 400, 500], result2=[200, 300]
 
-const arrNum2 = [100,200,300,400,500]
-const arrPush2 = arrNum2.shift();   //처음 요소 제거
+const arrNum3 = [100, 200, 300, 400, 500];
+const result3 = arrNum3.splice(1, 4);
+//arrNum3=[100], result3=[200, 300, 400, 500]
 
-console.log(arrNum2);    //200,300,400,500
+const arrNum4 = [100, 200, 300, 400, 500];
+const result4 = arrNum4.splice(1, 2, "javascript");
+//arrNum4=[100, 'javascript', 400, 500], result4=[200, 300]
+
+const arrNum5 = [100, 200, 300, 400, 500];
+const result5 = arrNum5.splice(1, 0, "javascript");
+//arrNum5=[100, 'javascript', 200, 300, 400, 500], result5=[]
+
+const arrNum6 = [100, 200, 300, 400, 500];
+const result6 = arrNum6.splice(0, 4, "javascript");
+//arrNum6=['javascript', 500], result6=[100, 200, 300, 400]
+
+const arrNum7 = [100, 200, 300, 400, 500];
+const result7 = arrNum7.splice(2, 2, "javascript", "react");
+//arrNum7=[100, 200, 'javascript', 'react', 500], result7=[300, 400]
+
+const arrNum8 = [100, 200, 300, 400, 500];
+const result8 = arrNum8.splice(-2, 2, "javascript", "react");
+//arrNum8=[100, 200, 300, 'javascript', 'react'], result8=[400, 500]
 }
 </pre></code>
                     </div>
                 </div>
-                <!-- //sample27 -->
-
+                <!-- //sample30 -->
                     
                     
 
-                </div> <!--mian_sample 끝-->      
+                </div> <!--mian_sample 끝-->
             </div> <!--.container 끝 / sample 마무리하면 끝에 항상 2개 /div 있어야 함-->
         </div>
     </main>
@@ -171,22 +175,45 @@ console.log(arrNum2);    //200,300,400,500
 
     <script src="assets/js/prism.js"></script>
     <script>
-    function hasScrolled() {
-				var st = document.querySelector(this).scrollTop();
-				document.querySelector('.walking_layer').css('left', ((st / (scHeight - winHeight - 100)) * 100)+'%');
-				if(((st / (scHeight - winHeight)) * 100) <= 0) {
-					document.querySelector('.walking_layer').css('left', '-100px');
-				}
-				if (st > lastScrollTop){
-					// Scroll Down
-					document.querySelector('.walking_layer').classList.remove('flip');
-				} else {
-					// Scroll Up
-					document.querySelector('.walking_layer').classList.add('flip');
-				}
-				lastScrollTop = st;
-			}
+    {
+        const arrNum1 = [100, 200, 300, 400, 500];
+        const result1 = arrNum1.splice(1);
+        //arrNum1=[100], result1=[200, 300, 400, 500] 
 
+        const arrNum2 = [100, 200, 300, 400, 500];
+        const result2 = arrNum2.splice(1, 2);
+        //arrNum2=[100, 400, 500], result2=[200, 300]
+
+        const arrNum3 = [100, 200, 300, 400, 500];
+        const result3 = arrNum3.splice(1, 4);
+        //arrNum3=[100], result3=[200, 300, 400, 500]
+
+        const arrNum4 = [100, 200, 300, 400, 500];
+        const result4 = arrNum4.splice(1, 2, "javascript");
+        //arrNum4=[100, 'javascript', 400, 500], result4=[200, 300]
+
+        const arrNum5 = [100, 200, 300, 400, 500];
+        const result5 = arrNum5.splice(1, 0, "javascript");
+        //arrNum5=[100, 'javascript', 200, 300, 400, 500], result5=[]
+
+        const arrNum6 = [100, 200, 300, 400, 500];
+        const result6 = arrNum6.splice(0, 4, "javascript");
+        //arrNum6=['javascript', 500], result6=[100, 200, 300, 400]
+
+        const arrNum7 = [100, 200, 300, 400, 500];
+        const result7 = arrNum7.splice(2, 2, "javascript", "react");
+        //arrNum7=[100, 200, 'javascript', 'react', 500], result7=[300, 400]
+
+        const arrNum8 = [100, 200, 300, 400, 500];
+        const result8 = arrNum8.splice(-2, 2, "javascript", "react");
+        //arrNum8=[100, 200, 300, 'javascript', 'react'], result8=[400, 500]
+
+        const arrNum9 = [100, 200, 300, 400, 500];
+        const result9 = arrNum9.splice(1, -2);
+
+        console.log(arrNum9)
+    }
+   
 
     </script>
 </body>

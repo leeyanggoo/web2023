@@ -250,15 +250,12 @@ mysql> show databases;
                     <div class="bs-callout bs-callout-info">
                         <code>create</code> <code>table</code> 테이블 이름;<br>
                     </div>
-<pre><code class="language-js">create table members(
-memberID int(10) unsigned auto_increment,
-youEmail varchar(40) NOT NULL,
-youName varchar(10) NOT NULL,
-youPass varchar(20) NOT NULL,
-youBirth int(10) NOT NULL,
-youAge int(5) NOT NULL,
+<pre><code class="language-js">create table reviews(
+reviewID int(10) unsigned auto_increment,
+memberID int(10) unsigned,
+youText tinytext NOT NULL,
 regTime int(30) NOT NULL,
-PRIMARY KEY(memberID)
+PRIMARY KEY(reviewID)
 ) charset=utf8;
 Query OK, 0 rows affected (0.03 sec)
 </code></pre>
@@ -270,7 +267,7 @@ Query OK, 0 rows affected (0.03 sec)
 +--------------------+
 | Tables_in_sample01 |
 +--------------------+
-| member             |
+| members            |
 +--------------------+
 1 row in set (0.00 sec)    
 </code></pre>
@@ -278,7 +275,7 @@ Query OK, 0 rows affected (0.03 sec)
                     <div class="bs-callout bs-callout-info">
                         <code>desc</code> 테이블 이름;<br>
                     </div>
-<pre><code class="language-js">mysql> desc member;
+<pre><code class="language-js">mysql> desc members;
 +----------+------------------+------+-----+---------+----------------+
 | Field    | Type             | Null | Key | Default | Extra          |
 +----------+------------------+------+-----+---------+----------------+
@@ -297,7 +294,7 @@ Query OK, 0 rows affected (0.03 sec)
                     <div class="bs-callout bs-callout-info">
                         <code>drop</code> <code>table</code> 테이블 이름;<br>
                     </div>
-<pre><code class="language-js">mysql> drop table member;
+<pre><code class="language-js">mysql> drop table members;
 Query OK, 0 rows affected (0.01 sec)
 
 mysql> show tables;
@@ -309,7 +306,7 @@ Empty set (0.00 sec)
                     <div class="bs-callout bs-callout-info">
                         <code>turncate</code> <code>table</code> 테이블 이름;<br>
                     </div>
-<pre><code class="language-js">mysql> turncate table member;
+<pre><code class="language-js">mysql> turncate table members;
 
 </code></pre>
 
@@ -330,7 +327,7 @@ Empty set (0.00 sec)
                        <code>INSERT</code> <code>INTO</code> 테이블명(필드명) <code>VALUES();</code><br>
                     </div>
 <pre><code class="language-js">
-mysql> INSERT INTO member(
+mysql> INSERT INTO members(
 youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("didrn94553@gmail.com", "이양구", "1234", "19941212", "30","03140316");
 
 </code></pre>
@@ -340,78 +337,78 @@ youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("didrn94553@gmail.
                     </div>
                     <br>
                     <h4>전체 데이터 불러오기</h4>
-<pre><code class="language-js">SELECT * FROM member;      //전체 필드명 = *</code></pre>
+<pre><code class="language-js">SELECT * FROM members;      //전체 필드명 = *</code></pre>
                     <br>
                     <h4>memberID가 1번인 경우만 불러오기</h4>
-<pre><code class="language-js">SELECT * FROM member WHERE memberID=1;</code></pre>
+<pre><code class="language-js">SELECT * FROM members WHERE memberID=1;</code></pre>
                     <br>
                     <h4>memberID가 1번이 아닌 경우만 불러오기</h4>
-<pre><code class="language-js">SELECT * FROM member WHERE memberID &lt;> 1;</code></pre>
+<pre><code class="language-js">SELECT * FROM members WHERE memberID &lt;> 1;</code></pre>
                     <br>
                     <h4>youAge가 30 이상 40 이하인 경우 불러오기</h4>
-<pre><code class="language-js">mysql> SELECT * FROM member WHERE youAge >=30 AND youAge &lt;= 40;   
-//==SELECT * FROM member WHERE youAge BETWEEN 30 AND 40;</code></pre>
+<pre><code class="language-js">mysql> SELECT * FROM members WHERE youAge >=30 AND youAge &lt;= 40;   
+//==SELECT * FROM members WHERE youAge BETWEEN 30 AND 40;</code></pre>
                     <br>
                     <h4>youAge가 30 이상 40 이하가 "아닌(NOT)" 경우 불러오기</h4>
-<pre><code class="language-js">mysql> SELECT * FROM member WHERE youAge NOT BETWEEN 30 AND 40;</code></pre>
+<pre><code class="language-js">mysql> SELECT * FROM members WHERE youAge NOT BETWEEN 30 AND 40;</code></pre>
                     <br>
                     <h4>memberID가 1, 5, 10, 15번만(IN) 불러오기</h4>
-<pre><code class="language-js">mysql> SELECT * FROM member WHERE memberID IN(1,5,10,15);</code></pre>
+<pre><code class="language-js">mysql> SELECT * FROM members WHERE memberID IN(1,5,10,15);</code></pre>
                     <br>
                     <h4>youName 중에 "연" 텍스트가 포함된(LIKE '%text%') 이름 불러오기</h4>
-<pre><code class="language-js">mysql> SELECT * FROM member WHERE youName LIKE '%연%';</code></pre>
+<pre><code class="language-js">mysql> SELECT * FROM members WHERE youName LIKE '%연%';</code></pre>
                     <br>
                     <h4>youName 중에 "김"으로 시작하는(LIKE 'text%') 이름 불러오기</h4>
-<pre><code class="language-js">mysql> SELECT * FROM member WHERE youName LIKE '김%';</code></pre>
+<pre><code class="language-js">mysql> SELECT * FROM members WHERE youName LIKE '김%';</code></pre>
                     <br>
                     <h4>youName 중에 "현"으로 끝나는(LIKE '%text') 이름 불러오기</h4>
 <pre><code class="language-js">mysql> SELECT * FROM youName LIKE '%현';</code></pre>
                     <br>
                     <h4>youName 중에 "상"이 들어가는("_상_") 이름 불러오기</h4>
-<pre><code class="language-js">mysql> SELECT * FROM member WHERE youName LIKE "_상_";
+<pre><code class="language-js">mysql> SELECT * FROM members WHERE youName LIKE "_상_";
 //밑줄(_)은 문자 개수를 의미한다.
 </code></pre>
                     <br>
                     <h4>youName 중에 "김" 또는 "이"로 시작하는 이름 불러오기</h4>
-<pre><code class="language-js">mysql> SELECT * FROM member WHERE youName LIKE "김%" OR youName LIKE "이%";
+<pre><code class="language-js">mysql> SELECT * FROM members WHERE youName LIKE "김%" OR youName LIKE "이%";
 //두 조건을 쓸 때 필드명을 한 번 더 적어야 함!!
 </code></pre>
                     <br>
                     <h4>나이가 25 이상이면서 김씨 성을 가지고 있는 사람 불러오기</h4>
-<pre><code class="language-js">mysql> SELECT * FROM member WHERE youAge >=25 AND youName LIKE "김%";</code></pre>
+<pre><code class="language-js">mysql> SELECT * FROM members WHERE youAge >=25 AND youName LIKE "김%";</code></pre>
                     <br>
                     <h4>나이가 25 이상이면서 아이디가 2 또는 아이디가 9인 멤버 목록</h4>
-<pre><code class="language-js">mysql> SELECT * FROM member WHERE youAge >= 25 AND memberID IN(2, 9);
-//SELECT * FROM member WHERE youAge >= 25 AND (memberID = 2 OR memberID = 9);
+<pre><code class="language-js">mysql> SELECT * FROM members WHERE youAge >= 25 AND memberID IN(2, 9);
+//SELECT * FROM members WHERE youAge >= 25 AND (memberID = 2 OR memberID = 9);
 </code></pre>
                     <br>
                     <h4>회원 데이터를 5개만 불러오기(1-5)</h4>
-<pre><code class="language-js">mysql> SELECT * FROM member LIMIT 5;</code></pre>
+<pre><code class="language-js">mysql> SELECT * FROM members LIMIT 5;</code></pre>
                     <br>
                     <h4>회원 데이터를 5개만 불러오기(6-10)</h4>
-<pre><code class="language-js">mysql> SELECT * FROM member LIMIT 5, 5;</code></pre>
+<pre><code class="language-js">mysql> SELECT * FROM members LIMIT 5, 5;</code></pre>
                     <br>
                     <h4>회원 이메일을 10개만 불러오기(11-20)</h4>
-<pre><code class="language-js">mysql> SELECT * FROM member LIMIT 10, 10;</code></pre>
+<pre><code class="language-js">mysql> SELECT * FROM members LIMIT 10, 10;</code></pre>
                     <br>
                     <h4>member 테이블의 youName만 불러오기</h4>
-<pre><code class="language-js">mysql> SELECT youName FROM member;       // * 대신 column 선택</code></pre>
+<pre><code class="language-js">mysql> SELECT youName FROM members;       // * 대신 column 선택</code></pre>
                     <br>
                     <h4>member 테이블의 youName과 youAge만 불러오기</h4>
-<pre><code class="language-js">mysql> SELECT youName, youAge FROM member;       //복수 선택은 쉼표(,)</code></pre>
+<pre><code class="language-js">mysql> SELECT youName, youAge FROM members;       //복수 선택은 쉼표(,)</code></pre>
                     <br>
                     <h4>중복된 데이터를 제외하고 불러오기</h4>
-<pre><code class="language-js">mysql> SELECT DISTINCT youAge FROM member;</code></pre>
+<pre><code class="language-js">mysql> SELECT DISTINCT youAge FROM members;</code></pre>
                     <br>
                     <h4>개수 불러오기</h4>
-<pre><code class="language-js">mysql> SELECT count(youName) FROM member;</code></pre>
-<pre><code class="language-js">mysql> SELECT count(*) FROM member;</code></pre>
+<pre><code class="language-js">mysql> SELECT count(youName) FROM members;</code></pre>
+<pre><code class="language-js">mysql> SELECT count(*) FROM members;</code></pre>
                     <br>
                     <h4>이름만 불러오기(내림차순)</h4>
-<pre><code class="language-js">mysql> SELECT youName FROM member ORDER BY youName DESC;</code></pre>
+<pre><code class="language-js">mysql> SELECT youName FROM members ORDER BY youName DESC;</code></pre>
                     <br>
                     <h4>이름만 불러오기(오름차순)</h4>
-<pre><code class="language-js">mysql> SELECT youName FROM member ORDER BY youName ASC;</code></pre>
+<pre><code class="language-js">mysql> SELECT youName FROM members ORDER BY youName ASC;</code></pre>
 
                     <h4 id="intro6-3" class="page-header">데이터 수정하기</h4>
                     <div class="bs-callout bs-callout-info">
@@ -434,16 +431,16 @@ youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("didrn94553@gmail.
                         <code>DELETE</code> <code>FROM</code> 테이블명 <code>WHERE</code> 조건<br>
                     </div>
                     <h4>아이디가 5번인 사람 삭제</h4>
-<pre><code class="language-js">mysql> DELETE FROM member WHERE memberID=5;</code></pre>
+<pre><code class="language-js">mysql> DELETE FROM members WHERE memberID=5;</code></pre>
                     <br>
                     <h4>회원 비밀번호가 1234인 사람만 삭제하기</h4>
-<pre><code class="language-js">mysql> DELETE FROM member WHERE youPass="1234";</code></pre>
+<pre><code class="language-js">mysql> DELETE FROM members WHERE youPass="1234";</code></pre>
                     <br>
                     <h4>아이디를 기준으로 5번째까지 삭제</h4>
-<pre><code class="language-js">mysql> DELETE FROM member ORDER BY memberID LIMIT 5;</code></pre>
+<pre><code class="language-js">mysql> DELETE FROM members ORDER BY memberID LIMIT 5;</code></pre>
                     <br>
                     <h4>아이디가 11, 13, 15번인 맴버 삭제</h4>
-<pre><code class="language-js">mysql> DELETE FROM member WHERE memberID IN(11, 13, 15);</code></pre>
+<pre><code class="language-js">mysql> DELETE FROM members WHERE memberID IN(11, 13, 15);</code></pre>
                     <br>
                     <h4>이름 내림차순으로 5명만 비밀번호 "9999"로 바꾸기</h4>
 <pre><code class="language-js">mysql> UPDATE member SET youPass="9999" ORDER BY youName DESC LIMIT 5;</code></pre>

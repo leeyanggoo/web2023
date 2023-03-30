@@ -79,8 +79,8 @@
                     <li><a href="#sample27">28. <strong>string.prototype.toUpperCase()</strong>         : 메서드는 문자열을 대문자로 설정하고, 대문자 문자열을 반환합니다.</a></li>
                     <li><a href="#sample29">29. <strong>string.prototype.toString()</strong>            : 메서드는 데이터를 문자열로 변환하고, 문자열을 반환합니다.</a></li>
                     <li><a href="#sample30">30. <strong>string.prototype.trim()</strong>                : 메서드는 문자열의 앞/뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</a>🐾</li>
-                    <li><a href="#sample30">31. <strong>string.prototype.trimStart()</strong>           : 메서드는 문자열의 앞 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
-                    <li><a href="#sample30">32. <strong>string.prototype.trimEnd()</strong>             : 메서드는 문자열의 뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample30">31. <strong>string.prototype.trimEnd()</strong>             : 메서드는 문자열의 뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample30">32. <strong>string.prototype.trimStart()</strong>           : 메서드는 문자열의 앞 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
                     <li><a href="#sample33">33. <strong>string.prototype.valueOf()</strong>             : 메서드는 객체의 원시값을 반환합니다.</a></li>
                 </ul>
             </div>
@@ -252,7 +252,7 @@ console.log(stringName.lastIndexOf('every')); // 17, lastIndexOf와 indexOf의 �
 
                 <div id="sample19" class="sample">
                     <h3>19. slice() 🐾🐾, 20. substring() 🐾</h3>
-                    <div class="notice">"문자열".slice(시작 위치, 끝 위치) "문자열".substring(시작 위치, 끝 위치)</div>
+                    <div class="notice">"문자열".slice(시작 위치, [끝 위치]) "문자열".substring(시작 위치, [끝 위치])</div>
                     <ul>
                         <li>slice(), substring() : 문자열에서 시작 위치에서 종료 위치 값을 추출하여, 새로운 문자열을 반환합니다.<br>끝 위치를 적지 않으면 문자열 끝까지 추출하며, 끝 위치를 지정하면 끝 위치 직전까지 추출합니다.</li>
                         <li>slice()는 위치를 지정할 때 음수를 쓸 수 있습니다. 이때 문자열 맨끝이 -1이며 시작점까지 뺀 숫자로 계산합니다.</li>
@@ -263,6 +263,13 @@ let str = "Good Boy"
 
 str.substring(5)	//"Boy"
 str.slice(-3, 8)	//"Boy"
+
+"javascript".slice(0);      //"javascript"
+"javascript".slice(1);      //"avascript"
+"javascript".slice(0, 3)    //"jav"
+"javascript".slice(5, 10)   //"cript"
+"javascript".slice(-1)      //"t"
+"javascript".slice(1, -1);  //"avascrip"
 }
 </pre></code>
                     </div>
@@ -271,7 +278,7 @@ str.slice(-3, 8)	//"Boy"
 
                 <div id="sample22" class="sample">
                     <h3>22. split() 🐾🐾🐾</h3>
-                    <div class="notice">"문자열".split(구분자)</div>
+                    <div class="notice">"문자열".split(구분자, [제한])</div>
                     <ul>
                         <li>문자열을 구분자로 구분하고, 여러 개의 문자열(배열)을 반환합니다.</li>
                         <li>단어별로 구분하고자 할 때는 공백(" ")으로 지정하며, 글자별로 구분할 때는 공백 없이 따옴표만("") 씁니다.</li>
@@ -283,6 +290,33 @@ let str = "Good Boy"
 str.split(" ")	//["Good", "Boy"]
 str.slice("")	//["G", "o", "o", "d", " ", "B", "o", "y"]
 }
+
+"javascript".split("");         //['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't']
+"java script".split(" ");       //['java', 'script']
+"java scr ipt".split(" ");      //['java', 'scr', 'ipt']
+
+"javascript".split("", 1);      //['j']
+"javascript".split("", 2);      //['j', 'a']
+
+"java script".split(" ", 1);    //['java']
+"java script".split(" ", 2);    //['java', 'script']
+
+"javascript".split("j");        //['', 'avascript']
+"javascript".split("t");        //['javascrip', ''] 구분자로 문자열의 맨 앞이나 맨 뒤가 지정되었을 때, 그 위치에서 빈 문자열이 생성됩니다.
+"1,,2,3".split(",");            //["1", "", "2", "3"] 구분자가 연속해서 나타나는 경우, 빈 문자열이 생성됩니다.
+"javascript".split("a");        //['j', 'v', 'script']  원래는 구분자 제외하고 나옴
+"javascript".split("e");        //['javascript']
+
+"java/scr/ipt".split("/");      //['java', 'scr', 'ipt']
+"java&scr!ipt".split("&");      //['java', 'scr!ipt']
+"java&scr!ipt".split("!");      //['java&scr', 'ipt']
+"java&scr!ipt".split(/&|\!/);   //['java', 'scr', 'ipt'] 정규식 표현
+
+"javascript".split('').join();                  //"j,a,v,a,s,c,r,i,p,t" join()을 쓰면 문자열로 반환
+"javascript".split('').join("*");               //j*a*v*a*s*c*r*i*p*t
+"javascript".split('').reverse().join();        //t,p,i,r,c,s,a,v,a,j 로꾸꺼 reverse()는 배열의 순서를 반대로 함
+"javascript".split('').join().reverse();        //error join()을 먼저 쓰면 문자열 반환이 먼저라서 에러 뜸.
+"javascript".split('').reverse().join("/");     //t/p/i/r/c/s/a/v/a/j
 </pre></code>
                     </div>
                 </div>
@@ -336,12 +370,12 @@ str.toLowerCase()	//"hi, i'm lee."
                 <!-- //sample27 28 -->
 
                 <div id="sample30" class="sample">
-                    <h3>30. trim() 🐾<br>31. trimStart()<br>32. trimEnd()</h3>
-                    <div class="notice">"문자열".trim()<br>"문자열".trimStart()<br>"문자열".trimEnd()</div>
+                    <h3>30. trim() 🐾<br>31. trimEnd()<br>32. trimStart()</h3>
+                    <div class="notice">"문자열".trim()<br>"문자열".trimEnd()<br>"문자열".trimStart()</div>
                     <ul>
                         <li>trim() : 문자열의 앞/뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</li>
-                        <li>trimStart() : 문자열의 앞 공백을 제거하고, 새로운 문자열을 반환합니다.</li>
-                        <li>trimEnd() : 문자열의 뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</li>
+                        <li>trimEnd() : 문자열의 앞 공백을 제거하고, 새로운 문자열을 반환합니다.</li>
+                        <li>trimStart() : 문자열의 뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</li>
                     </ul>          
                     <div class="script">
 <pre class="line-numbers"><code class="language-js">{
@@ -350,6 +384,14 @@ let str = " Hi, I'm Lee. "
 str.trim()	//"Hi, I'm Lee."
 str.trimStart()	//"Hi, I'm Lee. "
 str.trimEnd()	//" Hi, I'm Lee."
+
+"javascript".trim();        //javascript
+"javascript ".trim();       //javascript
+" javascript".trim();       //javascript
+" java script".trim();      //java script
+
+"javascript ".trimStart();  //javascript
+" javascript".trimEnd();    //javascript
 }
 </pre></code>
                     </div>
@@ -369,17 +411,18 @@ str.trimEnd()	//" Hi, I'm Lee."
 
     <script src="assets/js/prism.js"></script>
     <script>
-        "javascript reference".lastIndexOf("javascript");   //0
-        "javascript reference".lastIndexOf("javascripts");  //-1
-        "javascript reference".lastIndexOf("j");  //0
-        "javascript reference".lastIndexOf("a");  //3
-        
+        {
+            "javascript".trim();        //javascript
+            "javascript ".trim();       //javascript
+            " javascript".trim();       //javascript
+            " java script".trim();      //java script
 
-        console.log("reference".lastIndexOf("e", 2));
+            "javascript ".trimStart();  //javascript
+            " javascript".trimEnd();    //javascript
 
-        var stringName = 'coding everybody everywhere';
-        console.log(stringName.indexOf('every')); // 7, lastIndexOf와 indexOf의 차이
-        console.log(stringName.lastIndexOf('every')); // 17, lastIndexOf와 indexOf의 차이
+
+            console.log("javascript".trim())
+        }
     </script>
 
 </body>

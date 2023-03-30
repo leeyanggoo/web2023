@@ -26,3 +26,16 @@ INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUE
 INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("dripidea77@gmail.com","김시연","1234","19930313","31","03140316");
 INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("itshena01@gmail.com","조한미","1234","19930211","31","03140316");
 INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("aimee00418@gmail.com","권현정","1234","19830211","39","03140316");
+
+INSERT INTO reviews(memberID, youText, regTime) VALUES("4", "정말 감사합니다. 잘 봤어요", "123456");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("1", "정말 감사합니다람쥐", "123456");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("5", "안교남 파이팅!", "123456");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("9", "어떻게 사람 이름이...", "123456");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("8", "레몬 한 개에는 자그마치 레몬 하나만큼의 비타민이 들어있다구!", "123456");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("7", "혹시 으데 김 씨입니까?", "123456");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("6", "어디로 가야 하오", "123456");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("3", "데마시아를 위하여!", "123456");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("2", "경찰을 부르겠습니다!!", "123456");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("1", "저는 탐정, 남도일이죠.", "123456");
+
+//아이디가 6, 10 멤버 데이터를 출력
