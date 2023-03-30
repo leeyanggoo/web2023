@@ -17,12 +17,6 @@
             margin:0;
             min-height:100vh;
         }
-        div {
-            position: absolute;
-            top: 5%;
-            left: 5%;
-            width: 50%;
-        }
 
         button {
             position:fixed;
@@ -36,6 +30,11 @@
             cursor: pointer;
             background-image: url(quiz/img/modal2.png);
             background-size: cover;
+        }
+        h3 {
+            position: absolute;
+            top: 0;
+            right: 150px;
         }
 
         button.active {
@@ -75,19 +74,9 @@
     </style>
 </head>
 <body>
-    <div>
-        <h3>이벤트를 활용해 필요에 따라 표시했다가 감추는 메뉴를 만들어보겠습니다.<br>
-            여기서에서는 아이콘을 클릭하면 메뉴가 표시되고, 다시 클릭하면 메뉴가 숨겨지는 예제를 만들 것입니다.
-            버튼을 클릭할 때마다 변수와 메뉴에 .active 스타일을 토글하는 소스를 작성해 보세요.</h3>  
-            <h4>길라잡이</h4>
-        <p>웹 문서에 연결된 외부 스타일 시트 파일에 button.active와 nav.active 스타일이 미리 만들어져 있습니다.<br>
-            버튼과 메뉴를 가져와서 각각 변수로 저장합니다.<br>
-            버튼에 click 이벤트가 발생했을 때 실행할 함수를 연결하는데, 이 함수에서는 버튼과 메뉴에 active 클래스 스타일을 토글합니다.
-        </p>
-    </div>
-
-    <button></button>
-    <nav></nav>
+        <h3>마우스로 클릭하시오 당장!! 👉</h3>
+        <button></button>
+        <nav></nav>
 
     <script>
         let button = document.querySelector("button");
@@ -95,6 +84,7 @@
 
         //클릭하면 active가 class에 추가되도록 설정
         button.addEventListener("click", () => {
+            //조건을 이용해 class에 click이 있으면 제거하고 없으면 추가함
             button.getAttribute("class") !== "active" ? (button.classList.add("active"), nav.classList.add("active")) : (button.classList.remove("active"), nav.classList.remove("active"))
         });
         
