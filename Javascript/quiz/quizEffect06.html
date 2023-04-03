@@ -8,6 +8,12 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/quiz.css">
+
+    <!-- //파비콘 -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon192x192.png">
+    
     <style>
         .modal {
             display: none;
@@ -49,6 +55,36 @@
         }
         .modal p {
             font-size: 50px;
+        }
+
+        .quiz__check:hover {
+            animation: roll 1s ease;
+        }
+        @keyframes roll {
+            0% {
+                transform: translate(0,0);
+            }
+            50% {
+                transform:  translateX(-2000px) rotate(3600deg);
+            }
+            100% {
+                transform: translate(0,0);
+            }
+        }
+
+        .quiz__info:hover {
+            animation: up 1s ease;
+        }
+        @keyframes up {
+            0% {
+                transform: translate(0,0);
+            }
+            50% {
+                transform:  translateY(-2000px) rotate(3600deg);
+            }
+            100% {
+                transform: translate(0,0);
+            }
         }
     </style>
 </head>

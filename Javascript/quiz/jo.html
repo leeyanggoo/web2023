@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 이펙트07</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/ico/HC-192x192.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/ico/HC-192x192.png"/>
+    <link rel="apple-touch-icon" href="../assets/ico/HC-192x192.png"/>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../javascript14.html">Quiz</a> <em>객관식 확인하기: CBT 유형</em></h1>
+        <ul>
+            <li><a href="quizEffect01.html">1</a></li>
+            <li><a href="quizEffect02.html">2</a></li>
+            <li><a href="quizEffect03.html">3</a></li>
+            <li><a href="quizEffect04.html">4</a></li>
+            <li><a href="quizEffect05.html">5</a></li>
+            <li><a href="quizEffect06.html">6</a></li>
+            <li class="active"><a href="quizEffect07.html">7</a></li>
+            <li><a href="quizWebd.html">w</a></li>
+        </ul>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="quiz__wrap__cbt">
+            <div class="cbt__header">
+                <h2>2020년 1회 정보처리기능사 기출문제</h2>
+            </div>
+            <div class="cbt__conts">
+                <div class="cbt__quiz">
+                    <!-- <div class="cbt good">
+                        문제
+                        <div class="cbt__question"><span>1</span>.객체지향 프로그램에서 데이터를 추상화하는 단위는?</div>
+                        문제에 이미지가 추가되었을 경우
+                        <div class="cbt__question__img"><img src="img/EngineerJC2023_01_01.jpg" alt="기능사"></div>
+                        보기
+                        <div class="cbt__selects">
+                            <input type="radio" id="selects1">
+                            <label for="selects1"><span>클래스</span></label>
+                            <input type="radio" id="selects2">
+                            <label for="selects2"><span>메소드</span></label>
+                            <input type="radio" id="selects3">
+                            <label for="selects3"><span>상속</span></label>
+                            <input type="radio" id="selects4">
+                            <label for="selects4"><span>메세지</span></label>
+                        </div>
+                        <div class="cbt__desc">객체지향언어는 ___이다.</div>
+                        <div class="cbt__keyword">객체지향언어</div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="cbt__aside">
+                <div class="cbt__info">
+                    <div>
+                        <!-- 남은 시간 -->
+                        <div class="cbt__time">남은 시간 59분 10초</div>
+                        <!-- 답안지 제출 버튼 -->
+                        <div class="cbt__summit">답안지 제출하기</div>
+                    </div>
+                    <div>
+                        <div class="cbt__title">수험자 : <em>조한미</em></div>
+                        <div class="cbt__score">
+                            <span>전체 문제 수 : <em>60</em>문항</span>
+                            <span>남은 문제 수 : <em>59</em>문항</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cbt__omr">
+                    <!-- <div class="omr">
+                        <strong>1</strong>
+                        <input type="radio" id="omr0_1">
+                        <label for="omr0_1">
+                            <span class="label-inner">1</span>
+                        </label>
+                        <input type="radio" id="omr0_2">
+                        <label for="omr0_2">
+                            <span class="label-inner">2</span>
+                        </label>
+                        <input type="radio" id="omr0_3">
+                        <label for="omr0_3">
+                            <span class="label-inner">3</span>
+                        </label>
+                        <input type="radio" id="omr0_4">
+                        <label for="omr0_4">
+                            <span class="label-inner">4</span>
+                        </label>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <!-- <footer id="footer">
+        <a href="mailto:itshena01@gmail.com">itshena01@gmail.com</a>
+    </footer> -->
+    <!-- //footer -->
+    <script>
+        // 선택자
+        const cbtQuiz = document.querySelector(".cbt__quiz");
+        const cbtOmr = document.querySelector(".cbt__omr");
+        let questionAll = [];   //모든 퀴즈 정보
+        // 데이터 불러오기
+        const dataQuestion = () => {
+            fetch("json/EngineerJC2023_01.json")        // json 파일 불러오는 형식
+            .then(res => res.json())
+            .then(items => {
+                questionAll = items.map((item, index) => {
+                    const formattedQuestion = {
+                        question: item.question,
+                        number: index +1
+                    };
+                    const answerChoices = [...item.incorrect_answers];                                  // 오답 불러오기
+                    formattedQuestion.Answer = Math.ceil(Math.random() * (answerChoices.length+1));     //정답을 랜덤으로 불러오기
+                    answerChoices.splice(formattedQuestion.Answer, 0, item.correct_answer);             //정답을 랜덤으로 추가
+                    //보기를 추가
+                    answerChoices.forEach((choice, index) => {
+                        formattedQuestion["choice" + (index+1)] = choice;
+                    });
+                    // 문제에 대한 해설이 있으면 출력해주기
+                    if(item.hasOwnProperty("question_desc")){
+                        formattedQuestion.QuestionDesc = item.question_desc;
+                    }
+                    // 문제에 대한 이미지가 있으면 출력
+                    if(item.hasOwnProperty("question_img")){
+                        formattedQuestion.QuestionImg = item.question_img;
+                    }
+                    // 해설이 있으면 출력
+                    if(item.hasOwnProperty("desc")){
+                        formattedQuestion.desc = item.desc;
+                    }
+                    // //키워드가 있으면 출력
+                    // if(item.hasOwnProperty("keyword")){
+                    //     formattedQuestion.keyword = item.keyword;
+                    // }
+                    return formattedQuestion;
+                });
+                newQuestion();      //문제 만들기
+            })
+            .catch((err) => console.log(err));
+        }
+        //문제 만들기
+        const newQuestion = () => {
+            const exam = [];
+            const omr = [];
+
+            questionAll.forEach((question, number) => {
+                exam.push(`
+                    <div class="cbt">
+                        <div class="cbt__question"><span>${question.number}</span>. ${question.question}</div>
+                        <div class="cbt__question__img"></div>
+                        <div class="cbt__selects">
+                            <input type="radio" id="select${number}_1" name="select${number}" value="${number}_1" onclick="answerSelect(this)">
+                            <label for="select${number}_1"><span>${question.choice1}</span></label>
+                            <input type="radio" id="select${number}_2" name="select${number}" value="${number}_2" onclick="answerSelect(this)">
+                            <label for="select${number}_2"><span>${question.choice2}</span></label>
+                            <input type="radio" id="select${number}_3" name="select${number}" value="${number}_3" onclick="answerSelect(this)">
+                            <label for="select${number}_3"><span>${question.choice3}</span></label>
+                            <input type="radio" id="select${number}_4" name="select${number}" value="${number}_4" onclick="answerSelect(this)">
+                            <label for="select${number}_4"><span>${question.choice4}</span></label>
+                        </div>
+                        <div class="cbt__desc">${question.desc}</div>
+                        <div class="cbt__keyword">${question.keyword}</div> -->
+                    </div>
+                `);
+                omr.push(`
+                    <div class="omr">
+                        <strong>${question.number}</strong>
+                        <input type="radio" id="omr${number}_1" id="omr${number}_1" value="${number}_0">
+                        <label for="omr${number}_1"><span class="label-inner">1</span> </label>
+                        <input type="radio" id="omr${number}_2" id="omr${number}_2" value="${number}_1">
+                        <label for="omr${number}_2"><span class="label-inner">2</span></label>
+                        <input type="radio" id="omr${number}_3" id="omr${number}_3" value="${number}_2">
+                        <label for="omr${number}_3"><span class="label-inner">3</span></label>
+                        <input type="radio" id="omr${number}_4" id="omr${number}_4" value="${number}_3">
+                        <label for="omr${number}_4"><span class="label-inner">4</span> </label>
+                    </div>
+                `);
+            });
+            cbtQuiz.innerHTML = exam.join('');
+            cbtOmr.innerHTML = omr.join('');
+        };
+        
+        dataQuestion();
+    </script>
+</body>
+</html>
