@@ -369,7 +369,7 @@
 }
 .cbt__submit:hover {
     transform: scale(1.1);
-    transition: 0.2s;
+    transition: 0.3s;
     cursor: pointer;
 }
 .cbt__submit::before {
