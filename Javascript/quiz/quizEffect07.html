@@ -95,7 +95,7 @@
                     </div> -->
                 </div>
             </div>
-            <!-- <div class="cbt__start">
+            <div class="cbt__start">
                 <div class="cbt__modal1">
                     <h2>기능사 시험 도전하기</h2>
                     <select name="cbtTime" id="cbtTime">
@@ -148,12 +148,11 @@
                         <option value="gineungsaWD2016_01">웹디자인기능사 2016년 1회</option>
                         <option value="gineungsaWD2016_04">웹디자인기능사 2016년 4회</option>
                     </select>
-                    
                     <div>
                         <button class="cbt__button">시작하기</button>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
     </main>
     <!-- //main -->
@@ -168,8 +167,11 @@
         const cbtSubmit = document.querySelector(".cbt__submit")
         const cbtLength = document.querySelector(".cbt__score .cbt__length")   //전체 문제 수
         const cbtRest = document.querySelector(".cbt__score .cbt__rest")   //남은 문제 수
-        const cbtTime = document.querySelector(".cbt__time")
+
         const cbtQuizDesc = document.querySelectorAll(".cbt__question__desc")
+        const cbtStartButton = document.querySelector(".cbt__start button")
+
+        const cbtTime = document.querySelector(".cbt__time")    //타이머
 
         let questionAll = [];   //모든 퀴즈 정보
         let questionLength = 0; //전체 문제수
@@ -202,15 +204,11 @@
                     //문제에 이미지가 있으면 출력
                     if(item.hasOwnProperty("question_img")){
                         formattedQuestion.question_img = item.question_img;
-                    } else {
-                        formattedQuestion.question_img = "";
                     }
 
                     //해설이 있으면 출력
                     if(item.hasOwnProperty("desc")){
                         formattedQuestion.desc = item.desc;
-                    } else {
-                        formattedQuestion.desc = "";
                     }
 
                     return formattedQuestion;
@@ -271,25 +269,27 @@
                         </label>
                     </div>
                 `);
-
-                question.question_desc;
             });
             
             cbtQuiz.innerHTML = exam.join('');
             cbtOmr.innerHTML = omr.join('');
 
+            //desc 안 보이기
             const cbtQuestionDesc = document.querySelectorAll(".cbt__question__desc");
-
             cbtQuestionDesc.forEach(desc =>{
                 if(desc.innerHTML == "undefined"){
-                    desc.style.display="none";
+                    desc.style.display = "none";
+                }
+            })
+
+            //img 안 보이기
+            const cbtQuestionImg = document.querySelectorAll(".cbt__question__img");
+            cbtQuestionImg.forEach(img =>{
+                if(img.innerHTML == "undefined"){
+                    img.style.display = "none";
                 }
             })
         };
-
-        //desc 안 보이기
-
-
 
         //정답 확인
         const answerQuiz = () => {
@@ -298,11 +298,8 @@
             questionAll.forEach((question, number) => {
                 const quizSelectWrap = cbtSelects[number];
                 const userSelector = `input[name=select${number}]:checked`;
-                
                 const userAnswer = (quizSelectWrap.querySelector(userSelector) || {}).value;
-                
                 const numberAnswer = userAnswer ? userAnswer.slice(-1) : undefined;
-                console.log(numberAnswer)
 
                 //사용자의 정답 확인
                 if(numberAnswer == question.answer){
@@ -326,7 +323,7 @@
             });
         };
 
-        //
+        //문제와 OMR의 선택을 연동
         const answerSelect2 = (elem) => {
             const answer = elem.value;
             const answerNum = answer.split("_")
@@ -350,8 +347,31 @@
         };
 
         cbtSubmit.addEventListener("click", answerQuiz);
-        dataQuestion();  
+        dataQuestion();
         
+        //시작 누르면 모달 끄지라
+        cbtStartButton.addEventListener("click", () => {
+            const cbtStart = document.querySelector(".cbt__start");
+            cbtStart.classList.add("hide");
+
+            let setTime = 60 * 60
+            const timerStart = () => {
+                const timer = setInterval(()=>{
+                    setTime--;
+
+                    const minutes = Math.floor(setTime / 60);
+                    const seconds = setTime % 60;
+
+                    cbtTime.innerHTML = `${minutes}분 ${seconds}초`
+
+                    if(setTime <= 0){
+                        clearInterval(timer);
+                        answerQuiz();
+                    }
+                }, 1000);
+            };
+            timerStart();
+        });
 
     </script>
 </body>
