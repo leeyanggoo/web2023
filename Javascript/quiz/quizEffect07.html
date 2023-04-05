@@ -195,7 +195,7 @@
         let questionLength = 0; //전체 문제수
         let questionRest = questionLength;  //남은 문제수
         let questionTime = "";
-        let questionTimeRemain = "1000";
+        let questionTimeRemain = "13";
         let questionScore = 0;  //맞춘 문제 개수
 
         //시작하기
@@ -413,10 +413,20 @@
             } else {
                 let minutes = Math.floor(questionTimeRemain / 60);
                 let seconds = questionTimeRemain % 60
-                return `${minutes}분 ${seconds}초`;
+                
+                //허튼 데 시간 쓰는 놈이니?
+                // if(seconds.toString().length == 2){
+                //     seconds = questionTimeRemain % 60
+                // } else {
+                //     seconds = "0" + seconds.toString()
+                // }
 
-                //초 단위가 한 자리면 앞에 0 붙이기
+                //이런 방법이 있는데 말이지
+                if(seconds<10) {
+                    seconds = "0" + seconds;
+                }
 
+                return `${minutes}분 ${seconds}초`;                
             }
         }
         //시험 끝

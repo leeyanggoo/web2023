@@ -325,7 +325,7 @@
 .cbt__info .cbt__title {
     text-decoration: underline;
     text-underline-offset: 4px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-weight: bold;
 }
 .cbt__info span {
@@ -630,16 +630,19 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    animation: over 5s linear infinite;
+    animation: over 5s linear infinite alternate;
 }
 @keyframes over {
     0% {
+        background-position: 0% 0;
         background-size: calc(50%);
     }
     50% {
+        background-position: 50% 0;
         background-size: calc(80%);
     }
     100% {
+        background-position: 100% 0;
         background-size: calc(50%);
     }
 }
@@ -736,7 +739,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    animation: over 5s linear infinite;
+    animation: over 5s linear infinite alternate;
 }
 .cbt__end p {
     font-size: 50px;
@@ -750,6 +753,11 @@
     cursor: pointer;
     letter-spacing: 5px;
     font-size: 18px;
+}
+.cbt__end__btn:hover {
+    transform: scale(1.2);
+    transition: all 0.3s;
+    background-color: #d2d2ff;
 }
 
 /* dog__wrap  */
