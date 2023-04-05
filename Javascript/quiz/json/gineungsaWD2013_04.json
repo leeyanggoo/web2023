@@ -44,7 +44,7 @@
     },{
         "subject": "웹디자인기능사",
         "question": "다음과 같이 문자를 대신하여 의사소통이 가능한 그림 문자를 뜻하는 용어는?",
-        "question_img": "gineungsaWD2015_04_01",
+        "question_img": "<img src='img/gineungsaWD2015_04_01.jpg'>",
         "correct_answer": "픽토그램",
         "incorrect_answers": ["캐릭터", "로고타입", "다이어그램"],
         "desc": "사용자와 그림으로 의사소통을 할 수 있는 것을 픽토그램이라 하죠<br>(예, 남자&여자화장실, 장애인표지 등..)"

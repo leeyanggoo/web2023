@@ -282,18 +282,10 @@
     margin-bottom: 20px;
     padding: 20px;
     font-family: "NeoDunggeunmo";
-    background-color: lightskyblue;
+    background-color: #e3edff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-.cbt__header > div > div {
-    display: inline-block;
-    margin-left: 5px;
-    background-color: blue;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 20px;
 }
 
 /* cbt__conts */
@@ -315,19 +307,18 @@
 }
 
 
-
 .cbt__aside {
     position: fixed;
     right: 20px;
     top: 100px;
     width: 250px;
-    height: calc(100vh - 140px);
+    /* height: calc(100vh - 140px); */
     background-color: #fff;
 }
 
 .cbt__info {
     position: relative;
-    background-color: lightskyblue;
+    background-color: #e3edff;
     border: 5px ridge #cacaca;
     margin-bottom: 10px;
 }
@@ -380,7 +371,7 @@
     width: 100%;
     height: 50px;
     padding: 0 0 0 15px;
-    background-color: #ff0000;
+    background-color: lightcoral;
     color: #fff;
     border-radius: 20px;
     text-align: center;
@@ -639,14 +630,14 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    animation: spin 5s linear infinite;
+    animation: over 5s linear infinite;
 }
-@keyframes spin {
+@keyframes over {
     0% {
         background-size: calc(50%);
     }
     50% {
-        background-size: calc(100%);
+        background-size: calc(80%);
     }
     100% {
         background-size: calc(50%);
@@ -654,7 +645,6 @@
 }
 .cbt__start > div h2 {
     margin-bottom: 50px;
-    animation: beat 1s linear infinite;
     font-weight: bold;
     font-size: 30px;
     font-family: "NeoDunggeunmo";
@@ -663,6 +653,9 @@
     margin-bottom: 20px;
     padding: 10px;
     font-size: 16px;
+    border-radius: 10px;
+    border: 3px solid #cacaca;
+    font-family: "NanumSquare";
 }
 .cbt__start > div button {
     margin-top: 30px;
@@ -670,6 +663,93 @@
     font-family: "NeoDunggeunmo";
     border-radius: 20px;
     cursor: pointer;
+    letter-spacing: 5px;
+    font-size: 18px;
+}
+.cbt__start > div button:hover {
+    background-color: #d2d2ff;
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+.cbt__view {
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 10;
+    line-height: 1.8;
+    font-size: 16px;
+    font-family: "NeoDunggeunmo"
+}
+.cbt__view input {
+    border: 5px solid #d2d2ff;
+    padding: 20px 0;
+    font-family: "NanumSquare";
+    border-radius: 20px;
+    font-size: 20px;
+    text-align: center;
+    width: 50%;
+    letter-spacing: 5px;
+}
+.cbt__view span {
+    position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "NanumSquare";
+}
+.cbt__view span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 10px;
+    z-index: -1;
+    border-radius: 20px;
+    background-color: #d2d2ff;
+    width: 100%;
+    height: 10px;
+}
+
+.cbt__end {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    background-color: rgba(255,255,255,0.4);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cbt__end .modal2 {
+    width: 50%;
+    height: 50vh;
+    background-color: #fff;
+    box-shadow: 5px 10px 5px 5px #444;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/modal2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: over 5s linear infinite;
+}
+.cbt__end p {
+    font-size: 50px;
+    font-family: "NeoDunggeunmo";
+    margin-bottom: 50px;
+}
+.cbt__end__btn {
+    padding: 20px 40px 20px 40px;
+    font-family: "NeoDunggeunmo";
+    border-radius: 20px;
+    cursor: pointer;
+    letter-spacing: 5px;
+    font-size: 18px;
 }
 
 /* dog__wrap  */
