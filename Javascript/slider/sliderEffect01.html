@@ -27,7 +27,7 @@
             position: absolute;
             left: 0;
             top: 0;
-            transition: all 1s;
+            /* transition: all 1s; */
         }
         .slider::before {
             position: absolute;
@@ -75,7 +75,7 @@
             </div>
         </div>
     </main>
-    <!-- //header -->   
+    <!-- //main -->   
 
     <footer id="footer">
         <a href="mailto:didrn94553@gmail.com">didrn94553@gmail.com</a>
@@ -91,22 +91,25 @@
         let currentIndex = 0;   //현재 보이는 이미지
         let sliderCount = slider.length;     //이미지 개수
         let sliderInterval = 3000;  //이미지 변경 간격
+
     </script>
 
     <!-- javascript -->
-    <!-- <script>
+    <script>
         setInterval(() => {
-            
-            let nextIndex = (currentIndex + 1) % sliderCount;   //전체 개수로 나누고 남은 나머지를 활용해 4를 못 넘게 함
+            //트랜지션 설정
+            slider[currentIndex].style.transition = "all, 1s";
+
+            let nextIndex = (currentIndex + 1) % sliderCount;   
+            //전체 개수로 나누고 남은 나머지를 활용해 4(이미지 개수)를 못 넘게 함
             
             slider[currentIndex].style.opacity = "0"
             slider[nextIndex].style.opacity = "1";
 
             currentIndex = nextIndex;
-            
-            console.log(currentIndex)
+            //currentIndex가 nextIndex의 값을 할당받음으로써 4를 못 넘게 함
         }, sliderInterval);
-    </script> -->
+    </script>
 
     <!-- jQuery -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -124,19 +127,16 @@
     </script> -->
 
     <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script>
         setInterval(() => {
             let nextIndex = (currentIndex + 1) % sliderCount;
 
-
             gsap.to(slider[currentIndex], {opacity: 0, duration: 1});
-
             gsap.to(slider[nextIndex], {opacity: 1, duration : 1});
 
             currentIndex = nextIndex;
-
         }, sliderInterval);
     </script>
-</body>
+</body> -->
 </html>
