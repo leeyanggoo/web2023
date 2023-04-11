@@ -99,7 +99,7 @@
         //복사한 첫 번째 이미지 마지막에 붙여넣기
         sliderInner.appendChild(sliderClone)
 
-        let sliderInterval = 3000;  //이미지 변경 간격
+        let sliderInterval = 2000;  //이미지 변경 간격
     </script>
 
     <!-- javascript -->
@@ -153,7 +153,6 @@
     <script>
         function sliderEffect(){
             currentIndex++;
-            console.log(currentIndex)
             // sliderInner.style.transition = "all 1s";
             // sliderInner.style.transform = `translateX(-${sliderWidth*currentIndex}px)`
             gsap.to(sliderInner, {
@@ -165,7 +164,7 @@
             //마지막 이미지가 나오면 애니메이션 효과 멈추기
             if(currentIndex == sliderCount){
                 gsap.to(sliderInner, {
-                    delay: 0.5,  //setTimeout의 지연시간
+                    delay: 0.7,  //setTimeout의 지연시간
                     x : 0,
                     duration : 0,
                     onComplete: () => { //gsap는 onComplete 함수를 이용해 변수 이용
