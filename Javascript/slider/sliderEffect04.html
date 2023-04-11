@@ -103,7 +103,7 @@
     </script>
 
     <!-- javascript -->
-    <script>
+    <!-- <script>
         function sliderEffect(){
             currentIndex++;
 
@@ -114,13 +114,13 @@
             if(currentIndex == sliderCount){
                 setTimeout(() => {
                     sliderInner.style.transition = "all 0s";
-                    sliderInner.style.transform = `translateX(0px)`
+                    sliderInner.style.transform = `translateX(0)`
                     currentIndex = 0;
                 }, 700);
             };
         };
         setInterval(sliderEffect, sliderInterval)
-    </script>
+    </script> -->
 
     <!-- jQuery -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -149,11 +149,11 @@
     </script> -->
     
     <!-- GSAP -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script>
         function sliderEffect(){
             currentIndex++;
-
+            console.log(currentIndex)
             // sliderInner.style.transition = "all 1s";
             // sliderInner.style.transform = `translateX(-${sliderWidth*currentIndex}px)`
             gsap.to(sliderInner, {
@@ -165,7 +165,7 @@
             //마지막 이미지가 나오면 애니메이션 효과 멈추기
             if(currentIndex == sliderCount){
                 gsap.to(sliderInner, {
-                    delay: 0.7,  //setTimeout의 지연시간
+                    delay: 0.5,  //setTimeout의 지연시간
                     x : 0,
                     duration : 0,
                     onComplete: () => { //gsap는 onComplete 함수를 이용해 변수 이용
@@ -175,7 +175,7 @@
             };
         };
         setInterval(sliderEffect, sliderInterval)
-    </script> -->
+    </script>
 
 </body>
 </html>
