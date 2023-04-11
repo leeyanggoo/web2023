@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/slider.css">
     <style>
+        #header ul a:hover {
+            background-color: #000;
+            color: #fff;
+            transform: scale(1.2);
+            transition: all 0.5s;
+        }
+        #header li {
+            margin: 0 2px;
+        }
+        
         /* slider__wrap */
         .slider__wrap {
             width: 100%;
@@ -39,7 +49,7 @@
         }
     </style>
 </head>
-<body class="img09 bg09 font09">
+<body class="img08 bg08 font08">
     <header id="header">
         <h1>Javascript Slider Effect03</h1>
         <p>슬라이드 이펙트</p>
@@ -88,7 +98,7 @@
     <!-- javascript -->
     <!-- <script>
         //트랜지션 설정
-        sliderInner.style.transition = "all, 1s";
+        sliderInner.style.transition = "all 1s";
 
         setInterval(()=>{
             currentIndex = (currentIndex+1) % sliderCount;
