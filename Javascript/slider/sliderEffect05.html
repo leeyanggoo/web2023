@@ -51,7 +51,7 @@
 </head>
 <body class="img05 bg05 font05">
     <header id="header">
-        <h1>Javascript Slider Effect04</h1>
+        <h1>Javascript Slider Effect05</h1>
         <p>슬라이드 이펙트</p>
         <ul>
             <li><a href="sliderEffect01.html">1</a></li>
@@ -97,28 +97,85 @@
         let sliderClone = sliderInner.firstElementChild.cloneNode(true);    //복제할 첫 번째 이미지 (cloneNode는 복사해서 붙여넣음 안 쓰면 그냥 이동함 ㄷㄷ)
 
         //복사한 첫 번째 이미지 마지막에 붙여넣기
-        sliderInner.appendChild(sliderClone)
+        sliderInner.appendChild(sliderClone);
 
-        let sliderInterval = 1000;  //이미지 변경 간격
+        let sliderInterval = 2000;  //이미지 변경 간격
     </script>
+
+    <!-- Javascript -->
     <script>
         function sliderEffect(){
             currentIndex++;
 
             sliderInner.style.transition = "all 0.6s";
-            sliderInner.style.transform = `translateY(-${sliderHeight*currentIndex}px)`
+            sliderInner.style.transform = `translateY(-${sliderHeight*currentIndex}px)`;
 
             //마지막 이미지가 나오면 애니메이션 효과 멈추기
             if(currentIndex == sliderCount){
                 setTimeout(() => {
                     sliderInner.style.transition = "all 0s";
-                    sliderInner.style.transform = `translateY(0px)`
+                    sliderInner.style.transform = `translateY(0px)`;
                     currentIndex = 0;
                 }, 700);
             };
         };
-        setInterval(sliderEffect, sliderInterval)
+        setInterval(sliderEffect, sliderInterval);
     </script>
+
+    <!-- jQuery -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+        function sliderEffect(){
+            currentIndex++;
+
+            // sliderInner.style.transition = "all 0.6s";
+            // sliderInner.style.transform = `translateY(-${sliderHeight*currentIndex}px)`
+            $(".slider__inner").css("position", "relative");
+            $(".slider__inner").animate({top : -sliderHeight*currentIndex}, 600);            
+
+            //마지막 이미지가 나오면 애니메이션 효과 멈추기
+            if(currentIndex == sliderCount){
+                setTimeout(() => {
+                    // sliderInner.style.transition = "all 0s";
+                    // sliderInner.style.transform = `translateY(0px)`
+                    $(".slider__inner").animate({top : 0}, 0);
+                    currentIndex = 0;
+                }, 700);
+            };
+        };
+        setInterval(sliderEffect, sliderInterval);
+    </script> -->
+
+    <!-- GSAP -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+        function sliderEffect(){
+            currentIndex++;
+
+            // sliderInner.style.transition = "all 0.6s";
+            // sliderInner.style.transform = `translateY(-${sliderHeight*currentIndex}px)`;
+            gsap.to(sliderInner, {
+                y : -sliderHeight * currentIndex,
+                duration : 0.6, //첫 번째 duration이 delay보다 크면 중첩 실행됨.
+                ease : "none",
+            });
+
+            //마지막 이미지가 나오면 애니메이션 효과 멈추기
+            if(currentIndex == sliderCount){
+                gsap.to(sliderInner, {
+                    delay: 0.7,  //setTimeout의 지연시간
+                    y : 0,
+                    duration : 0,
+                    onComplete: () => { //gsap는 onComplete 함수를 이용해 변수 이용
+                        currentIndex = 0;
+                    }
+                });
+            };
+        };
+        setInterval(sliderEffect, sliderInterval);
+    </script> -->
+
     
     
     
