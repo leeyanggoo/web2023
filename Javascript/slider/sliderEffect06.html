@@ -82,14 +82,14 @@
             display: inline-block;
             border-radius: 50%;
             text-indent: -9999px;
-            transition: all 0.3s;
+            transition: all 0.2s;
             margin: 2px;
         }
         .slider__dot .dot.active {
             background-color: rgba(255,255,255,1);
         }
         .slider__dot .dot:hover {
-            border: 1px solid #000;
+            border: 2px solid #000;
         }
     </style>
 </head>
@@ -185,6 +185,13 @@
             });
         });
 
+        //닷 클릭 이벤트
+        let dotClick = document.querySelectorAll(".slider__dot .dot");
+        dotClick.forEach((dot, index)=>{
+            dot.addEventListener("click", ()=>{
+                gotoSlider(index);
+            });
+        });
         
     </script>
     <script>
