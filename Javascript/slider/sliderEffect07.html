@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07. 슬라이드 이펙트</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <style>
+        #header ul a:hover {
+            background-color: #000;
+            color: #fff;
+            transform: scale(1.2);
+            transition: all 0.5s;
+        }
+        #header li {
+            margin: 0 2px;
+        }
+
+        /* slider__wrap */
+        .slider__wrap {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 450px;
+            box-shadow: 0 50px 100px rgba(0,0,0,0.5);
+        }
+        .slider__img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .slider__img img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            /* background-size: cover; */
+            object-fit: cover;   /* img 태그로 불러왔을 때 cover 효과 */
+            opacity: 0;
+            transform: scale(1.1);
+            transition: all 500ms ease-in-out;
+        }
+        .slider__img img.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .slider__thumb {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, 150px);
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .slider__thumb img {
+            cursor: pointer;
+            border: 2px solid transparent; /* 보더도 위치값을 가지기 때문에 transparent(색상 투명하게) 씀 */
+        }
+        .slider__thumb img.active {
+            border: 2px solid #fff;
+        }
+        .slider__btn a {
+            display: flex;
+            position: absolute;
+            top: 0;
+            width: 40px;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            color: #fff;
+            background-color: rgba(0,0,0,0.2);
+            transition: all 300ms ease-in-out;
+        }
+        .slider__btn a:hover {
+            background-color: rgba(0,0,0,0.5);
+        }
+        .slider__btn a.next {
+            right: 0;
+        }
+        .slider__btn a.prev {
+            left: 0;
+        }
+    </style>
+</head>
+<body class="img07 bg07 font07">
+    <header id="header">
+        <h1>Javascript Slider Effect07</h1>
+        <p>슬라이드 이펙트</p>
+        <ul>
+            <li><a href="sliderEffect01.html">1</a></li>
+            <li><a href="sliderEffect02.html">2</a></li>
+            <li><a href="sliderEffect03.html">3</a></li>
+            <li><a href="sliderEffect04.html">4</a></li>
+            <li><a href="sliderEffect05.html">5</a></li>
+            <li><a href="sliderEffect06.html">6</a></li>
+            <li class="active"><a href="sliderEffect07.html">7</a></li>
+            <li><a href="sliderEffect08.html">8</a></li>
+            <li><a href="sliderEffect09.html">9</a></li>
+            <li><a href="sliderEffect10.html">10</a></li>
+        </ul>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="slider__wrap">
+            <div class="slider__img"></div>
+            <div class="slider__thumb"></div>
+            <div class="slider__btn">
+                <a href="#" class="prev" title="이전 이미지">prev</a>    <!--title은 웹 접근성을 위함임-->
+                <a href="#" class="next" title="다음 이미지">next</a>
+            </div>
+        </div>
+    </main>
+    <!-- //header -->
+
+    <footer id="footer">
+        <a href="mailto:didrn94553@gmail.com">didrn94553@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script>
+        // 이미지 불러오기
+        let images = [
+            "./img/sliderEffect06-min.jpg",
+            "./img/sliderEffect07-min.jpg",
+            "./img/sliderEffect08-min.jpg",
+            "./img/sliderEffect09-min.jpg",
+            "./img/sliderEffect10-min.jpg"
+        ];
+
+        function imageSlider(parent, images){
+            let currentIndex = 0;   //현재 이미지
+
+            //선택자 - 변수 객체 안에 선택자를 담은 형태
+            let slider = {
+                parent : parent,
+                images : parent.querySelector(".slider__img"),
+                thumnails : parent.querySelector(".slider__thumb"),
+                prevBtn : parent.querySelector(".slider__btn .prev"),
+                nextBtn : parent.querySelector(".slider__btn .next"),
+            }
+
+            //이미지 출력하기
+            slider.images.innerHTML = images.map((image, index) => {
+                return `<img src="${image}" alt="이미지${index}">`
+            }).join("");
+
+            //이미지 활성화(active)하기
+            let imageNodes = slider.images.querySelectorAll("img");
+            imageNodes[currentIndex].classList.add("active");
+
+            //썸네일 이미지 출력하기
+            slider.thumnails.innerHTML = slider.images.innerHTML;
+
+            //첫 번째 썸네일에 active 추가하기
+            // slider.thumnails.firstChild.classList.add("active")
+
+            //썸네일 활성화(active)하기
+            let thumnailNodes = slider.thumnails.querySelectorAll("img");
+            thumnailNodes[currentIndex].classList.add("active");
+
+            //썸네일 이미지 클릭하기
+            // for(let i = 0; i < thumnailNodes.length; i++){
+            //     thumnailNodes[i].addEventListener("click", function(){  //화살표 함수는 this 못 씀 ㄷㄷ
+            //         slider.thumnails.querySelector("img.active").classList.remove("active");
+            //         thumnailNodes[i].classList.add("active");
+
+            //         imageNodes[currentIndex].classList.remove("active");
+            //         currentIndex = i;
+            //         imageNodes[currentIndex].classList.add("active");
+            //     });
+            // }
+
+            thumnailNodes.forEach((el, i) => {
+                el.addEventListener("click", function(){
+                    slider.thumnails.querySelector("img.active").classList.remove("active");
+                    el.classList.add("active");
+
+                    imageNodes[currentIndex].classList.remove("active");
+                    currentIndex = i;
+                    imageNodes[currentIndex].classList.add("active");
+                });
+            });
+
+            //왼쪽 버튼 클릭하기
+            slider.prevBtn.addEventListener("click", ()=>{
+                imageNodes[currentIndex].classList.remove("active");
+                // thumnailNodes[currentIndex].classList.remove("active");
+                currentIndex--;
+
+                //0에서 빼도 음수가 안 나오도록
+                if(currentIndex < 0) currentIndex = images.length-1;
+
+                imageNodes[currentIndex].classList.add("active");
+                // thumnailNodes[currentIndex].classList.add("active");
+
+                //썸네일
+                slider.thumnails.querySelector("img.active").classList.remove("active");
+                thumnailNodes[currentIndex].classList.add("active");
+            });
+
+            //오른쪽 버튼 클릭하기
+            slider.nextBtn.addEventListener("click", ()=>{
+                imageNodes[currentIndex].classList.remove("active");
+                
+                //index가 최대 개수 안 넘게 하기(여기서 currentIndex에 +1을 하기 때문에 ++ 안 함)
+                currentIndex = (currentIndex+1) % images.length;
+
+                imageNodes[currentIndex].classList.add("active");
+
+                //썸네일
+                slider.thumnails.querySelector("img.active").classList.remove("active");
+                thumnailNodes[currentIndex].classList.add("active");
+            });
+        };
+
+        imageSlider(document.querySelector(".slider__wrap"), images);
+
+        
+    </script>
+    
+    
+    
+</body>
+</html>
