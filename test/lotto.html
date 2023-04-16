@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또 번호 뽑기</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100%;
+        }
+        h1 {
+            margin-bottom: 2rem;
+            font-size: 3rem;
+        }
+        button {
+            width: 5rem;
+            height: 3rem;
+            font-size: 1rem;
+            margin: 2rem 0;
+        }
+        div {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>로또 번호 생성기</h1>
+    <div>로또 번호</div>
+    <button>클릭</button>    
+
+    <script>
+        
+        document.querySelector("button").addEventListener("click", ()=>{
+            let numbers = new Set();
+            while (numbers.size < 6){
+                let random =Math.floor(Math.random()*45)+1
+                numbers.add(random)
+            }
+            document.querySelector("div").innerHTML = [...numbers].join(" ");
+        });
+    </script>
+</body>
+</html>
