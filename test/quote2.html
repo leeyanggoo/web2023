@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width='device-width', initial-scale=1.0">
-    <title>json 명언 가져오기</title>
+    <title>json 명언 가져오기2</title>
     <link rel="stylesheet" href="css/font.css">
     <style>
         * {
@@ -17,7 +17,6 @@
             align-items: center;
             justify-content: center;
             display: flex;
-            
         }
         .opacity {
             animation: opacity 2s ease-in-out;
@@ -34,10 +33,11 @@
             width: 50%;
         }
         .quote {
-            color: #222;
+            color: #fff;
             font-size: 2rem;
             margin: 1rem 0;
             font-weight: bold;
+            text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
         }
         .author {
             color: #808080;
@@ -59,7 +59,7 @@
         const quoteAuthor = document.querySelector(".author");
 
         let quoteAll = [];
-        let quoteInterval = 10000;
+        let quoteInterval = 5000;
 
         const quoteData = () => {
             fetch("json/dummy01.json")
@@ -72,12 +72,13 @@
                 quote.classList.add("opacity");
                 quoteAuthor.classList.add("opacity");
 
-                // 랜덤 배경색
-                let randomColor1 = bgColor[Math.floor(Math.random()*(bgColor.length))];
-                let randomColor2 = bgColor[Math.floor(Math.random()*(bgColor.length))];
-                let gradientColor = `linear-gradient(to right, ${randomColor1}, ${randomColor2})`
+                //랜덤 배경색
+                // let randomColor1 = bgColor[Math.floor(Math.random()*(bgColor.length))];
+                // let randomColor2 = bgColor[Math.floor(Math.random()*(bgColor.length))];
+                // let gradientColor = `linear-gradient(to right, ${randomColor1}, ${randomColor2})`
 
-                document.querySelector("body").style.backgroundImage = gradientColor;
+                document.querySelector("body").style.background = "url(https://source.unsplash.com/random/?person) no-repeat center / cover";
+
 
                 //랜덤 폰트
                 let randomFont = Math.floor(Math.floor(Math.random()*10)+1)
@@ -88,7 +89,7 @@
         quoteData();
 
         setInterval(() => {
-            quoteData()
+            location.reload("url(https://source.unsplash.com/random/?person)");
             quote.classList.remove("opacity");
             quoteAuthor.classList.remove("opacity");
         }, quoteInterval)
