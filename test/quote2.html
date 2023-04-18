@@ -59,7 +59,7 @@
         const quoteAuthor = document.querySelector(".author");
 
         let quoteAll = [];
-        let quoteInterval = 5000;
+        let quoteInterval = 10000;
 
         const quoteData = () => {
             fetch("json/dummy01.json")
@@ -78,7 +78,7 @@
                 // let gradientColor = `linear-gradient(to right, ${randomColor1}, ${randomColor2})`
 
                 document.querySelector("body").style.background = "url(https://source.unsplash.com/random/?person) no-repeat center / cover";
-
+                
 
                 //랜덤 폰트
                 let randomFont = Math.floor(Math.floor(Math.random()*10)+1)
@@ -89,6 +89,7 @@
         quoteData();
 
         setInterval(() => {
+            window.parent.location.reload();
             location.reload("url(https://source.unsplash.com/random/?person)");
             quote.classList.remove("opacity");
             quoteAuthor.classList.remove("opacity");
