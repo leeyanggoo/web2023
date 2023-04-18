@@ -200,20 +200,20 @@
             // });
 
             // for in 문
-            // let parallaxSpan = document.querySelectorAll(".info span");
-            // for(let i in parallaxSpan){
-            //     if(parallaxSpan.hasOwnProperty(i)){
-            //         parallaxSpan[parseInt(i)].innerHTML = document.getElementById(`section${parseInt(i)+1}`).offsetTop;
-            //     }
-            // };
+            let parallaxSpan = document.querySelectorAll(".info span");
+            for(let i in parallaxSpan){
+                if(parallaxSpan.hasOwnProperty(i)){
+                    parallaxSpan[parseInt(i)].innerHTML = document.getElementById(`section${parseInt(i)+1}`).offsetTop;
+                }
+            };
 
             // for of 문
-            let parallaxSpan = document.querySelectorAll(".info span");
-            // let sapnIndex = 0;
-            for(span of parallaxSpan.entries()){
-                // sapnIndex++;
-                span[1].innerHTML = document.getElementById(`section${span[0]+1}`).offsetTop;
-            }
+            // let parallaxSpan = document.querySelectorAll(".info span");
+            // // let sapnIndex = 0;
+            // for(span of parallaxSpan.entries()){
+            //     // sapnIndex++;
+            //     span[1].innerHTML = document.getElementById(`section${span[0]+1}`).offsetTop;
+            // }
         });
     </script>
 </body>
