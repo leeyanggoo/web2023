@@ -41,14 +41,15 @@
         }
         .s1-text1 {
             font-size: 30vw;
-            /* line-height: 1;
-            padding-top: 8vw; */
+            width: 100%;
+            text-align: center;
         }
         .s1-text2 {
             font-size: 0vw;
-            /* line-height: 1;
-            padding-top: 8vw; */
             animation: shake 0.2s infinite;
+            background-image: url(../parallax/img/doge_chart.png);
+            background-repeat: no-repeat;
+            background-position: center center;
         }
         @keyframes shake {
             0% { transform: translate(-50%, -50%); }
@@ -77,28 +78,11 @@
             width: 500px;
             height: 300px;
             background-image: url(../parallax/img/dog_rocket.png);
-            /* position: absolute; */
-            /* top: 50%; */
             left: -30%;
-            /* animation: fly 0.5s ease-in-out forwards; */
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
             opacity: 0;
-        }
-
-        .explosion {
-            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(../parallax/img/explosion.png);
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100vh;
-            width: 100%;
-            /* position: absolute;
-            top: -60px;
-            left: -60px; */
-            opacity: 0;
-            /* animation: explode 0.5s ease-in-out 1s forwards; */
         }
 
         .dot {
@@ -108,27 +92,67 @@
             border-radius: 50%;
         }
 
-        .money div {
-            background-image: url(../parallax/img/money.png);
-            width: 430px;
-            height: 240px;
+        .money {
+            background-image: url(../parallax/img/money.jpg);
+            width: 660px;
+            height: 300px;
             background-position: center center;
-            background-size: cover;
+            background-size: contain;
             background-repeat: no-repeat;
             /* opacity: 0; */
-            transform: translate(0%, -250%);
-            animation: fall 2s linear infinite;
+            transform: translate(-70%, -280%);
+            /* animation: fall 5s linear infinite; */
         }
         @keyframes fall {
-            from {
-                /* transform: translateY(1vh); */
-            }
+            from { }
             to {
                 transform: translateY(100vh);
                 opacity: 0;
             }
         }
-        
+        .s1-img2 {
+            width: 100%;
+            height: 100%;
+            background-image: url(../parallax/img/doge_astronaut.jpg);
+            background-position: center center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: fixed;
+        }
+        .s1-text3 {
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            text-align: center;
+            line-height: 100vh;
+            animation: go 10s linear infinite;
+        }
+        @keyframes go {
+            0% {
+                transform: translate(-100%, 100%) rotate(-30deg);
+            }
+            100% {
+                transform: translate(100%, -100%) rotate(-30deg);
+            }
+        }
+        .s1-text3::after {
+            content: '🚀';
+            position: absolute;
+            top: 0;
+            right: -10%;
+            animation: big2 0.5s linear infinite;
+        }
+        @keyframes big2 {
+            0% {
+                transform: scale(0.5) rotate(30deg);
+            }
+            50% {
+                transform: scale(0.7) rotate(32deg);
+            }
+            100% {
+                transform: scale(0.5) rotate(30deg);
+            }
+        }
     </style>
 </head>
 <body>
@@ -140,7 +164,7 @@
             data-1000="font-size: 20vw; opacity: 1" 
             data-2000="font-size: 20vw; opacity: 1"
             data-3000="font-size: 0vw; opacity: 0"
-        >R U</div>
+        >Are You</div>
         <div class="s1-text2 fixed"
             data-2500="font-size: 0vw; opacity: 0"
             data-3000="font-size: 30vw; opacity: 1"
@@ -150,7 +174,7 @@
             data-3500="opacity: 0"
             data-4000="opacity: 1"
             data-6500="opacity: 1"
-            data-7000="opacity: 0"
+            data-7300="opacity: 0"
         >
         </div>
         <div class="dot fixed"
@@ -186,27 +210,54 @@
             data-5700="transform: translate(-10%, 10%); opacity: 0"
             data-6300="transform: translate(250%, -50%); opacity: 1"
             data-6500="transform: translate(250%, -50%); opacity: 1"
-            data-7000="transform: translate(250%, -50%);opacity: 0"
+            data-7300="transform: translate(250%, -50%); opacity: 0"
         ></div>
-        <div class="money fixed"
-            data-7000="opacity: 0;"
-            data-7200="opacity: 1;"
-        >
-            <div></div>
-        </div>
+        <div class="s1-img2"
+            data-7300="opacity: 0; transform: scale(0.5);"
+            data-7500="opacity: 1; transform: scale(1);"
+        ></div>
+        <div class="s1-text3"
+            data-7300="font-size: 0vw; opacity: 0;"
+            data-7500="font-size: 15vw; opacity: 1;"
+        >We must go to Mars</div>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
     <script type="text/javascript">
         var s = skrollr.init();
+        const body = document.querySelector("body");
+        const MIN_DURATION = 5;
+
         window.addEventListener("scroll", () => {
             // scrollTop 값 넣기
             let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
             document.querySelector(".scrollTop").innerText = parseInt(scrollTop);
             
-            // if(scrollTop == 7200){
-            //     function makeMoney 
-            // }
+            // 화성 가서 대박났다
+            if(scrollTop == 7500){
+                function makeMoney() {
+                    const money = document.createElement("div");
+                    const delay = Math.random() * 10;
+                    const randomOpacity = Math.random();
+                    const duration = Math.random() * 20 + MIN_DURATION;
+
+                    money.classList.add("money", "fixed");
+                    money.style.left = `${Math.random() * window.screen.width}px`;
+                    money.style.animationDelay = `${parseInt(delay)}s`;
+                    money.style.opacity = randomOpacity;
+                    money.style.animation = `fall ${duration}s linear`;
+
+                    body.appendChild(money);
+
+                    setTimeout(() => {
+                        body.removeChild(money);
+                        makeMoney();
+                    }, (duration + delay) * 1000);
+                };
+                for(let index = 0; index < 30; index++){
+                    setTimeout(makeMoney, 500 * index);
+                };
+            }
         });
     </script>
 </body>
