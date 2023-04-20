@@ -173,9 +173,66 @@
     font-size: 14px;
     line-height: 1.4;
 }
-.parallax__info .scroll {}
-.parallax__info {}
 
+/* dot */
+.parallax__dot {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translate(-50%);
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.4);
+    padding: 20px 10px;
+    border-radius: 30px;
+}
+.parallax__dot li {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 12px 8px;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.1);
+    text-indent: -9999px;
+    transition: box-shadow .2s ease;
+}
+.parallax__dot li a {
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    transition: transform .2s ease;
+}
+.parallax__dot li.active {
+    box-shadow: 0 0 0 2px rgba(255,255,255,1);
+}
+.parallax__dot li.active a {
+    transform: scale(0.4);
+}
+
+/* scroll bar */
+/* 스크롤바 전체 */
+*::-webkit-scrollbar {
+    width: 20px;
+}
+/* 스크롤바 */
+*::-webkit-scrollbar-thumb {
+    background: #2f3542;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 3px solid transparent;
+}
+/* 스크롤 남은 부분 */
+*::-webkit-scrollbar-track {
+    background: gray;
+    border-radius: 10px;
+}
+
+
+
+/* media */
 @media (max-width: 1200px){
     .parallax__nav {
         padding: 10px;

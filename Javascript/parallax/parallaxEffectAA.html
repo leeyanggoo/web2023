@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패럴랙스 이펙트AA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Tangerine";
+        }
+        body {
+            height: 8500px;
+            background-color: #E0E4DD;
+        }
+        .scrollTop {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            z-index: 1000;
+            width: 40px;
+            height: 40px;
+            color: #fff;
+            text-align: center;
+            font-size: 24px;
+            line-height: 40px;
+            background-color: rgba(0,0,0,0.6);
+        }
+        .fixed {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        .s1-text1 {
+            font-size: 30vw;
+            /* line-height: 1;
+            padding-top: 8vw; */
+        }
+        .s1-text2 {
+            font-size: 0vw;
+            /* line-height: 1;
+            padding-top: 8vw; */
+            animation: shake 0.2s infinite;
+        }
+        @keyframes shake {
+            0% { transform: translate(-50%, -50%); }
+            20% { transform: translate(-51%, -50%); }
+            40% { transform: translate(-49%, -50%); }
+            60% { transform: translate(-51%, -50%); }
+            80% { transform: translate(-49%, -50%); }
+            100% { transform: translate(-50%, -50%); }
+        }
+        .s1-img1 {
+            width: 100%;
+            max-width: 60%;
+            height: 100vh;
+            background-image: url(../parallax/img/mars.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .s1-text3 {
+            font-size: 0vw;
+        }
+
+        /* 날아가라 */
+        .missile {
+            width: 500px;
+            height: 300px;
+            background-image: url(../parallax/img/dog_rocket.png);
+            /* position: absolute; */
+            /* top: 50%; */
+            left: -30%;
+            /* animation: fly 0.5s ease-in-out forwards; */
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0;
+        }
+
+        .explosion {
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(../parallax/img/explosion.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+            /* position: absolute;
+            top: -60px;
+            left: -60px; */
+            opacity: 0;
+            /* animation: explode 0.5s ease-in-out 1s forwards; */
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .money div {
+            background-image: url(../parallax/img/money.png);
+            width: 430px;
+            height: 240px;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* opacity: 0; */
+            transform: translate(0%, -250%);
+            animation: fall 2s linear infinite;
+        }
+        @keyframes fall {
+            from {
+                /* transform: translateY(1vh); */
+            }
+            to {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="scrollTop"></div>
+
+    <section id="section1">
+        <div class="s1-text1 fixed" 
+            data-0="font-size: 0vw; opacity: 0" 
+            data-1000="font-size: 20vw; opacity: 1" 
+            data-2000="font-size: 20vw; opacity: 1"
+            data-3000="font-size: 0vw; opacity: 0"
+        >R U</div>
+        <div class="s1-text2 fixed"
+            data-2500="font-size: 0vw; opacity: 0"
+            data-3000="font-size: 30vw; opacity: 1"
+            data-4000="font-size: 30vw; opacity: 0"
+        >Crazy?</div>
+        <div class="s1-img1 fixed"
+            data-3500="opacity: 0"
+            data-4000="opacity: 1"
+            data-6500="opacity: 1"
+            data-7000="opacity: 0"
+        >
+        </div>
+        <div class="dot fixed"
+            data-4000="opacity: 0;"
+            data-4100="opacity: 1;"
+            data-4200="opacity: 0;"
+            data-4300="opacity: 1;"
+            data-4400="opacity: 0;"
+            data-4500="opacity: 1;"
+            data-4600="opacity: 0;"
+            data-4700="opacity: 1;"
+            data-4800="opacity: 0;"
+            data-4900="opacity: 1;"
+            data-5000="opacity: 0;"
+            data-5100="opacity: 1;"
+            data-5200="opacity: 0;"
+            data-5300="opacity: 1;"
+            data-5400="opacity: 0;"
+            data-5500="opacity: 1;"
+            data-5600="opacity: 0;"
+            data-5700="opacity: 1;"
+            data-5800="opacity: 0;"
+            data-5900="opacity: 1;"
+            data-6000="opacity: 0;"
+            data-6100="opacity: 1;"
+            data-6200="opacity: 0;"
+            data-6300="opacity: 1;"
+            data-6400="opacity: 0;"
+            data-6500="opacity: 1;"
+            data-6600="opacity: 0;"
+        ></div>
+        <div class="missile fixed"
+            data-5700="transform: translate(-10%, 10%); opacity: 0"
+            data-6300="transform: translate(250%, -50%); opacity: 1"
+            data-6500="transform: translate(250%, -50%); opacity: 1"
+            data-7000="transform: translate(250%, -50%);opacity: 0"
+        ></div>
+        <div class="money fixed"
+            data-7000="opacity: 0;"
+            data-7200="opacity: 1;"
+        >
+            <div></div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script type="text/javascript">
+        var s = skrollr.init();
+        window.addEventListener("scroll", () => {
+            // scrollTop 값 넣기
+            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+            document.querySelector(".scrollTop").innerText = parseInt(scrollTop);
+            
+            // if(scrollTop == 7200){
+            //     function makeMoney 
+            // }
+        });
+    </script>
+</body>
+</html>
