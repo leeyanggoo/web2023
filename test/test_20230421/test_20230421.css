@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+#nav {
+    width: 20%;
+    text-align: left;
+}
+#nav .logo {
+    width: 100px;
+    height: 50px;
+    margin-bottom: 50px;
+}
+#nav .logo img {
+    width: 100%;
+}
+#nav ul li {
+    margin-bottom: 20px;
+}
+#nav ul li a {
+    font-size: 20px;
+    margin: 20px;
+    font-weight: bold;
+}
+#nav ul li a.active {
+    color: blue;
+}
+#nav ul li ul {
+    margin: 30px 20px;
+}
+#nav ul li ul li {
+    
+    border-bottom: 1px solid #cacaca;
+}
+#nav ul li ul li a {
+    font-size: 16px;
+    margin: 10px;
+}
+#main {
+    width: 70%;
+}
+.main__slider {
+    width: 100%;
+    height: 380px;
+    /* display: flex; */
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+.main__slider img {
+    height: 380px;
+    width: 100%;
+    margin: 0;
+    vertical-align: top;
+}
+.main__service__nav {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.main__service__nav a {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px;
+    color: #cacaca;
+}
+.main__service__nav a.active {
+    color: #000;
+}
+.main__service_menu {
+    display: flex;
+    justify-content: space-between;
+}
+.main__service_menu div {
+    width: 18%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.main__service_menu div img {
+    width: 100%;
+    margin-bottom: 5px;
+}
+.main__service_menu div p {
+    font-size: 14px;
+}
+.main__card {
+    display: flex;
+    background-color: #cacaca;
+    justify-content: space-between;
+    padding: 10px;
+}
+.main__card div {
+    width: 29%;
+    margin: 0;
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+.main__card div p {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.main__card div li {
+    font-size: 10px;
+    margin: 5px;
+    text-align: left;
+}
+.main__card div img {
+    width: 50%;
+    margin-bottom: 20px;
+}
+#footer {
+    margin: 0 auto;
+    width: 1000px;
+    height: 130px;
+    background-color: lightblue;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: space-between; 
+}
+
+#footer div:nth-child(1) img {
+    height: 100%;
+}
+#footer div:nth-child(2) {
+    padding: 20px;
+}
+#footer div:nth-child(3) {
+    display: flex;
+    padding: 30px;
+}
+#footer div:nth-child(3) img {
+    width: 100%;
+}
