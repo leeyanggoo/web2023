@@ -58,6 +58,9 @@ body {
     padding: 5px;
     border-radius: 5px;
 }
+.icon__box .music__box {
+    width: 100px;
+}
 
 /* footer */
 .info {
@@ -69,7 +72,7 @@ body {
     transform: translateX(-50%);
     text-align: center;
 }
-.aciton {
+/* .aciton {
     position: fixed;
     left: 50%;
     bottom: 50px;
@@ -77,4 +80,4 @@ body {
     color: #fff;
     transform: translateX(-50%);
     text-align: center;
-}
+} */
