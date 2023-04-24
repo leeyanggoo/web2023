@@ -17,7 +17,7 @@
     </div>
     <header id="header">
         <h1>HMM GAME WORLD</h1>
-        <div class="time">2023년 4월 23일 09시 30분 15초</div>
+        <div class="time"></div>
     </header>
 
     <main>
@@ -51,7 +51,7 @@
 
     <footer id="footer">
         <!-- <div class="aciton"></div> -->
-        <div class="info">현재 맥을 사용하고 있으며, 화면 크기는 1920 X 760 입니다.</div>
+        <div class="info"></div>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -193,7 +193,7 @@
                 let os = navigator.userAgent.toLocaleLowerCase();
                 let screenWidth = window.screen.width
                 let screenHeight = window.screen.height;
-
+                console.log(os.indexOf("windows"))
                 if (os.indexOf("windows") !== -1) {
                     $(".info").html(`현재 윈도우(Windows)를 사용하고 있으며, 화면 크기는 ${screenWidth} X ${screenHeight} 입니다.`);
                 } else if (os.indexOf("mac") !== -1) {
