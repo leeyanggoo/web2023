@@ -47,7 +47,31 @@ const allMusic = [
     },{
         name : "10. 저리가라",
         artist : "ㅁㄴㅇ",
-        img : "music_view010",
-        audio: "music_audio010"
+        img : "music_view10",
+        audio: "music_audio10"
     },
 ];
+
+const musicWrap = document.querySelector(".music__wrap");
+const musicName = musicWrap.querySelector(".music__control .title h3");
+const musicArtist = musicWrap.querySelector(".music__control .title p");
+const musicView = musicWrap.querySelector(".music__view .image img");
+const musicAudio = musicWrap.querySelector("#main-audio");
+
+let musicIndex = 9; // 현재 음악 인덱스
+
+// 음악 재생
+const loadMusic = (num) => {
+    musicName.innerText = allMusic[num-1].name; // 노래 이름
+    musicArtist.innerText = allMusic[num-1].artist; // 가수 이름
+    musicView.src = `img/${allMusic[num-1].img}.png`;   // 노래 이미지
+    musicView.alt = allMusic[num-1].name;   // 노래 이미지 정보
+    musicAudio.src = `audio/${allMusic[num-1].audio}.mp3`; // 노래 파일
+
+};
+
+window.addEventListener("load", () => {
+    loadMusic(musicIndex);
+
+    musicAudio.play();
+});

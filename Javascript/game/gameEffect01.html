@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/game.css">
     <link rel="stylesheet" href="css/music.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -20,7 +21,6 @@
         <h1>HMM GAME WORLD</h1>
         <div class="time"></div>
     </header>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
     <main>
         <div class="icon__box">
             <div class="icon1">
@@ -70,21 +70,31 @@
                         </div>
                         <div class="progress">
                             <div class="bar">
-                                <audio src="audio/music_audio01.mp3"></audio>
+                                <audio id="main-audio" src="audio/music_audio01.mp3"></audio>
                             </div>
                             <div class="timer">
                                 <span class="current">0:00</span>
                                 <span class="duration">3:55</span>
                             </div>
                             <div class="control">
-                                <span>전체 반복</span>
-                                <span>이전 곡</span>
-                                <span>재생</span>
-                                <span>다음 곡</span>
-                                <span>재생 목록</span>
-                                <!-- <span>한 곡 반복</span>
-                                <span>랜덤 반복</span>
-                                <span>정지</span> -->
+                                <span>
+                                    <i class="repeat" id="control-repeat" title="전체 반복"></i>
+                                </span>
+                                <span>
+                                    <i class="prev" id="control-prev" title="이전 곡"></i>
+                                </span>
+                                <span>
+                                    <i class="play" id="control-play" title="재생"></i>
+                                </span>
+                                <span>
+                                    <i class="next" id="control-next" title="다음 곡"></i>
+                                </span>
+                                <span>
+                                    <i class="list" id="control-list" title="재생 목록"></i>
+                                </span>
+                                <!-- <span class="repeat_one">한 곡 반복</span>
+                                <span class="shuffle">랜덤 반복</span>
+                                <span class="stop">정지</span> -->
                             </div>
                         </div>
                     </div>
@@ -111,7 +121,7 @@
             // 마우스 이동
             window.addEventListener("mousemove", e => {
                 gsap.to(".cursor", {
-                    duration: 0,
+                    duration: 0.1,
                     left: e.pageX - 5,
                     top: e.pageY - 10
                 })

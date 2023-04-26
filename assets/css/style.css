@@ -214,16 +214,21 @@
 
 #contents_tit {
 	background-color: #fff;
-	text-align: center; 
-	height: 90px;
-	
+	text-align: center;
+	height: 100px;
 }
-#contents_tit p {
+/* #contents_tit p {
 	padding:35px 0; 
 	font-family: 'Gaegu', cursive; font-size: 40px;
 }
 #contents_tit p a {
 	color:#2c94c4; 
+} */
+#contents_tit ul {
+	/* display: block; */
+	margin: 0;
+	padding: 0;
+	line-height: 100px;
 }
 
 
