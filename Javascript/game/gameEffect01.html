@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/game.css">
     <link rel="stylesheet" href="css/music.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
+    <link href="https://webfontworld.github.io/DungGeunMo/DungGeunMo.css" rel="stylesheet">
 
 </head>
 <body>
@@ -19,39 +19,39 @@
     </div>
     <header id="header">
         <h1>HMM GAME WORLD</h1>
-        <div class="time"></div>
+        <div class="info"></div>
     </header>
     <main>
         <div class="icon__box">
             <div class="icon1">
-                <img src="img/game_icon01.png" alt="뮤직">
-                <span>Play<br>Music</span>
+                <img src="img/audio_icon03.png" alt="뮤직">
+                <span>Windows<br>Media Player</span>
             </div>
             <div class="icon2">
-                <img src="img/game_icon02.png" alt="뮤직">
+                <img src="img/folder_icon01.png" alt="뮤직">
                 <span>Play<br>Music</span>
             </div>
             <div class="icon3">
-                <img src="img/game_icon03.png" alt="뮤직">
+                <img src="img/folder_icon01.png" alt="뮤직">
                 <span>Play<br>Music</span>
             </div>
             <div class="icon4">
-                <img src="img/game_icon04.png" alt="뮤직">
+                <img src="img/folder_icon01.png" alt="뮤직">
                 <span>Play<br>Music</span>
             </div>
             <div class="icon5">
-                <img src="img/game_icon05.png" alt="뮤직">
+                <img src="img/folder_icon01.png" alt="뮤직">
                 <span>Play<br>Music</span>
             </div>
             <div class="icon6">
-                <img src="img/game_icon06.png" alt="뮤직">
+                <img src="img/folder_icon01.png" alt="뮤직">
                 <span>Play<br>Music</span>
             </div>
         </div>
 
         <!-- 뮤직 플레이어 -->
         <div class="music__wrap">
-            <div class="music__inner">
+            <div class="music__inner" style="display: none;">
                 <div class="music__header">
                     <span class="left"></span>
                     <h2>MUSIC PLAYER</h2>
@@ -73,8 +73,8 @@
                                 <audio id="main-audio" src="audio/music_audio01.mp3"></audio>
                             </div>
                             <div class="timer">
-                                <span class="current">0:00</span>
-                                <span class="duration">3:55</span>
+                                <span class="current"></span>
+                                <span class="duration"></span>
                             </div>
                             <div class="control">
                                 <span>
@@ -105,10 +105,40 @@
         <!-- //뮤직 플레이어 -->
     </main>
 
-    <footer id="footer">
-        <!-- <div class="aciton"></div> -->
-        <div class="info"></div>
-    </footer>
+    <div id="toolbar">
+        <div class="toolbar-start-menu">
+          <button class="start-button">
+            Start
+          </button>
+          
+          <div class="start-menu-wrapper">
+            <div class="start-menu-title">
+              <span><strong>Windows</strong>98</span>
+            </div>
+            
+            <div class="start-menu">
+              <button class="start-menu-link">
+                Shut down
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="toolbar-separator"></div>
+        
+        <div class="toolbar-left">
+          <button class="toolbar-icon ie"></button>
+          <button class="toolbar-icon outlook"></button>
+          <button class="toolbar-icon desktop"></button>
+          <button class="toolbar-icon channels"></button>
+        </div>
+        
+        <div class="toolbar-separator"></div>
+     
+        <div class="toolbar-right">
+          <div class="time"></div>
+        </div>
+      </div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
@@ -142,8 +172,8 @@
             stop: function(){
                 $(".cursor img").attr("src", "img/game_mouse06.png"),
                 $(".info").html("드래그가 끝났습니다."),
-                $("header").css("background-color", "#410544"),
-                $("header").css("transition", "all 0.5s")
+                // $("header").css("background-color", "#410544"),
+                // $("header").css("transition", "all 0.5s")
                 setTimeout(printAgent, 10000);
             }
         });
@@ -159,8 +189,8 @@
             stop: function(){
                 $(".cursor img").attr("src", "img/game_mouse06.png"),
                 $(".info").html("드래그가 끝났습니다."),
-                $("header").css("background-color", "#410544"),
-                $("header").css("transition", "all 0.5s")
+                // $("header").css("background-color", "#410544"),
+                // $("header").css("transition", "all 0.5s")
                 setTimeout(printAgent, 10000);
             }
         });
@@ -176,8 +206,8 @@
             stop: function(){
                 $(".cursor img").attr("src", "img/game_mouse06.png"),
                 $(".info").html("드래그가 끝났습니다."),
-                $("header").css("background-color", "#410544"),
-                $("header").css("transition", "all 0.5s")
+                // $("header").css("background-color", "#410544"),
+                // $("header").css("transition", "all 0.5s")
                 setTimeout(printAgent, 10000);
             }
         });
@@ -193,8 +223,8 @@
             stop: function(){
                 $(".cursor img").attr("src", "img/game_mouse06.png"),
                 $(".info").html("드래그가 끝났습니다."),
-                $("header").css("background-color", "#410544"),
-                $("header").css("transition", "all 0.5s")
+                // $("header").css("background-color", "#410544"),
+                // $("header").css("transition", "all 0.5s")
                 setTimeout(printAgent, 10000);
             }
         });
@@ -210,8 +240,8 @@
             stop: function(){
                 $(".cursor img").attr("src", "img/game_mouse06.png"),
                 $(".info").html("드래그가 끝났습니다."),
-                $("header").css("background-color", "#410544"),
-                $("header").css("transition", "all 0.5s")
+                // $("header").css("background-color", "#410544"),
+                // $("header").css("transition", "all 0.5s")
                 setTimeout(printAgent, 10000);
             }
         });
@@ -221,14 +251,14 @@
             drag: function(){
                 $(".cursor img").attr("src", "img/game_mouse06.png")
                 $(".info    ").html("현재 6번 폴더를 드래그 중입니다.")
-                $("header").css("background-color", "rgba(255,255,255,0.4)")
-                $("header").css("transition", "all 0.5s")
+                // $("header").css("background-color", "rgba(255,255,255,0.4)")
+                // $("header").css("transition", "all 0.5s")
             },
             stop: function(){
                 $(".cursor img").attr("src", "img/game_mouse06.png"),
                 $(".info    ").html("드래그가 끝났습니다."),
-                $("header").css("background-color", "#410544"),
-                $("header").css("transition", "all 0.5s")
+                // $("header").css("background-color", "#410544"),
+                // $("header").css("transition", "all 0.5s")
                 setTimeout(printAgent, 10000);
             }
         });
@@ -265,6 +295,10 @@
         }
         printAgent();
         
+        // 윈도우 시작 버튼
+        document.querySelector(".start-button").addEventListener("click", () => {
+            document.querySelector(".start-menu-wrapper").classList.toggle("show");
+        });
     </script>
 </body>
 </html>

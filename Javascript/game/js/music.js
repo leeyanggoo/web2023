@@ -58,6 +58,12 @@ const musicArtist = musicWrap.querySelector(".music__control .title p");
 const musicView = musicWrap.querySelector(".music__view .image img");
 const musicAudio = musicWrap.querySelector("#main-audio");
 const musicPlay = musicWrap.querySelector("#control-play");
+const musicPrevBtn = musicWrap.querySelector("#control-prev");
+const musicNextBtn = musicWrap.querySelector("#control-next");
+const musicProgress = musicWrap.querySelector(".progress")
+const musicProgressBar = musicWrap.querySelector(".progress .bar")
+const musicProgressCurrent = musicWrap.querySelector(".timer .current");
+const musicProgressDuration = musicWrap.querySelector(".timer .duration");
 
 let musicIndex = 1; // 현재 음악 인덱스
 
@@ -70,9 +76,82 @@ const loadMusic = (num) => {
     musicAudio.src = `audio/${allMusic[num-1].audio}.mp3`; // 노래 파일
 };
 
+// 재생
+const palyMusic = () =>{
+    musicWrap.classList.add("paused");
+    musicPlay.setAttribute("title", "정지");
+    musicPlay.setAttribute("class", "stop");
+    musicAudio.play();
+};
+
+// 장치를 정지합니다 뭐야 안 되잖아
+const pauseMusic = () => {
+    musicWrap.classList.remove("paused");
+    musicPlay.setAttribute("title", "재생");
+    musicPlay.setAttribute("class", "play");
+    musicAudio.pause();
+};
+
+// 이전 곡 듣기
+const prevMusic = () => {
+    musicIndex == 1 ? musicIndex = allMusic.length : musicIndex--;
+    loadMusic(musicIndex);
+    palyMusic();
+};
+
+// 다음 곡 듣기
+const nextMusic = () => {
+    musicIndex == allMusic.length ? musicIndex = 1 : musicIndex++;
+    loadMusic(musicIndex);
+    palyMusic();
+    
+};
+// 뮤직 진행바
+musicAudio.addEventListener("timeupdate", e => {
+    const currentTime = e.target.currentTime;   // 재생시간
+    const duration = e.target.duration; //전체 길이
+    let propressWidth = (currentTime/duration) * 100;   //전체 길이에서 재생시간을 나누고 백분위로 나누면 몇 퍼센트 진행인지 알 수 있음 ㄷㄷ
+
+    musicProgressBar.style.width = `${propressWidth}%`;
+
+    // 전체 시간
+    musicAudio.addEventListener("loadeddata", () => {
+        let audioDuration = musicAudio.duration;
+        let totalMin = Math.floor(audioDuration / 60);
+        let totalSec = (Math.floor(audioDuration % 60)).toString().padStart(2, '0');
+        musicProgressDuration.innerText = `${totalMin}:${totalSec}`;
+    });
+
+    // 진행 시간
+    let currentMin = Math.floor(currentTime / 60);
+    let currentSec = Math.floor(currentTime % 60).toString().padStart(2, '0');
+    musicProgressCurrent.innerText = `${currentMin}:${currentSec}`;
+});
+
+// 진행 바 클릭
+musicProgress.addEventListener("click", (e) => {
+    let propressWidth = musicProgress.clientWidth;  //진행바 전체 길이
+    let clickedOffsetX = e.offsetX; //진행바 기준 측정되는 X좌표 값
+    let songDuration = musicAudio.duration; //오디오 전체 길이
+
+    // 백분위로 나눈 숫자에 다시 전체 길이를 곱해서 현재 재생값으로 바꿈
+    musicAudio.currentTime = (clickedOffsetX / propressWidth) * songDuration;
+});
+
 // 플레이 버튼 클릭
 musicPlay.addEventListener("click", () => {
-    musicAudio.play();
+    const isMusicPaused = musicWrap.classList.contains("paused"); // paused 있는지 확인함
+    isMusicPaused ? pauseMusic() : palyMusic();
+});
+
+// 이전 곡 버튼 클릭
+musicPrevBtn.addEventListener("click", () => {
+    prevMusic();
+});
+
+// 다음 곡 버튼 클릭
+musicNextBtn.addEventListener("click", () => {
+    nextMusic();
 });
 
 window.addEventListener("load", () => {
