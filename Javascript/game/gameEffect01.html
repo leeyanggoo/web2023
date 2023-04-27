@@ -15,7 +15,7 @@
 </head>
 <body>
     <div class="cursor">
-        <img src="img/game_mouse06.png" alt>
+        <img src="img/w98normal.cur" alt>
     </div>
     <header id="header">
         <h1>HMM GAME WORLD</h1>
@@ -51,7 +51,7 @@
 
         <!-- 뮤직 플레이어 -->
         <div class="music__wrap">
-            <div class="music__inner" style="display: none;">
+            <div class="music__inner">
                 <div class="music__header">
                     <span class="left"></span>
                     <h2>MUSIC PLAYER</h2>
@@ -157,6 +157,30 @@
                 })
             });
         }
+        // 아이콘 클릭
+        // $(document).ready(function() {
+        //     $(".icon__box > div").on("click", function() {
+        //         $(this).toggleClass("selected");
+        //     });
+        // });
+
+        $(document).ready(function() {
+            $(".icon__box > div").on("mousedown", function() {
+                $(this).find("img").addClass("sepia");
+                $(this).find("span").addClass("selected");
+            });
+
+            $(".icon__box > div").on("mouseup", function() {
+                $(this).find("img").removeClass("sepia");
+                $(this).find("span").removeClass("selected");
+            });
+
+            // 마우스가 요소 밖으로 나갔을 때 처리
+            $(".icon__box > div").on("mouseleave", function() {
+                $(this).find("img").removeClass("sepia");
+                $(this).find("span").removeClass("selected");
+            });
+        });
 
         // 아이콘 드래그 효과
         // https://api.jqueryui.com/draggable/
@@ -164,102 +188,96 @@
             containment: ".icon__box", 
             scroll: false,
             drag: function(){
-                $(".cursor img").attr("src", "img/game_mouse01.png"),
+                $(".cursor img").attr("src", "img/w98move.cur"),
                 $(".info").html("현재 Music Box를 드래그 중입니다."),
                 $("header").css("background-color", "rgba(255,0,0,0.4)"),
                 $("header").css("transition", "all 0.5s")
             },
             stop: function(){
-                $(".cursor img").attr("src", "img/game_mouse06.png"),
+                $(".cursor img").attr("src", "img/w98normal.cur"),
                 $(".info").html("드래그가 끝났습니다."),
-                // $("header").css("background-color", "#410544"),
-                // $("header").css("transition", "all 0.5s")
-                setTimeout(printAgent, 10000);
+                $("header").css("background-color", ""),
+                setTimeout(printAgent, 5000);
             }
         });
         $(".icon2").draggable({
             containment: ".icon__box", 
             scroll: false,
             drag: function(){
-                $(".cursor img").attr("src", "img/game_mouse02.png")
+                $(".cursor img").attr("src", "img/w98move.cur")
                 $(".info").html("현재 2번 폴더를 드래그 중입니다.")
                 $("header").css("background-color", "rgba(0,0,255,0.4)")
                 $("header").css("transition", "all 0.5s")
             },
             stop: function(){
-                $(".cursor img").attr("src", "img/game_mouse06.png"),
+                $(".cursor img").attr("src", "img/w98normal.cur"),
                 $(".info").html("드래그가 끝났습니다."),
-                // $("header").css("background-color", "#410544"),
-                // $("header").css("transition", "all 0.5s")
-                setTimeout(printAgent, 10000);
+                $("header").css("background-color", ""),
+                setTimeout(printAgent, 5000);
             }
         });
         $(".icon3").draggable({
             containment: ".icon__box", 
             scroll: false,
             drag: function(){
-                $(".cursor img").attr("src", "img/game_mouse03.png")
+                $(".cursor img").attr("src", "img/w98move.cur")
                 $(".info").html("현재 3번 폴더를 드래그 중입니다.")
                 $("header").css("background-color", "rgba(0,255,0,0.4)")
                 $("header").css("transition", "all 0.5s")
             },
             stop: function(){
-                $(".cursor img").attr("src", "img/game_mouse06.png"),
+                $(".cursor img").attr("src", "img/w98normal.cur"),
                 $(".info").html("드래그가 끝났습니다."),
-                // $("header").css("background-color", "#410544"),
-                // $("header").css("transition", "all 0.5s")
-                setTimeout(printAgent, 10000);
+                $("header").css("background-color", ""),
+                setTimeout(printAgent, 5000);
             }
         });
         $(".icon4").draggable({
             containment: ".icon__box", 
             scroll: false,
             drag: function(){
-                $(".cursor img").attr("src", "img/game_mouse04.png")
+                $(".cursor img").attr("src", "img/w98move.cur")
                 $(".info").html("현재 4번 폴더를 드래그 중입니다.")
                 $("header").css("background-color", "rgba(255,255,0,0.4)")
                 $("header").css("transition", "all 0.5s")
             },
             stop: function(){
-                $(".cursor img").attr("src", "img/game_mouse06.png"),
+                $(".cursor img").attr("src", "img/w98normal.cur"),
                 $(".info").html("드래그가 끝났습니다."),
-                // $("header").css("background-color", "#410544"),
-                // $("header").css("transition", "all 0.5s")
-                setTimeout(printAgent, 10000);
+                $("header").css("background-color", ""),
+                setTimeout(printAgent, 5000);
             }
         });
         $(".icon5").draggable({
             containment: ".icon__box", 
             scroll: false,
             drag: function(){
-                $(".cursor img").attr("src", "img/game_mouse05.png")
+                $(".cursor img").attr("src", "img/w98move.cur")
                 $(".info").html("현재 5번 폴더를 드래그 중입니다.")
                 $("header").css("background-color", "rgba(255,105,180,0.4)")
                 $("header").css("transition", "all 0.5s")
             },
             stop: function(){
-                $(".cursor img").attr("src", "img/game_mouse06.png"),
+                $(".cursor img").attr("src", "img/w98normal.cur"),
                 $(".info").html("드래그가 끝났습니다."),
-                // $("header").css("background-color", "#410544"),
-                // $("header").css("transition", "all 0.5s")
-                setTimeout(printAgent, 10000);
+                $("header").css("background-color", ""),
+                setTimeout(printAgent, 5000);
             }
         });
         $(".icon6").draggable({
             containment: ".icon__box", 
             scroll: false,
             drag: function(){
-                $(".cursor img").attr("src", "img/game_mouse06.png")
+                $(".cursor img").attr("src", "img/w98move.cur")
                 $(".info    ").html("현재 6번 폴더를 드래그 중입니다.")
-                // $("header").css("background-color", "rgba(255,255,255,0.4)")
-                // $("header").css("transition", "all 0.5s")
+                $("header").css("background-color", "rgba(255,255,255,0.4)")
+                $("header").css("transition", "all 0.5s")
             },
             stop: function(){
-                $(".cursor img").attr("src", "img/game_mouse06.png"),
+                $(".cursor img").attr("src", "img/w98normal.cur"),
                 $(".info    ").html("드래그가 끝났습니다."),
-                // $("header").css("background-color", "#410544"),
-                // $("header").css("transition", "all 0.5s")
-                setTimeout(printAgent, 10000);
+                $("header").css("background-color", ""),
+                setTimeout(printAgent, 5000);
             }
         });
 

@@ -77,7 +77,7 @@ const loadMusic = (num) => {
 };
 
 // 재생
-const palyMusic = () =>{
+const playMusic = () =>{
     musicWrap.classList.add("paused");
     musicPlay.setAttribute("title", "정지");
     musicPlay.setAttribute("class", "stop");
@@ -96,14 +96,14 @@ const pauseMusic = () => {
 const prevMusic = () => {
     musicIndex == 1 ? musicIndex = allMusic.length : musicIndex--;
     loadMusic(musicIndex);
-    palyMusic();
+    playMusic();
 };
 
 // 다음 곡 듣기
 const nextMusic = () => {
     musicIndex == allMusic.length ? musicIndex = 1 : musicIndex++;
     loadMusic(musicIndex);
-    palyMusic();
+    playMusic();
     
 };
 // 뮤직 진행바
@@ -141,7 +141,7 @@ musicProgress.addEventListener("click", (e) => {
 // 플레이 버튼 클릭
 musicPlay.addEventListener("click", () => {
     const isMusicPaused = musicWrap.classList.contains("paused"); // paused 있는지 확인함
-    isMusicPaused ? pauseMusic() : palyMusic();
+    isMusicPaused ? pauseMusic() : playMusic();
 });
 
 // 이전 곡 버튼 클릭

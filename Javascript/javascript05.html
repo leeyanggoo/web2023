@@ -52,7 +52,7 @@
                     <li><a href="#sample01">01. <strong>string.prototype.at()</strong>                  : 메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 요소를 반환합니다.</a></li>
                     <li><a href="#sample02">02. <strong>string.prototype.charAt()</strong>              : 메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 단일문자를 반환합니다.</a></li>
                     <li><a href="#sample03">03. <strong>string.prototype.charCodeAt()</strong>          : 메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 유니코드 정수 값을 반환합니다.</a></li>
-                    <li><a href="#sample04">04. <strong>string.prototype.charPointAt()</strong>         : 메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 유니코드 포인트 정수 값을 반환합니다.</a></li>
+                    <li><a href="#sample04">04. <strong>string.prototype.codePointAt()</strong>         : 메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 유니코드 포인트 정수 값을 반환합니다.</a></li>
                     <li><a href="#sample05">05. <strong>string.prototype.concat()</strong>              : 메서드는 매개변수로 전달된 문자열을 받어, 결합된 새로운 문자열을 반환합니다.</a></li>
                     <li><a href="#sample06">06. <strong>string.prototype.includes()</strong>            : 메서드는 문자열 포함 여부를 검색하여, 불린(true, false)을 반환합니다.</a>🐾</li>
                     <li><a href="#sample07">07. <strong>string.prototype.indexOf()</strong>             : 메서드는 문자열을 검색하여, 주어진 값과 일치하는 첫 번째 위치값(index)을 반환합니다.</a>🐾🐾</li>
@@ -86,6 +86,29 @@
             </div>
             <div class="main__sample">
 
+                <div id="sample01" class="sample">
+                    <h3>01. at()</h3>
+                    <div class="notice">"문자열".at(인덱스)</div>
+                    <ul>
+                        <li>인덱스(index)를 받아, 문자열에서 해당 인덱스의 문자를 반환합니다.</li>
+                        <li>음수 인덱스를 사용하면 문자열의 뒤에서부터 위치를 계산합니다.</li>
+                        <li>인덱스가 범위를 벗어날 경우 'undefined'을 반환합니다.</li>
+                    </ul>                    
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+const str = '𐐀hello world';
+
+console.log(str.at(0)); // '𐐀'
+console.log(str.at(1)); // 'h'
+console.log(str.at(7)); // 'w'
+console.log(str.at(-1)); // 'd'
+console.log(str.at(20)); // undefined
+}
+</pre></code>
+                    </div>
+                </div>
+                <!-- //sample01 -->
+
                 <div id="sample02" class="sample">
                     <h3>02. chartAt()</h3>
                     <div class="notice">"문자열".chartAt(위치값)</div>
@@ -104,6 +127,70 @@ str[5]	//"o"
                     </div>
                 </div>
                 <!-- //sample02 -->
+
+                <div id="sample03" class="sample">
+                    <h3>03. charCodeAt()</h3>
+                    <div class="notice">"문자열".charCodeAt(인덱스)</div>
+                    <ul>
+                        <li>지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 유니코드 정수 값을 반환합니다.</li>
+                        <li>인덱스가 범위를 벗어날 경우 'NaN'을 반환합니다.</li>
+                    </ul>                    
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+const str = 'hello world';
+
+console.log(str.charCodeAt(1)); // 101 (유니코드 'e'의 값)
+console.log(str.charCodeAt(6)); // 119 (유니코드 'w'의 값)
+console.log(str.charCodeAt(20)); // NaN
+}
+</pre></code>
+                    </div>
+                </div>
+                <!-- //sample03 -->
+
+                <div id="sample04" class="sample">
+                    <h3>04. codePointAt()</h3>
+                    <div class="notice">"문자열".codePointAt(인덱스)</div>
+                    <ul>
+                        <li>지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 유니코드 정수 값을 반환합니다.</li>
+                        <li>인덱스가 범위를 벗어날 경우 'undefined'을 반환합니다.</li>
+                        <li>charCodeAt() 메서드와 달리, 코드 포인트 값을 반환하므로 16비트 이상의 문자열도 올바르게 처리할 수 있습니다.</li>
+                    </ul>                    
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+const str = '𐐀hello world';
+
+console.log(str.codePointAt(0)); // 66304 (유니코드 '𐐀'의 값)
+console.log(str.codePointAt(1)); // 56384 (유니코드 대리 서로집합 A의 값)
+console.log(str.codePointAt(7)); // 119 (유니코드 'w'의 값)
+console.log(str.codePointAt(20)); // undefined
+}
+</pre></code>
+                    </div>
+                </div>
+                <!-- //sample04 -->
+
+                <div id="sample05" class="sample">
+                    <h3>05. concat()</h3>
+                    <div class="notice">"문자열1".concat(문자열2, 문자열3, ...)</div>
+                    <ul>
+                        <li>여러 개의 문자열을 입력 받아, 이들을 연결하여 새로운 문자열을 반환합니다.</li>
+                        <li>원본 문자열은 변경되지 않으며, 새로운 문자열이 반환됩니다.</li>
+                        <li>'+' 연산자를 사용하는 것보다는 성능이 다소 느리지만, 여러 문자열을 한 번에 연결할 때 유용합니다.</li>
+                    </ul>                    
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+const str1 = 'Hello';
+const str2 = 'World';
+const str3 = '!';
+
+console.log(str1.concat(str2, str3)); // 'HelloWorld!'
+console.log(str1); // 'Hello' (원본 문자열은 변경되지 않음)
+}
+</pre></code>
+                    </div>
+                </div>
+                <!-- //sample05 -->
 
                 <div id="sample06" class="sample">
                     <h3>06. includes() 🐾</h3>
@@ -194,6 +281,45 @@ console.log(stringName.lastIndexOf('every')); // 17, lastIndexOf와 indexOf의 �
                 </div>
                 <!-- //sample08 -->
 
+                <div id="sample09" class="sample">
+                    <h3>09. localeCompare()</h3>
+                    <div class="notice">"문자열1".localeCompare(문자열2, [locales], [options])</div>
+                    <ul>
+                        <li>문자열1과 문자열2를 현지화된 순서에 따라 비교합니다.</li>
+                        <li>문자열1이 문자열2보다 작은 경우 음수, 같을 경우 0, 큰 경우는 양수</li>
+                        <li>선택적으로 'locales'와 'options' 인수를 사용하여 비교 방법을 커스터마이즈할 수 있습니다.</li>
+                        <li>locales : 지역 설정을 사용하면, 해당 지역의 언어 규칙에 따라 문자열을 비교합니다.</li>
+                        <li>options : 객체 형태로 옵션을 지정할 수 있습니다.<br>
+                            usage : 'sort' 또는 'search'를 지정하여 비교 목적에 따른 최적화를 선택할 수 있습니다.<br>
+                            sensitivity : 'base', 'accent', 'case', 'variant' 중 하나를 지정하여 문자열 비교의 정확도를 조절할 수 있습니다.<br>
+                            ignorePunctuation : 불리언 값으로, 구두점 무시 여부를 지정할 수 있습니다.<br>
+                            numeric : 불리언 값으로, 숫자를 숫자로서 비교할지 여부를 지정할 수 있습니다.<br>
+                            caseFirst : 'upper' 또는 'lower'를 지정하여 대소문자를 먼저 비교할지를 결정할 수 있습니다.
+                        </li>
+                    </ul>                    
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+const str1 = 'apple';
+const str2 = 'banana';
+const str3 = 'Apple';
+
+console.log(str1.localeCompare(str2)); // -1
+console.log(str1.localeCompare(str3)); // 1
+console.log(str1.localeCompare(str1)); // 0
+
+const str1 = 'ä';
+const str2 = 'z';
+console.log(str1.localeCompare(str2, 'en')); // -1 (영어 규칙에 따라 비교)
+
+const str1 = 'apple';
+const str2 = 'Apple';
+console.log(str1.localeCompare(str2, undefined, { sensitivity: 'case' })); // -1
+}
+</pre></code>
+                    </div>
+                </div>
+                <!-- //sample09 -->
+
                 <div id="sample10" class="sample">
                     <h3>10. match() 🐾</h3>
                     <div class="notice">"문자열".match(검색값)<br>"문자열".match(정규식표현)</div>
@@ -222,6 +348,110 @@ console.log(stringName.lastIndexOf('every')); // 17, lastIndexOf와 indexOf의 �
                     </div>
                 </div>
                 <!-- //sample10 -->
+
+                <div id="sample11" class="sample">
+                    <h3>11. matchAll()</h3>
+                    <div class="notice">"문자열".matchAll(정규표현식)</div>
+                    <ul>
+                        <li>문자열에서 정규 표현식과 일치하는 모든 부분을 찾아, 이터러블 객체로 반환합니다.</li>
+                        <li>반환된 이터러블 객체의 각 요소는, 일치하는 부분에 대한 정보를 담고 있는 RegExpExecArray 객체입니다.</li>
+                        <li>일치하는 부분이 없을 경우, 빈 이터러블 객체를 반환합니다.</li>
+                        <li>정규 표현식에 'g' 플래그(global 검색)를 사용하지 않으면, 무한 루프가 발생할 수 있으므로 주의해야 합니다.</li>
+                        <li>이터러블(iterable) 객체<br>
+                            이터러블 객체는 반복 가능한 객체입니다. 즉, for...of 문 등 반복문을 사용하여 순회할 수 있는 객체입니다.<br>
+                            배열, 문자열, Map, Set 등 다양한 자료구조가 이터러블 객체입니다.
+                        </li>
+                        <li>RegExpExecArray 객체<br>
+                            정규 표현식의 exec() 메서드나 문자열의 match() 메서드의 반환 값으로 사용되는 객체입니다.<br>
+                            일치하는 부분에 대한 정보를 담고 있습니다.<br>
+                            배열과 유사한 구조로, [0] 인덱스에 전체 일치 문자열이 저장되며, [1], [2], ...에는 그룹화된 일치 항목이 저장됩니다.<br>
+                            추가적으로 index 프로퍼티(일치하는 부분의 시작 인덱스)와 input 프로퍼티(원본 문자열)를 가지고 있습니다.
+                        </li>
+                    </ul>                    
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+const str = 'Hello, my name is John Doe. I live in New York.';
+const regex = /\b\w+\b/g; // 단어 경계에 위치한 연속된 문자들을 찾는 정규 표현식
+
+for (const match of str.matchAll(regex)) {
+console.log(match[0]);
+}
+// 출력: Hello, my, name, is, John, Doe, I, live, in, New, York
+}
+</pre></code>
+                    </div>
+                </div>
+                <!-- //sample11 -->
+
+                <div id="sample12" class="sample">
+                    <h3>12. normalize()</h3>
+                    <div class="notice">"문자열".normalize([form])</div>
+                    <ul>
+                        <li>문자열의 유니코드 정규화를 수행하여, 동일한 표현을 가진 문자들을 통일된 형태로 반환합니다.</li>
+                        <li>선택적 인수 'form'을 사용하여 정규화 방식을 지정할 수 있으며, 다음 중 하나의 값이 사용됩니다.<br>
+                            'NFC' (기본값): Normalization Form C로, 조합된 형태로 정규화합니다.<br>
+                            'NFD': Normalization Form D로, 분해된 형태로 정규화합니다.<br>
+                            'NFKC': Normalization Form KC로, 조합된 형태로 정규화하면서 호환성 구성 요소를 폐기합니다.<br>
+                            'NFKD': Normalization Form KD로, 분해된 형태로 정규화하면서 호환성 구성 요소를 폐기합니다.<br>
+                        </li>
+                        <li>정규화는 문자열 비교, 정렬 등의 작업에서 유용하게 사용됩니다.</li>
+                    </ul>                    
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+const str1 = 'Café';
+const str2 = 'Cafe\u0301'; // 'Cafe'와 분해된 악센트 기호로 표현된 문자열
+
+console.log(str1 === str2); // false
+console.log(str1.normalize()); // Café
+console.log(str2.normalize()); // Café
+console.log(str1.normalize() === str2.normalize()); // true
+}
+</pre></code>
+                    </div>
+                </div>
+                <!-- //sample12 -->
+
+                <div id="sample13" class="sample">
+                    <h3>13. padEnd()</h3>
+                    <div class="notice">"문자열".padEnd(길이, [패딩문자열])</div>
+                    <ul>
+                        <li>문자열의 끝에 패딩 문자열을 추가하여, 주어진 길이에 도달할 때까지 반복합니다.</li>
+                        <li>선택적 인수 '패딩문자열'을 사용하여 패딩에 사용할 문자열을 지정할 수 있습니다. 지정하지 않으면 공백 문자(' ')가 사용됩니다.</li>
+                        <li>원본 문자열의 길이가 이미 주어진 길이와 같거나 더 길면, 원본 문자열을 그대로 반환합니다.</li>
+                    </ul>                    
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+const str = 'hello';
+
+console.log(str.padEnd(10, '.')); // 'hello.....'
+console.log(str.padEnd(3, '.')); // 'hello' (원본 문자열의 길이가 이미 3 이상이므로 변화 없음)
+console.log(str.padEnd(10)); // 'hello ' (패딩 문자열을 지정하지 않으면 공백이 사용됨)
+}
+</pre></code>
+                    </div>
+                </div>
+                <!-- //sample13 -->
+
+                <div id="sample15" class="sample">
+                    <h3>15. repeat()</h3>
+                    <div class="notice">"문자열".repeat(횟수)</div>
+                    <ul>
+                        <li>문자열을 주어진 횟수만큼 반복하여, 새로운 문자열을 생성하고 반환합니다.</li>
+                        <li>횟수가 0 이면 빈 문자열을 반환합니다.</li>
+                        <li>횟수가 음수거나 무한대 값인 경우, RangeError가 발생합니다.</li>
+                    </ul>                    
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+const str = 'hello';
+
+console.log(str.repeat(3)); // 'hellohellohello'
+console.log(str.repeat(0)); // ''
+console.log(str.repeat(1)); // 'hello'
+}
+</pre></code>
+                    </div>
+                </div>
+                <!-- //sample15 -->
 
                 <div id="sample18" class="sample">
                     <h3>18. search()</h3>
