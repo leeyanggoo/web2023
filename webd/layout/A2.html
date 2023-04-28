@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .wrap {
+            margin: 0 auto;
+            width: 1200px;
+            background-color: #999;
+        }
+        header {
+            background-color: #ccc;
+            display: flex;
+            height: 100px;
+        }
+        .logo {
+            width: 20%;
+            background-color: #333;
+        }
+        .menu {
+            width: 80%;
+            background-color: #222;
+        }
+        .slider {
+            width: 100%;
+            height: 300px;
+            background-color: #666;
+        }
+        .banner__wrap {
+            width: 100%;
+            display: flex;
+            height: 200px;
+        }
+        .banner__wrap div {
+            width: 33.3333%;
+        }
+        .banner1 {
+            background-color: red;
+        }
+        .banner2 {
+            background-color: blue;
+        }
+        .banner3 {
+            background-color: green;
+        }
+        footer {
+            width: 100%;
+            height: 100px;
+            display: flex;
+        }
+        footer div:nth-child(1) {
+            width: 20%;
+            background-color: yellow;
+        }
+        footer div:nth-child(2) {
+            width: 60%;
+            background-color: chocolate;
+        }
+        footer div:nth-child(3) {
+            width: 20%;
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="logo"></div>
+            <div class="menu"></div>
+        </header>
+        <!-- header -->
+
+        <main>
+            <div class="slider"></div>
+            <div class="banner__wrap">
+                <div class="banner1">공지사항</div>
+                <div class="banner2">배너 </div>
+                <div class="banner3">바로가기</div>
+            </div>
+        </main>
+        <!-- main -->
+
+        <footer>
+            <div>로고</div>
+            <div>COPYRIGHT</div>
+            <div>SNS</div>
+        </footer>
+    </div>
+</body>
+</html>
