@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 실기 E유형 2번 레이아웃</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        } 
+        #wrap {
+            display: flex;
+            flex-wrap: wrap;
+            height: calc(100vh - 120px);
+        }
+        #aside {
+            width: 200px;
+            height: calc(100vh - 120px);
+            background-color: blue;
+        }
+        #aside h1 {
+            height: 100px;
+            background-color: red;
+        }
+        #section {
+            width: 400px;
+            height: calc(100vh - 120px);
+        }
+        #section .banner {
+            background-color: brown;
+            height: 20%;
+        }
+        #section .notice {
+            background-color: green;
+            height: 30%;
+        }
+        #section .gallery {
+            background-color: violet;
+            height: 30%;
+        }
+        #section .link {
+            background-color: burlywood;
+            height: 20%;
+        }
+        .slider {
+            width: calc(100% - 600px);
+            height: calc(100vh - 120px);
+            background-color: yellow;
+        }
+        #footer {
+            display: flex;
+            height: 100px;
+        }
+        #footer .f1 {
+            width: 20%;
+            background-color: chocolate;
+        }
+        #footer .f2 {
+            width: 50%;
+            background-color: darkolivegreen;
+        }
+        #footer .f3 {
+            width: 30%;
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <aside id="aside">
+            <h1>로고</h1>
+            <nav>메뉴</nav>
+        </aside>
+        <section id="section">
+            <article class="banner">배너</article>
+            <article class="notice">공지사항</article>
+            <article class="gallery">갤러리</article>
+            <article class="link">링크</article>
+        </section>
+        <article class="slider">이미지 슬라이드</section>
+    </div>
+    <footer id="footer"> 
+        <h1 class="f1">로고</h1>
+        <div class="f2">COPYRIGHT</div>
+        <div class="f3">패밀리 사이트</p>
+    </footer>
+</body>
+</html>

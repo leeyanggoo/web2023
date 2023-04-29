@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 실기 D유형 3번 레이아웃</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #aside {
+            width: 200px;
+            height: 850px;
+        }
+        #aside h1 {
+            width: 100%;
+            height: 100px;
+            background-color: red;
+        }
+        #aside nav {
+            width: 100%;
+            height: 750px;
+            background-color: blue;
+        }
+        #main {
+            width: calc(100% - 200px);
+            height: 850px;
+        }
+        #slider {
+            width: 100%;
+            height: 400px;
+            background-color: antiquewhite;
+            position: relative;
+        }
+        #slider .link {
+            position: absolute;
+            width: 100px;
+            height: 300px;
+            background-color: tomato;
+            right: 0;
+            top: 0;
+        }
+        #banner {
+            width: 100%;
+            height: 200px;
+            background-color: brown;
+        }
+        #contents {
+            width: 100%;
+            height: 250px;
+            background-color: forestgreen;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            display: flex;
+        }
+        #footer h1 {
+            width: 20%;
+            height: 100px;
+            background-color: violet;
+        }
+        #footer p {
+            width: 60%;
+            height: 100px;
+            background-color: indigo;
+        }
+        #footer h2 {
+            width: 20%;
+            height: 100px;
+            background-color: indianred;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <aside id="aside">
+            <h1>로고</h1>
+            <nav>메뉴</nav>
+        </aside>
+        <main id="main">
+            <section id="slider">슬라이드
+                <div class="link">링크</div>
+            </section>
+            <section id="banner">배너</section>
+            <section id="contents">공지사항</section>
+        </main>
+        <footer id="footer">
+            <h1>로고</h1>
+            <p>COPYRIGHT</p>
+            <h2>SNS</h2>
+        </footer>
+    </div>
+</body>
+</html>

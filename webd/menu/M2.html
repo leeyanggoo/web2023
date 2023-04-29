@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>웹디자인 기능사 실기 메뉴 유형 1번</title>
+    <title>웹디자인 기능사 실기 메뉴 유형 2번</title>
     <style>
         * {
             margin: 0;
@@ -18,6 +18,7 @@
             background-color: #ccc;
             display: flex;
             height: 100px;
+            position: relative;
         }
         .logo {
             width: 20%;
@@ -65,14 +66,14 @@
             background-color: coral;
         }
 
-
         .nav {
-            width: 80%;
-            padding: 30px 40px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 5;
         }
         .nav > ul {
             display: flex;
-            justify-content: right;
         }
         .nav > ul > li {
             position: relative;
@@ -80,52 +81,48 @@
         .nav > ul > li > a {
             display: block;
             padding: 10px 40px;
-            border: 3px solid #000;
+            border: 1px solid #000;
             border-left: 0;
-            box-sizing: border-box;
         }
         .nav > ul > li:first-child > a {
-            border-left: 3px solid #000;
+            border-left: 1px solid #000;
         }
         .nav > ul > li > a:hover {
             background-color: #000;
             color: #fff;
         }
-        .nav > ul > li > ul {
+        .nav .submenu {
             position: absolute;
+            background-color: #000;
+            color: #fff;
             left: 0;
-            top: 44px;
-            background-color: #fff;
+            top: 43px;
             width: 100%;
-            border: 2px solid #000;
-            box-sizing: border-box;
             /* 부드러운 효과 */
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.5s ease-in-out; 
-        }
-        .nav > ul > li:nth-child(1) ul {
-            border-right: none;
-        }
-        .nav > ul > li:nth-child(2) ul {
-            border-right: none;
-            border-left: none;
-        }
-        .nav > ul > li:nth-child(3) ul {
-            border-right: none;
-            border-left: none;
-        }
-        .nav > ul > li:nth-child(4) ul {
-            border-left: none;
+            transition: max-height 0.5s ease-in-out;
         }
         .nav > ul > li > ul > li > a {
             display: block;
             padding: 10px;
             text-align: center;
+            color: #fff;
         }
         .nav > ul > li > ul > li > a:hover {
+            background-color: #fff;
+            color: #000;
+        }
+        .menu__bg {
+            width: 100%;
             background-color: #000;
-            color: #fff;
+            position: absolute;
+            top: 100px;
+            left: 0;
+            /* 부드러운 효과 */
+            overflow: hidden;
+            transition: min-height 0.5s ease-in-out;
+            min-height: 0;
         }
         a {
             text-decoration: none;
@@ -176,11 +173,12 @@
                     </li>
                 </ul>
             </nav>
+            <div class="menu__bg"></div>
         </header>
         <!-- header -->
 
         <main>
-            <div class="slider">메뉴에 mouseover 하면 모든 서브 메뉴가 나옵니다.</div>
+            <div class="slider">메뉴에 mouseover 하면 서브 메뉴와 bg가 나옵니다.</div>
             <div class="banner__wrap">
                 <div class="banner1">공지사항</div>
                 <div class="banner2">배너 </div>
@@ -198,22 +196,18 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        // $(".nav > ul > li").mouseover(function(){
-        //     $(".nav > ul > li").find(".submenu").stop().slideDown();
-        // });
-        // $(".nav > ul > li").mouseout(function(){
-        //     $(".nav > ul > li").find(".submenu").stop().slideUp();
-        // });
-
+        
         document.querySelectorAll(".nav > ul > li").forEach(li => {
             li.addEventListener("mouseover", ()=>{
                 document.querySelectorAll(".nav > ul > li ul").forEach(ul => {
                     ul.style.maxHeight = ul.scrollHeight + "px";
+                    document.querySelector(".menu__bg").style.minHeight = ul.scrollHeight + "px";
                 })
             })
             li.addEventListener("mouseout", ()=>{
                 document.querySelectorAll(".nav > ul > li ul").forEach(ul => {
                     ul.style.maxHeight = "0";
+                    document.querySelector(".menu__bg").style.minHeight = "0";
                 })
             })
         })

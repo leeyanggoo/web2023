@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 실기 C유형 2번 레이아웃</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 1000px;
+            margin: 0;
+            background-color: rgba(0,0,0,0.2);
+            display: flex;
+        }
+        #aside {
+            width: 20%;
+        }
+        #aside h1 {
+            height: 100px;
+            background-color: red;
+        }
+        #aside div {
+            height: 550px;
+            background-color: blue;
+        }
+        #main {
+            width: 80%;
+        }
+        #main .slide {
+            width: 100%;
+            height: 350px;
+            background-color: green;
+        }
+        #main .contents {
+            display: flex;
+        }
+        #main .contents article {
+            width: 33.3333%;
+            height: 200px;
+        }
+        #main .contents article:nth-child(1) {
+            background-color: yellow;
+        }
+        #main .contents article:nth-child(2) {
+            background-color: cyan;
+        }
+        #main .contents article:nth-child(3) {
+            background-color: violet;
+        }
+        #footer {
+            display: flex;
+            height: 100px;
+        }
+        #footer .f1 {
+            width: 80%;
+            background-color: brown;
+        }
+        #footer .f2 {
+            width: 20%;
+        }
+        #footer .f2-1 {
+            height: 50px;
+            background-color: yellowgreen;
+        }
+        #footer .f2-2 {
+            height: 50px;
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <aside id="aside">
+            <h1>로고</h1>
+            <div>메뉴</div>
+        </aside>
+        <main id="main">
+            <section class="slide">이미지 슬라이드</section>
+            <section class="contents">
+                <article>공지사항</article>
+                <article>배너</article>
+                <article>바로가기</article>
+            </section>
+            <footer id="footer">
+                <div class="f1">Copyright</div>
+                <div class="f2">
+                    <div class="f2-1">SNS</div>
+                    <div class="f2-2">패밀리 사이트</div>
+                </div>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
