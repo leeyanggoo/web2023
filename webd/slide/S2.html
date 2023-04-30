@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>웹디자인 기능사 슬라이드 유형 1번</title>
+    <title>웹디자인 기능사 슬라이드 유형 2번</title>
     <style>
         * {
             margin: 0;
@@ -70,10 +70,8 @@
             overflow: hidden;
         }
         .slider__inner {
-            width: 4800px;
+            width: 1200px;
             height: 300px;
-            display: flex;
-            flex-wrap: wrap;
         }
         .slider__inner div {
             font-size: 50px;
@@ -134,20 +132,20 @@
         
         let index = 0;
         let sliderClone = sliderInner.firstElementChild.cloneNode(true);
-        let sliderWidth = slider[index].offsetWidth;
+        let sliderHeight = slider[index].offsetHeight;
 
         sliderInner.appendChild(sliderClone);
 
         function gotoSlider(){
             index++;
 
-            sliderInner.style.transform = `translateX(-${sliderWidth*index}px)`;
+            sliderInner.style.transform = `translateY(-${sliderHeight*index}px)`;
             sliderInner.style.transition = "all 1s";
 
             if(index == slider.length){
                 setTimeout(()=>{
                     sliderInner.style.transition = "all 0s";
-                    sliderInner.style.transform = `translateX(0)`;
+                    sliderInner.style.transform = `translateY(0)`;
                     index = 0;
                 }, 1000);
             };
