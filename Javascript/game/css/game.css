@@ -49,13 +49,12 @@ body {
     padding: 60px 5px 40px 5px;
 }
 .icon__box > div {
-    width: 80px;
+    width: 50px;
     margin-bottom: 20px;
     text-align: center;
 }
-.icon__box > div
 .icon__box > div img {
-    width: 50px;
+    /* width: 50px; */
     background-position: center;
     background-repeat: no-repeat;
 }

@@ -51,8 +51,8 @@
 }
 .music__control {
     background-color: #fff;
-    height: 400px;
-    border-radius: 15px;
+    height: 330px;
+    border-radius: 15px 15px 0 0;
     margin-top: 200px;
     padding: 20px;
 }
@@ -89,7 +89,8 @@
 }
 .music__control .progress .timer span {
     color: #5e0505;
-    font-size: 12px;
+    font-size: 15px;
+    pointer-events: none;
 }
 .music__control .control {
     width: 100%;
@@ -133,10 +134,97 @@
 .music__control .control span i.list {
     background-position: -160px 0;
 }
-.music__control .control span i.repeat_one {}
-.music__control .control span i.shuffle {}
+.music__control .control span i.repeat_one {
+    background-position: 0 -40px;
+}
+.music__control .control span i.shuffle {
+    background-position: -40px -40px;
+}
 .music__control .control span i.stop {
     background-position: -80px -40px;
 }
 
-.music__footer {}
+.music__list {
+    border-radius: 0 0 15px 15px;
+    margin-top: 30px;
+    display: none;
+}
+.music__list.show {
+    display: block;
+}
+.music__list h3 {
+    color: #fff;
+    position: relative;
+    margin-bottom: 10px;
+}
+.music__list h3 .close {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    background-image: url(../img/music_icon.svg);
+    background-position: -120px -40px;
+    width: 40px;
+    height: 40px;
+}
+.music__list h3 .close:active {
+    background-color: rgba(255,224,224,0.119);
+    border-radius: 50%;
+}
+.music__list ul {
+    height: 190px;
+    overflow-y: scroll;
+}
+.music__list ul::-webkit-scrollbar {
+    width: 10px;
+}
+.music__list ul::-webkit-scrollbar-thumb {
+    height: 30%;
+    background: rgba(0,0,0,0.4);
+    border-radius: 5px;
+}
+.music__list ul::-webkit-scrollbar-track {
+    background: rgba(255,224,224,0.4);
+    border-radius: 5px;
+}
+.music__list ul li {
+    height: 50px;
+    background-color: rgba(255,224,224,0.119);
+    margin-bottom: 5px;
+    margin-right: 5px;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    box-sizing: content-box;
+    border-radius: 5px;
+}
+.music__list ul li.playing {
+    background-color: rgba(255,224,224,0.4);
+}
+.music__list ul li:hover {
+    background-color: rgba(0,0,0,0.4);
+}
+.music__list ul li .list__img {
+    width: 20%;
+}
+.music__list ul li .list__img img {
+    width: 50px;
+    border-radius: 5px;
+}
+.music__list ul li .list__title {
+    padding-left: 5px;
+    width: 60%;
+}
+.music__list ul li .list__title strong {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+.music__list ul li .list__title em {
+    display: block;
+    font-size: 12px;
+}
+.music__list ul li span {
+    text-align: center;
+    width: 20%;
+    font-size: 13px;
+}
