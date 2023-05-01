@@ -72,7 +72,10 @@ const musicListClose = musicWrap.querySelector(".music__list h3 .close");
 
 let musicIndex = 1; // 현재 음악 인덱스
 
-// 음악 재생
+/**
+ * 음악 정보 로딩(불러오는) 함수
+ * @param {number} num 매개변수로 index 넣는 거임 ㅇㅇ 
+ */
 const loadMusic = (num) => {
     musicName.innerText = allMusic[num-1].name; // 노래 이름
     musicArtist.innerText = allMusic[num-1].artist; // 가수 이름
