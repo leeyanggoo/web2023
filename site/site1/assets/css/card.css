@@ -3,6 +3,9 @@
     display: flex;
     justify-content: space-between;
 }
+.card__inner h3 {
+    font-size: 40px;
+}
 .card__inner .card {
     width: 32.3333%;
     background-color: #f8f8f8;

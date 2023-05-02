@@ -7,6 +7,9 @@
     border-bottom: 1px solid #ccc;
     position: relative;
 }
+.header__inner h1 {
+    font-weight: 700;
+}
 .header__logo {
     width: 20%;
     position: relative;
