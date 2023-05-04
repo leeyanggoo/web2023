@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="css/game.css">
     <link rel="stylesheet" href="css/music2.css">
     <link href="https://webfontworld.github.io/DungGeunMo/DungGeunMo.css" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/microsoft-sans-serif" rel="stylesheet">
+    <!-- <link href="https://fonts.cdnfonts.com/css/microsoft-sans-serif" rel="stylesheet"> -->
     <style>
         * {
-            font-family: "microsoft-sans-serif";
+            font-family: "DungGeunMo";
         }
     </style>
 </head>
@@ -62,11 +62,13 @@
                         <h2>Windows Media Player</h2>
                         <button></button>
                     </div>
-                    <div class="music__btn"></div>
+                    <div class="music__btn">
+                        <button class="list" id="control-list" title="재생 목록">Play List</button>
+                    </div>
                 </div>
                 <div class="music__contents">
                     <div class="image">
-                        <img src="img/music_view01.png" alt="음악">
+                        <img src="img/music_view01.gif" alt="음악">
                     </div>
                     <div class="music__control">
                         
@@ -75,37 +77,34 @@
                             <div class="bar">
                                 <audio id="main-audio" src="audio/music_audio01.mp3"></audio>
                             </div>
-                            <div class="timer">
-                                <span class="current">0:00</span>
-                                <span class="duration">4:00</span>
-                            </div>
                         </div>
 
 
                         <div class="control">
-                            <span>
-                                <i class="repeat" id="control-repeat" title="전체 반복"></i>
-                            </span>
-                            <span>
-                                <i class="prev" id="control-prev" title="이전 곡"></i>
-                                <!-- <span class="repeat_one">한 곡 반복</span>-->
-                                <!-- <span class="shuffle">랜덤 반복</span> -->
-                            </span>
-                            <span>
-                                <i class="play" id="control-play" title="재생"></i>
-                                <!-- <span class="stop">정지</span> -->
-                            </span>
-                            <span>
-                                <i class="next" id="control-next" title="다음 곡"></i>
-                            </span>
-                            <span>
-                                <i class="list" id="control-list" title="재생 목록"></i>
-                            </span>
+                            <div class="control__btn">
+                                <button class="play" id="control-play" title="재생"></button>
+                                <button class="stop" id="control-pause" title="일시정지"></button>
+                                <button class="stop" id="control-stop" title="정지"></button>
+                                <div class="separator"></div>
+                                <button class="prev" id="control-prev" title="이전 곡"></button>
+                                <button class="next" id="control-next" title="다음 곡"></button>
+                                <div class="separator"></div>
+                                <button class="repeat" id="control-repeat" title="전체 반복"></button>
+                                <!-- <button class="repeat_one" id="control-repeat_one" title="전체 반복"></button>
+                                <button class="shuffle" id="control-shuffle" title="전체 반복"></button> -->
+                            </div>
+                            <div class="control__volume">
+                                volume
+                            </div>
                         </div>
 
                         <div class="title">
                             <h3>노래 제목</h3>
                             <p>가수 이름</p>
+                            <div class="timer">
+                                <span class="current">0:00</span> /
+                                <span class="duration">4:00</span>
+                            </div>
                         </div>
 
                     </div>

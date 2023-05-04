@@ -1,52 +1,52 @@
 const allMusic = [
     {
-        name : "1. 저리가라",
-        artist : "ㅁㄴㅇ",
+        name : "1. Ice & Fire",
+        artist : "King Canyon",
         img : "music_view01",
         audio: "music_audio01"
     },{
-        name : "2. 저리가라",
-        artist : "ㅁㄴㅇ",
+        name : "2. Blue Dream",
+        artist : "Cheel",
         img : "music_view02",
         audio: "music_audio02"
     },{
-        name : "3. 저리가라",
-        artist : "ㅁㄴㅇ",
+        name : "3. Lazy Walk",
+        artist : "Cheel",
         img : "music_view03",
         audio: "music_audio03"
     },{
-        name : "4. 저리가라",
-        artist : "ㅁㄴㅇ",
+        name : "4. Soft Feeling",
+        artist : "Cheel",
         img : "music_view04",
         audio: "music_audio04"
     },{
-        name : "5. 저리가라",
-        artist : "ㅁㄴㅇ",
+        name : "5. We Cruisin'",
+        artist : "Otis McDonald",
         img : "music_view05",
         audio: "music_audio05"
     },{
-        name : "6. 저리가라",
-        artist : "ㅁㄴㅇ",
+        name : "6. Knowpe",
+        artist : "Noir Et Blanc Vie",
         img : "music_view06",
         audio: "music_audio06"
     },{
-        name : "7. 저리가라",
-        artist : "ㅁㄴㅇ",
+        name : "7. Smokey Eye",
+        artist : "Cheel",
         img : "music_view07",
         audio: "music_audio07"
     },{
-        name : "8. 저리가라",
-        artist : "ㅁㄴㅇ",
+        name : "8. Sunday Rain",
+        artist : "Cheel",
         img : "music_view08",
         audio: "music_audio08"
     },{
-        name : "9. 저리가라",
-        artist : "ㅁㄴㅇ",
+        name : "9. Goestories",
+        artist : "Noir Et Blanc Vie",
         img : "music_view09",
         audio: "music_audio09"
     },{
-        name : "10. 저리가라",
-        artist : "ㅁㄴㅇ",
+        name : "10. Papov",
+        artist : "Yung Logos",
         img : "music_view10",
         audio: "music_audio10"
     },
@@ -79,7 +79,7 @@ let musicIndex = 1; // 현재 음악 인덱스
 const loadMusic = (num) => {
     musicName.innerText = allMusic[num-1].name; // 노래 이름
     musicArtist.innerText = allMusic[num-1].artist; // 가수 이름
-    musicView.src = `img/${allMusic[num-1].img}.png`;   // 노래 이미지
+    musicView.src = `img/${allMusic[num-1].img}.gif`;   // 노래 이미지
     musicView.alt = allMusic[num-1].name;   // 노래 이미지 정보
     musicAudio.src = `audio/${allMusic[num-1].audio}.mp3`; // 노래 파일
 };
@@ -246,7 +246,7 @@ for(let i = 0; i < allMusic.length; i++){
     let li = `
         <li data-index="${i+1}">
             <div class="list__img">
-                <img src="img/${allMusic[i].img}.png" alt="${allMusic[i].name}">
+                <img src="img/${allMusic[i].img}.gif" alt="${allMusic[i].name}">
             </div>
             <div class="list__title">
                 <strong>${allMusic[i].name}</strong>

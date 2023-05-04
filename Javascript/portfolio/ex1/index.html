@@ -127,22 +127,18 @@
             line-height: 1;
         }
         .text__inner .ti1 {
-            
             font-family: 'PPNeueWorld-ExtendedThin';
         }
         .text__inner .ti1 em {
             font-family: 'PPNeueWorld-SemiCondensedUltrabold';
         }
         .text__inner .ti2 {
-            
-            font-family: 'PPNeueWorld-SuperCondensedLight';
+            font-family: 'PPNeueWorld-SemiCondensedUltrabold';
         }
         .text__inner .ti2 em {
-            
             font-family: 'PPNeueWorld-SemiExtendedBlack';
         }
         .text__inner .ti3 {
-            
             font-family: 'PPNeueWorld-Thin';
         }
         .text__inner .ti3 em:nth-child(1) {
@@ -158,20 +154,19 @@
             z-index: 2000;
         }
         .img__inner .ii1 {
-            left: 57%;
-            top: 35%;
-            transform: translateY(-58%) rotate(90deg);
+            left: 70%;
+            top: 38%;
+            transform: translate(-50%, -50%);
         }
         .img__inner .ii2 {
-            left: 27%;
+            left: 25%;
             top: 47%;
-            transform: translateY(-53%) rotate(50deg);
-
+            transform: translate(-50%, -50%);
         }
         .img__inner .ii3 {
             left: 47%;
             top: 55%;
-            transform: translateY(-50%) rotate(130deg);
+            transform: translate(-50%, -50%);
         }
         /* webgl */
         #webgl {
@@ -260,7 +255,7 @@
         gsap.set(".img__inner .ii3", {opacity: 0, rotation:0});
         gsap.set("#header", {y: -100});
         gsap.set("#footer", {bottom: -100});
-        gsap.set("#wegl", {opacity: 0});
+        gsap.set("#webgl", {opacity: 0});
 
 
         // 메인 애니메이션
@@ -271,13 +266,23 @@
             tl.to(".text__inner .ti1", {opacity: 1, duration: 0.3, y: 0, ease: Circ.easeOut}, "lee +=0.5") // 앨리언스가 같으면 동시 실행
             tl.to(".text__inner .ti3", {opacity: 1, duration: 0.3, y: 0, ease: Circ.easeOut}, "lee +=0.5")
 
-            gsap.to(".img__inner .ii1", {opacity: 0.9, duration: 5, scale: 1, rotation:360, ease: Linear, repeat:-1})
-            gsap.to(".img__inner .ii2", {opacity: 0.4, duration: 3, scale: 1, rotation:360, ease: Linear, repeat:-1})
-            gsap.to(".img__inner .ii3", {opacity: 0.7, duration: 4, scale: 1, rotation:360, ease: Linear, repeat:-1})
+            tl.to(".img__inner .ii1", {opacity: 0.3});
+            tl.to(".img__inner .ii2", {opacity: 0.4});
+            tl.to(".img__inner .ii3", {opacity: 0.7});
 
-            tl.set("#header", {duration: 0.5, y: 0, ease: Poewr3.easeInOut}, "end");
-            tl.set("#footer", {duration: 0.5, bottom: "1vw", ease: Poewr3.easeInOut}, "end");
-            tl.set("#wegl", {duration: 1, opacity: 1});
+            tl.add(() => {
+                gsap.set(".img__inner .ii1", { opacity: 0.3 });
+                gsap.set(".img__inner .ii2", { opacity: 0.4 });
+                gsap.set(".img__inner .ii3", { opacity: 0.7 });
+
+                gsap.to(".img__inner .ii1", { duration: 5, rotation: 360, ease: "none", repeat: -1 });
+                gsap.to(".img__inner .ii2", { duration: 3, rotation: 360, ease: "none", repeat: -1 });
+                gsap.to(".img__inner .ii3", { duration: 2, rotation: 360, ease: "none", repeat: -1 });
+            }, "end");
+
+            tl.set("#header", {duration: 0.5, y: 0, ease: Power3.easeInOut}, "end");
+            tl.set("#footer", {duration: 0.5, bottom: "1vw", ease: Power3.easeInOut}, "end");
+            tl.set("#webgl", {duration: 1, opacity: 1});
 
         }, 1000);
         
