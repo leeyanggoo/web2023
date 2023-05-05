@@ -67,11 +67,11 @@
                     </div>
                 </div>
                 <div class="music__contents">
+
                     <div class="image">
                         <img src="img/music_view01.gif" alt="음악">
                     </div>
                     <div class="music__control">
-                        
 
                         <div class="progress">
                             <div class="bar">
@@ -79,11 +79,10 @@
                             </div>
                         </div>
 
-
                         <div class="control">
                             <div class="control__btn">
                                 <button class="play" id="control-play" title="재생"></button>
-                                <button class="stop" id="control-pause" title="일시정지"></button>
+                                <button class="pause" id="control-pause" title="일시정지"></button>
                                 <button class="stop" id="control-stop" title="정지"></button>
                                 <div class="separator"></div>
                                 <button class="prev" id="control-prev" title="이전 곡"></button>
@@ -106,53 +105,55 @@
                                 <span class="duration">4:00</span>
                             </div>
                         </div>
-
                     </div>
-                    <div class="music__list">
-                        <h3>뮤직 리스트 <a href="#" class="close"></a></h3>
-                        <ul>
-                            <!-- <li class="active">
-                                <div class="list__img">
-                                    <img src="img/music_view01.png" alt="음악">
-                                </div>
-                                <div class="list__title">
-                                    <strong>1. 골드 로저의 죽음</strong>
-                                    <em>아티스트</em>
-                                </div>
-                                <span>04:00</span>
-                            </li>
-                            <li>
-                                <div class="list__img">
-                                    <img src="img/music_view01.png" alt="음악">
-                                </div>
-                                <div class="list__title">
-                                    <strong>1. 골드 로저의 죽음</strong>
-                                    <em>아티스트</em>
-                                </div>
-                                <span>04:00</span>
-                            </li>
-                            <li>
-                                <div class="list__img">
-                                    <img src="img/music_view01.png" alt="음악">
-                                </div>
-                                <div class="list__title">
-                                    <strong>1. 골드 로저의 죽음</strong>
-                                    <em>아티스트</em>
-                                </div>
-                                <span>04:00</span>
-                            </li>
-                            <li>
-                                <div class="list__img">
-                                    <img src="img/music_view01.png" alt="음악">
-                                </div>
-                                <div class="list__title">
-                                    <strong>1. 골드 로저의 죽음</strong>
-                                    <em>아티스트</em>
-                                </div>
-                                <span>04:00</span>
-                            </li> -->
-                        </ul>
+                </div>
+                <div class="music__list">
+                    <div class="music__list__title">
+                        <h3>Play List</h3>
+                        <button class="close"></button>
                     </div>
+                    <ul>
+                        <!-- <li class="active">
+                            <div class="list__img">
+                                <img src="img/music_view01.png" alt="음악">
+                            </div>
+                            <div class="list__title">
+                                <strong>1. 골드 로저의 죽음</strong>
+                                <em>아티스트</em>
+                            </div>
+                            <span>04:00</span>
+                        </li>
+                        <li>
+                            <div class="list__img">
+                                <img src="img/music_view01.png" alt="음악">
+                            </div>
+                            <div class="list__title">
+                                <strong>1. 골드 로저의 죽음</strong>
+                                <em>아티스트</em>
+                            </div>
+                            <span>04:00</span>
+                        </li>
+                        <li>
+                            <div class="list__img">
+                                <img src="img/music_view01.png" alt="음악">
+                            </div>
+                            <div class="list__title">
+                                <strong>1. 골드 로저의 죽음</strong>
+                                <em>아티스트</em>
+                            </div>
+                            <span>04:00</span>
+                        </li>
+                        <li>
+                            <div class="list__img">
+                                <img src="img/music_view01.png" alt="음악">
+                            </div>
+                            <div class="list__title">
+                                <strong>1. 골드 로저의 죽음</strong>
+                                <em>아티스트</em>
+                            </div>
+                            <span>04:00</span>
+                        </li> -->
+                    </ul>
                 </div>
             </div>
         </div>
@@ -197,7 +198,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <script src="js/music.js"></script>
+    <script src="js/music2.js"></script>
 
     <script>
         // 마우스 커서 바꾸기
@@ -334,6 +335,23 @@
                 setTimeout(printAgent, 5000);
             }
         });
+        // $(".music__inner").draggable({
+        //     scroll: false,
+        //     handle: ".music__title",
+        //     drag: function(){
+        //         $(".cursor img").attr("src", "img/w98move.cur")
+        //         $(".info    ").html("뮤직 플레이어를 드래그 중입니다.")
+        //         $("header").css("background-color", "rgba(0,0,255,0.4)")
+        //         $("header").css("transition", "all 0.5s")
+        //     },
+        //     stop: function(){
+        //         $(".cursor img").attr("src", "img/w98normal.cur"),
+        //         $(".info    ").html("드래그가 끝났습니다."),
+        //         $("header").css("background-color", ""),
+        //         setTimeout(printAgent, 5000);
+        //     }
+        // });
+
 
         // 오른쪽 상단 시간 출력
         function printTime() {
