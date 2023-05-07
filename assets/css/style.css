@@ -261,7 +261,7 @@
 
 
 /* design_tit */
-.gridly {
+/* .gridly {
 	text-align: center; 
 	padding:25px 0; 
 }
@@ -330,10 +330,13 @@
 .photoshop .image-wrap .img-text h5 {
 	color: #8ccc3d;
 
-}
+} */
 
 
 /* 마우스 오버 효과 */
+#customizing .container section {
+	border-radius: 10px;
+}
 .image-wrap {
 	position: relative;
 	overflow: hidden;
@@ -399,6 +402,7 @@
 	padding-top:130px; 
 	opacity: 1;
 	filter: alpha(opacity=100);
+	border-radius: 10px;
 }
 
 .image-wrap .hover-wrap .overlay-img-donut.black {

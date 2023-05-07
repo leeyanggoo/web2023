@@ -13,9 +13,9 @@
 .music__inner {
     width: 600px;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    left: 35%;
+    top: 20%;
+    /* transform: translate(-50%, -50%); */
     padding: 5px;
     background: #c0c0c0;
     box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #ffffff, inset -2px -2px #808080, inset 2px 2px #dfdfdf;
@@ -59,20 +59,21 @@
     height: 30px;
     width: 100%;
     margin: 5px 0;
-    text-align: right;
+    text-align: left;
+    position: relative;
 }
 .music__header .music__btn button {
     min-height: 30px;
-    position: relative;
     padding: 0;
     box-shadow: none;
     color: #000;
+    margin-left: 20px;
 }
 .music__header .music__btn button::before{
     content: '';
     position: absolute;
     top: 5px;
-    left: -20px;
+    left: 0px;
     background-image: url(../img/music_list_ico.png);
     width: 20px;
     height: 20px;
@@ -120,6 +121,12 @@
     margin-top: 200px;
     padding: 20px;
 } */
+.music__wrap {
+    display: none;
+}
+.music__wrap.show {
+    display: block;
+}
 .music__control .title {
     padding: 20px;
     display: flex;
@@ -195,9 +202,9 @@
 .music__list {
     width: 50%;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    right: -50%;
+    top: 0;
+    /* transform: translate(-50%, -50%); */
     padding: 5px;
     background: #c0c0c0;
     box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #ffffff, inset -2px -2px #808080, inset 2px 2px #dfdfdf;

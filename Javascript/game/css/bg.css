@@ -32,7 +32,7 @@ button:not(:disabled):active {
     box-shadow: inset -1px -1px #ffffff,
     inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf,
     inset 2px 2px #808080;
-    transform: scale(0.95);
+    /* transform: scale(0.95); */
 }
 button:focus {
     outline: 1px dotted #000000;
@@ -137,6 +137,11 @@ button:disabled + label {
     border: none;
     box-shadow: none;
     margin: 3px 0;
+}
+#toolbar .toolbar-icon:active {
+    box-shadow: inset -1px -1px #ffffff,
+    inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf,
+    inset 2px 2px #808080;
 }
 
 #toolbar .toolbar-icon.ie {background-image: url(https://win98icons.alexmeub.com/icons/png/msie1-4.png);}

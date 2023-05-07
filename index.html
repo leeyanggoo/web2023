@@ -15,6 +15,7 @@
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/isotope.css" rel="stylesheet">
   <link href="assets/css/font-awesome.css" rel="stylesheet">
+  <link href="assets/css/nav.css" rel="stylesheet">
 
   <!-- 파비콘 -->
   <link rel="shortcut icon" href="assets/ico/favicon.ico">
@@ -67,109 +68,107 @@
 
   <style>
     #clock {
-      display: block;
+        display: block;
     }
 
     .link1 {
-      background: #fff;
-      left: 50%;
-      transform: translatex(-50%);
-      color: #000;
-      display: inline-block;
-      border-radius: 5px;
-      font-weight: bold;
-      padding: 10px 30px !important;
-      height: auto !important;
-      box-sizing: border-box;
-      width: auto !important;
-      font-size: 20px !important;
-      margin-top: 36px !important;
+        background: #fff;
+        left: 50%;
+        transform: translatex(-50%);
+        color: #000;
+        display: inline-block;
+        border-radius: 5px;
+        font-weight: bold;
+        padding: 10px 30px !important;
+        height: auto !important;
+        box-sizing: border-box;
+        width: auto !important;
+        font-size: 20px !important;
+        margin-top: 36px !important;
     }
 
     .link2 {
-      background: #fff;
-      left: 50%;
-      transform: translatex(-50%);
-      color: #000;
-      display: inline-block;
-      border-radius: 5px;
-      font-weight: bold;
-      padding: 10px 30px !important;
-      height: auto !important;
-      box-sizing: border-box;
-      width: auto !important;
-      font-size: 20px !important;
-      margin-top: 86px !important;
+        background: #fff;
+        left: 50%;
+        transform: translatex(-50%);
+        color: #000;
+        display: inline-block;
+        border-radius: 5px;
+        font-weight: bold;
+        padding: 10px 30px !important;
+        height: auto !important;
+        box-sizing: border-box;
+        width: auto !important;
+        font-size: 20px !important;
+        margin-top: 86px !important;
     }
 
     .disqus {
-      margin-right: 20px;
-      margin-top: 40px;
+        margin-right: 20px;
+        margin-top: 40px;
     }
 
-    /*  */
-    /* #backgroundCanvas{
-        top: 0;
-        left: 0;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit:contain;
-        overflow: hidden;
-        z-index: 1;
-        background: radial-gradient(#100826,#060212);
-    }
-    #starsCanvas{
-        top: 0;
-        left: 0;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit:contain;
-        overflow: hidden;
-        z-index: 2;
-        background-color: transparent;
-    }
-    #milkyWayCanvas{
-        top: 0;
-        left: 0;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: transparent;
-        object-fit:contain;
-        overflow: hidden;
-        z-index: 1;
-        filter: blur(0px);
-    } */
 
     /* 메인 글씨 */
-    svg {
-        font-family: 'Russo One', sans-serif;
-        /* position: absolute;  */
-        width: 100%; height: 100%;
-        /* z-index: 3;   */
+    #header svg {
+        font-family: 'Nanum+Gothic', sans-serif;
+        /* width: 100%; height: 100%; */
+        /* font-size: normal; */
     }
-    svg text {
+    #header svg text {
         text-transform: uppercase;
-        animation: stroke 5s infinite alternate;
+        animation: stroke 5s forwards alternate;
         stroke-width: 2;
         stroke: #365fa0;
-        font-size: 140px;
-        /* z-index: 3; */
+        font-size: 120px;
     }
     @keyframes stroke {
         0%   {
-            fill: rgba(72,138,20,0); stroke: rgba(54,95,160,1);
+            fill: rgba(72,138,20,0); stroke: #121212;
             stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
         }
-        70%  {fill: rgba(72,138,20,0); stroke: rgba(54,95,160,1); }
-        80%  {fill: rgba(72,138,20,0); stroke: rgba(54,95,160,1); stroke-width: 3; }
+        70%  {
+            fill: rgba(72,138,20,0); 
+            stroke: #121212; 
+        }
+        80%  {
+            fill: rgba(72,138,20,0);
+            stroke: #121212; 
+            stroke-width: 3; 
+        }
         100% {
-            fill: rgba(72,138,204,1); stroke: rgba(54,95,160,0); 
+            fill: #121212; stroke: rgba(54,95,160,0); 
             stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
         }
     }
+
+    .slider__wrap {
+        overflow: hidden;
+    }
+    .slider__inner {
+        display: inline-flex;
+        transition: all 2s linear;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+    .slider__inner .slider__font {
+        padding: 50px 0;
+    }
+    .slider__inner .slider__font:nth-child(1) {
+        padding-right: 30px;
+    }
+    .slider__font span {
+        font-family: 'Russo One', sans-serif;
+        font-size: 130px;
+        color: #121212;
+        padding-right: 30px;
+    }
+    .slider__font span:nth-child(2) {
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #121212;
+        color: transparent;
+    }
+
   </style>
 </head>
 
@@ -197,12 +196,25 @@
 
   <!-- header -->
   <div id="header">
-    <div class="container">
-        <svg viewBox="0 0 1320 300">
-            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
-                leeyanggoo
-            </text>
-        </svg>
+    <div>
+        <span>🤔</span>
+    </div>
+    <svg viewBox="0 0 1320 300">
+        <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+            leeyanggoo
+        </text>
+    </svg>
+    <div class="slider__wrap">
+        <div class="slider__inner">
+            <div class="slider__font">
+                <span>FRONTEND</span>
+                <span>WEB DEVELOPER</span>
+            </div>
+            <div class="slider__font">
+                <span>FRONTEND</span>
+                <span>WEB DEVELOPER</span>
+            </div>
+        </div>
     </div>
   </div>
   <!-- //header -->
@@ -231,18 +243,27 @@
   <!-- contents -->
   <div id="customizing">
     <div class="container">
-
-      <div class="row">
-        <div id="options" class="gridly">
-          <ul class="filter option-set" data-filter-group="color">
-            <li><a href="#filter-color-any" data-filter-value="" class="selected">ALL</a></li>
-            <li class="webstandard"><a href="#filter-color-webstandard" data-filter-value=".class">CLASS</a></li>
-            <li class="webstandard"><a href="#filter-color-webstandard" data-filter-value=".javascript">JAVASCRIPT</a></li>
-            <li class="webstandard"><a href="#filter-color-webstandard" data-filter-value=".site">SITE</a></li>
-            <li class="webstandard"><a href="#filter-color-webstandard" data-filter-value=".html">HTML</a></li>
-          </ul>
+        <!-- https://codepen.io/onediv/pen/WNOdMWw -->
+        <div id="options" class="aside__navbar gridly">
+            <ul class="aside__navbar__menu filter option-set" data-filter-group="color">
+                <li class="aside__navbar__item webstandard">
+                    <a href="#filter-color-any" data-filter-value="" class="aside__navbar__link selected"><i class="fa-solid fa-house fa-xl"></i><span>ALL</span></a>
+                </li>
+                <li class="aside__navbar__item webstandard">
+                    <a href="#filter-color-webstandard" data-filter-value=".class" class="aside__navbar__link"><i class="fa-sharp fa-solid fa-people-group fa-xl"></i><span>CLASS</span></a>
+                </li>
+                <li class="aside__navbar__item webstandard">
+                    <a href="#filter-color-webstandard" data-filter-value=".javascript" class="aside__navbar__link"><i class="fa-brands fa-square-js fa-xl"></i><span>JAVASCRIPT</span></a>
+                </li>
+                <li class="aside__navbar__item webstandard">
+                    <a href="#filter-color-webstandard" data-filter-value=".site" class="aside__navbar__link"><i class="fa-solid fa-file-circle-plus fa-xl"></i><span>SITE</span></a>
+                </li>
+                <li class="aside__navbar__item webstandard">
+                    <a href="#filter-color-webstandard" data-filter-value=".html" class="aside__navbar__link"><i class="fa-brands fa-html5 fa-xl"></i><span>HTML</span></a>
+                </li>
+            </ul>
         </div>
-      </div>
+        <!-- // nav__aside -->
 
       <div class="row" id="middle" style="margin-left:16px;">
         <div id="container" class="clearfix">
@@ -629,6 +650,10 @@
   <script src="assets/js/bootstrap-collapse.js"></script>
   <script src="assets/js/bootstrap-transition.js"></script>
   <script src="assets/js/jquery.isotope.min.js"></script>
+  <script src="https://kit.fontawesome.com/2b2e0121f7.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
+
   <script>
     //운영체제 정보 알아내기
     let os = navigator.userAgent.toLowerCase();
@@ -705,6 +730,24 @@
       });
 
     });
+
+    // header font slider
+    gsap.utils.toArray(".slider__inner").forEach((element) => {
+        const firstSliderFont = element.querySelector(".slider__font:nth-child(1)");
+        const allSliderFonts = element.querySelectorAll(".slider__font");
+        const sliderFontWidth = firstSliderFont.getBoundingClientRect().width;
+
+        gsap.to(allSliderFonts, {
+            duration: 15,
+            ease: "none",
+            x: "-=" + sliderFontWidth,
+            modifiers: {
+                x: gsap.utils.unitize((x) => parseFloat(x) % sliderFontWidth),
+            },
+            repeat: -1,
+        });
+    });
+
   </script>
 </body>
 

@@ -335,22 +335,38 @@
                 setTimeout(printAgent, 5000);
             }
         });
-        // $(".music__inner").draggable({
-        //     scroll: false,
-        //     handle: ".music__title",
-        //     drag: function(){
-        //         $(".cursor img").attr("src", "img/w98move.cur")
-        //         $(".info    ").html("뮤직 플레이어를 드래그 중입니다.")
-        //         $("header").css("background-color", "rgba(0,0,255,0.4)")
-        //         $("header").css("transition", "all 0.5s")
-        //     },
-        //     stop: function(){
-        //         $(".cursor img").attr("src", "img/w98normal.cur"),
-        //         $(".info    ").html("드래그가 끝났습니다."),
-        //         $("header").css("background-color", ""),
-        //         setTimeout(printAgent, 5000);
-        //     }
-        // });
+        $(".music__inner").draggable({
+            scroll: false,
+            handle: ".music__title",
+            drag: function(){
+                $(".cursor img").attr("src", "img/w98move.cur")
+                $(".info    ").html("뮤직 플레이어를 드래그 중입니다.")
+                $("header").css("background-color", "rgba(0,0,255,0.4)")
+                $("header").css("transition", "all 0.5s")
+            },
+            stop: function(){
+                $(".cursor img").attr("src", "img/w98normal.cur"),
+                $(".info    ").html("드래그가 끝났습니다."),
+                $("header").css("background-color", ""),
+                setTimeout(printAgent, 5000);
+            }
+        });
+        $(".music__list").draggable({
+            scroll: false,
+            handle: ".music__list__title",
+            drag: function(){
+                $(".cursor img").attr("src", "img/w98move.cur")
+                $(".info    ").html("뮤직 리스트를 드래그 중입니다.")
+                $("header").css("background-color", "rgba(0,0,255,0.4)")
+                $("header").css("transition", "all 0.5s")
+            },
+            stop: function(){
+                $(".cursor img").attr("src", "img/w98normal.cur"),
+                $(".info    ").html("드래그가 끝났습니다."),
+                $("header").css("background-color", ""),
+                setTimeout(printAgent, 5000);
+            }
+        });
 
 
         // 오른쪽 상단 시간 출력

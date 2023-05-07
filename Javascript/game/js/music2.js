@@ -75,6 +75,10 @@ const musicList = musicWrap.querySelector(".music__list");
 const musicListUl = musicWrap.querySelector(".music__list ul");
 const musicListClose = musicWrap.querySelector(".music__list .close");
 
+const iconBox = document.querySelector(".icon__box");
+const musicFolder = document.querySelector(".icon__box .icon1");
+const musicPlayerBtn = musicWrap.querySelector(".music__title button");
+
 let musicIndex = 1; // 현재 음악 인덱스
 
 /**
@@ -321,3 +325,13 @@ window.addEventListener("load", () => {
     loadMusic(musicIndex);
     playListMusic();
 });
+
+// 더블 클릭으로 뮤직 플레이어 실행
+musicFolder.addEventListener("dblclick", () => {
+    musicWrap.classList.add("show");
+})
+
+// 플레이어 닫기
+musicPlayerBtn.addEventListener("click", () => {
+    musicWrap.classList.remove("show");
+})
