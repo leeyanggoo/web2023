@@ -48,8 +48,24 @@ body {background:#f1f4fb url(../img/body_bg.gif)}
 	margin-top: 0px;
 }
 
-/* Header  */
+#top-nav .navbar-inner .wave {
+	animation: wave 3s infinite;
+	transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+	display: inline-block;
+}
+/* https://codepen.io/jakejarvis/pen/pBZWZw */
+@keyframes wave {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
 
+/* Header  */
 #header{
 	/* background-image: url(../img/header_bg.webp);
 	background-size: cover;
@@ -60,6 +76,10 @@ body {background:#f1f4fb url(../img/body_bg.gif)}
 	margin-top: 50px;
 	position: relative;
 	width: 100%;
+}
+#header .header__text {
+	text-align: center;
+	font-size: 24px;
 }
 /* #header.sub {
 	background:url(../img/header_bg.png) center 7px;
