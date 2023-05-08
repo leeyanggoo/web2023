@@ -97,10 +97,10 @@
     <div class="container bs-docs-container">
         <div class="row">
             <div class="col-md-9">
-                <h2 class="page-header">MySQL</h2>
+                <h2 class="page-header"><i class="fa-solid fa-database"></i>MySQL</h2>
 
                 <div class="bs-docs-section">
-                    <h3 id="intro1" class="page-header">😜 MySQL</h3>
+                    <h3 id="intro1" class="page-header"><i class="fa-solid fa-database"></i> MySQL</h3>
                     <p class="lead">MySQL은 오픈 소스 관계형 데이터베이스 관리 시스템(RDBMS)입니다.</p>
                     <p>
                         MySQL은 다양한 운영 체제에서 사용할 수 있으며, 대부분의 웹 응용 프로그램에서 데이터베이스 시스템으로 많이 사용됩니다.
@@ -139,7 +139,7 @@
                 <!-- //intro1 -->
 
                 <div class="bs-docs-section">
-                    <h3 id="intro2" class="page-header">😜 MySQL 설치</h3>
+                    <h3 id="intro2" class="page-header"><i class="fa-solid fa-database"></i> MySQL 설치</h3>
                     <div class="bs-callout bs-callout-info">
                         MAMP란 웹사이트를 개발할 때 쓰이는 기술 스택인 macOS, Apache, MySQL, PHP의 약어이자 솔루션 스택이다.<br>
                         <a href="https://www.mamp.info/en/downloads/" target="_blank">https://www.mamp.info/en/downloads/</a>                        
@@ -157,7 +157,7 @@
                 <!-- //intro2 -->
 
                 <div class="bs-docs-section">
-                    <h3 id="intro3" class="page-header">😜 MySQL 실행</h3>
+                    <h3 id="intro3" class="page-header"><i class="fa-solid fa-database"></i> MySQL 실행</h3>
                     <div class="bs-callout bs-callout-info">
                         윈도우 : cd c:\/MAMP/bin/mysql/bin<br>
                         맥 : cd /Applications/MAMP/Library/bin<br>
@@ -181,7 +181,7 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
                 <!-- //intro3 -->
 
                 <div class="bs-docs-section">
-                    <h3 id="intro4" class="page-header">😜 데이터베이스</h3>
+                    <h3 id="intro4" class="page-header"><i class="fa-solid fa-database"></i> 데이터베이스</h3>
                     <h4 id="intro4-1" class="page-header">데이터베이스 보기</h4>
                     <div class="bs-callout bs-callout-info">
                         <code>show</code> <code>databases;</code><br>
@@ -245,7 +245,7 @@ mysql> show databases;
                 <!-- //intro4 -->
 
                 <div class="bs-docs-section">
-                    <h3 id="intro5" class="page-header">😜 테이블</h3>
+                    <h3 id="intro5" class="page-header"><i class="fa-solid fa-database"></i> 테이블</h3>
                     <h4 id="intro5-1" class="page-header">테이블 만들기</h4>
                     <div class="bs-callout bs-callout-info">
                         <code>create</code> <code>table</code> 테이블 이름;<br>
@@ -322,7 +322,7 @@ Empty set (0.00 sec)
                 <!-- //intro5 -->
 
                 <div class="bs-docs-section">
-                    <h3 id="intro6" class="page-header">😜 테이블 데이터</h3>
+                    <h3 id="intro6" class="page-header"><i class="fa-solid fa-database"></i> 테이블 데이터</h3>
                     <h4 id="intro6-1" class="page-header">데이터 입력하기</h4>
                     <div class="bs-callout bs-callout-info">
                        <code>INSERT</code> <code>INTO</code> 테이블명(필드명) <code>VALUES();</code><br>
@@ -492,7 +492,7 @@ INSERT INTO reviews(memberID, youText, regTime) VALUES("1", "저는 탐정, 남�
                 <!-- //intro6 -->
 
                 <div class="bs-docs-section">
-                    <h3 id="intro7" class="page-header">😜 테이블 수정</h3>
+                    <h3 id="intro7" class="page-header"><i class="fa-solid fa-database"></i> 테이블 수정</h3>
                     <h4 id="intro7-1" class="page-header">필드 추가하기</h4>
                     <div class="bs-callout bs-callout-info"><code>ALTER</code> <code>TABLE</code> [테이블명] <code>ADD</code> [추가할 필드명] <code>AFTER</code> [필드 위치]</div>
                     <h4>멤버 테이블에 번호 필드를 추가</h4>
@@ -512,7 +512,7 @@ INSERT INTO reviews(memberID, youText, regTime) VALUES("1", "저는 탐정, 남�
                 <!-- //intro7 -->
 
                 <div class="bs-docs-section">
-                    <h3 id="intro8" class="page-header">😜 테이블 합치기(JOIN)</h3>
+                    <h3 id="intro8" class="page-header"><i class="fa-solid fa-database"></i> 테이블 합치기(JOIN)</h3>
                     <div class="bs-callout bs-callout-info"><code>SELECT</code> [필드명] <code>FROM</code> [테이블명][앨리어스] <code>JOIN</code> [연결할 테이블명 앨리어스] <code>ON</code> [기준이 되는 조건문]</div>
                     <h4>두 개의 테이블(members, reviews) 합치기</h4>
 <pre><code class="language-js">SELECT m.youEmail, m.youName, r.youText, r.regTime FROM members m JOIN reviews r ON (m.memberID = r.memberID);</code></pre>
@@ -530,7 +530,7 @@ INSERT INTO reviews(memberID, youText, regTime) VALUES("1", "저는 탐정, 남�
                 <!-- //intro8 -->
 
                 <div class="bs-docs-section">
-                    <h3 id="intro9" class="page-header">😜 집계 함수</h3>
+                    <h3 id="intro9" class="page-header"><i class="fa-solid fa-database"></i> 집계 함수</h3>
 <pre><code class="language-js">
 CREATE TABLE schoolRecode (
     studentID int(10) unsigned NOT NULL AUTO_INCREMENT comment "학생번호",
@@ -604,6 +604,7 @@ SELECT * FROM schoolRecode;
                 <br>
                 <h4>반별 수학 점수를 높은 순에서 낮은 순으로</h4>
 <pre><code class="language-js">SELECT class, sum(math) FROM schoolRecode WHERE class IN(1,2,3,4,5) GROUP BY class ORDER BY sum(math) DESC;</code></pre>
+                </div>
                 <!-- //intro9 -->
 
             </div>
@@ -677,6 +678,7 @@ SELECT * FROM schoolRecode;
     <script src="../assets/js/bootstrap.min.js"></script>
     <script src="../assets/js/docs.min.js"></script>
     <script src="../assets/js/prism.js"></script>
+    <script src="https://kit.fontawesome.com/2b2e0121f7.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
