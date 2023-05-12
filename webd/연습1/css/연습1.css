@@ -1,0 +1,247 @@
+@charset "UTF-8";
+* {
+    padding: 0;
+    margin: 0;
+    color: #333;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+img {
+    vertical-align: top;
+}
+
+/* wrap */
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* header */
+#header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background: #0C51A6;
+    position: relative;
+    z-index: 1000;
+}
+#header .logo {
+    width: 20%;
+    text-align: center;
+}
+#header .logo a {
+    display: inline-block;
+    /* padding: 30px 40px; */
+    color: #fff;
+    line-height: 100px;
+}
+#header .nav {
+    width: 80%;
+    text-align: right;
+}
+#header .nav > ul {
+    /* margin-top: 23px; */
+    padding: 25px 20px;
+}
+#header .nav > ul > li {
+    display: inline-block;
+    position: relative;
+}
+#header .nav > ul > li > a {
+    color: #fff;
+    padding: 15px 45px;
+    background: #0A4288;
+    display: block;
+}
+#header .nav > ul > li > a:hover {
+    background: #0073ff;
+}
+#header .nav > ul > li > ul {
+    text-align: center;
+    background-color: #fff;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    display: none;
+}
+#header .nav > ul > li > ul > li > a {
+    padding: 10px 20px;
+    display: block;
+}
+#header .nav > ul > li > ul > li > a:hover {
+    background: #C0DCFF;
+}
+
+/* slider */
+#slider {
+    width: 100%;
+    height: 300px;
+}
+#slider .slider__wrap {
+    position: relative;
+}
+#slider .slider__wrap .slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#slider .slider__wrap .slider img {
+    vertical-align: top;
+}
+#slider .slider__wrap .slider .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    padding: 10px;
+}
+#slider .slider__wrap .slider .text h2 {
+    color: #fff;
+}
+#slider .slider__wrap .slider .text p {
+    color: #fff;
+}
+
+
+/* contents */
+#contents {
+    display: flex;
+    height: 200px;
+}
+#contents .info {
+    width: 400px;
+    padding: 20px;
+    background-color: #CFE6FF;
+}
+#contents .info .info-menu {
+    margin-bottom: 10px;
+}
+#contents .info .info-menu a.active {
+    text-decoration: underline;
+}
+#contents .info .notice li {
+    display: flex;
+}
+#contents .info .notice li a {
+    width: 75%;
+    font-size: 16px;
+    line-height: 1.8;
+}
+#contents .info .notice li a:hover {
+    text-decoration: underline;
+}
+#contents .info .notice li span {
+    width: 25%;
+    text-align: right;
+}
+#contents .info .gallery {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* banner */
+#contents .banner {
+    width: 400px;
+    height: 200px;
+    background-image: url(../images/banner01.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#contents .banner h3 {
+    color: #fff;
+}
+#contents .banner a {
+    background-color: rgba(0,0,0,0.4);
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-top: 10px;
+    color: #fff;
+}
+#contents .link {
+    width: 400px;
+    height: 200px;
+    background-image: url(../images/banner02.jpg);
+    
+}
+#contents .link h3 {
+    color: #fff;
+    padding: 20px;
+}
+#contents .link a {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0,0,0,0.4);
+    display: block;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    margin: 0 auto;
+    color: #fff;
+}
+#contents .link a:hover {
+    background-color: #67a3ec;
+}
+
+
+/* footer */
+#footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+#footer .f1 {
+    width: 20%;
+    height: 100px;
+    background-color: #0C51A6;
+    border-right: 1px solid #fff;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+}
+
+#footer .f2 {
+    width: 80%;
+}
+#footer .f2 .f2-1 {
+    width: 100%;
+    height: 50px;
+    background-color: #0C51A6;
+    border-bottom: 1px solid #fff;
+}
+#footer .f2 .f2-1 ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer .f2 .f2-1 ul li {
+    display: block;
+}
+#footer .f2 .f2-1 ul li a {
+    color: #fff;
+    line-height: 50px;
+    border-right: 1px solid #fff;
+    padding: 0 10px;
+}
+#footer .f2 .f2-1 ul li:last-child a {
+    border: none;
+    padding-right: 0;
+}
+#footer .f2 .f2-2 {
+    width: 100%;
+    height: 50px;
+    background-color: #0C51A6;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+}
