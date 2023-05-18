@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/parallax.css">
     <style>
-        .split span {
+        /* .split span {
             display: inline-block;
             min-height: 1vw;
             opacity: 0;
@@ -19,6 +19,161 @@
         .split.show span {
             opacity: 1;
             transform: translateY(0) rotate(0);
+        } */
+
+
+        /* style1 : 가장 기본적인 효과 */
+        /* .style1.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+            transition: all 0.3s ease-in-out;
+        }
+        .style1.split span.show {
+            opacity: 1;
+        } */
+
+        /* style2 : 밑에서 올라오기 */
+        /* .style2.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+            transform: translateY(100px);
+            transition: all 0.3s ease-in-out;
+        }
+        .style2.split span.show {
+            opacity: 1;
+            transform: translateY(0);
+        } */
+
+        /* style3 : 회전 */
+        /* .style3.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+            transform: translateY(100px) translateX(-100px) rotate(360deg);
+            transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+        }
+        .style3.split span.show {
+            opacity: 1;
+            transform: translateY(0) translateX(0) rotate(0);
+        } */
+
+        /* style4 :  */
+        /* .style4.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+        }
+        .style4.split span.show {
+            opacity: 1;
+            animation: rollIn 0.5s 1 ;
+        }
+        @keyframes rollIn {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(-100%, 0, 0) rotate(-120deg);
+                transform: translate3d(-100%, 0, 0) rotate(-120deg)
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translateZ(0);
+                transform: translateZ(0)
+            }
+        } */
+
+        /* style5 :  */
+        /* .style5.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+        }
+        .style5.split span.show {
+            opacity: 1;
+            animation: lightSpeedInRight 0.5s 1 ;
+        }
+        @keyframes lightSpeedInRight {
+            0% {
+                transform: translate3d(100%, 0, 0) skewX(-30deg);
+                opacity: 0
+            }
+
+            60% {
+                transform: skewX(20deg);
+                opacity: 1
+            }
+
+            80% {
+                transform: skewX(-5deg)
+            }
+
+            to {
+                transform: translateZ(0)
+            }
+        } */
+
+        /* style6 */
+        /* .style6.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+        }
+        .style6.split span.show {
+            opacity: 1;
+            animation: zoomInDown 0.5s 1 ;
+        }
+
+        @keyframes zoomInDown {
+            0% {
+                opacity: 0;
+                -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+                transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+                -webkit-animation-timing-function: cubic-bezier(.55, .055, .675, .19);
+                animation-timing-function: cubic-bezier(.55, .055, .675, .19)
+            }
+
+            60% {
+                opacity: 1;
+                -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+                transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+                -webkit-animation-timing-function: cubic-bezier(.175, .885, .32, 1);
+                animation-timing-function: cubic-bezier(.175, .885, .32, 1)
+            }
+        } */
+
+        /* style7 */
+        /* .style7.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+        }
+        .style7.split span.show {
+            opacity: 1;
+            animation: fadeInLeftBig 0.5s 1 ;
+        }
+        @keyframes fadeInLeftBig {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(-2000px, 0, 0);
+                transform: translate3d(-2000px, 0, 0)
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translateZ(0);
+                transform: translateZ(0)
+            }
+        } */
+
+        /* gsap */
+        .split span {
+            display: inline-block;
+            min-width: 1vw;
+            opacity: 0;
+            will-change: transform;
+transform: translate3d(10.2232vw, 3.40772vw, 0px) scale3d(1.59635, 1.59635, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 1.18456deg);
+transform-style: preserve-3d;
         }
     </style>
 </head>
@@ -46,7 +201,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">첫 걸음은 할 수 있는 일을 시작하는 것이다. 그러면 가능성이 열릴 것이다.</p>
+                <p class="parallax__item__desc split style1">첫 걸음은 할 수 있는 일을 시작하는 것이다. 그러면 가능성이 열릴 것이다.</p>
             </section>
             <!-- //section1 -->
             <section id="section2" class="parallax__item">
@@ -55,7 +210,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">다르다고 해서 다르게 실행해서는 안 됩니다. 단지 더 잘해야 할 뿐이죠.</p>
+                <p class="parallax__item__desc split style2">다르다고 해서 다르게 실행해서는 안 됩니다. 단지 더 잘해야 할 뿐이죠.</p>
             </section>
             <!-- //section2 -->
             <section id="section3" class="parallax__item">
@@ -64,7 +219,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">좋은 피드백보다는 나쁜 피드백에 신경을 쓰고 그와 같은 피드백을 친구들에게 받을 수 있도록 노력해야 합니다.</p>
+                <p class="parallax__item__desc split style3">좋은 피드백보다는 나쁜 피드백에 신경을 쓰고 그와 같은 피드백을 친구들에게 받을 수 있도록 노력해야 합니다.</p>
             </section>
             <!-- //section3 -->
             <section id="section4" class="parallax__item">
@@ -73,7 +228,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">당신이 할 수 있는 만큼 정말로 열심히 일하세요. 적어도 일주일에 80~100시간 가량 투자해야 합니다.</p>
+                <p class="parallax__item__desc split style4">당신이 할 수 있는 만큼 정말로 열심히 일하세요. 적어도 일주일에 80~100시간 가량 투자해야 합니다.</p>
             </section>
             <!-- //section4 -->
             <section id="section5" class="parallax__item">
@@ -82,7 +237,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">만약 당신이 아침에 일어나서 미래는 더 좋아질 것이라고 생각한다면, 그날은 더 밝은 날이 될 것이다.</p>
+                <p class="parallax__item__desc split style5">만약 당신이 아침에 일어나서 미래는 더 좋아질 것이라고 생각한다면, 그날은 더 밝은 날이 될 것이다.</p>
             </section>
             <!-- //section5 -->
             <section id="section6" class="parallax__item">
@@ -91,7 +246,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">실패를 겪지 않는다면 충분히 혁신적이지 않았다는 증거입니다.</p>
+                <p class="parallax__item__desc split style6">실패를 겪지 않는다면 충분히 혁신적이지 않았다는 증거입니다.</p>
             </section>
             <!-- //section6 -->
             <section id="section7" class="parallax__item">
@@ -100,7 +255,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">어떤 일이 충분히 중요하다면, 가능성이 없어 보이더라도 해라.</p>
+                <p class="parallax__item__desc split style7">어떤 일이 충분히 중요하다면, 가능성이 없어 보이더라도 해라.</p>
             </section>
             <!-- //section7 -->
             <section id="section8" class="parallax__item">
@@ -152,16 +307,49 @@
         function scroll(){
             let scrollTop = window.pageYOffset || window.scrollY;
 
-            // CSS 클래스 추가
-            document.querySelectorAll(".parallax__item").forEach(item => {
-                if(scrollTop > item.offsetTop){
-                    document.querySelectorAll(".split span").forEach(e => {
-                        e.querySelector(e.length)
-                    })
-                    item.querySelector(".split").classList.add("show");
-                }
-            });
+            // 1. CSS 클래스 추가(노가다)
+            // document.querySelectorAll(".parallax__item").forEach(item => {
+            //     if(scrollTop > item.offsetTop){
+            //         document.querySelectorAll(".split span").forEach(e => {
+            //             e.querySelector(e.length)
+            //         })
+            //         item.querySelector(".split").classList.add("show");
+            //     }
+            // });
             
+            // 2. span에 show 추가
+            // document.querySelectorAll(".parallax__item").forEach(item => {
+            //     if(scrollTop >= item.offsetTop){
+            //         item.querySelectorAll(".split span").forEach((span, index) => {
+            //             setTimeout(() => {
+            //                 span.classList.add("show");
+            //             }, 50 * index);
+            //         });
+            //     };
+            // });
+
+            //3. gsap
+            const items = document.querySelectorAll(".parallax__item");
+
+            items.forEach((item, itemIndex) => {
+                if(scrollTop >= item.offsetTop) {
+                    const spans = item.querySelectorAll(".split span");
+
+                    gsap.to(spans, {
+                        opacity: 1,
+                        x: '0',
+                        y: '0',
+                        z: 0,
+                        skewX: '0deg',
+                        skewY: '0deg',
+                        scaleX: 1,
+                        scaleY: 1,
+                        rotation: 0,
+                        perspective: 0,
+                    })
+                }
+            })
+
             requestAnimationFrame(scroll);
         };
         scroll();
