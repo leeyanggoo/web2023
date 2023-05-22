@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습4</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="script/연습4.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <main id="main">
+            <header id="header">
+                <h1 class="logo">
+                    <a href="#">철길 마을</a>
+                </h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">철길 마을</a>
+                            <ul class="submenu">
+                                <li><a href="#">마을 소개</a></li>
+                                <li><a href="#">마을의 유래</a></li>
+                                <li><a href="#">볼거리</a></li>
+                                <li><a href="#">찾아오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">주변 맛집</a>
+                            <ul class="submenu">
+                                <li><a href="#">빵집</a></li>
+                                <li><a href="#">간장게장</a></li>
+                                <li><a href="#">중국음식점</a></li>
+                                <li><a href="#">횟집</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">주변 여행지</a>
+                            <ul class="submenu">
+                                <li><a href="#">은파호수공원</a></li>
+                                <li><a href="#">초원사진관</a></li>
+                                <li><a href="#">월명공원</a></li>
+                                <li><a href="#">진포해양공원</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">도움마당</a>
+                            <ul class="submenu">
+                                <li><a href="#">교통정보</a></li>
+                                <li><a href="#">주변 주차장</a></li>
+                                <li><a href="#">자료실</a></li>
+                                <li><a href="#">자료마당</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- header -->
+
+            <section id="contents">
+                <article class="banner">
+                    <h3>기차 여행</h3>
+                    <a href="#">떠낙이!</a>
+                </article>
+                <!-- banner -->
+
+                <article class="notice">
+                    <h3>철길 마을 공지사항</h3>
+                    <ul>
+                        <li><a href="#">철길 마을 축제 일정 변경 안내</a><span>2023.05.03.</span></li>
+                        <li><a href="#">철길 마을 도서관 임시 폐쇄 안내</a><span>2023.05.03.</span></li>
+                        <li><a href="#">철길 마을 자원봉사자 모집</a><span>2023.05.03.</span></li>
+                        <li><a href="#">철길 마을 청소 캠페인 안내</a><span>2023.05.03.</span></li>
+                        <li><a href="#">철길 마을 최신 소식</a><span>2023.05.03.</span></li>
+                    </ul>
+                    <a href="#" class="more popup-btn">더복이+</a>
+                </article>
+                <!-- notice -->
+
+                <article class="gallery">
+                    <h3>철길 마을 갤러리</h3>
+                    <ul>
+                        <li><a href="#">므찐 풍경</a></li>
+                        <li><a href="#">알흠다운</a></li>
+                        <li><a href="#">어머나!</a></li>
+                    </ul>
+                    <a href="#" class="more">더복이+</a>
+                </article>
+                <!-- gallery -->
+
+                <article class="link">
+                    <ul>
+                        <li><a href="#">분실물</a></li>
+                        <li><a href="#">예약</a></li>
+                        <li><a href="#">연락처</a></li>
+                        <li><a href="#">전화하기</a></li>
+                    </ul>
+                </article>
+                <!-- link -->
+
+            </section>
+            <!-- contents -->
+
+            <article id="slider">
+                <div class="sliderWrap">
+                    <div class="slider s1">
+                        <div class="text">
+                            <h3>추억을 소환하는 철길 마을</h3>
+                            <p>추억은 사랑을 닮아 난 자꾸 잊혀지겠죠</p>
+                        </div>
+                    </div>
+                    <div class="slider s2">
+                        <div class="text">
+                            <h3>추억을 소환하는 철길 마을</h3>
+                            <p>그곳엔 아직도 그대가 있어서</p>
+                        </div>
+                    </div>
+                    <div class="slider s3">
+                        <div class="text">
+                            <h3>추억을 소환하는 철길 마을</h3>
+                            <p>오늘도 기다려요</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!-- slider -->
+        </main>
+        <!-- main -->
+
+        <div class="popup-view">
+            철길 마을 폭파 버튼->💣💣
+            <button class="popup-close">눌러라</button>
+        </div>
+
+        <footer id="footer">
+            <div class="f1">
+                <h4>철길 마을</h4>
+            </div>
+            <div class="f2">
+                <div class="f2-1">
+                    <ul>
+                        <li><a href="#">개인정보</a></li>
+                        <li><a href="#">정보공개</a></li>
+                        <li><a href="#">운영지침</a></li>
+                    </ul>
+                </div>
+                <div class="f2-2">
+                    전라북도 군산시 경촌4길 14(경암동) Copyright © Kakao Corp. All rights reserved.
+                </div>
+            </div>
+            <div class="f3">
+                <select name="family" id="family">
+                    <option value="철길마을1">철길마을1</option>
+                    <option value="철길마을2">철길마을2</option>
+                    <option value="철길마을3">철길마을3</option>
+                </select>
+            </div>
+        </footer>
+        <!-- footer -->
+    </div>
+    <!-- wrap -->
+</body>
+</html>
