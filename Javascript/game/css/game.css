@@ -69,4 +69,5 @@ body {
     background-color: #0000a2;
     color: #ffffff;
     border: 1px dotted #fff;
+    box-sizing: border-box;
 }

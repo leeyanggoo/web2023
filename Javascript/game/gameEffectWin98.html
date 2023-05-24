@@ -384,7 +384,7 @@
         setInterval(printTime, 1000);
         
         // 하단 중앙 모니터 정보 표시
-        printAgent = () => {
+        const printAgent = () => {
             let os = navigator.userAgent.toLocaleLowerCase();
             let screenWidth = window.screen.width
             let screenHeight = window.screen.height;

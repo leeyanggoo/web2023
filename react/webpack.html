@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="webstoryboy">
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+    <meta name="keywords"
+        content="이양구, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design, Webstoryboy">
+    <title>이양구 | Leeyanggoo | Class</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/docs.min.css" rel="stylesheet">
+    <link href="../assets/css/prism.css" rel="stylesheet">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../assets/ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../assets/ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/ico/favicon-16x16.png">
+    <link rel="manifest" href="../assets/ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../assets/ico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="이양구" />
+    <meta property="og:url" content="https://webstoryboy.co.kr/" />
+    <meta property="og:image" content="https://leeyanggoo.github.io/web2023/assets/ico/icon1.jpg" />
+    <meta property="og:site_name" content="이양구" />
+    <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@webstoryboy" />
+    <meta name="twitter:title" content="이양구" />
+    <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
+    <meta property="twitter:image" content="https://leeyanggoo.github.io/web2023/assets/ico/icon1.jpg" />
+
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+    <style>
+        i {
+            animation: beat 2s infinite linear;
+        }
+        @keyframes beat {
+            0% {
+                transform: scale(0.8)
+            }
+            50% {
+                transform: scale(1)
+            }
+            100% {
+                transform: scale(0.8)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../index.html" class="navbar-brand">Hello Leeyanggoo! &lt;/doc&gt;</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://leeyanggoo.tistory.com/">Blog</a></li>
+                    <li><a href="https://github.com/leeyanggoo/web2023">Github</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="bs-header bgs1" id="content">
+        <div class="container">
+            <h1>Class v1.0 &lt;/doc&gt;</h1>
+            <p><a href="https://leeyanggoo.github.io/web2023/" target="_blank">leeyanggoo.github.io/web2023/</a></p>
+        </div>
+    </div>
+
+    <div class="container bs-docs-container">
+        <div class="row">
+            <div class="col-md-9">
+                <h2 class="page-header"><i class="fa-solid fa-cube"></i> 웹팩 WEBPACK</h2>
+
+                <div class="bs-docs-section">
+                    <h3 id="intro1" class="page-header"><i class="fa-solid fa-cube"></i> 1. webpack 개념</h3>
+                    <p>webpack은 JavaScript 애플리케이션을 위한 모듈 번들러입니다. </p>
+                    <p>
+                        개발자가 모듈 시스템을 사용하여 JavaScript 코드를 작성할 수 있다는 것입니다.<br>
+                        이는 코드의 재사용성을 높이고, 코드의 구조를 더 명확하게 만들며, 복잡한 프론트엔드 환경에서의 개발 작업을 보다 용이하게 만듭니다.
+                    </p>
+                    <p>
+                        Entry: 웹팩이 내부 종속성 그래프를 만드는 시작점입니다. 기본값은 ./src/index.js이지만 웹팩 설정에서 직접 지정할 수 있습니다.
+                    </p>
+                    <p>
+                        Output: 번들링된 코드가 저장될 위치를 지정합니다. 기본적으로 ./dist/main.js에 저장되지만 웹팩 설정에서 직접 지정할 수 있습니다.
+                    </p>
+                    <p>
+                        Loaders: 웹팩은 기본적으로 JavaScript 및 JSON 파일만 이해하지만 로더를 사용하면 다른 유형의 파일들을 모듈로 변환하여 웹팩이 처리하게 할 수 있습니다.
+                    </p>
+                    <p>
+                        Plugins: 로더가 특정 유형의 모듈을 변환하는 데 반해, 플러그인은 번들 최적화, 자산 관리 및 환경 변수 주입 등과 같은 광범위한 작업을 수행합니다.
+                    </p>
+                    <p>
+                        Mode: 웹팩에 내장된 환경별 최적화를 위해 development, production 및 none 중 하나를 설정할 수 있습니다.
+                    </p>
+                </div>
+                <!-- //intro1 -->
+
+                <div class="bs-docs-section">
+                    <h3 id="intro2" class="page-header"><i class="fa-solid fa-cube"></i> 2. webpack 설치</h3>
+
+                    <h4 id="intro2-1">2-1. Node.js 설치하기</h4>
+                    <p>웹팩을 시작하기 전에 Node.js를 설치해야 합니다.</p>
+                    <!-- //2-1 -->
+
+                    <h4 id="intro2-2">2-2. npm 초기화</h4>
+<pre><code class="language-js">npm init or npm init -y</code></pre>
+<pre><code class="language-js">This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help init` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (webpack) game
+version: (1.0.0)
+description: game javascript
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
+About to write to C:\Users\didrn\Documents\webpack\package.json:
+
+{
+    "name": "game",
+    "version": "1.0.0",
+    "description": "game javascript",
+    "main": "index.js",
+    "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC"
+}
+
+
+Is this OK? (yes)
+</code></pre>
+                        <!-- //2-2 -->
+
+                    <h4 id="intro2-3">2-3. webpack 설치</h4>
+<pre><code class="language-js">npm install webpack webpack-cli --save-dev</code></pre>
+<pre><code class="language-js">added 117 packages, and audited 118 packages in 2m
+
+15 packages are looking for funding
+    run `npm fund` for details
+
+found 0 vulnerabilities
+</code></pre>
+                    <!-- //2-3 -->
+
+                    <h4 id="intro2-4">2-4. webpack.config.js 설치</h4>
+                    <p><code>npx webpack</code>을 작성하면 파일이 번들링 됩니다.</p>
+<pre><code class="language-js">const path = require('path');
+
+module.exports = {
+    mode: 'production', // production, development
+    entry: {
+        index: './src/index.js'
+    },
+    output: {
+        path: path.resolve(__dirname, 'public'),
+        filename: 'js/[name].js'
+    }
+}
+</code></pre>
+                    <!-- //2-4 -->
+
+                    <h4 id="intro2-5">2-5. webpack-dev-server 설정</h4>
+                    <pre><code class="language-js">npm install webpack-dev-server --save-dev</code></pre>
+<pre><code class="language-js">{
+  "name": "game",
+  "version": "1.0.0",
+  "description": "game javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.83.1",
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.0"
+  }
+}
+</code></pre>
+                    <!-- //2-5 -->
+
+                    <h4 id="intro2-6">2-6. HTML 번들러 설정</h4>
+                    <pre><code class="language-js">npm install html-webpack-plugin --save-dev</code></pre>
+<pre><code class="language-js">"devDependencies": {
+  "html-webpack-plugin": "^5.5.1",
+  "webpack": "^5.83.1",
+  "webpack-cli": "^5.1.1",
+  "webpack-dev-server": "^4.15.0"
+}
+
+<!-- config -->
+plugins: [new HtmlWebpackPlugin({
+  template: './src/index.html', // 번들 전
+  filename: './index.html', // 번들 후 
+  hash: true,
+  showErrors: true,
+})],
+</code></pre>
+                    <!-- //2-6 -->
+
+                    <h4 id="intro2-7">2-7. CSS 번들러 설정</h4>
+                    <pre><code class="language-js">npm install --save-dev css-loader style-loader</code></pre>
+<pre><code class="language-js">"devDependencies": {
+  "css-loader": "^6.7.4",
+  "html-webpack-plugin": "^5.5.1",
+  "style-loader": "^3.3.3",
+  "webpack": "^5.83.1",
+  "webpack-cli": "^5.1.1",
+  "webpack-dev-server": "^4.15.0"
+}
+
+<!-- config -->
+module: {
+  rules: [
+      {
+      test: /\.css$/i,
+      use: ["style-loader", "css-loader"],
+      },
+  ],
+},
+</code></pre>
+                    <!-- //2-7 -->
+
+                    <h4 id="intro2-8">2-8. CSS 파일 분리하기</h4>
+                    <pre><code class="language-js">npm install --save-dev mini-css-extract-plugin</code></pre>
+<pre><code class="language-js">  "devDependencies": {
+  "css-loader": "^6.7.4",
+  "html-webpack-plugin": "^5.5.1",
+  "mini-css-extract-plugin": "^2.7.6",
+  "style-loader": "^3.3.3",
+  "webpack": "^5.83.1",
+  "webpack-cli": "^5.1.1",
+  "webpack-dev-server": "^4.15.0"
+}
+
+<!-- config -->
+module: {
+  rules: [
+      {
+      test: /\.css$/i,
+      use: ["style-loader", "css-loader"],
+      },
+  ],
+},
+</code></pre>
+                    <!-- //2-8 -->
+                    
+                </div>
+                <!-- //intro2 -->
+
+                <div class="bs-docs-section">
+                  <h3 id="intro3" class="page-header"><i class="fa-solid fa-bolt-lightning" style="color: rgb(255, 196, 0)"></i> 3. vite 설치</h3>
+                  <p>Vite(프랑스어로 "빠르다(Quick)"를 의미하며, 발음은 "veet"와 비슷한 /vit/ 입니다.)은 빠르고 간결한 모던 웹 프로젝트 개발 경험에 초점을 맞춰 탄생한 빌드 도구이며, 두 가지 컨셉을 중심으로 하고 있습니다.</p>
+                  <p>
+                      개발자가 모듈 시스템을 사용하여 JavaScript 코드를 작성할 수 있다는 것입니다.<br>
+                      이는 코드의 재사용성을 높이고, 코드의 구조를 더 명확하게 만들며, 복잡한 프론트엔드 환경에서의 개발 작업을 보다 용이하게 만듭니다.
+                  </p>
+                  <p>
+                      Entry: 웹팩이 내부 종속성 그래프를 만드는 시작점입니다. 기본값은 ./src/index.js이지만 웹팩 설정에서 직접 지정할 수 있습니다.
+                  </p>
+                  <p>
+                      Output: 번들링된 코드가 저장될 위치를 지정합니다. 기본적으로 ./dist/main.js에 저장되지만 웹팩 설정에서 직접 지정할 수 있습니다.
+                  </p>
+                  <p>
+                      Loaders: 웹팩은 기본적으로 JavaScript 및 JSON 파일만 이해하지만 로더를 사용하면 다른 유형의 파일들을 모듈로 변환하여 웹팩이 처리하게 할 수 있습니다.
+                  </p>
+                  <p>
+                      Plugins: 로더가 특정 유형의 모듈을 변환하는 데 반해, 플러그인은 번들 최적화, 자산 관리 및 환경 변수 주입 등과 같은 광범위한 작업을 수행합니다.
+                  </p>
+                  <p>
+                      Mode: 웹팩에 내장된 환경별 최적화를 위해 development, production 및 none 중 하나를 설정할 수 있습니다.
+                  </p>
+              </div>
+              <!-- //intro1 -->
+
+                
+
+
+            </div>
+            <!-- cok-md-9 -->
+            <div class="col-md-3">
+                <div class="bs-sidebar hidden-print affix-top" role="complementary">
+                    <ul class="nav bs-sidenav">
+                        <li class="active"><a href="#intro1">webpack 개념</a></li>
+                        <li><a href="#intro2">webpack 설치</a>
+                            <ul class="nav">
+                                <li><a href="#intro2-1">Node.js 설치</a></li>
+                                <li><a href="#intro2-2">npm 초기화</a></li>
+                                <li><a href="#intro2-3">webpack 설치</a></li>
+                                <li><a href="#intro2-4">webpack.config.js 설치</a></li>
+                                <li><a href="#intro2-5">webpack-dev-server 설정</a></li>
+                                <li><a href="#intro2-6">HTML 번들러 설정</a></li>
+                                <li><a href="#intro2-7">CSS 번들러 설정</a></li>
+                                <li><a href="#intro2-8">CSS 파일 분리하기</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#intro2">vite 설치</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- //row -->
+    </div>
+    <!-- //container -->
+
+
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links muted">
+                <li><a href="https://leeyanggoo.tistory.com/">Leeyanggoo</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //Footer -->
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/docs.min.js"></script>
+    <script src="../assets/js/prism.js"></script>
+    <script src="https://kit.fontawesome.com/2b2e0121f7.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
