@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+img {
+    width: 100%;
+    vertical-align: top;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+#wrap {
+    width: 100%;
+    display: flex;
+    height: 650px;
+}
+#header {
+    width: 200px;
+}
+#header h1 {
+    width: 200px;
+    height: 200px;
+    /* background-color: #ccc; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header h1 img {
+   width: 80%;
+}
+#header nav {
+    display: flex;
+    justify-content: center;
+}
+#header nav > ul {
+    text-align: center;
+    width: 90%;
+}
+#header nav > ul > li {
+    border: 1px solid coral;
+    margin: 5px;
+}
+#header nav > ul > li > a {
+    display: block;
+    width: 100%;
+    background-color: pink;
+    padding: 10px 0;
+}
+#header nav > ul > li > a:hover {
+    background-color: lightsalmon;
+}
+#header nav > ul > li > ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s;
+}
+#header nav > ul > li > ul >li > a {
+    padding: 10px 0;
+    display: block;
+    width: 100%;
+    background-color: lightsteelblue;
+}
+#header nav > ul > li > ul >li > a:hover {
+    background-color: lightcyan;
+}
+
+#main {
+    width: calc(100% - 200px);
+    height: 650px;
+}
+#main section:first-child {
+    height: 400px;
+}
+#main section:last-child {
+    height: 250px;
+}
+#main section {
+    width: 100%;
+    display: flex;
+}
+#main .slider__wrap {
+    width: calc(100% - 230px);
+    height: 400px;
+    overflow: hidden;
+}
+#main .slider__wrap .slider__inner{
+    width: 100%;
+    height: 400px;
+    /* overflow: hidden; */
+}
+#main .slider__wrap .slider__inner .slider {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#main .banner {
+    width: 230px;
+    height: 400px;
+    background-color: #ccc;
+    position: relative;
+}
+#main .banner .banner__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: #0000006b;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#main .banner .banner__title h3 {
+    color: #fff;
+}
+#main .banner .banner__title a {
+    color: #fff;
+    background-color: rgba(255, 192, 203, 0.461);
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+#main .banner .banner__title a:hover {
+    background-color: rgba(255, 192, 203, 0.678);
+}
+#main section:last-child {
+    justify-content: space-between;
+}
+#main .notice {
+    width: 50%;
+    height: 250px;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    border-right: 1px solid #ccc;
+}
+#main article h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+#main .notice ul {
+    width: 100%;
+}
+#main .notice ul li {
+    display: flex;
+}
+#main .notice ul li a {
+    width: 70%;
+    line-height: 1.6;
+}
+#main .notice ul li a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+#main .notice ul li span {
+    width: 30%;
+    text-align: right;
+}
+#main .gallery {
+    width: 50%;
+    height: 250px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+#main .gallery .gallery__inner {
+    display: flex;
+    justify-content: space-between;
+}
+#main .gallery .gallery__inner a {
+    width: 32%;
+}
+#main .gallery .gallery__inner img {
+    height: 150px;
+    object-fit: cover;
+}
+#footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #413232;
+    justify-content: space-between;
+}
+#footer h1 {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer h1 img {
+    width: 50%;
+}
+#footer p {
+    width: 70%;
+    color: #fff
+}
+#footer div {
+    width: 10%;
+    padding: 10px;
+}
+#footer div select {
+    width: 100%;
+}
+
+.modal {
+    width: 500px;
+    height: 500px;
+    background-color: #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #000;
+    display: none;
+    z-index: 10;
+}
+.modal .modal__title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.modal .modal__title h3 {
+    background-color: pink;
+}
+.modal .modal__title button {
+    padding: 5px
+}
+.modal p {
+    line-height: 2;
+}
