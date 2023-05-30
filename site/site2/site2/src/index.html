@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹표준 사이트 만들기</title>
+
+    <link rel="icon" type="image/svg+xml" href="images/favicon1.svg" />
+    <meta name="author" content="웹스토리보이">
+    <meta name="description" content="웹스토리보이와 함께 만드는 사이트 튜토리얼입니다.">
+    <meta name="keyword" content="웹스토리보이, 사이트, 사이트 만들기, 튜토리얼">
+    <meta name="robots" content="all">
+</head>
+<body class="SCore3">
+    <div id="skip" role="region">
+        <a href="#sliderSection">슬라이드 영역 바로가기</a>
+        <a href="#textsSection">텍스트 영역 바로가기</a>
+        <a href="#imagesSection">이미지 영역 바로가기</a>
+        <a href="#cardsSection">카드 영역 바로가기</a>
+        <a href="#youtubeSection">유튜브 영역 바로가기</a>
+        <a href="#unsplashSection">언스플래쉬 영역 바로가기</a>
+        <a href="#moviesSection">영화 영역 바로가기</a>
+        <a href="#reviewsSection">리뷰 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header" class="header__wrap bg-blue" role="heading">
+        <div class="header__inner container">
+            <h1 class="header__logo">
+                <a href="#">web <em>site</em></a>
+            </h1>
+            <nav class="header__nav Mabinogi" role="navigation">
+                <ul>
+                    <li><a href="#introSection">소개</a></li>
+                    <li><a href="#membersSection">멤버 소개</a></li>
+                    <li><a href="#portsSection">포트폴리오</a></li>
+                    <li><a href="#youtubeSection">유튜브</a></li>
+                    <li><a href="#unsplashSection">이미지</a></li>
+                    <li><a href="#moviesSection">영화</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main" role="main">
+        <section id="sliderSection" class="slider__wrap section">
+            <div class="slider__inner">
+                <h2 class="blind">배너 슬라이드</h2>
+                <div class="slider__img">
+                    <div class="slider s1 container">
+                        <div class="text">
+                            <h3>New<br>Portfolio</h3>
+                            <p>가능성을 믿어라.<br>너도 믿지 말고 사람도 믿지 말고.</p>
+                            <a href="#" class="more button-red">더 알아보기</a>
+                        </div>
+                        <div class="img">
+                            <img src="images/icon4.png" alt="이미지1">
+                            <img src="images/icon2.png" alt="이미지2">
+                            <img src="images/icon3.png" alt="이미지3">
+                        </div>
+                        <div class="circle" aria-label="hidden">
+                            <span class="circle c1"></span>
+                            <span class="circle c2"></span>
+                            <span class="circle c3"></span>
+                            <span class="circle c4"></span>
+                            <span class="circle c5"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__btn">
+                    <a href="#" class="left"><span class="ir">이전 이미지</span></a>
+                    <a href="#" class="right"><span class="ir">다음 이미지</span></a>
+                </div>
+                <div class="slider__dot">
+                    <a href="#" class="dot active"><span class="ir">1번 이미지</span></a>
+                    <a href="#" class="dot"><span class="ir">2번 이미지</span></a>
+                    <a href="#" class="dot"><span class="ir">3번 이미지</span></a>
+                </div>
+            </div>
+        </section>
+        <!-- //slider__wrap -->
+        <section id="introSection" class="intro__wrap bg-blue section">
+            <h3 class="blind">프론트앤드 커리큘럼 과정 소개</h3>
+            <div class="intro__inner container">
+                <div class="intro__title">
+                    <span>fontend</span>
+                    <h3>프론트앤드<br>전문과정</h3>
+                    <p>프론트앤드 개발자로 취업하기 위한 전문 과정입니다.<br>여러분들도 도전해보세요!</p>
+                </div>
+                <div class="intro__desc">
+                    <div>
+                        <h4 class="icon-react">Vite.js</h4>
+                        <p>Vite.js는 현대적이고 빠른 웹 개발을 위한 빌드 도구 및 개발 서버입니다. Vite.js는 Vue.js를 위한 개발 도구로 시작되었으며, Vue.js 애플리케이션 개발을 더욱 즐겁고 효율적으로 만들어주는 목적으로 만들어졌습니다.</p>
+                    </div>
+                    <div>
+                        <h4 class="icon-node">React.js</h4>
+                        <p>웹디자이너가 포함된 웹 및 멀티미디어 디자이너는 다른 직업과 비교하여 임금과 복리후생이 낮은 퍼블리싱은 웹 사이트를 제작할 </p>
+                    </div>
+                    <div>
+                        <h4 class="icon-vue">Vue.js</h4>
+                        <p>사이트와 상호작용하는 모든 부분에 대한 개발, 관리, 유지 보수를 하는 것 솔루션의 프로세스를 개발합니다.</p>
+                    </div>
+                    <div>
+                        <h4 class="icon-next">Next.js</h4>
+                        <p>용어 자체에서 알 수 있듯이, 백엔드는 웹사이트나 웹 애플리케이션 또는 모바일 솔루션의 프로세스와 관련된입니다.</p>
+                    </div>
+                </div>
+            </div>=
+        </section>
+        <!-- //intro__wrap -->
+        <section id="membersSection" class="members__wrap">
+            <div class="members__inner container">
+                <h3 class="blind">멤버 소개</h3>
+            </div>
+        </section>
+        <!-- //members__wrap -->
+        <section id="portsSection" class="ports__wrap">
+            <div class="ports__inner container">
+                <h3 class="blind">포트폴리오</h3>
+            </div>
+        </section>
+        <!-- //ports__wrap -->
+        <section id="youtubeSection" class="youtube__wrap">
+            <div class="youtube__inner container">
+                <h3 class="blind">유튜브</h3>
+            </div>
+        </section>
+        <!-- //youtube__wrap -->
+        <section id="unsplashSection" class="unsplash__wrap">
+            <div class="unsplash__inner container">
+                <h3 class="blind">이미지</h3>
+            </div>
+        </section>
+        <!-- //unsplash__wrap -->
+        <section id="moviesSection" class="movies__wrap">
+            <div class="movies__inner container">
+                <h3 class="blind">영화</h3>
+            </div>
+        </section>
+        <!-- //movies__wrap -->
+        <section id="reviewsSection" class="reviews__wrap">
+            <div class="reviews__inner container">
+                <h3 class="blind">후기</h3>
+            </div>
+        </section>
+        <!-- //reviews__wrap -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer" class="footer__wrap" role="contentinfo">
+
+    </footer>
+    <!-- //footer -->
+
+    
+    <script type="module" src="main.js"></script>
+</body>
+</html>
