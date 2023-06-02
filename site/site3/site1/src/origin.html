@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹표준 사이트 만들기</title>
+
+    <link rel="icon" type="image/svg+xml" href="images/favicon1.svg" />
+    <meta name="author" content="웹스토리보이">
+    <meta name="description" content="웹스토리보이와 함께 만드는 사이트 튜토리얼입니다.">
+    <meta name="keyword" content="웹스토리보이, 사이트, 사이트 만들기, 튜토리얼">
+    <meta name="robots" content="all">
+</head>
+<body class="SCore3">
+    <div id="skip" role="region">
+        <a href="#sliderSection">슬라이드 영역 바로가기</a>
+        <a href="#textsSection">텍스트 영역 바로가기</a>
+        <a href="#imagesSection">이미지 영역 바로가기</a>
+        <a href="#cardsSection">카드 영역 바로가기</a>
+        <a href="#youtubeSection">유튜브 영역 바로가기</a>
+        <a href="#unsplashSection">언스플래쉬 영역 바로가기</a>
+        <a href="#moviesSection">영화 영역 바로가기</a>
+        <a href="#reviewsSection">리뷰 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header" class="header__wrap bg-blue" role="heading">
+        <div class="header__inner container">
+            <h1 class="header__logo">
+                <a href="#">web <em>site</em></a>
+            </h1>
+            <nav class="header__nav Mabinogi" role="navigation">
+                <ul>
+                    <li><a href="#introSection">소개</a></li>
+                    <li><a href="#membersSection">멤버 소개</a></li>
+                    <li><a href="#portsSection">포트폴리오</a></li>
+                    <li><a href="#youtubeSection">유튜브</a></li>
+                    <li><a href="#unsplashSection">이미지</a></li>
+                    <li><a href="#moviesSection">영화</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main" role="main">
+        <section id="sliderSection" class="slider__wrap section">
+            <div class="slider__inner">
+                <h2 class="blind">배너 슬라이드</h2>
+                <div class="slider__img">
+                    <div class="slider s1 container">
+                        <div class="text">
+                            <h3>New<br>Portfolio</h3>
+                            <p>가능성을 믿어라.<br>너도 믿지 말고 사람도 믿지 말고.</p>
+                            <a href="#" class="more button-blue">더 알아보기</a>
+                        </div>
+                        <div class="img">
+                            <img src="images/icon4.png" alt="이미지1">
+                            <img src="images/icon2.png" alt="이미지2">
+                            <img src="images/icon3.png" alt="이미지3">
+                        </div>
+                        <div class="circle" aria-label="hidden">
+                            <span class="circle c1"></span>
+                            <span class="circle c2"></span>
+                            <span class="circle c3"></span>
+                            <span class="circle c4"></span>
+                            <span class="circle c5"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__btn">
+                    <a href="#" class="left"><span class="ir">이전 이미지</span></a>
+                    <a href="#" class="right"><span class="ir">다음 이미지</span></a>
+                </div>
+                <div class="slider__dot">
+                    <a href="#" class="dot active"><span class="ir">1번 이미지</span></a>
+                    <a href="#" class="dot"><span class="ir">2번 이미지</span></a>
+                    <a href="#" class="dot"><span class="ir">3번 이미지</span></a>
+                </div>
+            </div>
+        </section>
+        <!-- //slider__wrap -->
+
+        <section id="introSection" class="intro__wrap bg-blue section">
+            <h3 class="blind">프론트앤드 커리큘럼 과정 소개</h3>
+            <div class="intro__inner container">
+                <div class="intro__title">
+                    <span>fontend</span>
+                    <h3>프론트앤드<br>전문과정</h3>
+                    <p>프론트앤드 개발자로 취업하기 위한 전문 과정입니다.<br>여러분들도 도전해보세요!</p>
+                </div>
+                <div class="intro__desc">
+                    <div>
+                        <h4 class="icon-react">Vite.js</h4>
+                        <p>Vite.js는 현대적이고 빠른 웹 개발을 위한 빌드 도구 및 개발 서버입니다. Vite.js는 Vue.js를 위한 개발 도구로 시작되었으며, Vue.js 애플리케이션 개발을 더욱 즐겁고 효율적으로 만들어주는 목적으로 만들어졌습니다.</p>
+                    </div>
+                    <div>
+                        <h4 class="icon-node">React.js</h4>
+                        <p>웹디자이너가 포함된 웹 및 멀티미디어 디자이너는 다른 직업과 비교하여 임금과 복리후생이 낮은 퍼블리싱은 웹 사이트를 제작할 </p>
+                    </div>
+                    <div>
+                        <h4 class="icon-vue">Vue.js</h4>
+                        <p>사이트와 상호작용하는 모든 부분에 대한 개발, 관리, 유지 보수를 하는 것 솔루션의 프로세스를 개발합니다.</p>
+                    </div>
+                    <div>
+                        <h4 class="icon-next">Next.js</h4>
+                        <p>용어 자체에서 알 수 있듯이, 백엔드는 웹사이트나 웹 애플리케이션 또는 모바일 솔루션의 프로세스와 관련된입니다.</p>
+                    </div>
+                </div>
+            </div>=
+        </section>
+        <!-- //intro__wrap -->
+
+        <section id="membersSection" class="members__wrap section center">
+            <h3>멤버 소개</h3>
+            <p>웹 디자이너, 웹 퍼블리셔, 프론트앤드 개발자를 소개합니다.</p>
+            
+            <div class="members__inner container">
+                <div class="member">
+                    <figure class="member__header">
+                        <img src="images/peep/peep-1.svg" alt="멤버">
+                    </figure>
+                    <div class="member__body">
+                        <h4>웹쓰 24기</h4>
+                        <a href="#" class="btn">포폴 보기</a>
+                    </div>
+                </div>
+                <div class="member">
+                    <figure class="member__header">
+                        <img src="images/peep/peep-2.svg" alt="멤버">
+                    </figure>
+                    <div class="member__body">
+                        <h4>웹쓰 24기</h4>
+                        <a href="#" class="btn">포폴 보기</a>
+                    </div>
+                </div>
+                <div class="member">
+                    <figure class="member__header">
+                        <img src="images/peep/peep-3.svg" alt="멤버">
+                    </figure>
+                    <div class="member__body">
+                        <h4>웹쓰 24기</h4>
+                        <a href="#" class="btn">포폴 보기</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //members__wrap -->
+
+        <section id="portsSection" class="ports__wrap bg-blue section center">
+            <h3>포트폴리오 소개</h3>
+            <p>웹 디자이너, 웹 퍼블리셔, 프론트앤드 포트폴리오입니다.</p>
+            <div class="ports__inner container">
+                <div class="port__btn">
+                    <a href="#">21기</a>
+                    <a href="#">22기</a>
+                    <a href="#">23기</a>
+                    <a href="#">24기</a>
+                </div>
+                <div class="port__cont">
+                    <div class="port">
+                        <figure class="port__header">
+                            <img src="images/port01.png" alt="포트폴리오">
+                        </figure>
+                        <div class="port__body">
+                            <span>
+                                <img src="images/peep/peep-4.svg" alt="멤버">
+                            </span>
+                            <div>
+                                <h4>김덕배 포트폴리오</h4>
+                                <p>프론트앤드 개발자 포트폴리오</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="port">
+                        <figure class="port__header">
+                            <img src="images/port02.png" alt="포트폴리오">
+                        </figure>
+                        <div class="port__body">
+                            <span>
+                                <img src="images/peep/peep-5.svg" alt="멤버">
+                            </span>
+                            <div>
+                                <h4>김덕배 포트폴리오</h4>
+                                <p>프론트앤드 개발자 포트폴리오</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="port">
+                        <figure class="port__header">
+                            <img src="images/port03.png" alt="포트폴리오">
+                        </figure>
+                        <div class="port__body">
+                            <span>
+                                <img src="images/peep/peep-6.svg" alt="멤버">
+                            </span>
+                            <div>
+                                <h4>김덕배 포트폴리오</h4>
+                                <p>프론트앤드 개발자 포트폴리오</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="port">
+                        <figure class="port__header">
+                            <img src="images/port04.png" alt="포트폴리오">
+                        </figure>
+                        <div class="port__body">
+                            <span>
+                                <img src="images/peep/peep-7.svg" alt="멤버">
+                            </span>
+                            <div>
+                                <h4>김덕배 포트폴리오</h4>
+                                <p>프론트앤드 개발자 포트폴리오</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="port">
+                        <figure class="port__header">
+                            <img src="images/port05.png" alt="포트폴리오">
+                        </figure>
+                        <div class="port__body">
+                            <span>
+                                <img src="images/peep/peep-8.svg" alt="멤버">
+                            </span>
+                            <div>
+                                <h4>김덕배 포트폴리오</h4>
+                                <p>프론트앤드 개발자 포트폴리오</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="port">
+                        <figure class="port__header">
+                            <img src="images/port06.png" alt="포트폴리오">
+                        </figure>
+                        <div class="port__body">
+                            <span>
+                                <img src="images/peep/peep-9.svg" alt="멤버">
+                            </span>
+                            <div>
+                                <h4>김덕배 포트폴리오</h4>
+                                <p>프론트앤드 개발자 포트폴리오</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //ports__wrap -->
+
+        <section id="youtubeSection" class="youtube__wrap section">
+            <div class="youtube__inner">
+                <div class="youtube__header container">
+                    <h3>코딩 유튜브 추천</h3>
+                    <p>더 다양한 강의는 유튜브를 통해 제공하고 있습니다.<br>구독과 좋아요! 부탁드립니다.</p>
+                    <a href="#" class="button-red">자세히 보기</a>
+                </div>
+                <div class="youtube__body">
+                    <div class="youtube__item">
+                        <div>
+                            <img src="images/youtube01.png" alt="유튜브">
+                        </div>
+                        <div>
+                            <img src="images/youtube02.png" alt="유튜브">
+                        </div>
+                        <div>
+                            <img src="images/youtube03.png" alt="유튜브">
+                        </div>
+                        <div>
+                            <img src="images/youtube04.png" alt="유튜브">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //youtube__wrap -->
+
+        <section id="unsplashSection" class="unsplash__wrap bg-blue section">
+            <div class="unsplash__inner">
+                <div class="unsplash__header container">
+                    <h3>코딩 이미지 다운로드</h3>
+                    <p>더 다양한 강의는 유튜브를 통해 제공하고 있습니다.<br>구독과 좋아요! 부탁드립니다.</p>
+                    <a href="#" class="button-blue">자세히 보기</a>
+                </div>
+                <div class="unsplash__body">
+                    <div class="unsplash__item">
+                        <div>
+                            <img src="images/unsplash01.png" alt="유튜브">
+                        </div>
+                        <div>
+                            <img src="images/unsplash02.png" alt="유튜브">
+                        </div>
+                        <div>
+                            <img src="images/unsplash03.png" alt="유튜브">
+                        </div>
+                        <div>
+                            <img src="images/unsplash04.png" alt="유튜브">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //unsplash__wrap -->
+
+        <section id="moviesSection" class="movies__wrap section">
+            <div class="movies__inner">
+                <div class="movies__header container">
+                    <h3>개발자를 위한 추천 영화</h3>
+                    <p>더 다양한 강의는 유튜브를 통해 제공하고 있습니다.<br>구독과 좋아요! 부탁드립니다.</p>
+                    <a href="#" class="button-red">자세히 보기</a>
+                </div>
+                <div class="movies__body">
+                    <div class="movies__item">
+                        <div>
+                            <img src="images/movie01.png" alt="유튜브">
+                        </div>
+                        <div>
+                            <img src="images/movie02.png" alt="유튜브">
+                        </div>
+                        <div>
+                            <img src="images/movie03.png" alt="유튜브">
+                        </div>
+                        <div>
+                            <img src="images/movie04.png" alt="유튜브">
+                        </div>
+                        <div>
+                            <img src="images/movie05.png" alt="유튜브">
+                        </div>
+                        <div>
+                            <img src="images/movie06.png" alt="유튜브">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //movies__wrap -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer" class="footer__wrap section bg-blue" role="contentinfo">
+        <div class="footer__inner container">
+            <div class="footer__left">
+                <h4>Leeyanggoo</h4>
+                <p>안녕하세요!<br>
+                    더 다양한 정보 확인<br>
+                    leeyanggoo@gmail.com</p>
+                <ul class="sns">
+                    <li><a href="#"><span class="ir">페이스북</span></a></li>
+                    <li><a href="#"><span class="ir">인스타그램</span></a></li>
+                    <li><a href="#"><span class="ir">유튜브</span></a></li>
+                    <li><a href="#"><span class="ir">깃</span></a></li>
+                    <li><a href="#"><span class="ir">디스코드</span></a></li>
+                </ul>
+            </div>
+            <div class="footer__right">
+                <div class="footer__menu">
+                    <div>
+                        <h4>사이트</h4>
+                        <ul>
+                            <li><a href="#">웹표준 사이트</a></li>
+                            <li><a href="#">반응형 사이트</a></li>
+                            <li><a href="#">패럴랙스 사이트</a></li>
+                            <li><a href="#">포트폴리오 사이트</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>유형</h4>
+                        <ul>
+                            <li><a href="#">이미지 유형</a></li>
+                            <li><a href="#">카드 유형</a></li>
+                            <li><a href="#">이미지/텍스트 유형</a></li>
+                            <li><a href="#">배너 유형</a></li>
+                            <li><a href="#">텍스트 유형</a></li>
+                            <li><a href="#">푸터 유형</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>스크립트</h4>
+                        <ul>
+                            <li><a href="#">검색 이펙트</a></li>
+                            <li><a href="#">퀴즈 이펙트</a></li>
+                            <li><a href="#">마우스 이펙트</a></li>
+                            <li><a href="#">슬라이드 이펙트</a></li>
+                            <li><a href="#">패럴랙스 이펙트</a></li>
+                            <li><a href="#">게임 이펙트</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>레퍼런스</h4>
+                        <ul>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">FONTS</a></li>
+                            <li><a href="#">BLOG</a></li>
+                            <li><a href="#">REFERENCE</a></li>
+                            <li><a href="#">TURTORIAL</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <p>Copyright 2023. All Rights Reserved. - Designed by Leeyanggoo</p>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    
+    <script type="module" src="main.js"></script>
+</body>
+</html>

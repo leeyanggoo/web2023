@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹표준 사이트 만들기</title>
+
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <meta name="author" content="웹스토리보이">
+    <meta name="description" content="웹스토리보이와 함께 만드는 사이트 튜토리얼입니다.">
+    <meta name="keyword" content="웹스토리보이, 사이트, 사이트 만들기, 튜토리얼">
+    <meta name="robots" content="all">
+</head>
+<body class="NanumM">
+    <div id="skip" role="region">
+        <a href="#sliderSection">슬라이드 영역 바로가기</a>
+        <a href="#textsSection">텍스트 영역 바로가기</a>
+        <a href="#imagesSection">이미지 영역 바로가기</a>
+        <a href="#cardsSection">카드 영역 바로가기</a>
+        <a href="#youtubeSection">유튜브 영역 바로가기</a>
+        <a href="#unsplashSection">언스플래쉬 영역 바로가기</a>
+        <a href="#moviesSection">영화 영역 바로가기</a>
+        <a href="#reviewsSection">리뷰 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header" class="header__wrap bg-blue" role="heading">
+        <div class="header__inner container">
+            <h1 class="header__logo Chosun">
+                <a href="#">詩요일 <em>세상의 모든 시</em></a>
+            </h1>
+            <nav class="header__nav" role="navigation">
+                <ul>
+                    <li><a href="#introSection">웹진 소개</a></li>
+                    <li><a href="#membersSection">오늘의 시</a></li>
+                    <li><a href="#portsSection">연재</a></li>
+                    <li><a href="#youtubeSection">출간</a></li>
+                    <li><a href="#unsplashSection">정기구독</a></li>
+                    <li><a href="#moviesSection">문의</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main" role="main">
+        <section id="sliderSection" class="slider__wrap section bg-gradient">
+            <div class="slider__inner">
+                <h2 class="blind">배너 슬라이드</h2>
+                <div class="slider__img">
+                    <div class="slider s1 container">
+                        <div class="text">
+                            <h3>"너의 장미꽃이 그토록 소중한 것은<br>그 꽃을 위해 네가 공들인 그 시간 때문이야."</h3>
+                            <p>우리가 아직도 어린왕자를 찾아가는 이유<br><em>김덕배</em> 시인과 함께 알아보는 시간</p>
+                            <a href="#" class="more button-blue">더 알아보기</a>
+                        </div>
+                        <div class="img">
+                            <!-- <img src="images/icon1.png" alt="이미지1">
+                            <img src="images/icon2.png" alt="이미지2">
+                            <img src="images/icon3.png" alt="이미지3"> -->
+                        </div>
+                        <div class="circle" aria-label="hidden">
+                            <span class="circle c1"></span>
+                            <span class="circle c2"></span>
+                            <span class="circle c3"></span>
+                            <span class="circle c4"></span>
+                            <span class="circle c5"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__btn">
+                    <a href="#" class="left"><span class="ir">이전 이미지</span></a>
+                    <a href="#" class="right"><span class="ir">다음 이미지</span></a>
+                </div>
+                <div class="slider__dot">
+                    <a href="#" class="dot active"><span class="ir">1번 이미지</span></a>
+                    <a href="#" class="dot"><span class="ir">2번 이미지</span></a>
+                    <a href="#" class="dot"><span class="ir">3번 이미지</span></a>
+                </div>
+            </div>
+        </section>
+        <!-- //slider__wrap -->
+
+        <section id="portsSection" class="ports__wrap section center">
+            <h3>오늘의 시<em>詩</em></h3>
+            <p>당신을 위한 시詩 한 편</p>
+            <div class="ports__inner container">
+                <div class="port__btn">
+                    <a href="#" class="active">月</a>
+                    <a href="#">火</a>
+                    <a href="#">水</a>
+                    <a href="#">木</a>
+                    <a href="#">金</a>
+                    <a href="#">土</a>
+                    <a href="#">日</a>
+                </div>
+                <div class="port__cont">
+                    <div class="port">
+                        <figure class="port__header">
+                            <img src="images/today01.png" alt="포트폴리오">
+                        </figure>
+                        <div class="port__body">
+                            <span>
+                                <img src="images/peep/peep-4.svg" alt="멤버">
+                            </span>
+                            <div>
+                                <h4>김덕배 <em>시인</em></h4>
+                                <p>나의 밤은 당신의 낮보다 아름답다</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="port">
+                        <figure class="port__header">
+                            <img src="images/today02.png" alt="포트폴리오">
+                        </figure>
+                        <div class="port__body">
+                            <span>
+                                <img src="images/peep/peep-5.svg" alt="멤버">
+                            </span>
+                            <div>
+                                <h4>김덕배 <em>시인</em></h4>
+                                <p>잊혀진 도시의 목소리</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="port">
+                        <figure class="port__header">
+                            <img src="images/today03.png" alt="포트폴리오">
+                        </figure>
+                        <div class="port__body">
+                            <span>
+                                <img src="images/peep/peep-6.svg" alt="멤버">
+                            </span>
+                            <div>
+                                <h4>김덕배 <em>시인</em></h4>
+                                <p>별빛 아래, 그리움이 선물하는 것들</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="port">
+                        <figure class="port__header">
+                            <img src="images/today04.png" alt="포트폴리오">
+                        </figure>
+                        <div class="port__body">
+                            <span>
+                                <img src="images/peep/peep-7.svg" alt="멤버">
+                            </span>
+                            <div>
+                                <h4>김덕배 <em>시인</em></h4>
+                                <p>햇살이 부서진 그 곳에서</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="port">
+                        <figure class="port__header">
+                            <img src="images/today05.png" alt="포트폴리오">
+                        </figure>
+                        <div class="port__body">
+                            <span>
+                                <img src="images/peep/peep-8.svg" alt="멤버">
+                            </span>
+                            <div>
+                                <h4>김덕배 <em>시인</em></h4>
+                                <p>눈물로 쓰여진 희망의 노래</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="port">
+                        <figure class="port__header">
+                            <img src="images/today06.png" alt="포트폴리오">
+                        </figure>
+                        <div class="port__body">
+                            <span>
+                                <img src="images/peep/peep-9.svg" alt="멤버">
+                            </span>
+                            <div>
+                                <h4>김덕배 <em>시인</em></h4>
+                                <p>그대를 향한 미완성의 서정시</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //ports__wrap -->
+
+        <section id="introSection" class="intro__wrap bg-blue section SCoreDream">
+            <h3 class="blind">시요일 소개</h3>
+            <div class="intro__inner container">
+                <div class="intro__title">
+                    <span>we are</span>
+                    <h3>시요일?<br></h3>
+                    <p>시요일은 시요일은 최초·최대의<br> 시詩큐레이션 검색 서비스입니다.</p>
+                </div>
+                <div class="intro__desc">
+                    <div>
+                        <h4 class="icon-book">43,000여편의 시</h4>
+                        <p>7개 출판사가 참여하여 고시조부터 현대대표시·창비시선·동시 등을 모두 담은 앱</p>
+                    </div>
+                    <div>
+                        <h4 class="icon-hand">차별화된 큐레이션</h4>
+                        <p>시인들이 직접 엄선한 시를 배달하고 추천하는 큐레이션 기능</p>
+                    </div>
+                    <div>
+                        <h4 class="icon-search">강력한 검색 기능</h4>
+                        <p>본문·시어·시인·태그(주제어)를 이용한 빠르고 강력한 검색</p>
+                    </div>
+                    <div>
+                        <h4 class="icon-pencil">시作!일기</h4>
+                        <p>당신의 시를 남겨보세요!</p>
+                    </div>
+                </div>
+            </div>=
+        </section>
+        <!-- //intro__wrap -->
+
+        <section id="membersSection" class="members__wrap section center">
+            <h3>오늘의 시인</h3>
+            <p>펜촉이 잉크로 촉촉한 시인들을 소개합니다.</p>
+            
+            <div class="members__inner container">
+                <div class="member">
+                    <figure class="member__header">
+                        <img src="images/peep/peep-1.svg" alt="멤버">
+                    </figure>
+                    <div class="member__body">
+                        <h4>김덕배</h4>
+                        <a href="#" class="btn">작품 보기</a>
+                    </div>
+                </div>
+                <div class="member">
+                    <figure class="member__header">
+                        <img src="images/peep/peep-2.svg" alt="멤버">
+                    </figure>
+                    <div class="member__body">
+                        <h4>김덕배</h4>
+                        <a href="#" class="btn">작품 보기</a>
+                    </div>
+                </div>
+                <div class="member">
+                    <figure class="member__header">
+                        <img src="images/peep/peep-3.svg" alt="멤버">
+                    </figure>
+                    <div class="member__body">
+                        <h4>김덕배</h4>
+                        <a href="#" class="btn">작품 보기</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //members__wrap -->
+
+        <section id="youtubeSection" class="youtube__wrap section">
+            <div class="youtube__inner">
+                <div class="youtube__header container">
+                    <h3>문학 유튜브 추천</h3>
+                    <p>더 다양한 강의가 유튜브를 통해 제공되고 있습니다.<br>구독과 좋아요! 부탁드립니다.</p>
+                    <a href="#" class="button-red">자세히 보기</a>
+                </div>
+                <div class="youtube__body">
+                    <div class="youtube__item">
+                        <div>
+                            <img src="images/youtube01.png" alt="유튜브">
+                        </div>
+                        <div>
+                            <img src="images/youtube02.png" alt="유튜브">
+                        </div>
+                        <div>
+                            <img src="images/youtube03.png" alt="유튜브">
+                        </div>
+                        <div>
+                            <img src="images/youtube04.png" alt="유튜브">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //youtube__wrap -->
+
+        <section id="unsplashSection" class="unsplash__wrap bg-blue section">
+            <div class="unsplash__inner">
+                <div class="unsplash__header container">
+                    <h3>시요일 기획</h3>
+                    <p>문학의<br>모든 고민</p>
+                    <a href="#" class="button-blue">자세히 보기</a>
+                </div>
+                <div class="unsplash__body">
+                    <div class="unsplash__item">
+                        <div>
+                            <img src="images/unsplash01.png" alt="기획">
+                        </div>
+                        <div>
+                            <img src="images/unsplash02.png" alt="기획">
+                        </div>
+                        <div>
+                            <img src="images/unsplash03.png" alt="기획">
+                        </div>
+                        <div>
+                            <img src="images/unsplash04.png" alt="기획">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //unsplash__wrap -->
+
+        <section id="moviesSection" class="movies__wrap section">
+            <div class="movies__inner">
+                <div class="movies__header container">
+                    <h3>주간 시집 추천</h3>
+                    <p>시요일의 시선이 닿은 곳.<br></p>
+                    <a href="#" class="button-red">자세히 보기</a>
+                </div>
+                <div class="movies__body">
+                    <div class="movies__item">
+                        <div>
+                            <img src="images/book01.png" alt="시집">
+                        </div>
+                        <div>
+                            <img src="images/book02.png" alt="시집">
+                        </div>
+                        <div>
+                            <img src="images/book03.png" alt="시집">
+                        </div>
+                        <div>
+                            <img src="images/book04.png" alt="시집">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //movies__wrap -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer" class="footer__wrap section bg-blue" role="contentinfo">
+        <div class="footer__inner container">
+            <div class="footer__left">
+                <h4>Leeyanggoo</h4>
+                <p>안녕하세요!<br>
+                    더 다양한 정보 확인<br>
+                    leeyanggoo@gmail.com</p>
+                <ul class="sns">
+                    <li><a href="#"><span class="ir">페이스북</span></a></li>
+                    <li><a href="#"><span class="ir">인스타그램</span></a></li>
+                    <li><a href="#"><span class="ir">유튜브</span></a></li>
+                    <li><a href="#"><span class="ir">깃</span></a></li>
+                    <li><a href="#"><span class="ir">디스코드</span></a></li>
+                </ul>
+            </div>
+            <div class="footer__right">
+                <div class="footer__menu">
+                    <div>
+                        <h4>사이트</h4>
+                        <ul>
+                            <li><a href="#">웹표준 사이트</a></li>
+                            <li><a href="#">반응형 사이트</a></li>
+                            <li><a href="#">패럴랙스 사이트</a></li>
+                            <li><a href="#">포트폴리오 사이트</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>유형</h4>
+                        <ul>
+                            <li><a href="#">이미지 유형</a></li>
+                            <li><a href="#">카드 유형</a></li>
+                            <li><a href="#">이미지/텍스트 유형</a></li>
+                            <li><a href="#">배너 유형</a></li>
+                            <li><a href="#">텍스트 유형</a></li>
+                            <li><a href="#">푸터 유형</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>스크립트</h4>
+                        <ul>
+                            <li><a href="#">검색 이펙트</a></li>
+                            <li><a href="#">퀴즈 이펙트</a></li>
+                            <li><a href="#">마우스 이펙트</a></li>
+                            <li><a href="#">슬라이드 이펙트</a></li>
+                            <li><a href="#">패럴랙스 이펙트</a></li>
+                            <li><a href="#">게임 이펙트</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>레퍼런스</h4>
+                        <ul>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">FONTS</a></li>
+                            <li><a href="#">BLOG</a></li>
+                            <li><a href="#">REFERENCE</a></li>
+                            <li><a href="#">TURTORIAL</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <p>Copyright 2023. All Rights Reserved. - Designed by Leeyanggoo</p>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    
+    <script type="module" src="main.js"></script>
+</body>
+</html>

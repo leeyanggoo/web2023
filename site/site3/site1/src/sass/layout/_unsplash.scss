@@ -1,0 +1,35 @@
+// unsplash__wrap
+.unsplash__inner {
+    .unsplash__header {
+        h3 {
+            font-size: 50px;
+            margin-bottom: 40px;
+        }
+        p {
+            font-size: 22px;
+            font-weight: 300;
+            margin-bottom: 60px;
+        }
+        a {
+            border-radius: 50px;
+            margin-bottom: 100px;
+        }
+    }
+    .unsplash__body {
+        padding-left: calc((100% - 1280px)/2);
+
+        .unsplash__item{
+            display: flex;
+            gap: 10px;
+
+            > div {
+                width: 25%;
+    
+                img {
+                    width: 100%;
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+}

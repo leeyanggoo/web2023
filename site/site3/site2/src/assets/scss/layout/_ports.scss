@@ -1,0 +1,99 @@
+// ports__wrap
+.ports__wrap{
+    > h3 {
+        em {
+            font-size: 40px;
+            color: var(--color_gray);
+        }
+    }
+}
+.ports__inner {
+    .port__btn {
+        margin-bottom: 50px;
+        > a {
+            padding: 10px 40px;
+            background-color: var(--button_sky);
+            border-radius: 50px;
+            margin: 0 5px;
+            font-size: 20px;
+
+            &.active {
+                background-color: var(--sky_border);
+            }
+
+            &:hover {
+                box-shadow: 0 0 0 2px var(--color_main) inset;
+            }
+        }
+    }
+    .port__cont {
+        @include flex-between;
+        flex-wrap: wrap;
+
+        .port {
+            width: 32%;
+            margin-bottom: 40px;
+
+            .port__header {
+                img {
+                    width: 100%;
+                    border-radius: 10px;
+                    margin-bottom: 20px;
+                    filter: grayscale(100%);
+                    transition: all 0.5s;
+                    &:hover {
+                        filter: grayscale(0%);
+                    }
+                }
+            }
+            &:nth-child(1) span {
+                background-color: #FD615B;
+            }
+            &:nth-child(2) span {
+                background-color: #FEDA68;
+            }
+            &:nth-child(3) span {
+                background-color: #D3CFEA;
+            }
+            &:nth-child(4) span {
+                background-color: #F3D2B3;
+            }
+            &:nth-child(5) span {
+                background-color: #686A64;
+            }
+            &:nth-child(6) span {
+                background-color: #817370;
+            }
+            .port__body {
+                display: flex;
+                span {
+                    display: block;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    overflow: hidden;
+                    img {
+                        transform: translate(-10%, 40%) scale(2.5);
+                    }
+                }
+                > div {
+                    text-align-last: left;
+                    h4 {
+                        font-size: 20px;
+                        font-weight: 700;
+
+                        em {
+                            font-size: 16px;
+                            color: var(--color_gray);
+                        }
+                    }
+                    p {
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}

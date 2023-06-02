@@ -1,0 +1,35 @@
+// movies__wrap
+.movies__inner {
+    .movies__header {
+        h3 {
+            font-size: 50px;
+            margin-bottom: 40px;
+        }
+        p {
+            font-size: 22px;
+            font-weight: 300;
+            margin-bottom: 60px;
+        }
+        a {
+            border-radius: 50px;
+            margin-bottom: 100px;
+        }
+    }
+    .movies__body {
+        padding-left: calc((100% - 1280px)/2);
+
+        .movies__item{
+            display: flex;
+            gap: 20px;
+
+            > div {
+                width: 16%;
+    
+                img {
+                    width: 100%;
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+}
