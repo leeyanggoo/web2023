@@ -1,7 +1,3 @@
-body {background:#f1f4fb url(../img/body_bg.gif)}
-
-
-
 /* Owl Carousel Bootstrap Custom CSS */
 
 /* Header Navigation */
@@ -67,11 +63,12 @@ body {background:#f1f4fb url(../img/body_bg.gif)}
 
 /* Header  */
 #header{
-	/* background-image: url(../img/header_bg.webp);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center; */
-	background: #77B5E6;
+	background: #7F7FD5;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+	/* background: #77B5E6; */
 	padding: 10px 0 10px 0px;
 	margin-top: 50px;
 	position: relative;

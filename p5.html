@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            /* 고정 너비 폰트 사용해야 함 */
+            font-family: 'Courier';
+            font-size: 12pt;
+            line-height: 10pt;
+        }
+
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.min.js"></script>
+    <script>
+        const density = " .:-=+*#%@";
+        let profile;
+        const maxImageWidth = 100;  // Maximum image width
+
+        /** 이미지 로드 */
+        function preload(){
+            profile = loadImage("../assets/img/profile.png");
+        }
+
+        function setup() {
+            // If the image is wider than the maximum width, resize it
+            if (profile.width > maxImageWidth) {
+                const scaleFactor = maxImageWidth / profile.width;
+                profile.resize(maxImageWidth, floor(profile.height * scaleFactor));
+            }
+
+            /** 코드를 그리는 게 아니라 문자열로 반환하기 위해 noCanvas 처리 */
+            noCanvas();
+
+            background(0);
+            // image(profile, 0, 0, width, height);
+
+            let w = width / profile.width;
+            let h = height / profile.height;
+
+            /** 픽셀 실행 */
+            profile.loadPixels();
+
+            /** width가 먼저면 열부터 변환하지만 height가 먼저면 행으로 변환 */
+            for(let j=0; j<profile.height; j++){
+                /** 문자를 각 행의 문자열로 누적하기 위한 변수 */
+                let row = "";
+                for(let i=0; i<profile.width; i++){
+                    const pixelIndex = (i + j * profile.width) * 4;
+                    const r = profile.pixels[pixelIndex + 0];
+                    const g = profile.pixels[pixelIndex + 1];
+                    const b = profile.pixels[pixelIndex + 2];
+                    const a = profile.pixels[pixelIndex + 3];
+                    /** 밝기 평균 구하기 = grayscale
+                    p5.js에 brightness() 있으니 참고해볼 것 */
+                    const avg = (r + g + b) / 3;
+                    const len = density.length;
+                    const charIndex = floor(map(avg, 0, 255, 0, len));
+
+                    /** 공백 처리를 위한 변수 */
+                    const c = a === 0 ? " " : density.charAt(charIndex);
+                    if (c == " ") row += "&nbsp;";
+                    else row += c;
+                }
+                createDiv(row);
+            }
+        }
+    </script>
+</body>
+</html>

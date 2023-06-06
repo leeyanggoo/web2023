@@ -310,7 +310,6 @@
 .image-wrap.active .hover-wrap {
 	opacity: 0.9;
 	filter: alpha(opacity=90);
-	
 }
 
 .image-wrap:hover .hover-wrap, overlay-text-thumb {color: #fff;}
