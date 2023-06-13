@@ -54,9 +54,9 @@
         .parallaxs__item:nth-child(4) .parallaxs__item__img {
             background-image: url(img/parallaxEffect04-min.jpg);
         }
-        .parallaxs__item:nth-child(5) .parallaxs__item__img {
+        /* .parallaxs__item:nth-child(5) .parallaxs__item__img {
             background-image: url(img/parallaxEffect05-min.jpg);
-        }
+        } */
         .parallaxs__item:nth-child(6) .parallaxs__item__img {
             background-image: url(img/parallaxEffect06-min.jpg);
         }
@@ -85,6 +85,53 @@
             text-transform: uppercase;
         }
 
+        /* horizon */
+        #section5 {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #section5 h2 {
+            display: block;
+            width: 40%;
+            word-wrap: break-word;
+            font-size: 5vw;
+        }
+        #section5 .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(img/silder_01.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #section5 .row {
+            width: 60%;
+            height: 100%;
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        #section5 .row .parallaxs__section5__img {
+            width: 100%;
+            height: 100%;
+            background-image: url(img/parallaxEffect05-min.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 1;
+            z-index: 10;
+            filter: blur(10px);
+        }
+
     </style>
 </head>
 <body class="img01 bg01 font06">
@@ -100,7 +147,7 @@
             <li class="active"><a href="gsap05.html">5</a></li>
             <li><a href="gsap06.html">6</a></li>
             <li><a href="gsap07.html">7</a></li>
-            <li><a href="gsap07.html">8</a></li>
+            <li><a href="gsap08.html">8</a></li>
             <li><a href="gsap09.html">9</a></li>
             <li><a href="gsap10.html">10</a></li>
         </ul>
@@ -138,7 +185,17 @@
             <!-- //section4 -->
             <section id="section5" class="parallaxs__item">
                 <span class="parallaxs__item__num">05</span>
-                <div class="parallaxs__item__img"></div>
+                <h2 class="parallax__item__title">horizon</h2>
+                <div class="bg">
+
+                </div>
+                <div class="row">
+                    <div class="parallaxs__section5__img"></div>
+                    <div class="parallaxs__section5__img"></div>
+                    <div class="parallaxs__section5__img"></div>
+                    <div class="parallaxs__section5__img"></div>
+                    <div class="parallaxs__section5__img"></div>
+                </div>
             </section>
             <!-- //section5 -->
             <section id="section6" class="parallaxs__item">
@@ -197,7 +254,7 @@
         const box2 = document.querySelector("#section2 .parallax__item__title");
         const box3 = document.querySelectorAll("#section3 .parallaxs__item__img");
         const box4 = document.querySelectorAll("#section4 .parallaxs__item__img");
-        const box5 = document.querySelector("#section5 .parallaxs__item__img");
+        const box5 = document.querySelectorAll("#section5 .parallaxs__section5__img");
         const box6 = document.querySelector("#section6 .parallaxs__item__img");
         const box7 = document.querySelector("#section7 .parallaxs__item__img");
         const box8 = document.querySelector("#section8 .parallaxs__item__img");
@@ -219,7 +276,7 @@
             scrub: true,
             pin: true,
             anticipatePin: true, // pin 부드럽게
-            markers: true
+            markers: false
         });
 
         // 2
@@ -235,7 +292,7 @@
             scrub: true,
             pin: true,
             anticipatePin: true, // pin 부드럽게
-            markers: true
+            markers: false
         });
 
         // 3
@@ -252,7 +309,7 @@
             scrub: true,
             pin: true,
             anticipatePin: true, // pin 부드럽게
-            markers: true
+            markers: false
         });
 
         // 4
@@ -271,11 +328,43 @@
             scrub: true,
             pin: true,
             anticipatePin: true, // pin 부드럽게
-            markers: true
+            markers: false
         });
 
-        
+        // 5
+        let sections5 = gsap.utils.toArray(box5);
+        let totalWidth = sections5.reduce((total, element) => total + element.offsetWidth, 0);
 
+        gsap.to(sections5, {
+            xPercent: -100 * (sections5.length - 1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: "#section5",
+                pin: true,
+                scrub: true,
+                anticipatePin: true,
+                // snap: 1 / (sections5.length - 1),
+                start: "top top",
+                end: "+=" + totalWidth,
+                markers: true
+            }
+        });
+
+        gsap.to(".bg", {
+            xPercent: -50,
+            ease: "none",
+            scrollTrigger: {
+                trigger: "#section5",
+                // pin: true,
+                scrub: true,
+                anticipatePin: true,
+                // snap: 1 / (sections5.length - 1),
+                start: "top top",
+                end: "+=" + totalWidth,
+                markers: true
+            }
+        })
+    
     </script>
 </body>
 </html>

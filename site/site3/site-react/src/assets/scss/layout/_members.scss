@@ -1,0 +1,32 @@
+// members__wrap
+.members__inner {
+    @include flex-between;
+
+    .member {
+        width: 32%;
+        border: 2px solid var(--color_body);
+
+        .member__header {
+            img {
+                width: 100%;
+            }
+        }
+        .member__body {
+            margin-top: -90px;
+            position: relative;
+            padding: 15px 10px;
+            background-color: #000;
+            color: #fff;
+
+            > h4 {
+                font-size: 22px;
+            }
+            
+            > a {
+                color: #fff;
+                text-decoration: underline;
+                text-underline-position: under;
+            }
+        }
+    }
+}

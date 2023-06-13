@@ -1,0 +1,69 @@
+#donation {}
+#donation h3 {
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+#donation .donation__card__wrap {
+    margin-top: 20px;
+}
+#donation .donation__card {
+    border: 1px solid rgba(0,0,0,.11);
+}
+#donation .donation__card:hover {
+    border: 1px solid rgba(0,0,0,.5);
+}
+.donation__card .donation__img__wrap {}
+.donation__card .donation__img__wrap img {}
+.donation__card .donation__cont {
+    padding: 20px;
+}
+.donation__card .donation__cont .donation__cont__title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    display: -webkit-box;
+    word-wrap: break-word;
+    word-break: break-all;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 17px;
+    color: #333;
+}
+.donation__card .donation__cont .donation__cont__organization{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 15px;
+    margin-top: 10px;
+    color: #828282;
+    font-weight: 700;
+}
+.donation__card .donation__cont .donation__cont__bar{
+    height: 5px;
+    margin: 10px 0;
+    background-color: #e8e8e8;
+}
+.donation__card .donation__cont .donation__cont__bar span {
+    display: inline-block;
+    height: 100%;
+    background-color: #10c838;
+    vertical-align: top;
+    width: 70%;
+}
+.donation__card .donation__cont .donation__cont__desc {
+    display: flex;
+    justify-content: space-between;
+}
+.donation__card .donation__cont .donation__cont__desc span {
+    font-size: 17px;
+    color: #00ab33;
+    font-weight: 900;
+}
+.donation__card .donation__cont .donation__cont__desc em {
+    font-size: 17px;
+    color: #333;
+    font-weight: 700;
+}
+
+

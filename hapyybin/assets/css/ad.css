@@ -1,0 +1,58 @@
+#ad {}
+#ad h3 {
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+#ad .ad__card__wrap {
+    margin-top: 20px;
+}
+
+#ad .ad__card {
+    border: 1px solid rgba(0,0,0,.11);
+}
+#ad .ad__card:hover {
+    border: 1px solid rgba(0,0,0,.5);
+}
+#ad .ad__card .ad__img__wrap img {
+    width: 364px;
+    aspect-ratio: auto 364 / 242;
+    height: 242px;
+    object-fit: cover;
+}
+.ad__card .ad__cont {
+    padding: 20px 100px 20px 20px;
+    position: relative;
+}
+.ad__card .ad__cont .ad__cont__funder{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 15px;
+    color: #828282;
+    font-weight: 700;
+}
+.ad__card .ad__cont .ad__cont__title {
+    margin-top: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    display: -webkit-box;
+    word-wrap: break-word;
+    word-break: break-all;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 17px;
+    color: #333;
+}
+.ad__card .ad__cont .ad__brand {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+

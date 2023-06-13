@@ -11,49 +11,45 @@
             margin: 0 auto;
             padding: 0;
             text-align: center;
-
-
-
-
-            background-color: #000;
             color: #fff;
             background: black;
-            display: inline-block;
-            white-space: pre;
             letter-spacing: 0;
             line-height: 1;
             font-family: 'Consolas', monospace;
-            font-size: 12px;
-            border-width: 1px;
-            border-style: solid;
-            border-color: lightgray;
+            font-size: 10px;
         }
 
-        canvas {
-            display: block;
+        #parent {
+            width: 100vw;
+            height: 100vh;
         }
     </style>
 </head>
 <body>
-    
+    <div id="parent">
+        <div id="child"></div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
     <script>
-        const density = " .:-=+*#%@";
-        // ⣿ ⠁⠂⠃⠄⠅⠆⠇⠈⠉⠊⠋⠌⠍⠎⠏⠐⠑⠒⠓⠔⠕⠖⠗⠘⠙⠚⠛⠜⠝⠞⠟⠠⠡⠢⠣⠤⠥⠦⠧⠨⠩⠪⠫⠬⠭⠮⠯⠰⠱⠲⠳⠴⠵⠶⠷⠸⠹⠺⠻⠼⠽⠾⠿⡀⡁⡂⡃⡄⡅⡆⡇⡈⡉⡊⡋⡌⡍⡎⡏⡐⡑⡒⡓⡔⡕⡖⡗⡘⡙⡚⡛⡜⡝⡞⡟⡠⡡⡢⡣⡤⡥⡦⡧⡨⡩⡪⡫⡬⡭⡮⡯⡰⡱⡲⡳⡴⡵⡶⡷⡸⡹⡺⡻⡼⡽⡾⡿⢀⢁⢂⢃⢄⢅⢆⢇⢈⢉⢊⢋⢌⢍⢎⢏⢐⢑⢒⢓⢔⢕⢖⢗⢘⢙⢚⢛⢜⢝⢞⢟⢠⢡⢢⢣⢤⢥⢦⢧⢨⢩⢪⢫⢬⢭⢮⢯⢰⢱⢲⢳⢴⢵⢶⢷⢸⢹⢺⢻⢼⢽⢾⢿⣀⣁⣂⣃⣄⣅⣆⣇⣈⣉⣊⣋⣌⣍⣎⣏⣐⣑⣒⣓⣔⣕⣖⣗⣘⣙⣚⣛⣜⣝⣞⣟⣠⣡⣢⣣⣤⣥⣦⣧⣨⣩⣪⣫⣬⣭⣮⣯⣰⣱⣲⣳⣴⣵⣶⣷⣸⣹⣺⣻⣼⣽⣾
+        let fontSize = parseInt(window.getComputedStyle(document.querySelector("#child")).getPropertyValue('font-size'));
+
+        const density = " ·:-=+*#%@";
+        // const density = "⣿ ⠁⠂⠃⠄⠅⠆⠇⠈⠉⠊⠋⠌⠍⠎⠏⠐⠑⠒⠓⠔⠕⠖⠗⠘⠙⠚⠛⠜⠝⠞⠟⠠⠡⠢⠣⠤⠥⠦⠧⠨⠩⠪⠫⠬⠭⠮⠯⠰⠱⠲⠳⠴⠵⠶⠷⠸⠹⠺⠻⠼⠽⠾⠿⡀⡁⡂⡃⡄⡅⡆⡇⡈⡉⡊⡋⡌⡍⡎⡏⡐⡑⡒⡓⡔⡕⡖⡗⡘⡙⡚⡛⡜⡝⡞⡟⡠⡡⡢⡣⡤⡥⡦⡧⡨⡩⡪⡫⡬⡭⡮⡯⡰⡱⡲⡳⡴⡵⡶⡷⡸⡹⡺⡻⡼⡽⡾⡿⢀⢁⢂⢃⢄⢅⢆⢇⢈⢉⢊⢋⢌⢍⢎⢏⢐⢑⢒⢓⢔⢕⢖⢗⢘⢙⢚⢛⢜⢝⢞⢟⢠⢡⢢⢣⢤⢥⢦⢧⢨⢩⢪⢫⢬⢭⢮⢯⢰⢱⢲⢳⢴⢵⢶⢷⢸⢹⢺⢻⢼⢽⢾⢿⣀⣁⣂⣃⣄⣅⣆⣇⣈⣉⣊⣋⣌⣍⣎⣏⣐⣑⣒⣓⣔⣕⣖⣗⣘⣙⣚⣛⣜⣝⣞⣟⣠⣡⣢⣣⣤⣥⣦⣧⣨⣩⣪⣫⣬⣭⣮⣯⣰⣱⣲⣳⣴⣵⣶⣷⣸⣹⣺⣻⣼⣽⣾"
         let profile;
-        const maxImageWidth = 200;  // Maximum image width
+        const heightPixelNum = Math.floor(document.querySelector("#parent").offsetHeight / fontSize);
+        const delay = ms => new Promise(res => setTimeout(res, ms));
 
         /** 이미지 로드 */
         function preload(){
             profile = loadImage("assets/img/profile.png");
         }
 
-        function setup() {
-            // If the image is wider than the maximum width, resize it
-            if (profile.width > maxImageWidth) {
-                const scaleFactor = maxImageWidth / profile.width;
-                profile.resize(maxImageWidth, floor(profile.height * scaleFactor));
-            }
+        async function setup() {
+            let child = select("#child");
+            const originalWidth = profile.width;
+            const originalHeight = profile.height;
+
+            profile.resize(floor(originalWidth*1.75 / originalHeight * heightPixelNum), heightPixelNum);
 
             /** 코드를 그리는 게 아니라 문자열로 반환하기 위해 noCanvas 처리 */
             noCanvas();
@@ -85,10 +81,11 @@
 
                     /** 공백 처리를 위한 변수 */
                     const c = a === 0 ? " " : density.charAt(charIndex);
-                    if (c == " ") row += "&nbsp;";
-                    else row += c;
+                    if (c == " ") row += "<span>&nbsp;</span>";
+                    else row += "<span>" + c + "</span>";
                 }
-                createDiv(row);
+                child.child(createDiv(row));
+                await delay(100);
             }
         }
     </script>

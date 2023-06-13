@@ -1,0 +1,117 @@
+// root
+:root {
+    --color_body: #101010;
+    --bg_section: #F6F8FD;
+    --button_blue: #4857EC;
+    --button_red: #FF3344;
+    --button_green: #00C183;
+
+    --button_sky: #D9E4FF;
+    --sky_border: #A2BCFF;
+    --color_gray: #2c3a4b80;
+    --color_main: #66cdcc;
+}
+// 네이버 설정
+body, input, textarea, select, button, table {
+    color: #101010;
+    color: var(--color_body);
+    font-size: 16px;
+    line-height: 1.4;
+    font-family: "GmarketSans","Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.4px;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    // 가로 확대 금지
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    // 폰트를 부드럽게
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+// 공백 초기화
+body,
+div,
+dl,
+dd,
+dt,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+p,
+table,
+th,
+td,
+input,
+figure,
+figcaption,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+// a li 스타일 초기화
+a {
+    text-decoration: none;
+    color: #333;
+}
+li,
+ol,
+ul {
+    list-style: none;
+}
+
+// 폰트 초기화
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+em,
+address {
+    font-style: normal;
+}
+
+// 이미지 초기화
+img,
+svg,
+video {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+img,
+fieldset,
+button {
+    border: 0;
+}

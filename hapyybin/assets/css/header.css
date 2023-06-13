@@ -1,0 +1,42 @@
+#header {
+    width: 100%;
+    height: 70px;
+    text-align: center;
+}
+.header__wrap {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header .header__logo {
+    width: 20%;
+    color: #1DBF49;
+    font-size: 20px;
+    text-align-last: left;
+}
+#header .header__logo span {
+    font-size: 30px;
+}
+#header nav {
+    width: 60%;
+}
+#header nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 20px;
+}
+#header nav ul li {
+        
+}
+#header .header__btn {
+    width: 20%;
+    text-align: right;
+}
+
+/* .saerch {
+    display: block;
+    background-image: url(../img/saerch.svg);
+} */

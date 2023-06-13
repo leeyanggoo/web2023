@@ -1,0 +1,203 @@
+/* 여백 초기화 */
+body,
+div,
+dl,
+dd,
+dt,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+p,
+table,
+th,
+td,
+input,
+figure,
+figcaption,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+/* box-sizing 초기화 */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* 폰트 초기화 */
+body,
+button,
+input,
+select,
+table,
+textarea {
+  font-family: var(--main__font), "AppleSDGothicNeo-Regular", "Malgun Gothic",
+    "맑은 고딕", "dotum", "돋움";
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5;
+  /* word-break: keep-all; */
+}
+body.windows button,
+body.windows input,
+body.windows select,
+body.windows table,
+body.windows textarea {
+  font-family: var(--main__win);
+}
+
+/* 링크 초기화 */
+a {
+  text-decoration: none;
+  color: var(--color__black);
+}
+
+/* 목록 초기화 */
+li,
+ol,
+ul {
+  list-style: none;
+}
+
+/* 제목 초기화 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: var(--font__size);
+}
+
+/* 폰트 스타일 */
+em,
+address {
+  font-style: normal;
+}
+
+/* 이미지 초기화 */
+img {
+  width: 100%;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* 보더 초기화 */
+img,
+fieldset,
+button {
+  border: 0;
+}
+
+/* 테이블 초기화 */
+table {
+  width: 100%;
+  /* 테이블 간격 없애기 */
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+/* 클리어픽스 */
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: block;
+  line-height: 0;
+}
+.clearfix::after {
+  clear: both;
+}
+
+/* 블라인드 효과 */
+.blind {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+/* ir 효과 */
+.ir {
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* line */
+.line1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  -webkit-box-pack: justify;
+}
+.line2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  -webkit-box-pack: justify;
+}
+.line3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  -webkit-box-pack: justify;
+}
+.line4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  -webkit-box-pack: justify;
+}
+
+/*  */
+.wrap {
+  min-width: 1140px;
+}
+.container {
+    width: 1140px;
+    margin: 0 auto;
+    padding: 0;
+}
+.m55 {
+  margin: 55px auto;
+}
+.col4,
+.col3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.col4 > div {
+  width: 24%;
+}
+.col3 > div {
+  width: 32%;
+}

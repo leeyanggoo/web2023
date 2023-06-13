@@ -32,14 +32,22 @@
             z-index: 1000;
         }
         .parallaxs__item__img {
-            width: 200px;
-            height: 200px;
+            width: 100%;
+            height: 100vh;
             background-size: cover;
-            border-radius: 20px;
-            transition: border-radius 0.3s;
+            position: relative;
+            z-index: 10;
         }
-        .parallaxs__item__img.active {
-            border-radius: 50%;
+        .parallaxs__item__img::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1;
+
         }
         .parallaxs__item:nth-child(1) .parallaxs__item__img {
             background-image: url(img/parallaxEffect01-min.jpg);
@@ -68,15 +76,15 @@
         .parallaxs__item:nth-child(9) .parallaxs__item__img {
             background-image: url(img/parallaxEffect09-min.jpg);
         }
-        #section1 {background-color: #111; height: 100vh;}
-        #section2 {background-color: #222; height: 50vh;}
-        #section3 {background-color: #333; height: 50vh;}
-        #section4 {background-color: #444; height: 50vh;}
-        #section5 {background-color: #555; height: 60vh;}
-        #section6 {background-color: #666; height: 70vh;}
-        #section7 {background-color: #777; height: 80vh;}
-        #section8 {background-color: #888; height: 90vh;}
-        #section9 {background-color: #999; height: 100vh;}
+        #section1 {background-color: #111;}
+        #section2 {background-color: #222;}
+        #section3 {background-color: #333;}
+        #section4 {background-color: #444;}
+        #section5 {background-color: #555;}
+        #section6 {background-color: #666;}
+        #section7 {background-color: #777;}
+        #section8 {background-color: #888;}
+        #section9 {background-color: #999;}
 
     </style>
 </head>
@@ -93,7 +101,7 @@
             <li><a href="gsap05.html">5</a></li>
             <li><a href="gsap06.html">6</a></li>
             <li><a href="gsap07.html">7</a></li>
-            <li><a href="gsap07.html">8</a></li>
+            <li><a href="gsap08.html">8</a></li>
             <li><a href="gsap09.html">9</a></li>
             <li><a href="gsap10.html">10</a></li>
         </ul>

@@ -1,0 +1,17 @@
+#keyword .keyword__list {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#keyword .keyword__list li {
+    margin: 0 10px;
+}
+#keyword .keyword__list li a {
+    display: block;
+    border: 1px solid #65db7f;
+    border-radius: 50px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #00ab33;
+    padding: 13px 40px;
+}
