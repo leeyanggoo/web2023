@@ -1,0 +1,49 @@
+#campaign h3 {
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+#campaign .campaign__card__wrap {
+    margin-top: 20px;
+}
+#campaign .campaign__card {
+    border: 1px solid rgba(0,0,0,.11);
+    margin-bottom: 20px;
+}
+#campaign .campaign__card:hover {
+    border: 1px solid rgba(0,0,0,.5);
+}
+.campaign__card a {
+    display: flex;
+    align-items: center;
+}
+.campaign__card .campaign__img__wrap {
+    width: 55%;
+}
+.campaign__card .campaign__cont {
+    width: 45%;
+    padding: 20px;
+}
+.campaign__card .campaign__cont p {
+    font-size: 15px;
+    color: #9354fb;
+    margin-bottom: 10px;
+}
+.campaign__card .campaign__cont strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    word-wrap: break-word;
+    word-break: break-all;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.campaign__card .campaign__cont span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #828282;
+    font-size: 14px;
+}

@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/style.css" />
 
     <!-- 폰트어썸 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <div class="wrap NanumSquare">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  </head>
+  <body>
+    <div class="wrap">
         <header id="header">
-            <div class="header__wrap container">
-                <h1 class="header__logo">
-                    <a href="https://happybean.naver.com/">
-                        <span>해피빈</span>
-                    </a>
-                </h1>
-                <nav>
-                    <ul>
-                        <li><a href="#">기부</a></li>
-                        <li><a href="#">펀딩</a></li>
-                        <li><a href="#">공감가게</a></li>
-                        <li><a href="#">가볼까</a></li>
-                        <li><a href="#">굿액션</a></li>
-                    </ul>
-                </nav>
-                <div class="header__btn">
-                    <a href="#">로그인</a>
-                    <span>|</span>
-                    <a href="#" class="saerch"><span class="blind">검색</span><i class="fa-solid fa-magnifying-glass"></i></a>
-                </div>
+        <div class="header__wrap container">
+            <h1 class="blind">해피빈</h1>
+            <div class="header__title">
+                <a href="https://happybean.naver.com/" class="happybean_logo">
+                    <img src="assets/img/happybean_logo.svg" alt="happybean">
+                </a>
             </div>
+            <nav>
+                <ul>
+                    <li><a href="#">기부</a></li>
+                    <li><a href="#">펀딩</a></li>
+                    <li><a href="#">공감가게</a></li>
+                    <li><a href="#">가볼까</a></li>
+                    <li><a href="#">굿액션</a></li>
+                </ul>
+            </nav>
+            <div class="header__btn">
+                <a href="#">로그인</a>
+                <span>|</span>
+                <a href="#" class="saerch"
+                    ><span class="blind">검색</span
+                    ><i class="fa-solid fa-magnifying-glass"></i
+                ></a>
+            </div>
+        </div>
         </header>
         <main id="main">
-            <h2 class="blind">본문</h2>
+        <h2 class="blind">본문</h2>
             <section id="banner">
                 <h2 class="blind">배너 리스트</h2>
                 <div class="banner__wrap">
@@ -46,184 +50,419 @@
                             <div class="slider s3"><a href="#"></a></div>
                         </div>
                     </div>
+                    <div class="prev"><span class="ir">이전 슬라이드</span></div>
+                    <div class="next"><span class="ir">다음 슬라이드</span></div>
+                    <div class="progress__wrap">
+                        <span class="current"></span>
+                        <div class="progress__bar">
+                            <div class="progress"></div>
+                        </div>
+                        <span class="total"></span>
+                        <div class="stop"><span class="ir">슬라이드 정지</span></div>
+                    </div>
                 </div>
             </section>
-            <section id="keyword" class="m55">
+            <section id="keyword" class="m70">
                 <ul class="keyword__list container">
-                    <li><a href="#">#호국보훈의 달</a></li>
-                    <li><a href="#">#6월의 해피빈</a></li>
-                    <li><a href="#">#세계 난민의 날</a></li>
-                    <li><a href="#">#여름맞이 먹거리</a></li>
-                    <li><a href="#">#기업이랑 기부</a></li>
+                <li><a href="#">#호국보훈의 달</a></li>
+                <li><a href="#">#6월의 해피빈</a></li>
+                <li><a href="#">#세계 난민의 날</a></li>
+                <li><a href="#">#여름맞이 먹거리</a></li>
+                <li><a href="#">#기업이랑 기부</a></li>
                 </ul>
             </section>
-            <section id="donation" class="m55 container">
+            <section id="donation" class="m70 container">
                 <h3><a href="#">100% 전달하는 기부</a></h3>
                 <div class="donation__card__wrap col4">
-                    <div class="donation__card">
-                        <a href="#">
-                            <div class="donation__img__wrap">
-                                <img src="assets/img/donation01.jpg" alt="꿈 많은 예준아, 엄마 아빠가 꼭 걷게 해줄게">
-                            </div>
-                            <div class="donation__cont">
-                                <strong class="donation__cont__title">꿈 많은 예준아, 엄마 아빠가 꼭 걷게 해줄게</strong>
-                                <p class="donation__cont__organization">대한적십자사</p>
-                                <div class="donation__cont__bar">
-                                    <span class="donation__cont__bar__progress"></span>
-                                </div>
-                                <div class="donation__cont__desc">
-                                    <span class="donation__cont__percent">70%</span>
-                                    <em class="donation__cont__money">15,291,400원</em>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="donation__card">
-                        <a href="#">
+                <div class="donation__card">
+                    <a href="#">
                         <div class="donation__img__wrap">
-                            <img src="assets/img/donation02.jpg" alt="정전 70주년, 나는 아직도 가난과 전쟁 중입니다">
+                        <img
+                            src="assets/img/donation01.jpg"
+                            alt="꿈 많은 예준아, 엄마 아빠가 꼭 걷게 해줄게"
+                        />
                         </div>
                         <div class="donation__cont">
-                            <strong class="donation__cont__title">정전 70주년, 나는 아직도 가난과 전쟁 중입니다</strong>
-                            <p class="donation__cont__organization">굿피플</p>
-                            <div class="donation__cont__bar"></div>
-                            <div class="donation__cont__desc">
-                                <span class="donation__cont__percent">15%</span>
-                                <em class="donation__cont__money">3,187,500원</em>
-                            </div>
+                        <strong class="donation__cont__title"
+                            >꿈 많은 예준아, 엄마 아빠가 꼭 걷게 해줄게</strong
+                        >
+                        <p class="donation__cont__organization">대한적십자사</p>
+                        <div class="donation__cont__bar">
+                            <span class="donation__cont__bar__progress"></span>
                         </div>
-                        </a>
+                        <div class="donation__cont__desc">
+                            <span class="donation__cont__percent">70%</span>
+                            <em class="donation__cont__money">15,291,400원</em>
+                        </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="donation__card">
+                    <a href="#">
+                    <div class="donation__img__wrap">
+                        <img
+                        src="assets/img/donation02.jpg"
+                        alt="정전 70주년, 나는 아직도 가난과 전쟁 중입니다"
+                        />
                     </div>
-                    <div class="donation__card">
-                        <a href="#">
-                        <div class="donation__img__wrap">
-                            <img src="assets/img/donation03.png" alt="똑똑, 이웃들에게 여름 김치를 들고 안부를 전합니다">
+                    <div class="donation__cont">
+                        <strong class="donation__cont__title"
+                        >정전 70주년, 나는 아직도 가난과 전쟁 중입니다</strong
+                        >
+                        <p class="donation__cont__organization">굿피플</p>
+                        <div class="donation__cont__bar"></div>
+                        <div class="donation__cont__desc">
+                        <span class="donation__cont__percent">15%</span>
+                        <em class="donation__cont__money">3,187,500원</em>
                         </div>
-                        <div class="donation__cont">
-                            <strong class="donation__cont__title">똑똑, 이웃들에게 여름 김치를 들고 안부를 전합니다</strong>
-                            <p class="donation__cont__organization">반석종합사회복지관</p>
-                            <div class="donation__cont__bar"></div>
-                            <div class="donation__cont__desc">
-                                <span class="donation__cont__percent">30%</span>
-                                <em class="donation__cont__money">2,454,200원</em>
-                            </div>
-                        </div>
-                        </a>
                     </div>
-                    <div class="donation__card">
-                        <a href="#">
-                        <div class="donation__img__wrap">
-                            <img src="assets/img/donation04.jpg" alt="최악의 열차 참사, 인도는 떨고 있습니다">
-                        </div>
-                        <div class="donation__cont">
-                            <strong class="donation__cont__title">최악의 열차 참사, 인도는 떨고 있습니다</strong>
-                            <p class="donation__cont__organization">사단법인 따뜻한하루</p>
-                            <div class="donation__cont__bar"></div>
-                            <div class="donation__cont__desc">
-                                <span class="donation__cont__percent">2%</span>
-                                <em class="donation__cont__money">225,500원</em>
-                            </div>
-                        </div>
-                        </a>
+                    </a>
+                </div>
+                <div class="donation__card">
+                    <a href="#">
+                    <div class="donation__img__wrap">
+                        <img
+                        src="assets/img/donation03.png"
+                        alt="똑똑, 이웃들에게 여름 김치를 들고 안부를 전합니다"
+                        />
                     </div>
+                    <div class="donation__cont">
+                        <strong class="donation__cont__title"
+                        >똑똑, 이웃들에게 여름 김치를 들고 안부를 전합니다</strong
+                        >
+                        <p class="donation__cont__organization">반석종합사회복지관</p>
+                        <div class="donation__cont__bar"></div>
+                        <div class="donation__cont__desc">
+                        <span class="donation__cont__percent">30%</span>
+                        <em class="donation__cont__money">2,454,200원</em>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                <div class="donation__card">
+                    <a href="#">
+                    <div class="donation__img__wrap">
+                        <img
+                        src="assets/img/donation04.jpg"
+                        alt="최악의 열차 참사, 인도는 떨고 있습니다"
+                        />
+                    </div>
+                    <div class="donation__cont">
+                        <strong class="donation__cont__title"
+                        >최악의 열차 참사, 인도는 떨고 있습니다</strong
+                        >
+                        <p class="donation__cont__organization">
+                        사단법인 따뜻한하루
+                        </p>
+                        <div class="donation__cont__bar"></div>
+                        <div class="donation__cont__desc">
+                        <span class="donation__cont__percent">2%</span>
+                        <em class="donation__cont__money">225,500원</em>
+                        </div>
+                    </div>
+                    </a>
+                </div>
                 </div>
             </section>
-            <section id="funding" class="m55 container">
+            <section id="funding" class="m70 container">
                 <h3><a href="#">소셜벤처를 만나는 펀딩</a></h3>
                 <div class="funding__card__wrap col3">
-                    <div class="funding__card">
-                        <a href="#">
-                            <div class="funding__img__wrap">
-                                <img src="assets/img/funding01.png" alt="5분 만에 홈스토랑 완성, 미트로프&스프">
-                            </div>
-                            <div class="funding__cont">
-                                <p class="funding__cont__funder">하이밀</p>
-                                <strong class="funding__cont__title">5분 만에 홈스토랑 완성, 미트로프&스프</strong>
-                                <span class="funding__cont__percent">
-                                    <span class="blind">달성률</span>
-                                    332%
-                                </span>
-                            </div>
-                        </a>
+                <div class="funding__card">
+                    <a href="#">
+                    <div class="funding__img__wrap">
+                        <img
+                        src="assets/img/funding01.png"
+                        alt="5분 만에 홈스토랑 완성, 미트로프&스프"
+                        />
                     </div>
-                    <div class="funding__card">
-                        <a href="#">
-                            <div class="funding__img__wrap">
-                                <img src="assets/img/funding02.png" alt="다육식물 세트로 전하는 작지만 큰 행복">
-                            </div>
-                            <div class="funding__cont">
-                                <p class="funding__cont__funder">블러썸농원</p>
-                                <strong class="funding__cont__title">다육식물 세트로 전하는 작지만 큰 행복</strong>
-                                <span class="funding__cont__percent">
-                                    <span class="blind">달성률</span>
-                                    120%
-                                </span>
-                            </div>
-                        </a>
+                    <div class="funding__cont">
+                        <p class="funding__cont__funder">하이밀</p>
+                        <strong class="funding__cont__title"
+                        >5분 만에 홈스토랑 완성, 미트로프&스프</strong
+                        >
+                        <span class="funding__cont__percent">
+                        <span class="blind">달성률</span>
+                        332%
+                        </span>
                     </div>
-                    <div class="funding__card">
-                        <a href="#">
-                            <div class="funding__img__wrap">
-                                <img src="assets/img/funding03.png" alt="삶아 빤 듯한 뽀송함, 리네드로 누려보세요">
+                    </a>
+                </div>
+                <div class="funding__card">
+                    <a href="#">
+                    <div class="funding__img__wrap">
+                        <img
+                        src="assets/img/funding02.png"
+                        alt="다육식물 세트로 전하는 작지만 큰 행복"
+                        />
+                    </div>
+                    <div class="funding__cont">
+                        <p class="funding__cont__funder">블러썸농원</p>
+                        <strong class="funding__cont__title"
+                        >다육식물 세트로 전하는 작지만 큰 행복</strong
+                        >
+                        <span class="funding__cont__percent">
+                        <span class="blind">달성률</span>
+                        120%
+                        </span>
+                    </div>
+                    </a>
+                </div>
+                <div class="funding__card">
+                    <a href="#">
+                    <div class="funding__img__wrap">
+                        <img
+                        src="assets/img/funding03.png"
+                        alt="삶아 빤 듯한 뽀송함, 리네드로 누려보세요"
+                        />
+                    </div>
+                    <div class="funding__cont">
+                        <p class="funding__cont__funder">이젠바이오</p>
+                        <strong class="funding__cont__title"
+                        >삶아 빤 듯한 뽀송함, 리네드로 누려보세요</strong
+                        >
+                        <span class="funding__cont__percent">
+                        <span class="blind">달성률</span>
+                        100%
+                        </span>
+                    </div>
+                    </a>
+                </div>
+                </div>
+            </section>
+            <section id="ad" class="m70 container">
+                <h3><a href="#">소상공인을 돕는 공감가게</a></h3>
+                <div class="ad__card__wrap col3">
+                <div class="ad__card">
+                    <a href="#">
+                    <div class="ad__img__wrap">
+                        <img
+                        src="assets/img/ad01.png"
+                        alt="좋은 일상을 만드는 사소한 기술"
+                        />
+                    </div>
+                    <div class="ad__cont">
+                        <p class="ad__cont__funder">일상기술연구소</p>
+                        <strong class="ad__cont__title"
+                        >좋은 일상을 만드는 사소한 기술</strong
+                        >
+                        <img
+                        src="assets/img/ad01_1.png"
+                        alt="목넓은 노브라 탄탄한 부들부들 안에입는 팔뚝커버 자켓안에 순면 비침없는 힙커버 반팔티"
+                        class="ad__brand"
+                        />
+                    </div>
+                    </a>
+                </div>
+                <div class="ad__card">
+                    <a href="#">
+                    <div class="ad__img__wrap">
+                        <img
+                        src="assets/img/ad02.png"
+                        alt="집에서 간편하게 맛보는 해물탕"
+                        />
+                    </div>
+                    <div class="ad__cont">
+                        <p class="ad__cont__funder">갓해물</p>
+                        <strong class="ad__cont__title"
+                        >집에서 간편하게 맛보는 해물탕</strong
+                        >
+                        <img
+                        src="assets/img/ad02_1.jpg"
+                        alt="꼬치 캠핑 해물 어묵탕 오뎅탕 2인"
+                        class="ad__brand"
+                        />
+                    </div>
+                    </a>
+                </div>
+                <div class="ad__card">
+                    <a href="#">
+                    <div class="ad__img__wrap">
+                        <img
+                        src="assets/img/ad03.png"
+                        alt="건강한 피부를 위한 클린뷰티"
+                        />
+                    </div>
+                    <div class="ad__cont">
+                        <p class="ad__cont__funder">그린아뜰리에</p>
+                        <strong class="ad__cont__title"
+                        >건강한 피부를 위한 클린뷰티</strong
+                        >
+                        <img
+                        src="assets/img/ad03_1.png"
+                        alt="그린아뜰리에 고농축 천연 중성 세제1+섬유유연제1 세트"
+                        class="ad__brand"
+                        />
+                    </div>
+                    </a>
+                </div>
+                </div>
+            </section>
+            <section id="statistics">
+                <div class="statistics__wrap container">
+                    <div class="statistics__title">
+                        <h3>오늘의 참여현황</h3>
+                        <span>여러분의 응원이 이만큼 모였어요</span>
+                    </div>
+                    <div class="statistics__list">
+                        <div class="join__donation">
+                            <div>
+                                <span>기부 참여</span>
+                                <strong>7,142<em>명</em></strong>
                             </div>
-                            <div class="funding__cont">
-                                <p class="funding__cont__funder">이젠바이오</p>
-                                <strong class="funding__cont__title">삶아 빤 듯한 뽀송함, 리네드로 누려보세요</strong>
-                                <span class="funding__cont__percent">
-                                    <span class="blind">달성률</span>
-                                    100%
-                                </span>
+                            <div>
+                                <span>기부 금액</span>
+                                <strong>30,974,000<em>원</em></strong>
                             </div>
-                        </a>
+                        </div>
+                        <div class="join__funding">
+                            <div>
+                                <span>펀딩 참여</span>
+                                <strong>246<em>명</em></strong>
+                            </div>
+                            <div>
+                                <span>참여 금액</span>
+                                <strong>9,358,100<em>원</em></strong>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section id="ad" class="m55 container">
-                <h3><a href="#">소상공인을 돕는 공감가게</a></h3> 
-                <div class="ad__card__wrap col3">
-                    <div class="ad__card">
+            <section id="campaign" class="m70 container">
+                <h3><a href="#">파트너와 함께하는 캠페인</a></h3>
+                <div class="campaign__card__wrap col2">
+                    <div class="campaign__card">
                         <a href="#">
-                            <div class="ad__img__wrap">
-                                <img src="assets/img/ad01.png" alt="좋은 일상을 만드는 사소한 기술">
+                            <div class="campaign__img__wrap">
+                                <img src="assets/img/campaign01.jpg" alt="바다를 사랑하는 워터러버가 되어주세요!"/>
                             </div>
-                            <div class="ad__cont">
-                                <p class="ad__cont__funder">일상기술연구소</p>
-                                <strong class="ad__cont__title">좋은 일상을 만드는 사소한 기술</strong>
-                                <img src="assets/img/ad01_1.png" alt="목넓은 노브라 탄탄한 부들부들 안에입는 팔뚝커버 자켓안에 순면 비침없는 힙커버 반팔티" class="ad__brand">
+                            <div class="campaign__cont">
+                                <p class="campaign__cont__organization">비오템</p>
+                                <strong class="campaign__cont__title">바다를 사랑하는 워터러버가 되어주세요!</strong>
+                                <span>함께 참여하기 👉</span>
                             </div>
                         </a>
                     </div>
-                    <div class="ad__card">
+                    <div class="campaign__card">
                         <a href="#">
-                            <div class="ad__img__wrap">
-                                <img src="assets/img/ad02.png" alt="집에서 간편하게 맛보는 해물탕">
+                            <div class="campaign__img__wrap">
+                                <img src="assets/img/campaign02.jpg" alt="꿀벌을 부르는 건강한 보금자리 만들기"/>
                             </div>
-                            <div class="ad__cont">
-                                <p class="ad__cont__funder">갓해물</p>
-                                <strong class="ad__cont__title">집에서 간편하게 맛보는 해물탕</strong>
-                                <img src="assets/img/ad02_1.jpg" alt="꼬치 캠핑 해물 어묵탕 오뎅탕 2인" class="ad__brand">
+                            <div class="campaign__cont">
+                                <p class="campaign__cont__organization">유한킴벌리</p>
+                                <strong class="campaign__cont__title">꿀벌을 부르는 건강한 보금자리 만들기</strong>
+                                <span>밀원숲 조성 프로젝트 함께하기 👉</span>
                             </div>
                         </a>
                     </div>
-                    <div class="ad__card">
+                    <div class="campaign__card">
                         <a href="#">
-                            <div class="ad__img__wrap">
-                                <img src="assets/img/ad03.png" alt="건강한 피부를 위한 클린뷰티">
+                            <div class="campaign__img__wrap">
+                                <img src="assets/img/campaign03.png" alt="어렵고 힘든 일상 우리가 응원할게요"/>
                             </div>
-                            <div class="ad__cont">
-                                <p class="ad__cont__funder">그린아뜰리에</p>
-                                <strong class="ad__cont__title">건강한 피부를 위한 클린뷰티</strong>
-                                <img src="assets/img/ad03_1.png" alt="그린아뜰리에 고농축 천연 중성 세제1+섬유유연제1 세트" class="ad__brand">
+                            <div class="campaign__cont">
+                                <p class="campaign__cont__organization">부산도시공사</p>
+                                <strong class="campaign__cont__title">어렵고 힘든 일상 우리가 응원할게요</strong>
+                                <span>더블기부 참여하기 👉</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="campaign__card">
+                        <a href="#">
+                            <div class="campaign__img__wrap">
+                                <img src="assets/img/campaign04.jpg" alt="아픈 아이 옆을 지키는 0.3평 엄마의 간이침대"/>
+                            </div>
+                            <div class="campaign__cont">
+                                <p class="campaign__cont__organization">한국맥도날드</p>
+                                <strong class="campaign__cont__title">아픈 아이 옆을 지키는 0.3평 엄마의 간이침대</strong>
+                                <span>RMHC하우스를 지어요 👉</span>
                             </div>
                         </a>
                     </div>
                 </div>
             </section>
         </main>
-        <footer id="footer"></footer>
+        <footer id="footer">
+            <div class="notice__wrap">
+                <div class="notice__inner container">
+                    <h4 class="notice__title">공지사항</h4>
+                    <a href="#" class="notice__text">네이버 블로그 글 발행 시 콩 지급 변경 안내 <i class="fa-sharp fa-solid fa-n fa-2xs" style="color: #2DB400;"></i></a>
+                </div>
+            </div>
+            <div class="service__wrap">
+                <div class="service__inner container">
+                    <div class="service">
+                        <h4 class="service__title">해피빈 안내</h4>
+                        <ul class="service__list">
+                            <li><a href="#">해피빈 소개</a></li>
+                            <li><a href="#">콩받기 안내</a></li>
+                            <li><a href="#">해피빈 현황</a></li>
+                            <li><a href="#">콩쿠폰 입력</a></li>
+                        </ul>
+                    </div>
+                    <div class="service">
+                        <h4 class="service__title">제휴∙단체 안내</h4>
+                        <ul class="service__list">
+                            <li><a href="#">해피로그 가입</a></li>
+                            <li><a href="#">기업제휴 문의</a></li>
+                            <li><a href="#">펀딩 개설 신청</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="info__wrap container">
+                <div class="info__list">
+                    <ul>
+                        <li><a href="#">해피빈 이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">책임의 한계와 법적고지</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">공익제보(행정안전부)</a></li>
+                    </ul>
+                </div>
+                <div class="info__inner col2">
+                    <div class="info left">
+                        <ul>
+                            <li><span>재단법인 해피빈</span></li>
+                            <li><span>대표자 유봉석</span></li>
+                            <li><span>경기도 성남시 분당구 황새울로 246, 5층</span></li>
+                        </ul>
+                        <ul>
+                            <li><span>대표전화 : 1588-3820</span></li>
+                            <li><span>이메일 : happybean@navercorp.com</span></li>
+                        </ul>
+                        <ul>
+                            <li><span>사업자등록번호 : 129-82-10367</span></li>
+                            <li><span>통신판매업신고 : 제2015-경기성남-1190호</span></li>
+                        </ul>
+                    </div>
+                    <div class="info right">
+                        <ul>
+                            <li><span>네이버 주식회사</span></li>
+                            <li><span>대표이사 최수연</span></li>
+                            <li><span>경기도 성남시 분당구 정자일로 95 NAVER 1784</span></li>
+                        </ul>
+                        <ul>
+                            <li><span>대표전화 : 1588-3819</span></li>
+                            <li><span>이메일 : helpcustomer@naver.com</span></li>
+                        </ul>
+                        <ul>
+                            <li><span>사업자등록번호 : 220-81-62517</span></li>
+                            <li><span>통신판매업신고 : 제2006-경기성남-0692호</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info__notice">
+                    <p>(재)해피빈과 네이버(주)는 펀딩, 공감가게, 가볼까 프로젝트의 당사자가 아닙니다. 프로젝트 진행 및 거래 등에 대한 책임은 해당 프로젝트의 개설자에게 있습니다.</p>
+                </div>
+                <div class="info__copyright">
+                    <a href="#"><img src="assets/img/naver_logo.png" alt="NAVER"></a>
+                    <span>Copyright © NAVER Corp. All Rights Reserved.</span>
+                </div>
+            </div>
+        </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.9.2/sass.min.js"></script>
     <script src="https://kit.fontawesome.com/2b2e0121f7.js" crossorigin="anonymous"></script>
     <script src="assets/js/happybin.js"></script>
-</body>
+  </body>
 </html>

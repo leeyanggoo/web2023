@@ -1,0 +1,62 @@
+#statistics {
+  width: 100%;
+  background-color: #21ce55;
+}
+.statistics__wrap {
+    padding: 45px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.statistics__wrap .statistics__title {
+    width: 40%;
+}
+.statistics__wrap .statistics__title h3 {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: #0eaa30;
+    font-size: 17px;
+    color: hsla(0, 0%, 100%, 0.85);
+}
+.statistics__wrap .statistics__title span {
+    display: block;
+    font-size: 24px;
+    margin-top: 25px;
+    color: #fff;
+}
+.statistics__wrap .statistics__list {
+    width: 60%;
+}
+.statistics__wrap .statistics__list .join__donation,
+.join__funding {
+    display: flex;
+    justify-content: space-between;
+}
+.statistics__list .join__donation div,
+.join__funding div {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 10px;
+}
+.statistics__list .join__donation div span,
+.join__funding div span {
+    display: block;
+    font-size: 18px;
+    color:hsla(0,0%,100%,.85);
+}
+.statistics__list .join__donation div strong,
+.join__funding div strong{
+    display: block;
+    font-size: 33px;
+    text-align: right;
+    color: #fff;
+}
+.statistics__list .join__donation div strong em,
+.join__funding div strong em{
+    font-size: 18px;
+    color:hsla(0,0%,100%,.85);
+
+}

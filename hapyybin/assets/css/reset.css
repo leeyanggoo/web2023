@@ -44,25 +44,23 @@ input,
 select,
 table,
 textarea {
-  font-family: var(--main__font), "AppleSDGothicNeo-Regular", "Malgun Gothic",
-    "맑은 고딕", "dotum", "돋움";
+  font-family: "NanumSquare";
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.5;
-  /* word-break: keep-all; */
 }
 body.windows button,
 body.windows input,
 body.windows select,
 body.windows table,
 body.windows textarea {
-  font-family: var(--main__win);
+  font-family: "NanumSquare";
 }
 
 /* 링크 초기화 */
 a {
   text-decoration: none;
-  color: var(--color__black);
+  color: #333;
 }
 
 /* 목록 초기화 */
@@ -80,7 +78,7 @@ h4,
 h5,
 h6 {
   font-weight: normal;
-  font-size: var(--font__size);
+  font-size: 16pt;
 }
 
 /* 폰트 스타일 */
@@ -182,18 +180,23 @@ table {
   min-width: 1140px;
 }
 .container {
-    width: 1140px;
-    margin: 0 auto;
-    padding: 0;
+  width: 1140px;
+  margin: 0 auto;
+  padding: 0;
 }
-.m55 {
-  margin: 55px auto;
+.m70 {
+  margin: 70px auto;
 }
+.col2,
 .col4,
 .col3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+}
+.col2 > div {
+  width: 49%;
 }
 .col4 > div {
   width: 24%;
